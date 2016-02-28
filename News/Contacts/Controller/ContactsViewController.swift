@@ -1,0 +1,61 @@
+//
+//  ContactsViewController.swift
+//  WXT_Teachers
+//
+//  Created by 李春波 on 16/2/23.
+//  Copyright © 2016年 北京校酷网络科技有限公司. All rights reserved.
+//
+
+import UIKit
+import PagingMenuController
+
+class ContactsViewController: UIViewController {
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "通讯录"
+        let rightItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "RightBtn")
+        let leftItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "LeftBtn")
+        self.navigationItem.rightBarButtonItem = rightItem
+        self.navigationItem.leftBarButtonItem = leftItem
+        let jiaZhangView = JiaZhangViewController()
+        let yuanDingView = YuanDingViewController()
+        let qunLiaoView = QunLiaoViewController()
+        jiaZhangView.title = "家长"
+        yuanDingView.title = "园丁"
+        qunLiaoView.title = "群聊"
+        let viewControllers = [jiaZhangView, yuanDingView,qunLiaoView]
+        let options = PagingMenuOptions()
+        options.menuItemMargin = 5
+        options.menuHeight = 40
+        options.menuDisplayMode = .SegmentedControl
+        options.selectedTextColor = UIColor(red: 54.0 / 255.0, green: 190.0 / 255.0, blue: 100.0 / 255.0, alpha: 1.0)
+        let pagingMenuController = PagingMenuController(viewControllers: viewControllers, options: options)
+        pagingMenuController.view.frame.origin.y += 60
+        pagingMenuController.view.frame.size.height -= 0
+        
+        addChildViewController(pagingMenuController)
+        view.addSubview(pagingMenuController.view)
+        pagingMenuController.didMoveToParentViewController(self)
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}

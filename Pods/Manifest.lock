@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (3.1.3)
+  - FlexibleTableView (1.1.2)
+  - JGProgressHUD (1.3.1)
+  - MBProgressHUD (0.9.1)
+  - PagingMenuController (0.7.6)
+  - XWSwiftRefresh (0.1.6)
+  - YYWebImage (0.9.11)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - FlexibleTableView
+  - JGProgressHUD
+  - MBProgressHUD
+  - PagingMenuController
+  - XWSwiftRefresh (~> 0.1.6)
+  - YYWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: 9f93b56389e48def9220dd57d1f44b1927229a5a
+  FlexibleTableView: b5e1d8ba02079aba946c763831ee2cd0b956018f
+  JGProgressHUD: 153053a21d81208cb5f659691996bcefce6a9885
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  PagingMenuController: d34cb992957c7dfae085785a870cf5f3966020be
+  XWSwiftRefresh: 3667a6660498aa230380ccb8d89bfa2be075f3ce
+  YYWebImage: a65b28461dc63d3b84de7c06ea0fbc4d46cdcd16
+
+COCOAPODS: 0.39.0
