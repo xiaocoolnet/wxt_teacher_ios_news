@@ -31,6 +31,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
         exitBtn.tintColor = UIColor.whiteColor()
         exitBtn.layer.cornerRadius = 2
         exitBtn.layer.masksToBounds = true
+        exitBtn.addTarget(self, action: Selector("ExitLogin"), forControlEvents: .TouchUpInside)
         self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(mineTableView)
         self.mineTableView.tableFooterView = exitBtn
@@ -210,6 +211,23 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
         if(indexPath.section == 0){
             print("点击了第一个section")
         }
+    }
+    
+    func ExitLogin(){
+        let alertController = UIAlertController(title: NSLocalizedString("", comment: "Warn"), message: NSLocalizedString("确认注销？", comment: "empty message"), preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
+        let doneAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+            let userid = NSUserDefaults.standardUserDefaults()
+            userid.setValue("", forKey: "userid")
+            let defalutid = NSUserDefaults.standardUserDefaults()
+            defalutid.setValue("", forKey: "cid")
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginView") as! UINavigationController
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+        alertController.addAction(doneAction)
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

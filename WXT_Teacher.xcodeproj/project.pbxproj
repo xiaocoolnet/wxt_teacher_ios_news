@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		AFC09C14012FD90FA811DB41 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F387A67369CB0717891AF5C /* Pods.framework */; };
+		EA7D9D111C83DE8B00056B22 /* XKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D9D101C83DE8B00056B22 /* XKeyBoard.m */; };
+		EA94898C1C83E4FD008682E6 /* NewBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94898B1C83E4FD008682E6 /* NewBlogViewController.swift */; };
+		EA94898E1C83E8EE008682E6 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94898D1C83E8EE008682E6 /* ImageCollectionViewCell.swift */; };
+		EA9489911C8413E8008682E6 /* BRPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9489901C8413E8008682E6 /* BRPlaceholderTextView.m */; };
+		EA9489951C84266F008682E6 /* ConnectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9489941C84266F008682E6 /* ConnectModel.m */; };
 		EAFAE5D31C82E4D500A8BAF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE5D21C82E4D500A8BAF2 /* AppDelegate.swift */; };
 		EAFAE5D51C82E4D500A8BAF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE5D41C82E4D500A8BAF2 /* ViewController.swift */; };
 		EAFAE5DD1C82E4D600A8BAF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE5DB1C82E4D600A8BAF2 /* LaunchScreen.storyboard */; };
@@ -159,6 +164,14 @@
 /* Begin PBXFileReference section */
 		7CC3BC55E673A0F4FFA674CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7F387A67369CB0717891AF5C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7D9D0F1C83DE8B00056B22 /* XKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKeyBoard.h; sourceTree = "<group>"; };
+		EA7D9D101C83DE8B00056B22 /* XKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKeyBoard.m; sourceTree = "<group>"; };
+		EA94898B1C83E4FD008682E6 /* NewBlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBlogViewController.swift; sourceTree = "<group>"; };
+		EA94898D1C83E8EE008682E6 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA94898F1C8413E8008682E6 /* BRPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPlaceholderTextView.h; sourceTree = "<group>"; };
+		EA9489901C8413E8008682E6 /* BRPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPlaceholderTextView.m; sourceTree = "<group>"; };
+		EA9489931C84266F008682E6 /* ConnectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectModel.h; sourceTree = "<group>"; };
+		EA9489941C84266F008682E6 /* ConnectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectModel.m; sourceTree = "<group>"; };
 		EAFAE5CF1C82E4D500A8BAF2 /* WXT_Teacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXT_Teacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFAE5D21C82E4D500A8BAF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAFAE5D41C82E4D500A8BAF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -310,7 +323,7 @@
 		EAFAE7301C82E52B00A8BAF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAFAE7311C82E52B00A8BAF2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EAFAE7341C82E55400A8BAF2 /* WXT_Teacher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WXT_Teacher-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		EAFAE7381C82E56800A8BAF2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		EAFAE7381C82E56800A8BAF2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F7D892E0A840C8D6CB9F6455 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -347,11 +360,12 @@
 			isa = PBXGroup;
 			children = (
 				EAFAE7381C82E56800A8BAF2 /* Podfile */,
-				EAFAE5E41C82E50900A8BAF2 /* Blog */,
-				EAFAE5F11C82E50900A8BAF2 /* Function */,
 				EAFAE5FC1C82E50900A8BAF2 /* Login and Register */,
-				EAFAE6171C82E50900A8BAF2 /* Mine */,
 				EAFAE6201C82E50900A8BAF2 /* News */,
+				EAFAE6211C82E50900A8BAF2 /* Contacts */,
+				EAFAE5F11C82E50900A8BAF2 /* Function */,
+				EAFAE5E41C82E50900A8BAF2 /* Blog */,
+				EAFAE6171C82E50900A8BAF2 /* Mine */,
 				EAFAE6361C82E50900A8BAF2 /* Third Package */,
 				EAFAE69C1C82E50900A8BAF2 /* Tool */,
 				EAFAE5D11C82E4D500A8BAF2 /* WXT_Teacher */,
@@ -398,6 +412,7 @@
 			children = (
 				EAFAE5E61C82E50900A8BAF2 /* BlogViewController.swift */,
 				EAFAE5E71C82E50900A8BAF2 /* Readme */,
+				EA94898B1C83E4FD008682E6 /* NewBlogViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -416,6 +431,7 @@
 		EAFAE5ED1C82E50900A8BAF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EA94898D1C83E8EE008682E6 /* ImageCollectionViewCell.swift */,
 				EAFAE5EE1C82E50900A8BAF2 /* BlogTableViewCell.swift */,
 				EAFAE5EF1C82E50900A8BAF2 /* PhotoBrowserCollectionCell.swift */,
 				EAFAE5F01C82E50900A8BAF2 /* Readme */,
@@ -617,7 +633,6 @@
 		EAFAE6201C82E50900A8BAF2 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				EAFAE6211C82E50900A8BAF2 /* Contacts */,
 				EAFAE62D1C82E50900A8BAF2 /* Controller */,
 				EAFAE6311C82E50900A8BAF2 /* Model */,
 				EAFAE6331C82E50900A8BAF2 /* View */,
@@ -632,7 +647,8 @@
 				EAFAE6281C82E50900A8BAF2 /* Model */,
 				EAFAE62A1C82E50900A8BAF2 /* View */,
 			);
-			path = Contacts;
+			name = Contacts;
+			path = News/Contacts;
 			sourceTree = "<group>";
 		};
 		EAFAE6221C82E50900A8BAF2 /* Controller */ = {
@@ -694,10 +710,16 @@
 		EAFAE6361C82E50900A8BAF2 /* Third Package */ = {
 			isa = PBXGroup;
 			children = (
-				EAFAE6371C82E50900A8BAF2 /* Browser */,
+				EA9489931C84266F008682E6 /* ConnectModel.h */,
+				EA9489941C84266F008682E6 /* ConnectModel.m */,
+				EA94898F1C8413E8008682E6 /* BRPlaceholderTextView.h */,
+				EA9489901C8413E8008682E6 /* BRPlaceholderTextView.m */,
+				EA7D9D0F1C83DE8B00056B22 /* XKeyBoard.h */,
+				EA7D9D101C83DE8B00056B22 /* XKeyBoard.m */,
 				EAFAE6381C82E50900A8BAF2 /* DisplayView.swift */,
 				EAFAE6391C82E50900A8BAF2 /* FlexibleTableView.swift */,
 				EAFAE63A1C82E50900A8BAF2 /* FlexibleTableViewCell.swift */,
+				EAFAE6371C82E50900A8BAF2 /* Browser */,
 				EAFAE63B1C82E50900A8BAF2 /* Frameworks */,
 				EAFAE6871C82E50900A8BAF2 /* PhotoBrowser */,
 			);
@@ -946,6 +968,7 @@
 				TargetAttributes = {
 					EAFAE5CE1C82E4D500A8BAF2 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = H58LYH4V4T;
 					};
 				};
 			};
@@ -1107,6 +1130,7 @@
 				EAFAE6DF1C82E50900A8BAF2 /* Debugging.swift in Sources */,
 				EAFAE6CD1C82E50900A8BAF2 /* ContactsTableViewCell.swift in Sources */,
 				EAFAE6FB1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
+				EA94898C1C83E4FD008682E6 /* NewBlogViewController.swift in Sources */,
 				EAFAE6DC1C82E50900A8BAF2 /* ConstraintItem.swift in Sources */,
 				EAFAE7171C82E50900A8BAF2 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				EAFAE6F31C82E50900A8BAF2 /* NSHTTPURLResponse+Haneke.swift in Sources */,
@@ -1116,6 +1140,7 @@
 				EAFAE6EC1C82E50900A8BAF2 /* Fetch.swift in Sources */,
 				EAFAE7121C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				EAFAE6E71C82E50900A8BAF2 /* CGSize+Swift.swift in Sources */,
+				EA7D9D111C83DE8B00056B22 /* XKeyBoard.m in Sources */,
 				EAFAE72C1C82E50900A8BAF2 /* Httpresult.swift in Sources */,
 				EAFAE6BE1C82E50900A8BAF2 /* RegisterGetCodeViewController.swift in Sources */,
 				EAFAE6DA1C82E50900A8BAF2 /* ConstraintAttributes.swift in Sources */,
@@ -1133,6 +1158,7 @@
 				EAFAE72E1C82E50900A8BAF2 /* Url.swift in Sources */,
 				EAFAE6BF1C82E50900A8BAF2 /* RegisterSetPasswordViewController.swift in Sources */,
 				EAFAE6C71C82E50900A8BAF2 /* ContactsViewController.swift in Sources */,
+				EA94898E1C83E8EE008682E6 /* ImageCollectionViewCell.swift in Sources */,
 				EAFAE72B1C82E50900A8BAF2 /* Http.swift in Sources */,
 				EAFAE6E91C82E50900A8BAF2 /* Data.swift in Sources */,
 				EAFAE6AB1C82E50900A8BAF2 /* PhotoBrowserCollectionCell.swift in Sources */,
@@ -1143,6 +1169,7 @@
 				EAFAE6F51C82E50900A8BAF2 /* String+Haneke.swift in Sources */,
 				EAFAE6E01C82E50900A8BAF2 /* EdgeInsets.swift in Sources */,
 				EAFAE6AA1C82E50900A8BAF2 /* BlogTableViewCell.swift in Sources */,
+				EA9489911C8413E8008682E6 /* BRPlaceholderTextView.m in Sources */,
 				EAFAE7221C82E50900A8BAF2 /* PhotoBrowser+ZoomAnim.swift in Sources */,
 				EAFAE6FA1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
 				EAFAE6A61C82E50900A8BAF2 /* BlogList.swift in Sources */,
@@ -1173,6 +1200,7 @@
 				EAFAE71D1C82E50900A8BAF2 /* PhotoBrowser+CollectionViewExtend.swift in Sources */,
 				EAFAE6C51C82E50900A8BAF2 /* MineTableViewCell.swift in Sources */,
 				EAFAE7161C82E50900A8BAF2 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
+				EA9489951C84266F008682E6 /* ConnectModel.m in Sources */,
 				EAFAE7251C82E50900A8BAF2 /* PhotoBrowser.swift in Sources */,
 				EAFAE7141C82E50900A8BAF2 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
 				EAFAE7011C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
@@ -1280,6 +1308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WXT_Teacher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1296,6 +1325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WXT_Teacher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

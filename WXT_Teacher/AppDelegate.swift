@@ -15,8 +15,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        NSThread.sleepForTimeInterval(2.0)
+        self.loginCheck()
+        UITabBar.appearance().tintColor = UIColor(red: 54.0 / 255.0, green: 190.0 / 255.0, blue: 100.0 / 255.0, alpha: 1.0)
+        
         return true
+    }
+    func loginCheck(){
+        let userid = NSUserDefaults.standardUserDefaults()
+        var segueId = "MainView"
+        if((userid.valueForKey("userid") == nil) || (userid.valueForKey("userid")?.length == 0 )){
+            segueId = "LoginView"
+            self.window?.rootViewController = self.window?.rootViewController?.storyboard?.instantiateViewControllerWithIdentifier(segueId)
+        }
+        else{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let tableBarController = storyboard.instantiateViewControllerWithIdentifier(segueId) as! UITabBarController
+            let tableBarItem = tableBarController.tabBar.items![2]
+            tableBarItem.badgeValue = nil
+            self.window?.rootViewController = tableBarController
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

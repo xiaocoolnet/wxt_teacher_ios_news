@@ -25,6 +25,8 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         self.title = "动态"
         super.viewDidLoad()
+        let rightItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("NewBlog"))
+        self.navigationItem.rightBarButtonItem = rightItem
         blogTableView.delegate = self
         blogTableView.dataSource = self
         blogTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64 - 44)
@@ -241,6 +243,12 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             return cell1
         }
         return cell1
+    }
+    
+    func NewBlog(){
+        let newBlog = NewBlogViewController()
+        self.navigationController?.pushViewController(newBlog, animated: true)
+        newBlog.tabBarController?.tabBar.hidden = true
     }
     
     override func didReceiveMemoryWarning() {

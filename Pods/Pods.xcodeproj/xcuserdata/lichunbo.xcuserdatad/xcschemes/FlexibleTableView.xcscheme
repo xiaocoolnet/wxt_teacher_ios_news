@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1E86E1E24A47FA34BD646037'
+               BlueprintIdentifier = '6D7B68020D2371BA1EA3513B'
                BlueprintName = 'FlexibleTableView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'FlexibleTableView.framework'>

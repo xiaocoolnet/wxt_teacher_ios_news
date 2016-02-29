@@ -9,7 +9,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="WXT_Teachers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="WXT_Teacher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -209,7 +209,7 @@
         <!--填写手机号码-->
         <scene sceneID="Rgm-Wq-wii">
             <objects>
-                <viewController storyboardIdentifier="PhoneNumberView" id="pRt-eI-oHa" customClass="RegisterGetCodeViewController" customModule="WXT_Teachers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhoneNumberView" id="pRt-eI-oHa" customClass="RegisterGetCodeViewController" customModule="WXT_Teacher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hqi-Wc-yaf"/>
                         <viewControllerLayoutGuide type="bottom" id="WqA-qZ-37I"/>
@@ -350,7 +350,7 @@
         <!--设置密码-->
         <scene sceneID="L8X-eN-0EN">
             <objects>
-                <viewController storyboardIdentifier="SetPasswordView" id="Ngh-wM-FFS" customClass="RegisterSetPasswordViewController" customModule="WXT_Teachers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SetPasswordView" id="Ngh-wM-FFS" customClass="RegisterSetPasswordViewController" customModule="WXT_Teacher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NKU-Ma-uBf"/>
                         <viewControllerLayoutGuide type="bottom" id="hCe-AM-ADr"/>
@@ -459,7 +459,7 @@
         <!--设置密码-->
         <scene sceneID="2Z2-nc-uaF">
             <objects>
-                <viewController storyboardIdentifier="ForgetPasswordView" id="9Dt-yf-15w" customClass="ForgetPasswordSetViewController" customModule="WXT_Teachers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgetPasswordView" id="9Dt-yf-15w" customClass="ForgetPasswordSetViewController" customModule="WXT_Teacher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B5G-dU-V2F"/>
                         <viewControllerLayoutGuide type="bottom" id="dYF-YU-vxr"/>
@@ -568,7 +568,7 @@
         <!--忘记密码-->
         <scene sceneID="R8a-CI-oyE">
             <objects>
-                <viewController id="YCu-nu-fg2" customClass="ForgetPasswordViewController" customModule="WXT_Teachers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YCu-nu-fg2" customClass="ForgetPasswordViewController" customModule="WXT_Teacher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="A3Q-3D-R8f"/>
                         <viewControllerLayoutGuide type="bottom" id="uHO-Ak-NF9"/>
@@ -709,7 +709,7 @@
         <!--Contacts View Controller-->
         <scene sceneID="7oB-xE-xVS">
             <objects>
-                <viewController id="2eo-73-sO2" customClass="ContactsViewController" customModule="WXT_Teachers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2eo-73-sO2" customClass="ContactsViewController" customModule="WXT_Teacher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b2i-NP-bqX"/>
                         <viewControllerLayoutGuide type="bottom" id="LLq-db-zlx"/>
@@ -728,7 +728,7 @@
         <!--News View Controller-->
         <scene sceneID="k4a-lJ-OgI">
             <objects>
-                <viewController id="6Aa-eP-QFv" customClass="NewsViewController" customModule="WXT_Teachers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Aa-eP-QFv" customClass="NewsViewController" customModule="WXT_Teacher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TIV-jF-dNU"/>
                         <viewControllerLayoutGuide type="bottom" id="diG-eu-nVS"/>
@@ -747,7 +747,7 @@
         <!--Blog View Controller-->
         <scene sceneID="S75-t8-Cq7">
             <objects>
-                <viewController id="fbu-rK-Dbv" customClass="BlogViewController" customModule="WXT_Teachers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fbu-rK-Dbv" customClass="BlogViewController" customModule="WXT_Teacher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ue0-Iv-ZDe"/>
                         <viewControllerLayoutGuide type="bottom" id="qZh-CE-11X"/>
@@ -766,7 +766,7 @@
         <!--Function View Controller-->
         <scene sceneID="8V7-px-vZI">
             <objects>
-                <viewController id="B1Z-Uw-ydv" customClass="FunctionViewController" customModule="WXT_Teachers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="B1Z-Uw-ydv" customClass="FunctionViewController" customModule="WXT_Teacher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OKa-WF-dpB"/>
                         <viewControllerLayoutGuide type="bottom" id="7Oy-5O-e7g"/>
@@ -785,7 +785,7 @@
         <!--Mine Main View Controller-->
         <scene sceneID="v5h-zi-KEb">
             <objects>
-                <viewController id="Wdf-6U-wdk" customClass="MineMainViewController" customModule="WXT_Teachers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Wdf-6U-wdk" customClass="MineMainViewController" customModule="WXT_Teacher" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fbp-zT-lCp"/>
                         <viewControllerLayoutGuide type="bottom" id="fGU-n5-qKR"/>
@@ -806,7 +806,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="UpS-fF-WEP">
             <objects>
-                <tabBarController id="C9m-GK-Stj" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainView" id="C9m-GK-Stj" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="3zJ-sC-Mdk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

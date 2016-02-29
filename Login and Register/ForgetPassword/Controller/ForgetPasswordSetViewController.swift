@@ -15,19 +15,11 @@ class ForgetPasswordSetViewController: UIViewController {
     @IBOutlet weak var againsetPassword: UITextField!
     @IBOutlet weak var finishbutton: UIButton!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-       /*
-finishbutton.addTarget(self, action: Selector("Finish"),
-      */
-         finishbutton.addTarget(self, action: Selector("PanKong"), forControlEvents: UIControlEvents.TouchUpInside)
-
-        // Do any additional setup after loading the view.
+        finishbutton.addTarget(self, action: Selector("PanKong"), forControlEvents: UIControlEvents.TouchUpInside)
     }
     
-      /*
     func Finish(){
         if PanKong() == true{
             UpdatePassword()
@@ -62,7 +54,6 @@ finishbutton.addTarget(self, action: Selector("Finish"),
                     hud.removeFromSuperViewOnHide = true
                     hud.hide(true, afterDelay: 1)
                 }
-                
                 if(status.status == "success"){
                     let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
                     hud.mode = MBProgressHUDMode.Text;
@@ -72,15 +63,10 @@ finishbutton.addTarget(self, action: Selector("Finish"),
                     hud.hide(true, afterDelay: 1)
                     self.navigationController?.popToRootViewControllerAnimated(true)
                 }
-                
             }
-
-            
         }
     }
-*/
-    
-    //写一个判空函数，和比较两次密码是否相同
+
     func PanKong()->Bool{
         if(setPassword.text!.isEmpty){
             let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
@@ -108,11 +94,9 @@ finishbutton.addTarget(self, action: Selector("Finish"),
             hud.removeFromSuperViewOnHide = true
             hud.hide(true, afterDelay: 1)
             return false
-            
         }
         return true
     }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -122,16 +106,5 @@ finishbutton.addTarget(self, action: Selector("Finish"),
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

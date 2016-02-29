@@ -39,8 +39,6 @@ class RegisterSetPasswordViewController: UIViewController {
     func SetPassword(){
         let userid = NSUserDefaults.standardUserDefaults()
         let uid = userid.stringForKey("userid")
-        /*
-  // 接口
         let url = apiUrl+"UserActivate"
         let params = [
             "userid":uid!,
@@ -74,10 +72,8 @@ class RegisterSetPasswordViewController: UIViewController {
                     hud.hide(true, afterDelay: 1)
                     self.navigationController?.popToRootViewControllerAnimated(true)
                 }
-                
             }
         }
-*/
     }
     
     func Pankong() -> Bool{
@@ -116,19 +112,6 @@ class RegisterSetPasswordViewController: UIViewController {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }
 

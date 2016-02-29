@@ -31,12 +31,10 @@ class RegisterGetCodeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         getCodeButton.addTarget(self, action: Selector("GetCode"), forControlEvents: UIControlEvents.TouchUpInside)
         nextButton.addTarget(self, action: Selector("Next"), forControlEvents: UIControlEvents.TouchUpInside)
         timeLabel.hidden = true
         self.navigationController?.navigationBar.hidden = false
-        // Do any additional setup after loading the view.
     }
     
     func GetCode(){
@@ -50,10 +48,10 @@ class RegisterGetCodeViewController: UIViewController {
             alerView.delegate = self
             alerView.tag = 1
             alerView.show()
+
         }
         else
         {
-            
             let alerView:UIAlertView = UIAlertView()
             alerView.title = "发送验证码到"
             alerView.message = "\(phoneNumberText.text!)"
@@ -63,20 +61,16 @@ class RegisterGetCodeViewController: UIViewController {
             alerView.delegate = self
             alerView.tag = 0
             alerView.show()
-            
         }
         
     }
     
     func Next(){
         if PandKong()==true{
-          //  RegisterYanZheng()
+            RegisterYanZheng()
         }
         
     }
-    
-    
-  /*
     func RegisterYanZheng(){
         let url = apiUrl+"UserVerify"
         let param = [
@@ -103,23 +97,16 @@ class RegisterGetCodeViewController: UIViewController {
                     hud.removeFromSuperViewOnHide = true
                     hud.hide(true, afterDelay: 3)
                 }
-                
                 if(status.status == "success"){
                     let userid = NSUserDefaults.standardUserDefaults()
                     userid.setValue(status.data?.id, forKey: "userid")
-                    let uid = userid.valueForKey("userid")
-                    
                     let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-                    let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("SetPasswordView") as! UIViewController
+                    let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("SetPasswordView") 
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
-                
             }
-            
         }
-        
     }
-    */
     func PandKong()->Bool{
         if(phoneNumberText.text!.isEmpty){
             let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
@@ -130,7 +117,6 @@ class RegisterGetCodeViewController: UIViewController {
             hud.hide(true, afterDelay: 1)
             return false
         }
-        
         if(codeText.text!.isEmpty){
             let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
             hud.mode = MBProgressHUDMode.Text
@@ -170,39 +156,36 @@ class RegisterGetCodeViewController: UIViewController {
     }
     
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
-        
         if alertView.tag == 0
         {
             if buttonIndex == 1
             {
- //               self.senderMessage()
+                self.senderMessage()
                 getCodeButton.hidden = true
                 timeLabel.hidden = false
                 self.timeDow()
             }
+
         }
         if alertView.tag == 1
         {}
         if alertView.tag == 2
         {}
     }
-    /*
+    
     func senderMessage()
     {
         let url = apiUrl+"SendMobileCode"
         let param = [
             "phone":self.phoneNumberText.text!,
-            
         ]
         Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
             if(error != nil){
             }
             else{
             }
-            
         }
     }
-    */
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -9,6 +9,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BSGridCollectionViewLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>BSImagePicker-BSImagePicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>BSImagePicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FlexibleTableView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,6 +54,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UIImageViewModeScaleAspect.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>XWSwiftRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,7 +72,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0FF38C485BD8E73F614C919F834D6EAB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>23D4B5C9CC657B68134305BFEB076270</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2BBD961D1E35160346E3DD7281E02EF6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,22 +107,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>83EAA3FF5012F33C7508958ADF57F39B</key>
+		<key>7914DA72CA2474BB4E29F302CAE3D1F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>89590F85C1F45BE41A4B48EACC1F0067</key>
+		<key>8AA3DDB8797222294E1288CB197A8347</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BBF4A73AC9F2F79EEC4E888BF10F51C1</key>
+		<key>C59EE95662AD4757E7FCE220DB1AFA41</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D54D076285BFE5EA71B429A671DB8985</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E61CE3B6DFA1FE6B3E296965C76C0E10</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7DE5171AA3C53DA4E4A078B795C78EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

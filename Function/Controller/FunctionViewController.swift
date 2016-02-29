@@ -333,7 +333,7 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 btn15.frame = CGRectMake(0, 100, 44, 44)
                 btn15.layer.cornerRadius = 22
                 btn15.layer.masksToBounds = true
-                btn15.setBackgroundImage(UIImage(named: "班级活动"), forState: UIControlState.Normal)
+                btn15.setBackgroundImage(UIImage(named: "班级课程"), forState: UIControlState.Normal)
                 btn15.center.x = (viewWidth/8)*13
                 btn16.frame = CGRectMake(0, 100, 44, 44)
                 btn16.layer.cornerRadius = 22
@@ -405,7 +405,7 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 lab13.center.x = (viewWidth/8)*9
                 lab13.font = UIFont.systemFontOfSize(13)
                 lab13.textAlignment = .Center
-                lab14.text = "成长档案"
+                lab14.text = "班级课程"
                 lab14.frame = CGRectMake(0, 150, 55, 15)
                 lab14.center.x = (viewWidth/8)*11
                 lab14.font = UIFont.systemFontOfSize(13)
