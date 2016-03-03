@@ -7,7 +7,7 @@
 
 #import "ConnectModel.h"
 @implementation ConnectModel
-#define PICURL @"http://www.xiaocool.cn:8016/uploads/microblog/"
+#define PICURL @"http://www.xiaocool.cn:8016/"
 - (instancetype)init
 {
     self = [super init];

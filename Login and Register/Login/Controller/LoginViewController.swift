@@ -111,9 +111,10 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                     let userid = NSUserDefaults.standardUserDefaults()
                     userid.setValue(status.data?.id, forKey: "userid")
                     let schoolid = NSUserDefaults.standardUserDefaults()
-                    schoolid.setValue(status.data?.id, forKey: "schoolid")
+                    schoolid.setValue(status.data?.schoolid, forKey: "schoolid")
                     let classid = NSUserDefaults.standardUserDefaults()
-                    classid.setValue(status.data?.id, forKey: "classid")
+                    classid.setValue(status.data?.classid, forKey: "classid")
+                    self.GetUserInfo()
                     let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
                     let vc : UIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainView")
                     self.presentViewController(vc, animated: true, completion: nil)
@@ -122,4 +123,37 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         }
     }
 
+    func GetUserInfo(){
+        let userid = NSUserDefaults.standardUserDefaults()
+        let uid = userid.stringForKey("userid")
+        let url = apiUrl+"GetUsers"
+        let param = [
+            "userid":uid!
+        ]
+        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                print("request是")
+                print(request!)
+                print("====================")
+                let status = MineModel(JSONDecoder(json!))
+                print("状态是")
+                print(status.status)
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.labelText = status.errorData
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                }
+                if(status.status == "success"){
+                    print("Success")
+                    let username = NSUserDefaults.standardUserDefaults()
+                    username.setValue(status.data?.name, forKey: "username")
+                }
+            }
+        }
+    }
 }

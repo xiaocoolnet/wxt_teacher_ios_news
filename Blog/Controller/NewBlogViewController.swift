@@ -137,13 +137,12 @@ class NewBlogViewController: UIViewController,UICollectionViewDataSource,UIColle
             for j in 0..<asset.count{
                 manager.requestImageForAsset(asset[j], targetSize: CGSize(width: 80.0, height: 80.0), contentMode: .AspectFit, options: option, resultHandler: {(result, info)->Void in
                     thumbnail = result!
-                    print(thumbnail)
+                    print("图片是")
                     print(UIImagePNGRepresentation(thumbnail))
-                    self.data.append(UIImageJPEGRepresentation(thumbnail, 0.3)!)
+                    self.data.append(UIImagePNGRepresentation(thumbnail)!)
                     self.pictureArray.addObject(thumbnail)
                 })
             }
-            
         }
         return thumbnail
     }
@@ -163,9 +162,11 @@ class NewBlogViewController: UIViewController,UICollectionViewDataSource,UIColle
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
                 ConnectModel.uploadWithImageName(RanNumber, imageData:self.data[i], URL: "WriteMicroblog_upload", finish: { (data) -> Void in
                 })}
+            //self.imagePath.addObject("uploads/microblog/" + RanNumber + ".png")
             self.imagePath.addObject(RanNumber + ".png")
         }
         self.imageUrl = self.imagePath.componentsJoinedByString(",")
+        print(self.imageUrl!)
         let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         hud.mode = MBProgressHUDMode.Text
         hud.margin = 10
@@ -205,7 +206,7 @@ class NewBlogViewController: UIViewController,UICollectionViewDataSource,UIColle
                 print(result.status)
                 if(result.status == "error"){
                     let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-                    hud.mode = MBProgressHUDMode.Text;
+                    hud.mode = MBProgressHUDMode.Text
                     hud.labelText = result.errorData
                     hud.margin = 10.0
                     hud.removeFromSuperViewOnHide = true

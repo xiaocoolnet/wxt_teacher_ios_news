@@ -13,6 +13,8 @@
 		EA94898E1C83E8EE008682E6 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94898D1C83E8EE008682E6 /* ImageCollectionViewCell.swift */; };
 		EA9489911C8413E8008682E6 /* BRPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9489901C8413E8008682E6 /* BRPlaceholderTextView.m */; };
 		EA9489951C84266F008682E6 /* ConnectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9489941C84266F008682E6 /* ConnectModel.m */; };
+		EACFF6361C86885800615394 /* DianzanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFF6341C86885800615394 /* DianzanTableViewCell.swift */; };
+		EAEA5F021C86C51A00DD362E /* MineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA5F011C86C51A00DD362E /* MineModel.swift */; };
 		EAFAE5D31C82E4D500A8BAF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE5D21C82E4D500A8BAF2 /* AppDelegate.swift */; };
 		EAFAE5D51C82E4D500A8BAF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE5D41C82E4D500A8BAF2 /* ViewController.swift */; };
 		EAFAE5DD1C82E4D600A8BAF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE5DB1C82E4D600A8BAF2 /* LaunchScreen.storyboard */; };
@@ -172,6 +174,8 @@
 		EA9489901C8413E8008682E6 /* BRPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPlaceholderTextView.m; sourceTree = "<group>"; };
 		EA9489931C84266F008682E6 /* ConnectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectModel.h; sourceTree = "<group>"; };
 		EA9489941C84266F008682E6 /* ConnectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectModel.m; sourceTree = "<group>"; };
+		EACFF6341C86885800615394 /* DianzanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DianzanTableViewCell.swift; sourceTree = "<group>"; };
+		EAEA5F011C86C51A00DD362E /* MineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineModel.swift; sourceTree = "<group>"; };
 		EAFAE5CF1C82E4D500A8BAF2 /* WXT_Teacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXT_Teacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFAE5D21C82E4D500A8BAF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAFAE5D41C82E4D500A8BAF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -435,6 +439,7 @@
 				EAFAE5EE1C82E50900A8BAF2 /* BlogTableViewCell.swift */,
 				EAFAE5EF1C82E50900A8BAF2 /* PhotoBrowserCollectionCell.swift */,
 				EAFAE5F01C82E50900A8BAF2 /* Readme */,
+				EACFF6341C86885800615394 /* DianzanTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -616,6 +621,7 @@
 		EAFAE61B1C82E50900A8BAF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EAEA5F011C86C51A00DD362E /* MineModel.swift */,
 				EAFAE61C1C82E50900A8BAF2 /* Readme */,
 			);
 			path = Model;
@@ -1176,6 +1182,7 @@
 				EAFAE6F61C82E50900A8BAF2 /* UIButton+Haneke.swift in Sources */,
 				EAFAE7101C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				EAFAE7201C82E50900A8BAF2 /* PhotoBrowser+Main.swift in Sources */,
+				EACFF6361C86885800615394 /* DianzanTableViewCell.swift in Sources */,
 				EAFAE6AF1C82E50900A8BAF2 /* ScrollViewController.swift in Sources */,
 				EAFAE6D01C82E50900A8BAF2 /* NewsViewController.swift in Sources */,
 				EAFAE7151C82E50900A8BAF2 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
@@ -1197,6 +1204,7 @@
 				EAFAE6E41C82E50900A8BAF2 /* View+SnapKit.swift in Sources */,
 				EAFAE6A41C82E50900A8BAF2 /* BlogViewController.swift in Sources */,
 				EAFAE7271C82E50900A8BAF2 /* ItemCell.swift in Sources */,
+				EAEA5F021C86C51A00DD362E /* MineModel.swift in Sources */,
 				EAFAE71D1C82E50900A8BAF2 /* PhotoBrowser+CollectionViewExtend.swift in Sources */,
 				EAFAE6C51C82E50900A8BAF2 /* MineTableViewCell.swift in Sources */,
 				EAFAE7161C82E50900A8BAF2 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
