@@ -123,7 +123,20 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
         return 60
     }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if(indexPath.section == 0){
+            return false
+        }
+        return true
+    }
 
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        print(indexPath.section)
+        if editingStyle == .Delete
+        {
+        }
+    }
     /*
     // MARK: - Navigation
 
