@@ -21,11 +21,12 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "我的"
-        mineTableView.frame = CGRectMake(0, 20, self.view.bounds.width, self.view.bounds.height - 70)
+        mineTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64 - 44)
         mineTableView.delegate = self
         mineTableView.dataSource = self
         mineTableView.registerClass(MineTableViewCell.self, forCellReuseIdentifier: "MineCell")
-        exitBtn.frame = CGRectMake(0, 750, self.view.frame.width, 38)
+        exitBtn.frame = CGRectMake(0, 750, 300, 38)
+        exitBtn.center.x = self.view.center.x
         exitBtn.setTitle("退出登录", forState: .Normal)
         exitBtn.backgroundColor = UIColor(red: 54.0 / 255.0, green: 190.0 / 255.0, blue: 100.0 / 255.0, alpha: 1.0)
         exitBtn.tintColor = UIColor.whiteColor()
@@ -35,6 +36,8 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
         self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(mineTableView)
         self.mineTableView.tableFooterView = exitBtn
+        self.mineTableView.tableFooterView!.frame = CGRectMake(0, 760, 300, 38)
+        //self.mineTableView.tableFooterView!.center.x = self.view.center.x
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

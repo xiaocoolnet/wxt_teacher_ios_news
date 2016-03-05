@@ -14,7 +14,7 @@ import MBProgressHUD
 
 
 class NewBlogViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
-    var data:[NSData] = []
+    var imageData:[NSData] = []
     var isuploading = false
     var imageUrl:String?
     var i = 0
@@ -38,7 +38,7 @@ class NewBlogViewController: UIViewController,UICollectionViewDataSource,UIColle
         self.contentTextView.addMaxTextLengthWithMaxLength(200) { (contentTextView) -> Void in
             let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
             hud.mode = MBProgressHUDMode.Text
-            hud.labelText = "超过1200字啦"
+            hud.labelText = "超过200字啦"
             hud.margin = 10.0
             hud.removeFromSuperViewOnHide = true
             hud.hide(true, afterDelay: 3)
@@ -139,7 +139,7 @@ class NewBlogViewController: UIViewController,UICollectionViewDataSource,UIColle
                     thumbnail = result!
                     print("图片是")
                     print(UIImagePNGRepresentation(thumbnail))
-                    self.data.append(UIImagePNGRepresentation(thumbnail)!)
+                    self.imageData.append(UIImagePNGRepresentation(thumbnail)!)
                     self.pictureArray.addObject(thumbnail)
                 })
             }
@@ -156,14 +156,18 @@ class NewBlogViewController: UIViewController,UICollectionViewDataSource,UIColle
     }
     
     func UpdatePic(){
-        for i in 0..<self.data.count{
+        for i in 0..<self.imageData.count{
             let RanNumber = String(arc4random_uniform(1000) + 1000)
             isuploading = true
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
-                ConnectModel.uploadWithImageName(RanNumber, imageData:self.data[i], URL: "WriteMicroblog_upload", finish: { (data) -> Void in
+                ConnectModel.uploadWithImageName(RanNumber, imageData:self.imageData[i], URL: "WriteMicroblog_upload", finish: { (data) -> Void in
+                    print("返回值")
+                    print(data)
                 })}
             //self.imagePath.addObject("uploads/microblog/" + RanNumber + ".png")
-            self.imagePath.addObject(RanNumber + ".png")
+            let userid = NSUserDefaults.standardUserDefaults()
+            let uid = userid.stringForKey("userid")
+            self.imagePath.addObject(uid! + RanNumber + ".png")
         }
         self.imageUrl = self.imagePath.componentsJoinedByString(",")
         print(self.imageUrl!)

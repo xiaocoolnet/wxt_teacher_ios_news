@@ -11,7 +11,6 @@ import PagingMenuController
 
 class ContactsViewController: UIViewController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "通讯录"
@@ -34,7 +33,6 @@ class ContactsViewController: UIViewController {
         let pagingMenuController = PagingMenuController(viewControllers: viewControllers, options: options)
         pagingMenuController.view.frame.origin.y += 60
         pagingMenuController.view.frame.size.height -= 0
-        
         addChildViewController(pagingMenuController)
         view.addSubview(pagingMenuController.view)
         pagingMenuController.didMoveToParentViewController(self)

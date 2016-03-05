@@ -13,6 +13,9 @@
 		EA94898E1C83E8EE008682E6 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94898D1C83E8EE008682E6 /* ImageCollectionViewCell.swift */; };
 		EA9489911C8413E8008682E6 /* BRPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9489901C8413E8008682E6 /* BRPlaceholderTextView.m */; };
 		EA9489951C84266F008682E6 /* ConnectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9489941C84266F008682E6 /* ConnectModel.m */; };
+		EAA578031C8A7BDA00E9A95D /* NewCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA578021C8A7BDA00E9A95D /* NewCommentViewController.swift */; };
+		EAC8DE701C8974AC00C2CEE6 /* BlogCommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8DE6F1C8974AC00C2CEE6 /* BlogCommentTableViewController.swift */; };
+		EAC8DE721C8978B300C2CEE6 /* CommentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8DE711C8978B300C2CEE6 /* CommentList.swift */; };
 		EACFF6361C86885800615394 /* DianzanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFF6341C86885800615394 /* DianzanTableViewCell.swift */; };
 		EAEA5F021C86C51A00DD362E /* MineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA5F011C86C51A00DD362E /* MineModel.swift */; };
 		EAFAE5D31C82E4D500A8BAF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE5D21C82E4D500A8BAF2 /* AppDelegate.swift */; };
@@ -174,6 +177,9 @@
 		EA9489901C8413E8008682E6 /* BRPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPlaceholderTextView.m; sourceTree = "<group>"; };
 		EA9489931C84266F008682E6 /* ConnectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectModel.h; sourceTree = "<group>"; };
 		EA9489941C84266F008682E6 /* ConnectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectModel.m; sourceTree = "<group>"; };
+		EAA578021C8A7BDA00E9A95D /* NewCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentViewController.swift; sourceTree = "<group>"; };
+		EAC8DE6F1C8974AC00C2CEE6 /* BlogCommentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogCommentTableViewController.swift; sourceTree = "<group>"; };
+		EAC8DE711C8978B300C2CEE6 /* CommentList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentList.swift; sourceTree = "<group>"; };
 		EACFF6341C86885800615394 /* DianzanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DianzanTableViewCell.swift; sourceTree = "<group>"; };
 		EAEA5F011C86C51A00DD362E /* MineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineModel.swift; sourceTree = "<group>"; };
 		EAFAE5CF1C82E4D500A8BAF2 /* WXT_Teacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXT_Teacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -414,9 +420,11 @@
 		EAFAE5E51C82E50900A8BAF2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EAFAE5E61C82E50900A8BAF2 /* BlogViewController.swift */,
 				EAFAE5E71C82E50900A8BAF2 /* Readme */,
+				EAFAE5E61C82E50900A8BAF2 /* BlogViewController.swift */,
 				EA94898B1C83E4FD008682E6 /* NewBlogViewController.swift */,
+				EAC8DE6F1C8974AC00C2CEE6 /* BlogCommentTableViewController.swift */,
+				EAA578021C8A7BDA00E9A95D /* NewCommentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -424,10 +432,11 @@
 		EAFAE5E81C82E50900A8BAF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EAFAE5E91C82E50900A8BAF2 /* BlogList.swift */,
-				EAFAE5EA1C82E50900A8BAF2 /* DianZanList.swift */,
-				EAFAE5EB1C82E50900A8BAF2 /* PictureList.swift */,
 				EAFAE5EC1C82E50900A8BAF2 /* Readme */,
+				EAFAE5E91C82E50900A8BAF2 /* BlogList.swift */,
+				EAFAE5EB1C82E50900A8BAF2 /* PictureList.swift */,
+				EAFAE5EA1C82E50900A8BAF2 /* DianZanList.swift */,
+				EAC8DE711C8978B300C2CEE6 /* CommentList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1119,6 +1128,7 @@
 				EAFAE6CB1C82E50900A8BAF2 /* YuanDingViewController.swift in Sources */,
 				EAFAE70E1C82E50900A8BAF2 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				EAFAE6EF1C82E50900A8BAF2 /* Haneke.swift in Sources */,
+				EAA578031C8A7BDA00E9A95D /* NewCommentViewController.swift in Sources */,
 				EAFAE6E81C82E50900A8BAF2 /* CryptoSwiftMD5.swift in Sources */,
 				EAFAE7191C82E50900A8BAF2 /* NVActivityIndicatorShape.swift in Sources */,
 				EAFAE6FF1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
@@ -1151,6 +1161,7 @@
 				EAFAE6BE1C82E50900A8BAF2 /* RegisterGetCodeViewController.swift in Sources */,
 				EAFAE6DA1C82E50900A8BAF2 /* ConstraintAttributes.swift in Sources */,
 				EAFAE70F1C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
+				EAC8DE701C8974AC00C2CEE6 /* BlogCommentTableViewController.swift in Sources */,
 				EAFAE6F81C82E50900A8BAF2 /* UIImageView+Haneke.swift in Sources */,
 				EAFAE70D1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBlank.swift in Sources */,
 				EAFAE6EA1C82E50900A8BAF2 /* DiskCache.swift in Sources */,
@@ -1192,6 +1203,7 @@
 				EAFAE6B21C82E50900A8BAF2 /* FunTableViewCell.swift in Sources */,
 				EAFAE6F71C82E50900A8BAF2 /* UIImage+Haneke.swift in Sources */,
 				EAFAE7071C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
+				EAC8DE721C8978B300C2CEE6 /* CommentList.swift in Sources */,
 				EAFAE6DD1C82E50900A8BAF2 /* ConstraintMaker.swift in Sources */,
 				EAFAE7021C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				EAFAE6B41C82E50900A8BAF2 /* ForgetPasswordSetViewController.swift in Sources */,

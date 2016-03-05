@@ -18,7 +18,8 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     let blogTableView = UITableView()
     var blogSource = BlogList()
     var pciSource = PictureList()
-    var DianzanSource = DianZanList()
+    var dianzanSource = DianZanList()
+    var pingLunSource = CommentList()
     var remoteThumbImage = [NSIndexPath:[String]]()
     var remoteImage :[String] = []
     var sectionInt = Int()
@@ -41,6 +42,7 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.DropDownUpdate()
     }
     override func viewWillAppear(animated: Bool) {
+        self.DropDownUpdate()
         self.tabBarController?.tabBar.hidden = false
     }
     
@@ -49,7 +51,6 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.blogTableView.reloadData()
         self.blogTableView.headerView?.beginRefreshing()
     }
-    
     
     func GetDate(){
         print("刷新")
@@ -157,11 +158,7 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let bloginfo = self.blogSource.objectlist[indexPath.section]
         let string:NSString = bloginfo.content!
         let screenBounds:CGRect = UIScreen.mainScreen().bounds
-        self.DianzanSource = DianZanList(bloginfo.dianzanlist!)
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 70, height: 70)
-        layout.scrollDirection = UICollectionViewScrollDirection.Vertical
-        layout.headerReferenceSize = CGSize(width: self.view.frame.width, height: 40)
+        self.dianzanSource = DianZanList(bloginfo.dianzanlist!)
         let cell1 = UITableViewCell(style: .Value1, reuseIdentifier: "blog")
         cell1.selectionStyle = .None
         if(indexPath.row == 0){
@@ -242,26 +239,39 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             return cell!
         }
         if indexPath.row == 1{
-            self.DianzanSource = DianZanList(bloginfo.dianzanlist!)
+            self.dianzanSource = DianZanList(bloginfo.dianzanlist!)
+            self.pingLunSource = CommentList(bloginfo.pingLunList!)
             let cell = UITableViewCell(style: .Default, reuseIdentifier: "test")
+            cell.selectionStyle = .None
             let dianZanBtn = UIButton()
+            let pingLun = UIButton()
             let dianZanPeople = UILabel()
+            let pingLunLabel = UILabel()
             var arrayPeople:[String] = []
             dianZanBtn.frame = CGRectMake(15, 8, 20, 20)
             dianZanPeople.frame = CGRectMake(38, 8, 300, 20)
             dianZanBtn.setImage(UIImage(named: "zan0"), forState: .Normal)
             dianZanBtn.tag = Int(bloginfo.mid!)!
             dianZanBtn.addTarget(self, action: Selector("DianZan:"), forControlEvents: .TouchUpInside)
+            pingLun.frame = CGRectMake(15, 33, 20, 20)
+            pingLun.setImage(UIImage(named: "pinglun0"), forState: .Normal)
+            pingLun.tag = indexPath.section
+            pingLun.setTitle(bloginfo.mid!, forState: .Normal)
+            pingLun.addTarget(self, action: Selector("PingLun:"), forControlEvents: .TouchUpInside)
+            pingLunLabel.frame = CGRectMake(40, 32, 20, 20)
+            pingLunLabel.textColor = UIColor.grayColor()
+            pingLunLabel.font = UIFont.systemFontOfSize(16)
+            pingLunLabel.text = String(self.pingLunSource.count)
             let userid = NSUserDefaults.standardUserDefaults()
             let uid = userid.stringForKey("userid")
-            if(self.DianzanSource.count == 0){
+            if(self.dianzanSource.count == 0){
                 dianZanBtn.selected = false
                 dianZanBtn.setImage(UIImage(named: "zan0"), forState: .Normal)
                 dianZanPeople.text = ""
             }
-            if(self.DianzanSource.count>0 && self.DianzanSource.count<=6){
-                for i in 0..<self.DianzanSource.count{
-                    let dianzanInfo = self.DianzanSource.dianzanlist[i]
+            if(self.dianzanSource.count>0 && self.dianzanSource.count<=6){
+                for i in 0..<self.dianzanSource.count{
+                    let dianzanInfo = self.dianzanSource.dianzanlist[i]
                     if(dianzanInfo.dianZanId == uid){
                         dianZanBtn.selected = true
                         dianZanBtn.setImage(UIImage(named: "zan2"), forState: .Normal)
@@ -277,9 +287,9 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     dianZanPeople.text = "\(peopleArray)觉得很赞"
                 }
             }
-            if(self.DianzanSource.count>6){
-                for i in 0..<self.DianzanSource.count{
-                    let dianzanInfo = self.DianzanSource.dianzanlist[i]
+            if(self.dianzanSource.count>6){
+                for i in 0..<self.dianzanSource.count{
+                    let dianzanInfo = self.dianzanSource.dianzanlist[i]
                     if(dianzanInfo.dianZanId == uid){
                         dianZanBtn.selected = true
                         dianZanBtn.setImage(UIImage(named: "zan2"), forState: .Normal)
@@ -290,21 +300,32 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     }
                 }
                 for i in 0...5{
-                    let dianzanInfo = self.DianzanSource.dianzanlist[i]
+                    let dianzanInfo = self.dianzanSource.dianzanlist[i]
                     arrayPeople.append(dianzanInfo.dianZanName!)
                     dianZanPeople.font = UIFont.systemFontOfSize(15)
                     dianZanPeople.textColor = UIColor.grayColor()
                     peopleArray = arrayPeople.joinWithSeparator(",")
                 }
-                dianZanPeople.text = "\(peopleArray)等\(self.DianzanSource.count)人觉得很赞"
+                dianZanPeople.text = "\(peopleArray)等\(self.dianzanSource.count)人觉得很赞"
                 
             }
             cell.contentView.addSubview(dianZanBtn)
             cell.contentView.addSubview(dianZanPeople)
+            cell.contentView.addSubview(pingLun)
+            cell.contentView.addSubview(pingLunLabel)
             return cell
             
         }
         return cell1
+    }
+    
+    func PingLun(sender:UIButton){
+        let blogComment = BlogCommentViewController()
+        let bloginfo = self.blogSource.objectlist[sender.tag]
+        blogComment.pingLunSource = CommentList(bloginfo.pingLunList!)
+        print(sender.titleLabel?.text)
+        blogComment.mid = sender.titleLabel?.text!
+        self.navigationController?.pushViewController(blogComment, animated: true)
     }
 
     func DianZan(sender:UIButton){

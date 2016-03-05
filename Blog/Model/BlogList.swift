@@ -36,6 +36,7 @@ class BlogInfo: JSONJoy{
     var photo:String?
     var piclist:JSONDecoder?
     var dianzanlist:JSONDecoder?
+    var pingLunList:JSONDecoder?
     var mid:String?
     init() {
         
@@ -44,6 +45,7 @@ class BlogInfo: JSONJoy{
         content = decoder["content"].string
         piclist = decoder["pic"]
         dianzanlist = decoder["like"]
+        pingLunList = decoder["comment"]
         name = decoder["name"].string
         write_time = decoder["write_time"].string
         photo = decoder["photo"].string
