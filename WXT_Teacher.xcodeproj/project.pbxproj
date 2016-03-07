@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AFC09C14012FD90FA811DB41 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F387A67369CB0717891AF5C /* Pods.framework */; };
+		EA20A69D1C8D663F001AAAAD /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A69C1C8D663F001AAAAD /* NewsList.swift */; };
 		EA7D9D111C83DE8B00056B22 /* XKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D9D101C83DE8B00056B22 /* XKeyBoard.m */; };
 		EA94898C1C83E4FD008682E6 /* NewBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94898B1C83E4FD008682E6 /* NewBlogViewController.swift */; };
 		EA94898E1C83E8EE008682E6 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94898D1C83E8EE008682E6 /* ImageCollectionViewCell.swift */; };
@@ -169,6 +170,7 @@
 /* Begin PBXFileReference section */
 		7CC3BC55E673A0F4FFA674CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7F387A67369CB0717891AF5C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA20A69C1C8D663F001AAAAD /* NewsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
 		EA7D9D0F1C83DE8B00056B22 /* XKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKeyBoard.h; sourceTree = "<group>"; };
 		EA7D9D101C83DE8B00056B22 /* XKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKeyBoard.m; sourceTree = "<group>"; };
 		EA94898B1C83E4FD008682E6 /* NewBlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBlogViewController.swift; sourceTree = "<group>"; };
@@ -698,8 +700,8 @@
 		EAFAE62D1C82E50900A8BAF2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EAFAE62E1C82E50900A8BAF2 /* NewsInfoViewController.swift */,
 				EAFAE62F1C82E50900A8BAF2 /* NewsViewController.swift */,
+				EAFAE62E1C82E50900A8BAF2 /* NewsInfoViewController.swift */,
 				EAFAE6301C82E50900A8BAF2 /* Readme */,
 			);
 			path = Controller;
@@ -709,6 +711,7 @@
 			isa = PBXGroup;
 			children = (
 				EAFAE6321C82E50900A8BAF2 /* Readme */,
+				EA20A69C1C8D663F001AAAAD /* NewsList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1213,6 +1216,7 @@
 				EAFAE7091C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				EAFAE5D31C82E4D500A8BAF2 /* AppDelegate.swift in Sources */,
 				EAFAE7051C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
+				EA20A69D1C8D663F001AAAAD /* NewsList.swift in Sources */,
 				EAFAE6E41C82E50900A8BAF2 /* View+SnapKit.swift in Sources */,
 				EAFAE6A41C82E50900A8BAF2 /* BlogViewController.swift in Sources */,
 				EAFAE7271C82E50900A8BAF2 /* ItemCell.swift in Sources */,

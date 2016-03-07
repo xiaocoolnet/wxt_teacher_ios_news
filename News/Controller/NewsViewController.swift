@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Alamofire
+import MBProgressHUD
+import XWSwiftRefresh
 
 class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     var dataTableView = UITableView()
+    var newsSource = NewsList()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "消息"
@@ -24,7 +28,46 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
         self.navigationItem.leftBarButtonItem = leftItem
         self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(dataTableView)
-        
+        self.DropDownUpdate()
+    }
+    
+    func DropDownUpdate(){
+        self.dataTableView.headerView = XWRefreshNormalHeader(target: self, action: "GetDate")
+        self.dataTableView.reloadData()
+        self.dataTableView.headerView?.beginRefreshing()
+    }
+    
+    func GetDate(){
+        let url = apiUrl+"ReceiveidMessage"
+        let userid = NSUserDefaults.standardUserDefaults()
+        let uid = userid.stringForKey("userid")
+        let param = [
+            "userid":uid!
+        ]
+        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                print("request是")
+                print(request!)
+                print("====================")
+                let status = Http(JSONDecoder(json!))
+                print("状态是")
+                print(status.status)
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                }
+                if(status.status == "success"){
+                    self.newsSource = NewsList(status.data!)
+                    self.dataTableView.reloadData()
+                    self.dataTableView.headerView?.endRefreshing()
+                }
+            }
+        }
     }
     
     func RightBtn(){
@@ -53,7 +96,7 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
             return 6
         }
        if(section == 1){
-            return 10
+            return newsSource.count
         }
         return 0
     }
@@ -100,8 +143,9 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
             }
         }
         if(indexPath.section == 1){
-            cell.contextLabel.text = "hahahahahaa阿斯达斯"
-            cell.nameLabel.text = "张老师"
+            let newsInfo = newsSource.objectlist[indexPath.row]
+            cell.contextLabel.text = newsInfo.message_content!
+            cell.nameLabel.text = newsInfo.sendName!
             cell.avatorImage.image = UIImage(named: "Logo")
             return cell
         }
@@ -109,10 +153,13 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.dataTableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let newsInfo = NewsInfoViewController()
-        self.navigationController?.pushViewController(newsInfo, animated: true)
-        newsInfo.tabBarController?.tabBar.hidden = true
+        if(indexPath.section == 1){
+            self.dataTableView.deselectRowAtIndexPath(indexPath, animated: true)
+            let newsInfo = NewsInfoViewController()
+            self.navigationController?.pushViewController(newsInfo, animated: true)
+            newsInfo.newsInfo = self.newsSource.objectlist[indexPath.row]
+            newsInfo.tabBarController?.tabBar.hidden = true
+        }
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

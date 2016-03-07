@@ -14,7 +14,6 @@ import XWSwiftRefresh
 
 class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
-    
     let blogTableView = UITableView()
     var blogSource = BlogList()
     var pciSource = PictureList()
@@ -23,12 +22,14 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var remoteThumbImage = [NSIndexPath:[String]]()
     var remoteImage :[String] = []
     var sectionInt = Int()
-    
-    //var arrayPeople = NSMutableArray()
     var peopleArray:String?
+    
     override func viewDidLoad() {
         self.title = "动态"
         super.viewDidLoad()
+        let imageView = UIImageView(frame: CGRectMake(0, 0, self.blogTableView.bounds.width, 100))
+        imageView.image = UIImage(named: "ba1ec0437cc8d5367a516ff69b01ea89")
+        imageView.contentMode = .ScaleAspectFill
         let rightItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("NewBlog"))
         self.navigationItem.rightBarButtonItem = rightItem
         blogTableView.delegate = self
@@ -307,14 +308,12 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     peopleArray = arrayPeople.joinWithSeparator(",")
                 }
                 dianZanPeople.text = "\(peopleArray)等\(self.dianzanSource.count)人觉得很赞"
-                
             }
             cell.contentView.addSubview(dianZanBtn)
             cell.contentView.addSubview(dianZanPeople)
             cell.contentView.addSubview(pingLun)
             cell.contentView.addSubview(pingLunLabel)
             return cell
-            
         }
         return cell1
     }
@@ -339,9 +338,7 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             GetDianZanDate(sender.tag)
             sender.setImage(UIImage(named: "zan2"), forState: .Normal)
             self.GetDate()
-
         }
-
     }
     
     func QuXiaoDianZan(mid:Int){
@@ -421,7 +418,6 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
     }
 
-    
     func NewBlog(){
         let newBlog = NewBlogViewController()
         self.navigationController?.pushViewController(newBlog, animated: true)
