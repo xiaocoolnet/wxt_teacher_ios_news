@@ -37,7 +37,10 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
         self.view.addSubview(mineTableView)
         self.mineTableView.tableFooterView = exitBtn
         self.mineTableView.tableFooterView!.frame = CGRectMake(0, 760, 300, 38)
-        //self.mineTableView.tableFooterView!.center.x = self.view.center.x
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.tabBarController?.tabBar.hidden = false
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -115,6 +118,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
             if(indexPath.row == 1){
                 let defaultCell = tableView.dequeueReusableCellWithIdentifier("MineCell", forIndexPath: indexPath) as! MineTableViewCell
                 defaultCell.selectionStyle = .None
+                defaultCell.accessoryType = .DisclosureIndicator
                 defaultCell.iconImage.image = UIImage(named: "修改密码")
                 defaultCell.contentLabel.text = "修改密码"
                 return defaultCell
@@ -144,6 +148,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
             if indexPath.row == 0{
                 let defaultCell = tableView.dequeueReusableCellWithIdentifier("MineCell", forIndexPath: indexPath) as! MineTableViewCell
                 defaultCell.selectionStyle = .None
+                defaultCell.accessoryType = .DisclosureIndicator
                 defaultCell.iconImage.image = UIImage(named: "扫一扫打卡")
                 defaultCell.contentLabel.text = "扫一扫打卡"
                 return defaultCell
@@ -151,6 +156,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
             if indexPath.row == 1{
                 let defaultCell = tableView.dequeueReusableCellWithIdentifier("MineCell", forIndexPath: indexPath) as! MineTableViewCell
                 defaultCell.selectionStyle = .None
+                defaultCell.accessoryType = .DisclosureIndicator
                 defaultCell.iconImage.image = UIImage(named: "刷卡设置")
                 defaultCell.contentLabel.text = "刷卡设置"
                 return defaultCell
@@ -158,6 +164,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
             if indexPath.row == 2{
                 let defaultCell = tableView.dequeueReusableCellWithIdentifier("MineCell", forIndexPath: indexPath) as! MineTableViewCell
                 defaultCell.selectionStyle = .None
+                defaultCell.accessoryType = .DisclosureIndicator
                 defaultCell.iconImage.image = UIImage(named: "系统公告")
                 defaultCell.contentLabel.text = "系统公告"
                 return defaultCell
@@ -165,6 +172,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
             if indexPath.row == 3{
                 let defaultCell = tableView.dequeueReusableCellWithIdentifier("MineCell", forIndexPath: indexPath) as! MineTableViewCell
                 defaultCell.selectionStyle = .None
+                defaultCell.accessoryType = .DisclosureIndicator
                 defaultCell.iconImage.image = UIImage(named: "使用帮助")
                 defaultCell.contentLabel.text = "使用帮助"
                 return defaultCell
@@ -172,6 +180,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
             if indexPath.row == 4{
                 let defaultCell = tableView.dequeueReusableCellWithIdentifier("MineCell", forIndexPath: indexPath) as! MineTableViewCell
                 defaultCell.selectionStyle = .None
+                defaultCell.accessoryType = .DisclosureIndicator
                 defaultCell.iconImage.image = UIImage(named: "意见反馈")
                 defaultCell.contentLabel.text = "意见反馈"
                 return defaultCell
@@ -181,6 +190,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
             if indexPath.row == 0{
                 let defaultCell = tableView.dequeueReusableCellWithIdentifier("MineCell", forIndexPath: indexPath) as! MineTableViewCell
                 defaultCell.selectionStyle = .None
+                defaultCell.accessoryType = .DisclosureIndicator
                 defaultCell.iconImage.image = UIImage(named: "维护人员")
                 defaultCell.contentLabel.text = "维护人员"
                 return defaultCell
@@ -188,6 +198,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
             if indexPath.row == 1{
                 let defaultCell = tableView.dequeueReusableCellWithIdentifier("MineCell", forIndexPath: indexPath) as! MineTableViewCell
                 defaultCell.selectionStyle = .None
+                defaultCell.accessoryType = .DisclosureIndicator
                 defaultCell.iconImage.image = UIImage(named: "在线客服")
                 defaultCell.contentLabel.text = "在线客服"
                 return defaultCell
@@ -195,6 +206,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
             if indexPath.row == 2{
                 let defaultCell = tableView.dequeueReusableCellWithIdentifier("MineCell", forIndexPath: indexPath) as! MineTableViewCell
                 defaultCell.selectionStyle = .None
+                defaultCell.accessoryType = .DisclosureIndicator
                 defaultCell.iconImage.image = UIImage(named: "清除缓存")
                 defaultCell.contentLabel.text = "清除缓存"
                 return defaultCell
@@ -202,6 +214,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
             if indexPath.row == 3{
                 let defaultCell = tableView.dequeueReusableCellWithIdentifier("MineCell", forIndexPath: indexPath) as! MineTableViewCell
                 defaultCell.selectionStyle = .None
+                defaultCell.accessoryType = .DisclosureIndicator
                 defaultCell.iconImage.image = UIImage(named: "二维码下载")
                 defaultCell.contentLabel.text = "二维码下载"
                 return defaultCell
@@ -212,7 +225,55 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if(indexPath.section == 0){
-            print("点击了第一个section")
+            if(indexPath.row == 1){
+                let ChangePassView = ChangePassViewController()
+                self.navigationController?.pushViewController(ChangePassView, animated: true)
+                ChangePassView.tabBarController?.tabBar.hidden = true
+            }
+        }
+        if(indexPath.section == 2){
+            if(indexPath.row == 0){
+                let SaoYiSaoView = SaoYiSaoViewController()
+                self.navigationController?.pushViewController(SaoYiSaoView, animated: true)
+                SaoYiSaoView.tabBarController?.tabBar.hidden = true
+            }
+            if(indexPath.row == 1){
+                let ChangePassView = ChangePassViewController()
+                self.navigationController?.pushViewController(ChangePassView, animated: true)
+                ChangePassView.tabBarController?.tabBar.hidden = true
+            }
+            if(indexPath.row == 2){
+                let ChangePassView = ChangePassViewController()
+                self.navigationController?.pushViewController(ChangePassView, animated: true)
+                ChangePassView.tabBarController?.tabBar.hidden = true
+            }
+            if(indexPath.row == 3){
+                let  HelpView = HelpTableViewController()
+                self.navigationController?.pushViewController(HelpView, animated: true)
+                HelpView.tabBarController?.tabBar.hidden = true
+            }
+            if(indexPath.row == 4){
+                let ChangePassView = ChangePassViewController()
+                self.navigationController?.pushViewController(ChangePassView, animated: true)
+                ChangePassView.tabBarController?.tabBar.hidden = true
+            }
+        }
+        if(indexPath.section == 3){
+            if(indexPath.row == 0){
+                let ChangePassView = ChangePassViewController()
+                self.navigationController?.pushViewController(ChangePassView, animated: true)
+                ChangePassView.tabBarController?.tabBar.hidden = true
+            }
+            if(indexPath.row == 1){
+                let ServerView = ServerTableViewController()
+                self.navigationController?.pushViewController(ServerView, animated: true)
+                ServerView.tabBarController?.tabBar.hidden = true
+            }
+            if(indexPath.row == 3){
+                let ChangePassView = ChangePassViewController()
+                self.navigationController?.pushViewController(ChangePassView, animated: true)
+                ChangePassView.tabBarController?.tabBar.hidden = true
+            }
         }
     }
     

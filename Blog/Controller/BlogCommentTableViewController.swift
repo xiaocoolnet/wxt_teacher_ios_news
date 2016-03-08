@@ -19,16 +19,23 @@ class BlogCommentViewController: UIViewController,UITableViewDelegate,UITableVie
         self.title = "评论列表"
         if(pingLunSource.count == 0){
             let tiShiLable = UILabel()
+//            tiShiLable.frame = CGRectMake(0, 0, 150, 40)
+//            tiShiLable.font = UIFont.systemFontOfSize(20)
+//            tiShiLable.textColor = UIColor.whiteColor()
+//            tiShiLable.backgroundColor = UIColor(red: 54.0 / 255.0, green: 190.0 / 255.0, blue: 100.0 / 255.0, alpha: 1.0)
+//            tiShiLable.center = self.view.center
+//            tiShiLable.layer.cornerRadius = 5
+//            tiShiLable.layer.masksToBounds = true
+//            tiShiLable.layer.borderWidth = 1.5
+//            tiShiLable.layer.borderColor = UIColor.blackColor().CGColor
+//            tiShiLable.text = "还没有评论～"
+//            tiShiLable.textAlignment = .Center
+//            self.view.addSubview(tiShiLable)
+            self.view.backgroundColor = UIColor.grayColor()
             tiShiLable.frame = CGRectMake(0, 0, 150, 40)
-            tiShiLable.font = UIFont.systemFontOfSize(20)
-            tiShiLable.textColor = UIColor.whiteColor()
-            tiShiLable.backgroundColor = UIColor(red: 54.0 / 255.0, green: 190.0 / 255.0, blue: 100.0 / 255.0, alpha: 1.0)
             tiShiLable.center = self.view.center
-            tiShiLable.layer.cornerRadius = 5
-            tiShiLable.layer.masksToBounds = true
-            tiShiLable.layer.borderWidth = 1.5
-            tiShiLable.layer.borderColor = UIColor.blackColor().CGColor
             tiShiLable.text = "还没有评论～"
+            tiShiLable.textColor = UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1)
             tiShiLable.textAlignment = .Center
             self.view.addSubview(tiShiLable)
         }

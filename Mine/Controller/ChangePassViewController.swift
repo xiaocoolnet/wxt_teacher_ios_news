@@ -1,22 +1,19 @@
 //
-//  ScrollViewController.swift
-//  WXT_Teachers
+//  ChangePassViewController.swift
+//  WXT_Teacher
 //
-//  Created by 李春波 on 16/2/24.
+//  Created by 李春波 on 16/3/8.
 //  Copyright © 2016年 北京校酷网络科技有限公司. All rights reserved.
 //
 
 import UIKit
 
-class ScrollViewController: UIViewController {
+class ChangePassViewController: UIViewController {
 
-    var btn = UIButton()
     override func viewDidLoad() {
         super.viewDidLoad()
-        btn.frame = CGRectMake(0, 0, 10, 23)
-        btn.setTitle("te", forState: UIControlState.Normal)
-        btn.backgroundColor = UIColor.redColor()
-        self.view.addSubview(btn)
+        self.title = "修改密码"
+        self.view.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
     }
 

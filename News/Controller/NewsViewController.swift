@@ -18,7 +18,7 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "消息"
-        dataTableView.frame = CGRectMake(0, 60, self.view.bounds.width, self.view.bounds.height - 90)
+        dataTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64 - 44)
         dataTableView.delegate = self
         dataTableView.dataSource = self
         dataTableView.registerClass(NewsTableViewCell.self, forCellReuseIdentifier: "NewsCell")

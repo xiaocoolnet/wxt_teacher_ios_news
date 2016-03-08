@@ -21,10 +21,17 @@ class NewsInfoViewController: UIViewController,UITableViewDelegate,UITableViewDa
         newsInfoTableView.dataSource = self
         newsInfoTableView.scrollEnabled = false
         self.automaticallyAdjustsScrollViewInsets = false
+        let rightItem = UIBarButtonItem(title: "回复", style: UIBarButtonItemStyle.Done, target: self, action: Selector("ReviceMessages"))
+        self.navigationItem.rightBarButtonItem = rightItem
         self.view.addSubview(newsInfoTableView)
-        // Do any additional setup after loading the view.
     }
 
+    func ReviceMessages(){
+        let reviceView = ReviceMessagesViewController()
+        reviceView.newsInfo = self.newsInfo
+        self.navigationController?.pushViewController(reviceView, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

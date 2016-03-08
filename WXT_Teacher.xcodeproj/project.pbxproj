@@ -17,6 +17,11 @@
 		EAA578031C8A7BDA00E9A95D /* NewCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA578021C8A7BDA00E9A95D /* NewCommentViewController.swift */; };
 		EAC8DE701C8974AC00C2CEE6 /* BlogCommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8DE6F1C8974AC00C2CEE6 /* BlogCommentTableViewController.swift */; };
 		EAC8DE721C8978B300C2CEE6 /* CommentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8DE711C8978B300C2CEE6 /* CommentList.swift */; };
+		EACF4D9A1C8E6B8800C777D6 /* ReviceMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF4D991C8E6B8800C777D6 /* ReviceMessagesViewController.swift */; };
+		EACF4D9C1C8E794300C777D6 /* ChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF4D9B1C8E794300C777D6 /* ChangePassViewController.swift */; };
+		EACF4D9E1C8E7F2800C777D6 /* SaoYiSaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF4D9D1C8E7F2800C777D6 /* SaoYiSaoViewController.swift */; };
+		EACF4DA11C8E9F4000C777D6 /* ServerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF4D9F1C8E9F4000C777D6 /* ServerTableViewController.swift */; };
+		EACF4DA21C8E9F4000C777D6 /* HelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF4DA01C8E9F4000C777D6 /* HelpTableViewController.swift */; };
 		EACFF6361C86885800615394 /* DianzanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFF6341C86885800615394 /* DianzanTableViewCell.swift */; };
 		EAEA5F021C86C51A00DD362E /* MineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA5F011C86C51A00DD362E /* MineModel.swift */; };
 		EAFAE5D31C82E4D500A8BAF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE5D21C82E4D500A8BAF2 /* AppDelegate.swift */; };
@@ -33,7 +38,6 @@
 		EAFAE6AC1C82E50900A8BAF2 /* Readme in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE5F01C82E50900A8BAF2 /* Readme */; };
 		EAFAE6AD1C82E50900A8BAF2 /* FunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE5F31C82E50900A8BAF2 /* FunctionViewController.swift */; };
 		EAFAE6AE1C82E50900A8BAF2 /* Readme in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE5F41C82E50900A8BAF2 /* Readme */; };
-		EAFAE6AF1C82E50900A8BAF2 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE5F51C82E50900A8BAF2 /* ScrollViewController.swift */; };
 		EAFAE6B01C82E50900A8BAF2 /* Readme in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE5F71C82E50900A8BAF2 /* Readme */; };
 		EAFAE6B11C82E50900A8BAF2 /* FunSecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE5F91C82E50900A8BAF2 /* FunSecondTableViewCell.swift */; };
 		EAFAE6B21C82E50900A8BAF2 /* FunTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE5FA1C82E50900A8BAF2 /* FunTableViewCell.swift */; };
@@ -182,6 +186,11 @@
 		EAA578021C8A7BDA00E9A95D /* NewCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentViewController.swift; sourceTree = "<group>"; };
 		EAC8DE6F1C8974AC00C2CEE6 /* BlogCommentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogCommentTableViewController.swift; sourceTree = "<group>"; };
 		EAC8DE711C8978B300C2CEE6 /* CommentList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentList.swift; sourceTree = "<group>"; };
+		EACF4D991C8E6B8800C777D6 /* ReviceMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviceMessagesViewController.swift; sourceTree = "<group>"; };
+		EACF4D9B1C8E794300C777D6 /* ChangePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassViewController.swift; sourceTree = "<group>"; };
+		EACF4D9D1C8E7F2800C777D6 /* SaoYiSaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaoYiSaoViewController.swift; sourceTree = "<group>"; };
+		EACF4D9F1C8E9F4000C777D6 /* ServerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServerTableViewController.swift; path = ../ServerTableViewController.swift; sourceTree = "<group>"; };
+		EACF4DA01C8E9F4000C777D6 /* HelpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpTableViewController.swift; path = ../HelpTableViewController.swift; sourceTree = "<group>"; };
 		EACFF6341C86885800615394 /* DianzanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DianzanTableViewCell.swift; sourceTree = "<group>"; };
 		EAEA5F011C86C51A00DD362E /* MineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineModel.swift; sourceTree = "<group>"; };
 		EAFAE5CF1C82E4D500A8BAF2 /* WXT_Teacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXT_Teacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,7 +209,6 @@
 		EAFAE5F01C82E50900A8BAF2 /* Readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme; sourceTree = "<group>"; };
 		EAFAE5F31C82E50900A8BAF2 /* FunctionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionViewController.swift; sourceTree = "<group>"; };
 		EAFAE5F41C82E50900A8BAF2 /* Readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme; sourceTree = "<group>"; };
-		EAFAE5F51C82E50900A8BAF2 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		EAFAE5F71C82E50900A8BAF2 /* Readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme; sourceTree = "<group>"; };
 		EAFAE5F91C82E50900A8BAF2 /* FunSecondTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunSecondTableViewCell.swift; sourceTree = "<group>"; };
 		EAFAE5FA1C82E50900A8BAF2 /* FunTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunTableViewCell.swift; sourceTree = "<group>"; };
@@ -468,9 +476,8 @@
 		EAFAE5F21C82E50900A8BAF2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EAFAE5F31C82E50900A8BAF2 /* FunctionViewController.swift */,
 				EAFAE5F41C82E50900A8BAF2 /* Readme */,
-				EAFAE5F51C82E50900A8BAF2 /* ScrollViewController.swift */,
+				EAFAE5F31C82E50900A8BAF2 /* FunctionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -623,8 +630,12 @@
 		EAFAE6181C82E50900A8BAF2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EAFAE6191C82E50900A8BAF2 /* MineMainViewController.swift */,
 				EAFAE61A1C82E50900A8BAF2 /* Readme */,
+				EACF4D9F1C8E9F4000C777D6 /* ServerTableViewController.swift */,
+				EACF4DA01C8E9F4000C777D6 /* HelpTableViewController.swift */,
+				EAFAE6191C82E50900A8BAF2 /* MineMainViewController.swift */,
+				EACF4D9B1C8E794300C777D6 /* ChangePassViewController.swift */,
+				EACF4D9D1C8E7F2800C777D6 /* SaoYiSaoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -703,6 +714,7 @@
 				EAFAE62F1C82E50900A8BAF2 /* NewsViewController.swift */,
 				EAFAE62E1C82E50900A8BAF2 /* NewsInfoViewController.swift */,
 				EAFAE6301C82E50900A8BAF2 /* Readme */,
+				EACF4D991C8E6B8800C777D6 /* ReviceMessagesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1126,6 +1138,7 @@
 				EAFAE6B11C82E50900A8BAF2 /* FunSecondTableViewCell.swift in Sources */,
 				EAFAE72D1C82E50900A8BAF2 /* JSONJoy.swift in Sources */,
 				EAFAE6E21C82E50900A8BAF2 /* SnapKit.swift in Sources */,
+				EACF4DA11C8E9F4000C777D6 /* ServerTableViewController.swift in Sources */,
 				EAFAE6A71C82E50900A8BAF2 /* DianZanList.swift in Sources */,
 				EAFAE71A1C82E50900A8BAF2 /* NVActivityIndicatorView.swift in Sources */,
 				EAFAE6CB1C82E50900A8BAF2 /* YuanDingViewController.swift in Sources */,
@@ -1153,6 +1166,7 @@
 				EAFAE6DC1C82E50900A8BAF2 /* ConstraintItem.swift in Sources */,
 				EAFAE7171C82E50900A8BAF2 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				EAFAE6F31C82E50900A8BAF2 /* NSHTTPURLResponse+Haneke.swift in Sources */,
+				EACF4DA21C8E9F4000C777D6 /* HelpTableViewController.swift in Sources */,
 				EAFAE6D71C82E50900A8BAF2 /* FlexibleTableViewCell.swift in Sources */,
 				EAFAE6F91C82E50900A8BAF2 /* UIView+Haneke.swift in Sources */,
 				EAFAE70C1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
@@ -1164,6 +1178,8 @@
 				EAFAE6BE1C82E50900A8BAF2 /* RegisterGetCodeViewController.swift in Sources */,
 				EAFAE6DA1C82E50900A8BAF2 /* ConstraintAttributes.swift in Sources */,
 				EAFAE70F1C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
+				EACF4D9E1C8E7F2800C777D6 /* SaoYiSaoViewController.swift in Sources */,
+				EACF4D9A1C8E6B8800C777D6 /* ReviceMessagesViewController.swift in Sources */,
 				EAC8DE701C8974AC00C2CEE6 /* BlogCommentTableViewController.swift in Sources */,
 				EAFAE6F81C82E50900A8BAF2 /* UIImageView+Haneke.swift in Sources */,
 				EAFAE70D1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBlank.swift in Sources */,
@@ -1197,7 +1213,6 @@
 				EAFAE7101C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				EAFAE7201C82E50900A8BAF2 /* PhotoBrowser+Main.swift in Sources */,
 				EACFF6361C86885800615394 /* DianzanTableViewCell.swift in Sources */,
-				EAFAE6AF1C82E50900A8BAF2 /* ScrollViewController.swift in Sources */,
 				EAFAE6D01C82E50900A8BAF2 /* NewsViewController.swift in Sources */,
 				EAFAE7151C82E50900A8BAF2 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				EAFAE6FE1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
@@ -1218,6 +1233,7 @@
 				EAFAE7051C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
 				EA20A69D1C8D663F001AAAAD /* NewsList.swift in Sources */,
 				EAFAE6E41C82E50900A8BAF2 /* View+SnapKit.swift in Sources */,
+				EACF4D9C1C8E794300C777D6 /* ChangePassViewController.swift in Sources */,
 				EAFAE6A41C82E50900A8BAF2 /* BlogViewController.swift in Sources */,
 				EAFAE7271C82E50900A8BAF2 /* ItemCell.swift in Sources */,
 				EAEA5F021C86C51A00DD362E /* MineModel.swift in Sources */,

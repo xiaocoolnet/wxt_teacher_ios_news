@@ -43,7 +43,7 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.DropDownUpdate()
     }
     override func viewWillAppear(animated: Bool) {
-        self.DropDownUpdate()
+        self.GetDate()
         self.tabBarController?.tabBar.hidden = false
     }
     
