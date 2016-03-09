@@ -36,7 +36,6 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         blogTableView.dataSource = self
         blogTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64 - 44)
         blogTableView.registerClass(BlogTableViewCell.self, forCellReuseIdentifier: "blogCell")
-        
         self.automaticallyAdjustsScrollViewInsets = false
         self.tabBarController?.tabBar.hidden = false
         self.view.addSubview(blogTableView)

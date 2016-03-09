@@ -93,6 +93,10 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.tabBarController?.tabBar.hidden = false
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 6
     }
@@ -276,6 +280,7 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 btn2.layer.masksToBounds = true
                 btn2.setBackgroundImage(UIImage(named: "宝宝相册"), forState: UIControlState.Normal)
                 btn2.center.x = (viewWidth/8)*3
+                btn2.addTarget(self, action: Selector("PhotoView"), forControlEvents: .TouchUpInside)
                 btn3.frame = CGRectMake(0, 16, 44, 44)
                 btn3.layer.cornerRadius = 22
                 btn3.layer.masksToBounds = true
@@ -286,6 +291,7 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 btn4.layer.masksToBounds = true
                 btn4.setBackgroundImage(UIImage(named: "代接确认"), forState: UIControlState.Normal)
                 btn4.center.x = (viewWidth/8)*7
+                btn4.addTarget(self, action: Selector("DaiJieView"), forControlEvents: .TouchUpInside)
                 btn5.frame = CGRectMake(0, 100, 44, 44)
                 btn5.layer.cornerRadius = 22
                 btn5.layer.masksToBounds = true
@@ -558,6 +564,16 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
         }
 
         return cell
+    }
+    
+    func DaiJieView(){
+        let DaiJie = DaiJieViewController()
+        self.navigationController?.pushViewController(DaiJie, animated: true)
+    }
+    
+    func PhotoView(){
+        let Photo = PhotoViewController()
+        self.navigationController?.pushViewController(Photo, animated: true)
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

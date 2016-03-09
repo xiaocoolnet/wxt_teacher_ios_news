@@ -15,6 +15,10 @@
 		EA9489911C8413E8008682E6 /* BRPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9489901C8413E8008682E6 /* BRPlaceholderTextView.m */; };
 		EA9489951C84266F008682E6 /* ConnectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9489941C84266F008682E6 /* ConnectModel.m */; };
 		EAA578031C8A7BDA00E9A95D /* NewCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA578021C8A7BDA00E9A95D /* NewCommentViewController.swift */; };
+		EAB2EECF1C8FAE5500693D04 /* DaiJieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2EECE1C8FAE5500693D04 /* DaiJieViewController.swift */; };
+		EAB2EED11C8FB1CF00693D04 /* DaiJieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2EED01C8FB1CF00693D04 /* DaiJieTableViewCell.swift */; };
+		EAB2EED31C90032500693D04 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2EED21C90032500693D04 /* PhotoViewController.swift */; };
+		EAB2EED51C90035B00693D04 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2EED41C90035B00693D04 /* PhotoCollectionViewCell.swift */; };
 		EAC8DE701C8974AC00C2CEE6 /* BlogCommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8DE6F1C8974AC00C2CEE6 /* BlogCommentTableViewController.swift */; };
 		EAC8DE721C8978B300C2CEE6 /* CommentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8DE711C8978B300C2CEE6 /* CommentList.swift */; };
 		EACF4D9A1C8E6B8800C777D6 /* ReviceMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF4D991C8E6B8800C777D6 /* ReviceMessagesViewController.swift */; };
@@ -184,6 +188,10 @@
 		EA9489931C84266F008682E6 /* ConnectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectModel.h; sourceTree = "<group>"; };
 		EA9489941C84266F008682E6 /* ConnectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectModel.m; sourceTree = "<group>"; };
 		EAA578021C8A7BDA00E9A95D /* NewCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentViewController.swift; sourceTree = "<group>"; };
+		EAB2EECE1C8FAE5500693D04 /* DaiJieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaiJieViewController.swift; sourceTree = "<group>"; };
+		EAB2EED01C8FB1CF00693D04 /* DaiJieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaiJieTableViewCell.swift; sourceTree = "<group>"; };
+		EAB2EED21C90032500693D04 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		EAB2EED41C90035B00693D04 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		EAC8DE6F1C8974AC00C2CEE6 /* BlogCommentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogCommentTableViewController.swift; sourceTree = "<group>"; };
 		EAC8DE711C8978B300C2CEE6 /* CommentList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentList.swift; sourceTree = "<group>"; };
 		EACF4D991C8E6B8800C777D6 /* ReviceMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviceMessagesViewController.swift; sourceTree = "<group>"; };
@@ -478,6 +486,8 @@
 			children = (
 				EAFAE5F41C82E50900A8BAF2 /* Readme */,
 				EAFAE5F31C82E50900A8BAF2 /* FunctionViewController.swift */,
+				EAB2EECE1C8FAE5500693D04 /* DaiJieViewController.swift */,
+				EAB2EED21C90032500693D04 /* PhotoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -493,9 +503,11 @@
 		EAFAE5F81C82E50900A8BAF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EAFAE5FB1C82E50900A8BAF2 /* Readme */,
 				EAFAE5F91C82E50900A8BAF2 /* FunSecondTableViewCell.swift */,
 				EAFAE5FA1C82E50900A8BAF2 /* FunTableViewCell.swift */,
-				EAFAE5FB1C82E50900A8BAF2 /* Readme */,
+				EAB2EED01C8FB1CF00693D04 /* DaiJieTableViewCell.swift */,
+				EAB2EED41C90035B00693D04 /* PhotoCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1183,10 +1195,12 @@
 				EAC8DE701C8974AC00C2CEE6 /* BlogCommentTableViewController.swift in Sources */,
 				EAFAE6F81C82E50900A8BAF2 /* UIImageView+Haneke.swift in Sources */,
 				EAFAE70D1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBlank.swift in Sources */,
+				EAB2EED11C8FB1CF00693D04 /* DaiJieTableViewCell.swift in Sources */,
 				EAFAE6EA1C82E50900A8BAF2 /* DiskCache.swift in Sources */,
 				EAFAE7131C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				EAFAE70A1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				EAFAE6E11C82E50900A8BAF2 /* LayoutConstraint.swift in Sources */,
+				EAB2EED31C90032500693D04 /* PhotoViewController.swift in Sources */,
 				EAFAE7001C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
 				EAFAE71E1C82E50900A8BAF2 /* PhotoBrowser+HUD.swift in Sources */,
 				EAFAE6B51C82E50900A8BAF2 /* ForgetPasswordViewController.swift in Sources */,
@@ -1225,6 +1239,7 @@
 				EAFAE6DD1C82E50900A8BAF2 /* ConstraintMaker.swift in Sources */,
 				EAFAE7021C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				EAFAE6B41C82E50900A8BAF2 /* ForgetPasswordSetViewController.swift in Sources */,
+				EAB2EED51C90035B00693D04 /* PhotoCollectionViewCell.swift in Sources */,
 				EAFAE7041C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
 				EAFAE6D61C82E50900A8BAF2 /* FlexibleTableView.swift in Sources */,
 				EAFAE6C91C82E50900A8BAF2 /* QunLiaoViewController.swift in Sources */,
@@ -1236,6 +1251,7 @@
 				EACF4D9C1C8E794300C777D6 /* ChangePassViewController.swift in Sources */,
 				EAFAE6A41C82E50900A8BAF2 /* BlogViewController.swift in Sources */,
 				EAFAE7271C82E50900A8BAF2 /* ItemCell.swift in Sources */,
+				EAB2EECF1C8FAE5500693D04 /* DaiJieViewController.swift in Sources */,
 				EAEA5F021C86C51A00DD362E /* MineModel.swift in Sources */,
 				EAFAE71D1C82E50900A8BAF2 /* PhotoBrowser+CollectionViewExtend.swift in Sources */,
 				EAFAE6C51C82E50900A8BAF2 /* MineTableViewCell.swift in Sources */,
