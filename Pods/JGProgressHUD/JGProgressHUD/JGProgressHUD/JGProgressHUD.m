@@ -114,7 +114,7 @@ static CGRect keyboardFrame = (CGRect){{0.0f, 0.0f}, {0.0f, 0.0f}};
     self = [super initWithFrame:CGRectZero];
     
     if (self) {
-        _style = style;
+        _stylea = style;
         
         self.hidden = YES;
         self.backgroundColor = [UIColor clearColor];
@@ -126,7 +126,7 @@ static CGRect keyboardFrame = (CGRect){{0.0f, 0.0f}, {0.0f, 0.0f}};
         
         [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)]];
         
-        _indicatorView = [[JGProgressHUDIndeterminateIndicatorView alloc] initWithHUDStyle:self.style];
+        _indicatorView = [[JGProgressHUDIndeterminateIndicatorView alloc] initWithHUDStyle:self.stylea];
         
         _cornerRadius = 10.0f;
     }
@@ -564,10 +564,10 @@ NS_INLINE UIViewAnimationOptions UIViewAnimationOptionsFromUIViewAnimationCurve(
         if (iOS8) {
             UIBlurEffectStyle effect = 0;
             
-            if (self.style == JGProgressHUDStyleDark) {
+            if (self.stylea == JGProgressHUDStyleDark) {
                 effect = UIBlurEffectStyleDark;
             }
-            else if (self.style == JGProgressHUDStyleLight) {
+            else if (self.stylea == JGProgressHUDStyleLight) {
                 effect = UIBlurEffectStyleLight;
             }
             else {
@@ -581,10 +581,10 @@ NS_INLINE UIViewAnimationOptions UIViewAnimationOptionsFromUIViewAnimationCurve(
         else {
             _HUDView = [[UIView alloc] init];
             
-            if (self.style == JGProgressHUDStyleDark) {
+            if (self.stylea == JGProgressHUDStyleDark) {
                 _HUDView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.8f];
             }
-            else if (self.style == JGProgressHUDStyleLight) {
+            else if (self.stylea == JGProgressHUDStyleLight) {
                 _HUDView.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.75f];
             }
             else {
@@ -635,7 +635,7 @@ NS_INLINE UIViewAnimationOptions UIViewAnimationOptionsFromUIViewAnimationCurve(
     if (!_textLabel) {
         _textLabel = [[UILabel alloc] init];
         _textLabel.backgroundColor = [UIColor clearColor];
-        _textLabel.textColor = (self.style == JGProgressHUDStyleDark ? [UIColor whiteColor] : [UIColor blackColor]);
+        _textLabel.textColor = (self.stylea == JGProgressHUDStyleDark ? [UIColor whiteColor] : [UIColor blackColor]);
         _textLabel.textAlignment = NSTextAlignmentCenter;
         _textLabel.font = [UIFont boldSystemFontOfSize:15.0f];
         _textLabel.numberOfLines = 0;
@@ -653,7 +653,7 @@ NS_INLINE UIViewAnimationOptions UIViewAnimationOptionsFromUIViewAnimationCurve(
     if (!_detailTextLabel) {
         _detailTextLabel = [[UILabel alloc] init];
         _detailTextLabel.backgroundColor = [UIColor clearColor];
-        _detailTextLabel.textColor = (self.style == JGProgressHUDStyleDark ? [UIColor whiteColor] : [UIColor blackColor]);
+        _detailTextLabel.textColor = (self.stylea == JGProgressHUDStyleDark ? [UIColor whiteColor] : [UIColor blackColor]);
         _detailTextLabel.textAlignment = NSTextAlignmentCenter;
         _detailTextLabel.font = [UIFont systemFontOfSize:13.0f];
         _detailTextLabel.numberOfLines = 0;

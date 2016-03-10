@@ -8,6 +8,7 @@
 
 import UIKit
 import MBProgressHUD
+import IQKeyboardManagerSwift
 
 class ReviceMessagesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -16,6 +17,7 @@ class ReviceMessagesViewController: UIViewController,UITableViewDelegate,UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        IQKeyboardManager.sharedManager().enable = false
         self.title = "回复\(newsInfo.sendName!)"
         newsInfoTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64)
         self.view.backgroundColor = UIColor.whiteColor()

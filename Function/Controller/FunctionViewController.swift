@@ -297,6 +297,7 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 btn5.layer.masksToBounds = true
                 btn5.setBackgroundImage(UIImage(named: "在线请假"), forState: UIControlState.Normal)
                 btn5.center.x = (viewWidth/8)
+                btn5.addTarget(self, action: Selector("QingJiaView"), forControlEvents: .TouchUpInside)
                 btn6.frame = CGRectMake(0, 100, 44, 44)
                 btn6.layer.cornerRadius = 22
                 btn6.layer.masksToBounds = true
@@ -574,6 +575,11 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
     func PhotoView(){
         let Photo = PhotoViewController()
         self.navigationController?.pushViewController(Photo, animated: true)
+    }
+    
+    func QingJiaView(){
+        let QingJia = QingJiaViewController()
+        self.navigationController?.pushViewController(QingJia, animated: true)
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
