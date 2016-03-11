@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DE929349B3EAB499F0ED353F'
+               BlueprintIdentifier = 'E3C7F530E5DB4B34C5407A55'
                BlueprintName = 'BSImagePicker-BSImagePicker'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'BSImagePicker.bundle'>

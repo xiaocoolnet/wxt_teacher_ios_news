@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AFC09C14012FD90FA811DB41 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F387A67369CB0717891AF5C /* Pods.framework */; };
+		EA166B1F1C92B11000416536 /* ChengZhangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA166B1E1C92B11000416536 /* ChengZhangViewController.swift */; };
 		EA20A69D1C8D663F001AAAAD /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A69C1C8D663F001AAAAD /* NewsList.swift */; };
+		EA7A7E361C9261AD00DBA75B /* SchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A7E351C9261AD00DBA75B /* SchoolViewController.swift */; };
 		EA7D9D111C83DE8B00056B22 /* XKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D9D101C83DE8B00056B22 /* XKeyBoard.m */; };
 		EA94898C1C83E4FD008682E6 /* NewBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94898B1C83E4FD008682E6 /* NewBlogViewController.swift */; };
 		EA94898E1C83E8EE008682E6 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94898D1C83E8EE008682E6 /* ImageCollectionViewCell.swift */; };
@@ -179,7 +181,9 @@
 /* Begin PBXFileReference section */
 		7CC3BC55E673A0F4FFA674CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7F387A67369CB0717891AF5C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA166B1E1C92B11000416536 /* ChengZhangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChengZhangViewController.swift; sourceTree = "<group>"; };
 		EA20A69C1C8D663F001AAAAD /* NewsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
+		EA7A7E351C9261AD00DBA75B /* SchoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolViewController.swift; sourceTree = "<group>"; };
 		EA7D9D0F1C83DE8B00056B22 /* XKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKeyBoard.h; sourceTree = "<group>"; };
 		EA7D9D101C83DE8B00056B22 /* XKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKeyBoard.m; sourceTree = "<group>"; };
 		EA94898B1C83E4FD008682E6 /* NewBlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBlogViewController.swift; sourceTree = "<group>"; };
@@ -491,6 +495,8 @@
 				EAB2EECE1C8FAE5500693D04 /* DaiJieViewController.swift */,
 				EAB2EED21C90032500693D04 /* PhotoViewController.swift */,
 				EAD2EA6E1C911B00006F3A3B /* QingJiaViewController.swift */,
+				EA7A7E351C9261AD00DBA75B /* SchoolViewController.swift */,
+				EA166B1E1C92B11000416536 /* ChengZhangViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1221,6 +1227,7 @@
 				EAFAE6ED1C82E50900A8BAF2 /* Fetcher.swift in Sources */,
 				EAFAE7211C82E50900A8BAF2 /* PhotoBrowser+PBType.swift in Sources */,
 				EAFAE6F51C82E50900A8BAF2 /* String+Haneke.swift in Sources */,
+				EA7A7E361C9261AD00DBA75B /* SchoolViewController.swift in Sources */,
 				EAFAE6E01C82E50900A8BAF2 /* EdgeInsets.swift in Sources */,
 				EAFAE6AA1C82E50900A8BAF2 /* BlogTableViewCell.swift in Sources */,
 				EA9489911C8413E8008682E6 /* BRPlaceholderTextView.m in Sources */,
@@ -1243,6 +1250,7 @@
 				EAFAE6DD1C82E50900A8BAF2 /* ConstraintMaker.swift in Sources */,
 				EAFAE7021C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				EAFAE6B41C82E50900A8BAF2 /* ForgetPasswordSetViewController.swift in Sources */,
+				EA166B1F1C92B11000416536 /* ChengZhangViewController.swift in Sources */,
 				EAB2EED51C90035B00693D04 /* PhotoCollectionViewCell.swift in Sources */,
 				EAFAE7041C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
 				EAFAE6D61C82E50900A8BAF2 /* FlexibleTableView.swift in Sources */,

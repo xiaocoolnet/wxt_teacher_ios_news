@@ -8,6 +8,7 @@
 
 import UIKit
 import MBProgressHUD
+import IQKeyboardManagerSwift
 
 class QingJiaViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -23,6 +24,7 @@ class QingJiaViewController: UIViewController,UITableViewDelegate,UITableViewDat
         super.viewDidLoad()
         self.title = "在线请假"
         self.view.backgroundColor = UIColor.whiteColor()
+        IQKeyboardManager.sharedManager().enable = true
         dataTableView = UITableView(frame:CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height) , style: UITableViewStyle.Grouped)
         self.automaticallyAdjustsScrollViewInsets = false
         dataTableView.delegate = self

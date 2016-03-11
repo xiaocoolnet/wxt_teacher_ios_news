@@ -275,6 +275,7 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 btn1.layer.masksToBounds = true
                 btn1.setBackgroundImage(UIImage(named: "学校官网"), forState: UIControlState.Normal)
                 btn1.center.x = viewWidth/8
+                btn1.addTarget(self, action: Selector("SchoolView"), forControlEvents: .TouchUpInside)
                 btn2.frame = CGRectMake(0, 16, 44, 44)
                 btn2.layer.cornerRadius = 22
                 btn2.layer.masksToBounds = true
@@ -286,6 +287,7 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 btn3.layer.masksToBounds = true
                 btn3.setBackgroundImage(UIImage(named: "成长档案"), forState: UIControlState.Normal)
                 btn3.center.x = (viewWidth/8)*5
+                btn3.addTarget(self, action: Selector("ChengZhangView"), forControlEvents: .TouchUpInside)
                 btn4.frame = CGRectMake(0, 16, 44, 44)
                 btn4.layer.cornerRadius = 22
                 btn4.layer.masksToBounds = true
@@ -567,6 +569,11 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
         return cell
     }
     
+    func SchoolView(){
+        let school = SchoolViewController()
+        self.navigationController?.pushViewController(school, animated: true)
+    }
+    
     func DaiJieView(){
         let DaiJie = DaiJieViewController()
         self.navigationController?.pushViewController(DaiJie, animated: true)
@@ -575,6 +582,11 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
     func PhotoView(){
         let Photo = PhotoViewController()
         self.navigationController?.pushViewController(Photo, animated: true)
+    }
+    
+    func ChengZhangView(){
+        let ChengZhang = ChengZhangViewController()
+        self.navigationController?.pushViewController(ChengZhang, animated: true)
     }
     
     func QingJiaView(){

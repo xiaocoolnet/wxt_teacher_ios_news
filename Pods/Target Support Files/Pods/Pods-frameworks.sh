@@ -84,11 +84,13 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods/AFNetworking.framework"
   install_framework "Pods/Alamofire.framework"
   install_framework "Pods/BSGridCollectionViewLayout.framework"
   install_framework "Pods/BSImagePicker.framework"
   install_framework "Pods/FlexibleTableView.framework"
   install_framework "Pods/IQKeyboardManagerSwift.framework"
+  install_framework "Pods/ImageSlideshow.framework"
   install_framework "Pods/JGProgressHUD.framework"
   install_framework "Pods/MBProgressHUD.framework"
   install_framework "Pods/PagingMenuController.framework"
@@ -97,11 +99,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/YYWebImage.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods/AFNetworking.framework"
   install_framework "Pods/Alamofire.framework"
   install_framework "Pods/BSGridCollectionViewLayout.framework"
   install_framework "Pods/BSImagePicker.framework"
   install_framework "Pods/FlexibleTableView.framework"
   install_framework "Pods/IQKeyboardManagerSwift.framework"
+  install_framework "Pods/ImageSlideshow.framework"
   install_framework "Pods/JGProgressHUD.framework"
   install_framework "Pods/MBProgressHUD.framework"
   install_framework "Pods/PagingMenuController.framework"

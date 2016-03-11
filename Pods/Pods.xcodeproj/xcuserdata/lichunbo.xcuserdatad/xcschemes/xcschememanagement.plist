@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -30,6 +35,16 @@
 			<false/>
 		</dict>
 		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ImageSlideshow-ImageSlideshow.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ImageSlideshow.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -87,6 +102,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1A0BCF8AD93C9F03F8BF4FA065AC0BF5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>23D4B5C9CC657B68134305BFEB076270</key>
 		<dict>
 			<key>primary</key>
@@ -97,12 +117,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3D8998861A442AD02E07615A99C87DAE</key>
+		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>432ECC54282C84882B482CCB4CF227FC</key>
+		<key>4878C70B21CA37D7CB8A476BF986741B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,17 +142,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9B556B8F59E0D9C37C980C500874CBDE</key>
+		<key>99A011DB236AD3D4B60833C8001472C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BBB9299C96E109BE650944DF270A4E74</key>
+		<key>A02B582261A4E9DB614DFEE775C0E0D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C59EE95662AD4757E7FCE220DB1AFA41</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE215D13B948F4101432629FDE75C8E6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E0385FB37D160FBDCFFCAB194320C988</key>
 		<dict>
 			<key>primary</key>
 			<true/>
