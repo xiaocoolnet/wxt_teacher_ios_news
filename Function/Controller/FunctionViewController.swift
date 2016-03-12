@@ -320,6 +320,7 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 btn9.layer.masksToBounds = true
                 btn9.setBackgroundImage(UIImage(named: "老师点评"), forState: UIControlState.Normal)
                 btn9.center.x = (viewWidth/8)*9
+                btn9.addTarget(self, action: Selector("TeacherDPView"), forControlEvents: .TouchUpInside)
                 btn10.frame = CGRectMake(0, 16, 44, 44)
                 btn10.layer.cornerRadius = 22
                 btn10.layer.masksToBounds = true
@@ -340,6 +341,7 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 btn13.layer.masksToBounds = true
                 btn13.setBackgroundImage(UIImage(named: "宝宝课件"), forState: UIControlState.Normal)
                 btn13.center.x = (viewWidth/8)*9
+                btn13.addTarget(self, action: Selector("KeJianView"), forControlEvents: .TouchUpInside)
                 btn14.frame = CGRectMake(0, 100, 44, 44)
                 btn14.layer.cornerRadius = 22
                 btn14.layer.masksToBounds = true
@@ -350,6 +352,7 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 btn15.layer.masksToBounds = true
                 btn15.setBackgroundImage(UIImage(named: "班级课程"), forState: UIControlState.Normal)
                 btn15.center.x = (viewWidth/8)*13
+                btn14.addTarget(self, action: Selector("BBkeChengView"), forControlEvents: .TouchUpInside)
                 btn16.frame = CGRectMake(0, 100, 44, 44)
                 btn16.layer.cornerRadius = 22
                 btn16.layer.masksToBounds = true
@@ -592,6 +595,21 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
     func QingJiaView(){
         let QingJia = QingJiaViewController()
         self.navigationController?.pushViewController(QingJia, animated: true)
+    }
+    
+    func TeacherDPView(){
+        let tecDianPing = TeacherDianPingViewController()
+        self.navigationController?.pushViewController(tecDianPing, animated: true)
+    }
+    
+    func KeJianView(){
+        let banJikejian = BanJiKeJianViewController()
+        self.navigationController?.pushViewController(banJikejian, animated: true)
+    }
+    
+    func BBkeChengView(){
+        let bbkc = BBKeTangViewController()
+        self.navigationController?.pushViewController(bbkc, animated: true)
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

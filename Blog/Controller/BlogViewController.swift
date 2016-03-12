@@ -51,7 +51,7 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.blogTableView.reloadData()
         self.blogTableView.headerView?.beginRefreshing()
     }
-    
+    //
     func GetDate(){
         print("刷新")
         let url = apiUrl+"GetMicroblog"
@@ -80,7 +80,6 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 if(status.status == "success"){
                     self.blogSource = BlogList(status.data!)
                     self.blogTableView.reloadData()
-                    //self.arrayPeople.removeAllObjects()
                     self.blogTableView.headerView?.endRefreshing()
                 }
             }
@@ -144,9 +143,11 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
         return 0
     }
+    
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 5
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         self.remoteThumbImage = [NSIndexPath:[String]]()
         self.remoteImage = []

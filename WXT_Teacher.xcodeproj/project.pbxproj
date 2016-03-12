@@ -10,6 +10,8 @@
 		AFC09C14012FD90FA811DB41 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F387A67369CB0717891AF5C /* Pods.framework */; };
 		EA166B1F1C92B11000416536 /* ChengZhangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA166B1E1C92B11000416536 /* ChengZhangViewController.swift */; };
 		EA20A69D1C8D663F001AAAAD /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A69C1C8D663F001AAAAD /* NewsList.swift */; };
+		EA43502F1C93F51F0040F56D /* BanJiKeJianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA43502E1C93F51F0040F56D /* BanJiKeJianViewController.swift */; };
+		EA4350311C9403810040F56D /* BBKeTangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4350301C9403810040F56D /* BBKeTangViewController.swift */; };
 		EA7A7E361C9261AD00DBA75B /* SchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A7E351C9261AD00DBA75B /* SchoolViewController.swift */; };
 		EA7D9D111C83DE8B00056B22 /* XKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D9D101C83DE8B00056B22 /* XKeyBoard.m */; };
 		EA94898C1C83E4FD008682E6 /* NewBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94898B1C83E4FD008682E6 /* NewBlogViewController.swift */; };
@@ -30,6 +32,8 @@
 		EACF4DA21C8E9F4000C777D6 /* HelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF4DA01C8E9F4000C777D6 /* HelpTableViewController.swift */; };
 		EACFF6361C86885800615394 /* DianzanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFF6341C86885800615394 /* DianzanTableViewCell.swift */; };
 		EAD2EA6F1C911B00006F3A3B /* QingJiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD2EA6E1C911B00006F3A3B /* QingJiaViewController.swift */; };
+		EAD5D45B1C93A2D900013E10 /* TeacherDianPingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD5D45A1C93A2D900013E10 /* TeacherDianPingViewController.swift */; };
+		EAD5D45D1C93AB5F00013E10 /* TeacherDianPingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD5D45C1C93AB5F00013E10 /* TeacherDianPingTableViewCell.swift */; };
 		EAEA5F021C86C51A00DD362E /* MineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA5F011C86C51A00DD362E /* MineModel.swift */; };
 		EAFAE5D31C82E4D500A8BAF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE5D21C82E4D500A8BAF2 /* AppDelegate.swift */; };
 		EAFAE5D51C82E4D500A8BAF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE5D41C82E4D500A8BAF2 /* ViewController.swift */; };
@@ -183,6 +187,8 @@
 		7F387A67369CB0717891AF5C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA166B1E1C92B11000416536 /* ChengZhangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChengZhangViewController.swift; sourceTree = "<group>"; };
 		EA20A69C1C8D663F001AAAAD /* NewsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
+		EA43502E1C93F51F0040F56D /* BanJiKeJianViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanJiKeJianViewController.swift; sourceTree = "<group>"; };
+		EA4350301C9403810040F56D /* BBKeTangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBKeTangViewController.swift; sourceTree = "<group>"; };
 		EA7A7E351C9261AD00DBA75B /* SchoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolViewController.swift; sourceTree = "<group>"; };
 		EA7D9D0F1C83DE8B00056B22 /* XKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKeyBoard.h; sourceTree = "<group>"; };
 		EA7D9D101C83DE8B00056B22 /* XKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKeyBoard.m; sourceTree = "<group>"; };
@@ -206,6 +212,8 @@
 		EACF4DA01C8E9F4000C777D6 /* HelpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpTableViewController.swift; path = ../HelpTableViewController.swift; sourceTree = "<group>"; };
 		EACFF6341C86885800615394 /* DianzanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DianzanTableViewCell.swift; sourceTree = "<group>"; };
 		EAD2EA6E1C911B00006F3A3B /* QingJiaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QingJiaViewController.swift; sourceTree = "<group>"; };
+		EAD5D45A1C93A2D900013E10 /* TeacherDianPingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherDianPingViewController.swift; sourceTree = "<group>"; };
+		EAD5D45C1C93AB5F00013E10 /* TeacherDianPingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherDianPingTableViewCell.swift; sourceTree = "<group>"; };
 		EAEA5F011C86C51A00DD362E /* MineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineModel.swift; sourceTree = "<group>"; };
 		EAFAE5CF1C82E4D500A8BAF2 /* WXT_Teacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXT_Teacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFAE5D21C82E4D500A8BAF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -497,6 +505,9 @@
 				EAD2EA6E1C911B00006F3A3B /* QingJiaViewController.swift */,
 				EA7A7E351C9261AD00DBA75B /* SchoolViewController.swift */,
 				EA166B1E1C92B11000416536 /* ChengZhangViewController.swift */,
+				EAD5D45A1C93A2D900013E10 /* TeacherDianPingViewController.swift */,
+				EA43502E1C93F51F0040F56D /* BanJiKeJianViewController.swift */,
+				EA4350301C9403810040F56D /* BBKeTangViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -517,6 +528,7 @@
 				EAFAE5FA1C82E50900A8BAF2 /* FunTableViewCell.swift */,
 				EAB2EED01C8FB1CF00693D04 /* DaiJieTableViewCell.swift */,
 				EAB2EED41C90035B00693D04 /* PhotoCollectionViewCell.swift */,
+				EAD5D45C1C93AB5F00013E10 /* TeacherDianPingTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1154,6 +1166,7 @@
 				EAFAE7291C82E50900A8BAF2 /* ShowImageView.swift in Sources */,
 				EAFAE7111C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
 				EAFAE6DE1C82E50900A8BAF2 /* ConstraintRelation.swift in Sources */,
+				EA43502F1C93F51F0040F56D /* BanJiKeJianViewController.swift in Sources */,
 				EAFAE6AD1C82E50900A8BAF2 /* FunctionViewController.swift in Sources */,
 				EAFAE7261C82E50900A8BAF2 /* CollectionView.swift in Sources */,
 				EAFAE6F21C82E50900A8BAF2 /* NSFileManager+Haneke.swift in Sources */,
@@ -1166,6 +1179,7 @@
 				EAFAE6CB1C82E50900A8BAF2 /* YuanDingViewController.swift in Sources */,
 				EAFAE70E1C82E50900A8BAF2 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				EAFAE6EF1C82E50900A8BAF2 /* Haneke.swift in Sources */,
+				EAD5D45D1C93AB5F00013E10 /* TeacherDianPingTableViewCell.swift in Sources */,
 				EAA578031C8A7BDA00E9A95D /* NewCommentViewController.swift in Sources */,
 				EAFAE6E81C82E50900A8BAF2 /* CryptoSwiftMD5.swift in Sources */,
 				EAFAE7191C82E50900A8BAF2 /* NVActivityIndicatorShape.swift in Sources */,
@@ -1214,6 +1228,7 @@
 				EAFAE7001C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
 				EAFAE71E1C82E50900A8BAF2 /* PhotoBrowser+HUD.swift in Sources */,
 				EAFAE6B51C82E50900A8BAF2 /* ForgetPasswordViewController.swift in Sources */,
+				EAD5D45B1C93A2D900013E10 /* TeacherDianPingViewController.swift in Sources */,
 				EAFAE6D91C82E50900A8BAF2 /* Constraint.swift in Sources */,
 				EAFAE72E1C82E50900A8BAF2 /* Url.swift in Sources */,
 				EAFAE6BF1C82E50900A8BAF2 /* RegisterSetPasswordViewController.swift in Sources */,
@@ -1227,6 +1242,7 @@
 				EAFAE6ED1C82E50900A8BAF2 /* Fetcher.swift in Sources */,
 				EAFAE7211C82E50900A8BAF2 /* PhotoBrowser+PBType.swift in Sources */,
 				EAFAE6F51C82E50900A8BAF2 /* String+Haneke.swift in Sources */,
+				EA4350311C9403810040F56D /* BBKeTangViewController.swift in Sources */,
 				EA7A7E361C9261AD00DBA75B /* SchoolViewController.swift in Sources */,
 				EAFAE6E01C82E50900A8BAF2 /* EdgeInsets.swift in Sources */,
 				EAFAE6AA1C82E50900A8BAF2 /* BlogTableViewCell.swift in Sources */,
