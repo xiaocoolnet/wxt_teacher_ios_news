@@ -315,6 +315,7 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 btn8.layer.masksToBounds = true
                 btn8.setBackgroundImage(UIImage(named: "班级考勤"), forState: UIControlState.Normal)
                 btn8.center.x = (viewWidth/8)*7
+                btn8.addTarget(self, action: Selector("KaoQinView"), forControlEvents: .TouchUpInside)
                 btn9.frame = CGRectMake(0, 16, 44, 44)
                 btn9.layer.cornerRadius = 22
                 btn9.layer.masksToBounds = true
@@ -326,16 +327,19 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 btn10.layer.masksToBounds = true
                 btn10.setBackgroundImage(UIImage(named: "老师考勤"), forState: UIControlState.Normal)
                 btn10.center.x = (viewWidth/8)*11
+                btn10.addTarget(self, action: Selector("daKaView"), forControlEvents: .TouchUpInside)
                 btn11.frame = CGRectMake(0, 16, 44, 44)
                 btn11.layer.cornerRadius = 22
                 btn11.layer.masksToBounds = true
                 btn11.setBackgroundImage(UIImage(named: "周计划"), forState: UIControlState.Normal)
                 btn11.center.x = (viewWidth/8)*13
+                btn11.addTarget(self, action: Selector("ZhouPlanView"), forControlEvents: .TouchUpInside)
                 btn12.frame = CGRectMake(0, 16, 44, 44)
                 btn12.layer.cornerRadius = 22
                 btn12.layer.masksToBounds = true
                 btn12.setBackgroundImage(UIImage(named: "信息审核"), forState: UIControlState.Normal)
                 btn12.center.x = (viewWidth/8)*15
+                btn12.addTarget(self, action: Selector("XinxiView"), forControlEvents: .TouchUpInside)
                 btn13.frame = CGRectMake(0, 100, 44, 44)
                 btn13.layer.cornerRadius = 22
                 btn13.layer.masksToBounds = true
@@ -347,12 +351,13 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 btn14.layer.masksToBounds = true
                 btn14.setBackgroundImage(UIImage(named: "成长档案"), forState: UIControlState.Normal)
                 btn14.center.x = (viewWidth/8)*11
+                btn14.addTarget(self, action: Selector("BBkeChengView"), forControlEvents: .TouchUpInside)
                 btn15.frame = CGRectMake(0, 100, 44, 44)
                 btn15.layer.cornerRadius = 22
                 btn15.layer.masksToBounds = true
-                btn15.setBackgroundImage(UIImage(named: "班级课程"), forState: UIControlState.Normal)
+                btn15.setBackgroundImage(UIImage(named: "班级活动"), forState: UIControlState.Normal)
                 btn15.center.x = (viewWidth/8)*13
-                btn14.addTarget(self, action: Selector("BBkeChengView"), forControlEvents: .TouchUpInside)
+                btn15.addTarget(self, action: Selector("huoDongView"), forControlEvents: .TouchUpInside)
                 btn16.frame = CGRectMake(0, 100, 44, 44)
                 btn16.layer.cornerRadius = 22
                 btn16.layer.masksToBounds = true
@@ -563,6 +568,7 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
             fangDiuContent.text = "显示宝宝当前位置"
             fangDiuContent.font = UIFont.systemFontOfSize(12)
             fangDiuContent.textColor = UIColor.grayColor()
+            cell.selectionStyle = .None
             cell.contentView.addSubview(fangDiuContent)
             cell.contentView.addSubview(fangDiu)
             cell.contentView.addSubview(fangDiuLabel)
@@ -602,14 +608,39 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
         self.navigationController?.pushViewController(tecDianPing, animated: true)
     }
     
+    func KaoQinView(){
+        let kaoqin = bbKaoQinViewController()
+        self.navigationController?.pushViewController(kaoqin, animated: true)
+    }
+    
     func KeJianView(){
         let banJikejian = BanJiKeJianViewController()
         self.navigationController?.pushViewController(banJikejian, animated: true)
     }
     
+    func ZhouPlanView(){
+        let zhouPlan = ZhouPlanViewController()
+        self.navigationController?.pushViewController(zhouPlan, animated: true)
+    }
+    
     func BBkeChengView(){
         let bbkc = BBKeTangViewController()
         self.navigationController?.pushViewController(bbkc, animated: true)
+    }
+    
+    func huoDongView(){
+        let bjhd = BanJihuodongViewController()
+        self.navigationController?.pushViewController(bjhd, animated: true)
+    }
+    
+    func XinxiView(){
+        let xinxi = XinXiViewController()
+        self.navigationController?.pushViewController(xinxi, animated: true)
+    }
+    
+    func daKaView(){
+        let daka = daKaViewController()
+        self.navigationController?.pushViewController(daka, animated: true)
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

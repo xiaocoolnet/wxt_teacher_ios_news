@@ -29,6 +29,8 @@ class ChengZhangViewController: UIViewController,UITableViewDataSource,UITableVi
         searchController.searchBar.placeholder = "输入学生姓名关键字"
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
+        self.tabBarController?.tabBar.hidden = true
+        self.view.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(nameTableView)
     }
 

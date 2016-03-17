@@ -12,6 +12,18 @@
 		EA20A69D1C8D663F001AAAAD /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A69C1C8D663F001AAAAD /* NewsList.swift */; };
 		EA43502F1C93F51F0040F56D /* BanJiKeJianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA43502E1C93F51F0040F56D /* BanJiKeJianViewController.swift */; };
 		EA4350311C9403810040F56D /* BBKeTangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4350301C9403810040F56D /* BBKeTangViewController.swift */; };
+		EA4882071C995E9A009CAC3A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4882061C995E9A009CAC3A /* CameraViewController.swift */; };
+		EA5DC6D71C9A3D4600A0641B /* BrowserCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DC6D31C9A3D4600A0641B /* BrowserCellDelegate.swift */; };
+		EA5DC6D81C9A3D4600A0641B /* PhotoBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DC6D41C9A3D4600A0641B /* PhotoBrowserCell.swift */; };
+		EA5DC6D91C9A3D4600A0641B /* PhotoBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DC6D51C9A3D4600A0641B /* PhotoBrowserView.swift */; };
+		EA5DC6DA1C9A3D4600A0641B /* RMDownloadIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DC6D61C9A3D4600A0641B /* RMDownloadIndicator.swift */; };
+		EA5DC6DC1C9AA36500A0641B /* NewPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DC6DB1C9AA36500A0641B /* NewPhotoViewController.swift */; };
+		EA6D2D3B1C9500830092F09A /* ZhouPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D2D3A1C9500830092F09A /* ZhouPlanViewController.swift */; };
+		EA6D2D3D1C95125D0092F09A /* bbKaoQinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D2D3C1C95125D0092F09A /* bbKaoQinViewController.swift */; };
+		EA6D2D3F1C9512F20092F09A /* AvatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D2D3E1C9512F20092F09A /* AvatorCollectionViewCell.swift */; };
+		EA6D54111C97925D00F85EA2 /* XinXiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D54101C97925D00F85EA2 /* XinXiViewController.swift */; };
+		EA6D54131C97AB3D00F85EA2 /* daKaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D54121C97AB3D00F85EA2 /* daKaViewController.swift */; };
+		EA6D54151C97E85F00F85EA2 /* BanJihuodongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D54141C97E85F00F85EA2 /* BanJihuodongViewController.swift */; };
 		EA7A7E361C9261AD00DBA75B /* SchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A7E351C9261AD00DBA75B /* SchoolViewController.swift */; };
 		EA7D9D111C83DE8B00056B22 /* XKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D9D101C83DE8B00056B22 /* XKeyBoard.m */; };
 		EA94898C1C83E4FD008682E6 /* NewBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94898B1C83E4FD008682E6 /* NewBlogViewController.swift */; };
@@ -189,6 +201,18 @@
 		EA20A69C1C8D663F001AAAAD /* NewsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
 		EA43502E1C93F51F0040F56D /* BanJiKeJianViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanJiKeJianViewController.swift; sourceTree = "<group>"; };
 		EA4350301C9403810040F56D /* BBKeTangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBKeTangViewController.swift; sourceTree = "<group>"; };
+		EA4882061C995E9A009CAC3A /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		EA5DC6D31C9A3D4600A0641B /* BrowserCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowserCellDelegate.swift; sourceTree = "<group>"; };
+		EA5DC6D41C9A3D4600A0641B /* PhotoBrowserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserCell.swift; sourceTree = "<group>"; };
+		EA5DC6D51C9A3D4600A0641B /* PhotoBrowserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserView.swift; sourceTree = "<group>"; };
+		EA5DC6D61C9A3D4600A0641B /* RMDownloadIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMDownloadIndicator.swift; sourceTree = "<group>"; };
+		EA5DC6DB1C9AA36500A0641B /* NewPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPhotoViewController.swift; sourceTree = "<group>"; };
+		EA6D2D3A1C9500830092F09A /* ZhouPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhouPlanViewController.swift; sourceTree = "<group>"; };
+		EA6D2D3C1C95125D0092F09A /* bbKaoQinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bbKaoQinViewController.swift; sourceTree = "<group>"; };
+		EA6D2D3E1C9512F20092F09A /* AvatorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatorCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA6D54101C97925D00F85EA2 /* XinXiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XinXiViewController.swift; sourceTree = "<group>"; };
+		EA6D54121C97AB3D00F85EA2 /* daKaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = daKaViewController.swift; sourceTree = "<group>"; };
+		EA6D54141C97E85F00F85EA2 /* BanJihuodongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanJihuodongViewController.swift; sourceTree = "<group>"; };
 		EA7A7E351C9261AD00DBA75B /* SchoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolViewController.swift; sourceTree = "<group>"; };
 		EA7D9D0F1C83DE8B00056B22 /* XKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKeyBoard.h; sourceTree = "<group>"; };
 		EA7D9D101C83DE8B00056B22 /* XKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKeyBoard.m; sourceTree = "<group>"; };
@@ -398,6 +422,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EA4882051C9948E3009CAC3A /* photo */ = {
+			isa = PBXGroup;
+			children = (
+				EAB2EED21C90032500693D04 /* PhotoViewController.swift */,
+				EA4882061C995E9A009CAC3A /* CameraViewController.swift */,
+				EA5DC6DB1C9AA36500A0641B /* NewPhotoViewController.swift */,
+			);
+			name = photo;
+			sourceTree = "<group>";
+		};
+		EA5DC6D21C9A3D4600A0641B /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				EA5DC6D31C9A3D4600A0641B /* BrowserCellDelegate.swift */,
+				EA5DC6D41C9A3D4600A0641B /* PhotoBrowserCell.swift */,
+				EA5DC6D51C9A3D4600A0641B /* PhotoBrowserView.swift */,
+				EA5DC6D61C9A3D4600A0641B /* RMDownloadIndicator.swift */,
+			);
+			path = Browser;
+			sourceTree = "<group>";
+		};
 		EAFAE5C61C82E4D500A8BAF2 = {
 			isa = PBXGroup;
 			children = (
@@ -498,16 +543,21 @@
 		EAFAE5F21C82E50900A8BAF2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EA4882051C9948E3009CAC3A /* photo */,
 				EAFAE5F41C82E50900A8BAF2 /* Readme */,
 				EAFAE5F31C82E50900A8BAF2 /* FunctionViewController.swift */,
 				EAB2EECE1C8FAE5500693D04 /* DaiJieViewController.swift */,
-				EAB2EED21C90032500693D04 /* PhotoViewController.swift */,
 				EAD2EA6E1C911B00006F3A3B /* QingJiaViewController.swift */,
 				EA7A7E351C9261AD00DBA75B /* SchoolViewController.swift */,
 				EA166B1E1C92B11000416536 /* ChengZhangViewController.swift */,
 				EAD5D45A1C93A2D900013E10 /* TeacherDianPingViewController.swift */,
 				EA43502E1C93F51F0040F56D /* BanJiKeJianViewController.swift */,
 				EA4350301C9403810040F56D /* BBKeTangViewController.swift */,
+				EA6D2D3A1C9500830092F09A /* ZhouPlanViewController.swift */,
+				EA6D2D3C1C95125D0092F09A /* bbKaoQinViewController.swift */,
+				EA6D54101C97925D00F85EA2 /* XinXiViewController.swift */,
+				EA6D54121C97AB3D00F85EA2 /* daKaViewController.swift */,
+				EA6D54141C97E85F00F85EA2 /* BanJihuodongViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -529,6 +579,7 @@
 				EAB2EED01C8FB1CF00693D04 /* DaiJieTableViewCell.swift */,
 				EAB2EED41C90035B00693D04 /* PhotoCollectionViewCell.swift */,
 				EAD5D45C1C93AB5F00013E10 /* TeacherDianPingTableViewCell.swift */,
+				EA6D2D3E1C9512F20092F09A /* AvatorCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -782,18 +833,11 @@
 				EAFAE6381C82E50900A8BAF2 /* DisplayView.swift */,
 				EAFAE6391C82E50900A8BAF2 /* FlexibleTableView.swift */,
 				EAFAE63A1C82E50900A8BAF2 /* FlexibleTableViewCell.swift */,
-				EAFAE6371C82E50900A8BAF2 /* Browser */,
+				EA5DC6D21C9A3D4600A0641B /* Browser */,
 				EAFAE63B1C82E50900A8BAF2 /* Frameworks */,
 				EAFAE6871C82E50900A8BAF2 /* PhotoBrowser */,
 			);
 			path = "Third Package";
-			sourceTree = "<group>";
-		};
-		EAFAE6371C82E50900A8BAF2 /* Browser */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Browser;
 			sourceTree = "<group>";
 		};
 		EAFAE63B1C82E50900A8BAF2 /* Frameworks */ = {
@@ -1031,7 +1075,7 @@
 				TargetAttributes = {
 					EAFAE5CE1C82E4D500A8BAF2 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = H58LYH4V4T;
+						DevelopmentTeam = TB5TQ2MXGN;
 					};
 				};
 			};
@@ -1151,7 +1195,9 @@
 				EAFAE7241C82E50900A8BAF2 /* PhotoBrowser+Model.swift in Sources */,
 				EAFAE6C81C82E50900A8BAF2 /* JiaZhangViewController.swift in Sources */,
 				EAFAE6E61C82E50900A8BAF2 /* Cache.swift in Sources */,
+				EA5DC6DC1C9AA36500A0641B /* NewPhotoViewController.swift in Sources */,
 				EAFAE6F11C82E50900A8BAF2 /* NetworkFetcher.swift in Sources */,
+				EA4882071C995E9A009CAC3A /* CameraViewController.swift in Sources */,
 				EAFAE6F01C82E50900A8BAF2 /* Log.swift in Sources */,
 				EAFAE6DB1C82E50900A8BAF2 /* ConstraintDescription.swift in Sources */,
 				EAFAE7081C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
@@ -1170,6 +1216,7 @@
 				EAFAE6AD1C82E50900A8BAF2 /* FunctionViewController.swift in Sources */,
 				EAFAE7261C82E50900A8BAF2 /* CollectionView.swift in Sources */,
 				EAFAE6F21C82E50900A8BAF2 /* NSFileManager+Haneke.swift in Sources */,
+				EA5DC6DA1C9A3D4600A0641B /* RMDownloadIndicator.swift in Sources */,
 				EAFAE6B11C82E50900A8BAF2 /* FunSecondTableViewCell.swift in Sources */,
 				EAFAE72D1C82E50900A8BAF2 /* JSONJoy.swift in Sources */,
 				EAFAE6E21C82E50900A8BAF2 /* SnapKit.swift in Sources */,
@@ -1191,6 +1238,7 @@
 				EAFAE7231C82E50900A8BAF2 /* Layout.swift in Sources */,
 				EAFAE71F1C82E50900A8BAF2 /* PhotoBrowser+Indicator.swift in Sources */,
 				EAFAE6D31C82E50900A8BAF2 /* NewsTableViewCell.swift in Sources */,
+				EA5DC6D81C9A3D4600A0641B /* PhotoBrowserCell.swift in Sources */,
 				EAFAE7061C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
 				EAFAE6F41C82E50900A8BAF2 /* NSURLResponse+Haneke.swift in Sources */,
 				EAFAE5D51C82E4D500A8BAF2 /* ViewController.swift in Sources */,
@@ -1199,6 +1247,7 @@
 				EAFAE6CD1C82E50900A8BAF2 /* ContactsTableViewCell.swift in Sources */,
 				EAFAE6FB1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				EA94898C1C83E4FD008682E6 /* NewBlogViewController.swift in Sources */,
+				EA5DC6D71C9A3D4600A0641B /* BrowserCellDelegate.swift in Sources */,
 				EAFAE6DC1C82E50900A8BAF2 /* ConstraintItem.swift in Sources */,
 				EAFAE7171C82E50900A8BAF2 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				EAFAE6F31C82E50900A8BAF2 /* NSHTTPURLResponse+Haneke.swift in Sources */,
@@ -1212,6 +1261,7 @@
 				EA7D9D111C83DE8B00056B22 /* XKeyBoard.m in Sources */,
 				EAFAE72C1C82E50900A8BAF2 /* Httpresult.swift in Sources */,
 				EAFAE6BE1C82E50900A8BAF2 /* RegisterGetCodeViewController.swift in Sources */,
+				EA6D54151C97E85F00F85EA2 /* BanJihuodongViewController.swift in Sources */,
 				EAFAE6DA1C82E50900A8BAF2 /* ConstraintAttributes.swift in Sources */,
 				EAFAE70F1C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				EACF4D9E1C8E7F2800C777D6 /* SaoYiSaoViewController.swift in Sources */,
@@ -1236,9 +1286,11 @@
 				EA94898E1C83E8EE008682E6 /* ImageCollectionViewCell.swift in Sources */,
 				EAFAE72B1C82E50900A8BAF2 /* Http.swift in Sources */,
 				EAFAE6E91C82E50900A8BAF2 /* Data.swift in Sources */,
+				EA6D2D3B1C9500830092F09A /* ZhouPlanViewController.swift in Sources */,
 				EAFAE6AB1C82E50900A8BAF2 /* PhotoBrowserCollectionCell.swift in Sources */,
 				EAFAE6A81C82E50900A8BAF2 /* PictureList.swift in Sources */,
 				EAFAE72A1C82E50900A8BAF2 /* CornerRadiusViewController.swift in Sources */,
+				EA6D2D3F1C9512F20092F09A /* AvatorCollectionViewCell.swift in Sources */,
 				EAFAE6ED1C82E50900A8BAF2 /* Fetcher.swift in Sources */,
 				EAFAE7211C82E50900A8BAF2 /* PhotoBrowser+PBType.swift in Sources */,
 				EAFAE6F51C82E50900A8BAF2 /* String+Haneke.swift in Sources */,
@@ -1257,12 +1309,15 @@
 				EAFAE6D01C82E50900A8BAF2 /* NewsViewController.swift in Sources */,
 				EAFAE7151C82E50900A8BAF2 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				EAFAE6FE1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
+				EA5DC6D91C9A3D4600A0641B /* PhotoBrowserView.swift in Sources */,
 				EAFAE70B1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				EAFAE6EE1C82E50900A8BAF2 /* Format.swift in Sources */,
 				EAFAE6B21C82E50900A8BAF2 /* FunTableViewCell.swift in Sources */,
 				EAFAE6F71C82E50900A8BAF2 /* UIImage+Haneke.swift in Sources */,
 				EAFAE7071C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
+				EA6D54131C97AB3D00F85EA2 /* daKaViewController.swift in Sources */,
 				EAC8DE721C8978B300C2CEE6 /* CommentList.swift in Sources */,
+				EA6D54111C97925D00F85EA2 /* XinXiViewController.swift in Sources */,
 				EAFAE6DD1C82E50900A8BAF2 /* ConstraintMaker.swift in Sources */,
 				EAFAE7021C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				EAFAE6B41C82E50900A8BAF2 /* ForgetPasswordSetViewController.swift in Sources */,
@@ -1284,6 +1339,7 @@
 				EAFAE71D1C82E50900A8BAF2 /* PhotoBrowser+CollectionViewExtend.swift in Sources */,
 				EAFAE6C51C82E50900A8BAF2 /* MineTableViewCell.swift in Sources */,
 				EAFAE7161C82E50900A8BAF2 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
+				EA6D2D3D1C95125D0092F09A /* bbKaoQinViewController.swift in Sources */,
 				EA9489951C84266F008682E6 /* ConnectModel.m in Sources */,
 				EAFAE7251C82E50900A8BAF2 /* PhotoBrowser.swift in Sources */,
 				EAFAE7141C82E50900A8BAF2 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
@@ -1392,12 +1448,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shuguo Peng (269Z58773S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shuguo Peng (269Z58773S)";
 				INFOPLIST_FILE = WXT_Teacher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "xiaocool.cn.WXT-Teacher";
+				PRODUCT_BUNDLE_IDENTIFIER = xiaocool.cn.wxtteacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "28315964-33d6-418c-be50-757d0355edf9";
 				SWIFT_OBJC_BRIDGING_HEADER = "WXT_Teacher-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1409,12 +1467,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shuguo Peng (269Z58773S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shuguo Peng (269Z58773S)";
 				INFOPLIST_FILE = WXT_Teacher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "xiaocool.cn.WXT-Teacher";
+				PRODUCT_BUNDLE_IDENTIFIER = xiaocool.cn.wxtteacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "28315964-33d6-418c-be50-757d0355edf9";
 				SWIFT_OBJC_BRIDGING_HEADER = "WXT_Teacher-Bridging-Header.h";
 			};
 			name = Release;

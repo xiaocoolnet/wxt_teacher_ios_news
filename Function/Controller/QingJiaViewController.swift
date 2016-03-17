@@ -33,6 +33,7 @@ class QingJiaViewController: UIViewController,UITableViewDelegate,UITableViewDat
         XKeyBoard.registerKeyBoardShow(self)
         let rightItem = UIBarButtonItem(title: "发送", style: .Done, target: self, action: Selector("PutMessage"))
         self.navigationItem.rightBarButtonItem = rightItem
+        self.tabBarController?.tabBar.hidden = true
         self.view.addSubview(self.dataTableView)
     }
     

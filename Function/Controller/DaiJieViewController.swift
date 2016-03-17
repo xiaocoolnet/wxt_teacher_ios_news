@@ -14,6 +14,7 @@ class DaiJieViewController: UIViewController,UITableViewDelegate,UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "代接确认"
+        self.view.backgroundColor = UIColor.whiteColor()
         dataTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64)
         dataTableView.delegate = self
         dataTableView.dataSource = self

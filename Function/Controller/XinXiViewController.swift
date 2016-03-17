@@ -1,30 +1,32 @@
 //
-//  BanJiKeJianViewController.swift
+//  XinXiViewController.swift
 //  WXT_Teacher
 //
-//  Created by 李春波 on 16/3/12.
+//  Created by 李春波 on 16/3/15.
 //  Copyright © 2016年 北京校酷网络科技有限公司. All rights reserved.
 //
 
 import UIKit
 
-class BanJiKeJianViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class XinXiViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
-    let kejianTableview = UITableView()
+    
+    let shenHeTableview = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "宝宝课件"
+        self.title = "信息审核"
         self.tabBarController?.tabBar.hidden = true
-        self.kejianTableview.delegate = self
-        self.kejianTableview.dataSource = self
+        self.shenHeTableview.delegate = self
+        self.shenHeTableview.dataSource = self
         self.automaticallyAdjustsScrollViewInsets = false
-        self.kejianTableview.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64)
-        self.kejianTableview.tableFooterView = UIView(frame: CGRectZero)
-        self.view.addSubview(self.kejianTableview)
+        self.shenHeTableview.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64)
+        self.view.backgroundColor = UIColor.whiteColor()
+        self.shenHeTableview.tableFooterView = UIView(frame: CGRectZero)
+        self.view.addSubview(self.shenHeTableview)
         // Do any additional setup after loading the view.
     }
-
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -42,18 +44,18 @@ class BanJiKeJianViewController: UIViewController,UITableViewDelegate,UITableVie
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "cell")
         checkBtn.frame = CGRectMake(0, 10, 70, 30)
         checkBtn.frame.origin.x = self.view.bounds.width - 80
-        checkBtn.backgroundColor = UIColor(red: 255/255, green: 130/255, blue: 4/255, alpha: 1)
+        //155,229,180
+        checkBtn.backgroundColor = UIColor(red: 155/255, green: 229/255, blue: 180/255, alpha: 1)
         checkBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         checkBtn.setTitle("查看", forState: .Normal)
         checkBtn.titleLabel?.font = UIFont.systemFontOfSize(14)
         checkBtn.layer.cornerRadius = 5
         checkBtn.layer.masksToBounds = true
-        cell.textLabel?.text = "语文课课件"
-        self.view.backgroundColor = UIColor.whiteColor()
+        cell.textLabel?.text = "小红家长发送了一条动态"
         cell.contentView.addSubview(checkBtn)
         return cell
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

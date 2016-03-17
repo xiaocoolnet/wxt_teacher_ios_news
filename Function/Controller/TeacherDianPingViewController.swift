@@ -23,7 +23,7 @@ class TeacherDianPingViewController: UIViewController,UITableViewDelegate,UITabl
         let emptyView = UIView()
         emptyView.frame = CGRectZero
         DianPingView.tableFooterView = emptyView
-        let rightItem = UIBarButtonItem(title: "发表点评", style: .Done, target: self, action: Selector(""))
+        let rightItem = UIBarButtonItem(title: "发表点评", style: .Done, target: self, action: Selector("FaBiao"))
         self.navigationItem.rightBarButtonItem = rightItem
         DianPingView.registerClass(TeacherDianPingTableViewCell.self, forCellReuseIdentifier: "TDP")
         self.view.addSubview(DianPingView)
@@ -54,6 +54,10 @@ class TeacherDianPingViewController: UIViewController,UITableViewDelegate,UITabl
         cell.contentLabel.frame = CGRectMake(11, 54, self.view.bounds.width - 22, boundingRect.height)
         cell.contentLabel.text = "孩子学习成绩很好"
         return cell
+    }
+    
+    func FaBiao(){
+        print("")
     }
     
     override func didReceiveMemoryWarning() {

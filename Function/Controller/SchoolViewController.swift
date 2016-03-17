@@ -38,6 +38,7 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
         self.schoolTableView.delegate = self
         self.schoolTableView.dataSource = self
         ScrollViewImage()
+        self.view.backgroundColor = UIColor.whiteColor()
         self.tabBarController?.tabBar.hidden = true
         self.view.addSubview(self.schoolTableView)
     }

@@ -25,6 +25,8 @@ class BBKeTangViewController: UIViewController,UITableViewDataSource,UITableView
         self.ketangTableView.delegate = self
         self.ketangTableView.tableFooterView = UIView(frame: CGRectZero)
         self.automaticallyAdjustsScrollViewInsets = false
+        self.tabBarController?.tabBar.hidden = true
+        self.view.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(self.ketangTableView)
         // Do any additional setup after loading the view.
     }

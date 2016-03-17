@@ -54,6 +54,10 @@ class ReviceMessagesViewController: UIViewController,UITableViewDelegate,UITable
         }
         return self.view.bounds.height - 90 - 64
     }
+    
+    func ReviceMessages(){
+        print("")
+    }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let avatorImage = UIImageView()

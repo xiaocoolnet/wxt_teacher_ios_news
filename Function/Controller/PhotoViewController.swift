@@ -33,7 +33,8 @@ class PhotoViewController: UIViewController,UICollectionViewDataSource,UICollect
     }
     
     func NewPhoto(){
-        print("点击了右边")
+        let newPhoto = NewPhotoViewController()
+        self.navigationController?.pushViewController(newPhoto, animated: true)
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -74,6 +75,12 @@ class PhotoViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(10, 10, 10, 10)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let camera = CameraViewController()
+        camera.titlename = "小二班班级相册"
+        self.navigationController?.pushViewController(camera, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
