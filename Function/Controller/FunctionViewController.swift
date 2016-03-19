@@ -78,7 +78,7 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "功能"
-        funTableView.frame = CGRectMake(0, 60, self.view.bounds.width, self.view.bounds.height - 100)
+        funTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height - 44 - 64)
         funTableView.delegate = self
         funTableView.dataSource = self
         funTableView.registerClass(FunTableViewCell.self, forCellReuseIdentifier: "FunCell")
@@ -305,11 +305,13 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 btn6.layer.masksToBounds = true
                 btn6.setBackgroundImage(UIImage(named: "家长叮嘱"), forState: UIControlState.Normal)
                 btn6.center.x = (viewWidth/8)*3
+                btn6.addTarget(self, action: Selector("DingzhuView"), forControlEvents: .TouchUpInside)
                 btn7.frame = CGRectMake(0, 100, 44, 44)
                 btn7.layer.cornerRadius = 22
                 btn7.layer.masksToBounds = true
                 btn7.setBackgroundImage(UIImage(named: "食谱"), forState: UIControlState.Normal)
                 btn7.center.x = (viewWidth/8)*5
+                btn7.addTarget(self, action: Selector("ShiPuView"), forControlEvents: .TouchUpInside)
                 btn8.frame = CGRectMake(0, 100, 44, 44)
                 btn8.layer.cornerRadius = 22
                 btn8.layer.masksToBounds = true
@@ -613,6 +615,11 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
         self.navigationController?.pushViewController(kaoqin, animated: true)
     }
     
+    func ShiPuView(){
+        let shipu = ShiPuViewController()
+        self.navigationController?.pushViewController(shipu, animated: true)
+    }
+    
     func KeJianView(){
         let banJikejian = BanJiKeJianViewController()
         self.navigationController?.pushViewController(banJikejian, animated: true)
@@ -631,6 +638,11 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
     func huoDongView(){
         let bjhd = BanJihuodongViewController()
         self.navigationController?.pushViewController(bjhd, animated: true)
+    }
+    
+    func DingzhuView(){
+        let dingzhu = DingzhuViewController()
+        self.navigationController?.pushViewController(dingzhu, animated: true)
     }
     
     func XinxiView(){

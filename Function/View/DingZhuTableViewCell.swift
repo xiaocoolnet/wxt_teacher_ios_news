@@ -1,14 +1,14 @@
 //
-//  DaiJieTableViewCell.swift
+//  DingZhuTableViewCell.swift
 //  WXT_Teacher
 //
-//  Created by 李春波 on 16/3/9.
+//  Created by 李春波 on 16/3/19.
 //  Copyright © 2016年 北京校酷网络科技有限公司. All rights reserved.
 //
 
 import UIKit
 
-class DaiJieTableViewCell: UITableViewCell {
+class DingZhuTableViewCell: UITableViewCell {
 
     let nameLabel = UILabel()
     let btn = UIButton()
@@ -22,7 +22,7 @@ class DaiJieTableViewCell: UITableViewCell {
         for view in self.contentView.subviews {
             view.removeFromSuperview()
         }
-        self.nameLabel.frame = CGRectMake(10, 20, 81, 15)
+        self.nameLabel.frame = CGRectMake(10, 20, 31, 15)
         self.nameLabel.font = UIFont.systemFontOfSize(15)
         self.nameLabel.textColor = UIColor.blackColor()
         self.btn.frame = CGRectMake(0, 8, 70, 30)
@@ -37,7 +37,6 @@ class DaiJieTableViewCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

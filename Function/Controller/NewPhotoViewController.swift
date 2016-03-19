@@ -19,25 +19,25 @@ class NewPhotoViewController: UIViewController {
         self.view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
         self.title = "新建相册"
         super.viewDidLoad()
-        nameView.frame = CGRectMake(5, 70, self.view.bounds.width - 10, 46)
+        nameView.frame = CGRectMake(5, 10, self.view.bounds.width - 10, 46)
         nameView.backgroundColor = UIColor.whiteColor()
         nameView.layer.cornerRadius = 5
         nameView.layer.masksToBounds = true
         nameView.layer.borderWidth = 1
         nameView.layer.borderColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1).CGColor
-        miaoshuView.frame = CGRectMake(5, 115, self.view.bounds.width - 10, 46)
+        miaoshuView.frame = CGRectMake(5, 55, self.view.bounds.width - 10, 46)
         miaoshuView.backgroundColor = UIColor.whiteColor()
         miaoshuView.layer.cornerRadius = 5
         miaoshuView.layer.masksToBounds = true
         miaoshuView.layer.borderWidth = 1
         miaoshuView.layer.borderColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1).CGColor
-        nameLabel.frame = CGRectMake(10, 85, 70, 15)
+        nameLabel.frame = CGRectMake(10, 25, 70, 15)
         nameLabel.font = UIFont.systemFontOfSize(16)
         nameLabel.text = "相册名称"
-        miaoshiLabel.frame = CGRectMake(10, 131, 70, 15)
+        miaoshiLabel.frame = CGRectMake(10, 71, 70, 15)
         miaoshiLabel.font = UIFont.systemFontOfSize(16)
         miaoshiLabel.text = "相册描述"
-        finishBtn.frame = CGRectMake(10, 174, self.view.bounds.width - 20, 40)
+        finishBtn.frame = CGRectMake(10, 114, self.view.bounds.width - 20, 40)
         finishBtn.layer.cornerRadius = 5
         finishBtn.layer.masksToBounds = true
         finishBtn.setTitle("完成创建", forState: .Normal)

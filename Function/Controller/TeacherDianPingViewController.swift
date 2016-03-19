@@ -16,7 +16,7 @@ class TeacherDianPingViewController: UIViewController,UITableViewDelegate,UITabl
         self.title = "点评记录"
         self.view.backgroundColor = UIColor.whiteColor()
         self.tabBarController?.tabBar.hidden = true
-        DianPingView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64)
+        DianPingView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
         DianPingView.dataSource = self
         DianPingView.delegate = self
         self.automaticallyAdjustsScrollViewInsets = false

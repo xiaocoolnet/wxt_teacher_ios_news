@@ -1,32 +1,33 @@
+
 //
-//  DaiJieViewController.swift
+//  ShiPuViewController.swift
 //  WXT_Teacher
 //
-//  Created by 李春波 on 16/3/9.
+//  Created by 李春波 on 16/3/19.
 //  Copyright © 2016年 北京校酷网络科技有限公司. All rights reserved.
 //
 
 import UIKit
 
-class DaiJieViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ShiPuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     let dataTableView = UITableView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "代接确认"
+        self.title = "每周食谱"
         self.view.backgroundColor = UIColor.whiteColor()
-        dataTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height - 64)
-        dataTableView.delegate = self
-        dataTableView.dataSource = self
-        dataTableView.registerClass(DaiJieTableViewCell.self, forCellReuseIdentifier: "Daijie")
+        self.dataTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height - 64)
+        self.dataTableView.delegate = self
+        self.dataTableView.dataSource = self
+        self.dataTableView.tableFooterView = UIView(frame: CGRectZero)
         self.automaticallyAdjustsScrollViewInsets = false
         self.tabBarController?.tabBar.hidden = true
-        self.view.addSubview(dataTableView)
+        self.view.addSubview(self.dataTableView)
         // Do any additional setup after loading the view.
     }
-
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 5
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -40,13 +41,13 @@ class DaiJieViewController: UIViewController,UITableViewDelegate,UITableViewData
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 50
     }
-    
+
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
         if(section == 0){
             let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
             let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
             label.font = UIFont.systemFontOfSize(12)
-            label.text = "未接走(3)"
+            label.text = "周一"
             label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
             view.addSubview(label)
             view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
@@ -56,7 +57,27 @@ class DaiJieViewController: UIViewController,UITableViewDelegate,UITableViewData
             let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
             let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
             label.font = UIFont.systemFontOfSize(12)
-            label.text = "待确认(5)"
+            label.text = "周二"
+            label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
+            view.addSubview(label)
+            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+            return view
+        }
+        if(section == 2){
+            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
+            let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
+            label.font = UIFont.systemFontOfSize(12)
+            label.text = "周三"
+            label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
+            view.addSubview(label)
+            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+            return view
+        }
+        if(section == 3){
+            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
+            let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
+            label.font = UIFont.systemFontOfSize(12)
+            label.text = "周四"
             label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
             view.addSubview(label)
             view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
@@ -65,7 +86,7 @@ class DaiJieViewController: UIViewController,UITableViewDelegate,UITableViewData
         let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
         let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
         label.font = UIFont.systemFontOfSize(12)
-        label.text = "已接走(26)"
+        label.text = "周五"
         label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
         view.addSubview(label)
         view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
@@ -73,54 +94,21 @@ class DaiJieViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(section == 0){
-            return 3
-        }
-        if(section == 1){
-            return 5
-        }
-        if(section == 2){
-            return 26
-        }
-        return 0
+        return 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Daijie", forIndexPath: indexPath) as! DaiJieTableViewCell
-        cell.selectionStyle = .None
-        if(indexPath.section == 0){
-            cell.nameLabel.text = "小明"
-            //245,80,102
-            cell.btn.backgroundColor = UIColor(red: 245/255, green: 80/255, blue: 102/255, alpha: 1)
-            cell.btn.layer.borderWidth = 0
-            cell.btn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-            cell.btn.setTitle("提醒家长", forState: .Normal)
-            cell.btn.frame.origin.x = self.view.bounds.width - 80
-            return cell
-        }
-        if(indexPath.section == 1){
-            cell.nameLabel.text = "小房"
-            //255,130,4
-            cell.btn.backgroundColor = UIColor(red: 255/255, green: 130/255, blue: 4/255, alpha: 1)
-            cell.btn.layer.borderWidth = 0
-            cell.btn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-            cell.btn.setTitle("确认", forState: .Normal)
-            cell.btn.frame.origin.x = self.view.bounds.width - 80
-            return cell
-        }
-        else{
-            cell.nameLabel.text = "小红"
-            cell.btn.backgroundColor = UIColor.whiteColor()
-            cell.btn.layer.borderWidth = 1
-            cell.btn.layer.borderColor = UIColor.grayColor().CGColor
-            cell.btn.setTitleColor(UIColor.blackColor(), forState: .Normal)
-            cell.btn.setTitle("已接走", forState: .Normal)
-            cell.btn.frame.origin.x = self.view.bounds.width - 80
-            return cell
-
-        }
+        let contentlabel = UILabel()
+        let cell = UITableViewCell(style: .Default, reuseIdentifier: "cell")
+        contentlabel.frame = CGRectMake(10, 5, self.view.bounds.width - 10, 40)
+        contentlabel.numberOfLines = 0
+        contentlabel.font = UIFont.systemFontOfSize(16)
+        contentlabel.text = "食谱1号"
+        cell.contentView.addSubview(contentlabel)
+        return cell
     }
-    
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

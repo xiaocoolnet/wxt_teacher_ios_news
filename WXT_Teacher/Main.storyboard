@@ -95,7 +95,7 @@
                                     <constraint firstAttribute="height" constant="49" id="Ijl-vH-lbA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqm-53-aFz">
                                 <rect key="frame" x="315" y="557" width="30" height="17"/>
@@ -734,7 +734,7 @@
                         <viewControllerLayoutGuide type="bottom" id="diG-eu-nVS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8kb-k0-bmk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -791,7 +791,7 @@
                         <viewControllerLayoutGuide type="bottom" id="fGU-n5-qKR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="l85-z1-PlS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -801,7 +801,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBM-j5-0Z1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1184" y="4014"/>
+            <point key="canvasLocation" x="1184" y="3995"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UpS-fF-WEP">
@@ -830,7 +830,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d0m-kg-RQY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="消息" image="消息" id="wNC-h7-9Il"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hQI-dh-ogp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="hQI-dh-ogp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -906,7 +906,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z9d-2X-aFH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我的" image="我的" id="END-tA-DYL"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gtq-W5-C8m">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Gtq-W5-C8m">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

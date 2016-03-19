@@ -16,7 +16,7 @@ class BanJihuodongViewController: UIViewController,UITableViewDelegate,UITableVi
         self.title = "班级活动"
         self.view.backgroundColor = UIColor.whiteColor()
         self.automaticallyAdjustsScrollViewInsets = false
-        huoDongTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64)
+        huoDongTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
         self.huoDongTableView.tableFooterView = UIView(frame: CGRectZero)
         huoDongTableView.delegate = self
         huoDongTableView.dataSource = self

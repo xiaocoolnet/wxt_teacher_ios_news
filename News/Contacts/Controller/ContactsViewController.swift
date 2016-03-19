@@ -11,7 +11,7 @@ import PagingMenuController
 
 class ContactsViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
         self.title = "通讯录"
         let rightItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "RightBtn")
@@ -31,12 +31,20 @@ class ContactsViewController: UIViewController {
         options.menuDisplayMode = .SegmentedControl
         options.selectedTextColor = UIColor(red: 54.0 / 255.0, green: 190.0 / 255.0, blue: 100.0 / 255.0, alpha: 1.0)
         let pagingMenuController = PagingMenuController(viewControllers: viewControllers, options: options)
-        pagingMenuController.view.frame.origin.y += 60
+        pagingMenuController.view.frame.origin.y += 0
         pagingMenuController.view.frame.size.height -= 0
         addChildViewController(pagingMenuController)
         view.addSubview(pagingMenuController.view)
         pagingMenuController.didMoveToParentViewController(self)
         // Do any additional setup after loading the view.
+    }
+    
+    func LeftBtn(){
+        print("")
+    }
+    
+    func RightBtn(){
+        print("")
     }
 
     override func didReceiveMemoryWarning() {

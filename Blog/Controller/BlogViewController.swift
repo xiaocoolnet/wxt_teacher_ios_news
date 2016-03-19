@@ -34,7 +34,7 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.navigationItem.rightBarButtonItem = rightItem
         blogTableView.delegate = self
         blogTableView.dataSource = self
-        blogTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64 - 44)
+        blogTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height - 44 - 64)
         blogTableView.registerClass(BlogTableViewCell.self, forCellReuseIdentifier: "blogCell")
         self.automaticallyAdjustsScrollViewInsets = false
         self.tabBarController?.tabBar.hidden = false

@@ -15,7 +15,7 @@ class NewsInfoViewController: UIViewController,UITableViewDelegate,UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "消息详情"
-        newsInfoTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64)
+        newsInfoTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
         self.view.backgroundColor = UIColor.whiteColor()
         newsInfoTableView.delegate = self
         newsInfoTableView.dataSource = self

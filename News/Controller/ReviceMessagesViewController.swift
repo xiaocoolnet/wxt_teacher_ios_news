@@ -19,7 +19,7 @@ class ReviceMessagesViewController: UIViewController,UITableViewDelegate,UITable
         super.viewDidLoad()
         IQKeyboardManager.sharedManager().enable = false
         self.title = "回复\(newsInfo.sendName!)"
-        newsInfoTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64)
+        newsInfoTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
         self.view.backgroundColor = UIColor.whiteColor()
         newsInfoTableView.delegate = self
         newsInfoTableView.dataSource = self

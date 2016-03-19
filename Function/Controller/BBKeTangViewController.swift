@@ -20,7 +20,7 @@ class BBKeTangViewController: UIViewController,UITableViewDataSource,UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "宝宝课堂"
-        self.ketangTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64)
+        self.ketangTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
         self.ketangTableView.dataSource = self
         self.ketangTableView.delegate = self
         self.ketangTableView.tableFooterView = UIView(frame: CGRectZero)

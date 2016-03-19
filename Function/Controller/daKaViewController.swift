@@ -14,7 +14,7 @@ class daKaViewController: UIViewController,UITableViewDataSource,UITableViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "老师考勤"
-        dakaiTableView.frame = CGRectMake(0,64,self.view.bounds.width,self.view.bounds.height - 64)
+        dakaiTableView.frame = CGRectMake(0,0,self.view.bounds.width,self.view.bounds.height)
         dakaiTableView.dataSource = self
         dakaiTableView.delegate = self
         self.view.backgroundColor = UIColor.whiteColor()

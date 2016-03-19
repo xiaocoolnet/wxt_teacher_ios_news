@@ -14,7 +14,7 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
     var tableView: FlexibleTableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView = FlexibleTableView(frame: CGRectMake(0, -30, self.view.bounds.width, self.view.bounds.height), delegate: self)
+        tableView = FlexibleTableView(frame: CGRectMake(0, -30, self.view.bounds.width, self.view.bounds.height - 114), delegate: self)
         self.tableView.registerClass(ContactsTableViewCell.self, forCellReuseIdentifier: "ContactsCell")
         self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(tableView)
@@ -80,8 +80,23 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
     }
     //加载子类行的数据
     func tableView(tableView: UITableView, cellForSubRowAtIndexPath indexPath: FlexibleIndexPath) -> UITableViewCell {
+        let duanxinBtn = UIButton()
+        let ipBtn = UIButton()
+        let phoneBtn = UIButton()
         let cell = tableView.dequeueReusableCellWithIdentifier("ContactsCell", forIndexPath: indexPath.ns) as! ContactsTableViewCell
-        cell.nameLabel.text = "hahah"
+        duanxinBtn.frame = CGRectMake(0, 26, 17, 17)
+        duanxinBtn.frame.origin.x = self.view.bounds.width - 72
+        ipBtn.frame = CGRectMake(0, 26, 17, 17)
+        ipBtn.frame.origin.x = self.view.bounds.width - 50
+        phoneBtn.frame = CGRectMake(0, 26, 17, 17)
+        phoneBtn.frame.origin.x = self.view.bounds.width - 30
+        duanxinBtn.setImage(UIImage(named: "发消息"), forState: .Normal)
+        ipBtn.setImage(UIImage(named: "电话"), forState: .Normal)
+        phoneBtn.setImage(UIImage(named: "电话2"), forState: .Normal)
+        cell.nameLabel.text = "小明爸爸"
+        cell.contentView.addSubview(duanxinBtn)
+        cell.contentView.addSubview(ipBtn)
+        cell.contentView.addSubview(phoneBtn)
         return cell
     }
     

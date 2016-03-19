@@ -15,7 +15,7 @@ class ZhouPlanViewController: UIViewController,UITableViewDataSource,UITableView
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         self.title = "周计划"
-        self.zhouPlanTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64)
+        self.zhouPlanTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
         self.zhouPlanTableView.dataSource = self
         self.zhouPlanTableView.delegate = self
         self.zhouPlanTableView.tableFooterView = UIView(frame: CGRectZero)

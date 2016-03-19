@@ -20,7 +20,7 @@ class PhotoViewController: UIViewController,UICollectionViewDataSource,UICollect
         self.tabBarController?.tabBar.hidden = true
         flowLayout.scrollDirection = UICollectionViewScrollDirection.Vertical
         print(UIScreen.mainScreen().bounds.width)
-        photoCollection = UICollectionView(frame: CGRectMake(0, 10, UIScreen.mainScreen().bounds.width, self.view.bounds.height), collectionViewLayout: flowLayout)
+        photoCollection = UICollectionView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, self.view.bounds.height), collectionViewLayout: flowLayout)
         photoCollection!.delegate = self
         photoCollection!.dataSource = self
         photoCollection!.alwaysBounceVertical = true

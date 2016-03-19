@@ -21,7 +21,7 @@ class ChengZhangViewController: UIViewController,UITableViewDataSource,UITableVi
         self.automaticallyAdjustsScrollViewInsets = false
         nameTableView.delegate = self
         nameTableView.dataSource = self
-        nameTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64)
+        nameTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.frame = CGRectMake(0, 0, self.view.bounds.width, 44)
         definesPresentationContext = true

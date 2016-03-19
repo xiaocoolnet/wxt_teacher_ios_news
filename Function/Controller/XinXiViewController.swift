@@ -20,7 +20,7 @@ class XinXiViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         self.shenHeTableview.delegate = self
         self.shenHeTableview.dataSource = self
         self.automaticallyAdjustsScrollViewInsets = false
-        self.shenHeTableview.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64)
+        self.shenHeTableview.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height )
         self.view.backgroundColor = UIColor.whiteColor()
         self.shenHeTableview.tableFooterView = UIView(frame: CGRectZero)
         self.view.addSubview(self.shenHeTableview)

@@ -12,6 +12,7 @@
 		EA20A69D1C8D663F001AAAAD /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA20A69C1C8D663F001AAAAD /* NewsList.swift */; };
 		EA43502F1C93F51F0040F56D /* BanJiKeJianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA43502E1C93F51F0040F56D /* BanJiKeJianViewController.swift */; };
 		EA4350311C9403810040F56D /* BBKeTangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4350301C9403810040F56D /* BBKeTangViewController.swift */; };
+		EA4402831C9BED87009D1890 /* YiJianFanKuiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4402821C9BED87009D1890 /* YiJianFanKuiViewController.swift */; };
 		EA4882071C995E9A009CAC3A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4882061C995E9A009CAC3A /* CameraViewController.swift */; };
 		EA5DC6D71C9A3D4600A0641B /* BrowserCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DC6D31C9A3D4600A0641B /* BrowserCellDelegate.swift */; };
 		EA5DC6D81C9A3D4600A0641B /* PhotoBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DC6D41C9A3D4600A0641B /* PhotoBrowserCell.swift */; };
@@ -35,8 +36,15 @@
 		EAB2EED11C8FB1CF00693D04 /* DaiJieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2EED01C8FB1CF00693D04 /* DaiJieTableViewCell.swift */; };
 		EAB2EED31C90032500693D04 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2EED21C90032500693D04 /* PhotoViewController.swift */; };
 		EAB2EED51C90035B00693D04 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2EED41C90035B00693D04 /* PhotoCollectionViewCell.swift */; };
+		EAC200881C9CF72700A6A613 /* SetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC200871C9CF72700A6A613 /* SetPassViewController.swift */; };
+		EAC2008A1C9D2D6300A6A613 /* ShiPuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC200891C9D2D6300A6A613 /* ShiPuViewController.swift */; };
+		EAC2008C1C9D332700A6A613 /* DingzhuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC2008B1C9D332700A6A613 /* DingzhuViewController.swift */; };
+		EAC2008E1C9D36A400A6A613 /* DingZhuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC2008D1C9D36A400A6A613 /* DingZhuTableViewCell.swift */; };
 		EAC8DE701C8974AC00C2CEE6 /* BlogCommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8DE6F1C8974AC00C2CEE6 /* BlogCommentTableViewController.swift */; };
 		EAC8DE721C8978B300C2CEE6 /* CommentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8DE711C8978B300C2CEE6 /* CommentList.swift */; };
+		EACF434C1C9D3B730008A3A6 /* DingzhuXiangqingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF434B1C9D3B730008A3A6 /* DingzhuXiangqingViewController.swift */; };
+		EACF434F1C9D3EC30008A3A6 /* QunLiaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF434D1C9D3EC30008A3A6 /* QunLiaoViewController.swift */; };
+		EACF43501C9D3EC30008A3A6 /* YuanDingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF434E1C9D3EC30008A3A6 /* YuanDingViewController.swift */; };
 		EACF4D9A1C8E6B8800C777D6 /* ReviceMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF4D991C8E6B8800C777D6 /* ReviceMessagesViewController.swift */; };
 		EACF4D9C1C8E794300C777D6 /* ChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF4D9B1C8E794300C777D6 /* ChangePassViewController.swift */; };
 		EACF4D9E1C8E7F2800C777D6 /* SaoYiSaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF4D9D1C8E7F2800C777D6 /* SaoYiSaoViewController.swift */; };
@@ -86,9 +94,7 @@
 		EAFAE6C61C82E50900A8BAF2 /* Readme in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE61F1C82E50900A8BAF2 /* Readme */; };
 		EAFAE6C71C82E50900A8BAF2 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE6231C82E50900A8BAF2 /* ContactsViewController.swift */; };
 		EAFAE6C81C82E50900A8BAF2 /* JiaZhangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE6241C82E50900A8BAF2 /* JiaZhangViewController.swift */; };
-		EAFAE6C91C82E50900A8BAF2 /* QunLiaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE6251C82E50900A8BAF2 /* QunLiaoViewController.swift */; };
 		EAFAE6CA1C82E50900A8BAF2 /* Readme in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE6261C82E50900A8BAF2 /* Readme */; };
-		EAFAE6CB1C82E50900A8BAF2 /* YuanDingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE6271C82E50900A8BAF2 /* YuanDingViewController.swift */; };
 		EAFAE6CC1C82E50900A8BAF2 /* Readme in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE6291C82E50900A8BAF2 /* Readme */; };
 		EAFAE6CD1C82E50900A8BAF2 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE62B1C82E50900A8BAF2 /* ContactsTableViewCell.swift */; };
 		EAFAE6CE1C82E50900A8BAF2 /* Readme in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE62C1C82E50900A8BAF2 /* Readme */; };
@@ -201,6 +207,7 @@
 		EA20A69C1C8D663F001AAAAD /* NewsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
 		EA43502E1C93F51F0040F56D /* BanJiKeJianViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanJiKeJianViewController.swift; sourceTree = "<group>"; };
 		EA4350301C9403810040F56D /* BBKeTangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBKeTangViewController.swift; sourceTree = "<group>"; };
+		EA4402821C9BED87009D1890 /* YiJianFanKuiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiJianFanKuiViewController.swift; sourceTree = "<group>"; };
 		EA4882061C995E9A009CAC3A /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		EA5DC6D31C9A3D4600A0641B /* BrowserCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowserCellDelegate.swift; sourceTree = "<group>"; };
 		EA5DC6D41C9A3D4600A0641B /* PhotoBrowserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserCell.swift; sourceTree = "<group>"; };
@@ -227,8 +234,15 @@
 		EAB2EED01C8FB1CF00693D04 /* DaiJieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaiJieTableViewCell.swift; sourceTree = "<group>"; };
 		EAB2EED21C90032500693D04 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		EAB2EED41C90035B00693D04 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		EAC200871C9CF72700A6A613 /* SetPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPassViewController.swift; sourceTree = "<group>"; };
+		EAC200891C9D2D6300A6A613 /* ShiPuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiPuViewController.swift; sourceTree = "<group>"; };
+		EAC2008B1C9D332700A6A613 /* DingzhuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DingzhuViewController.swift; sourceTree = "<group>"; };
+		EAC2008D1C9D36A400A6A613 /* DingZhuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DingZhuTableViewCell.swift; sourceTree = "<group>"; };
 		EAC8DE6F1C8974AC00C2CEE6 /* BlogCommentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogCommentTableViewController.swift; sourceTree = "<group>"; };
 		EAC8DE711C8978B300C2CEE6 /* CommentList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentList.swift; sourceTree = "<group>"; };
+		EACF434B1C9D3B730008A3A6 /* DingzhuXiangqingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DingzhuXiangqingViewController.swift; sourceTree = "<group>"; };
+		EACF434D1C9D3EC30008A3A6 /* QunLiaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QunLiaoViewController.swift; sourceTree = "<group>"; };
+		EACF434E1C9D3EC30008A3A6 /* YuanDingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YuanDingViewController.swift; sourceTree = "<group>"; };
 		EACF4D991C8E6B8800C777D6 /* ReviceMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviceMessagesViewController.swift; sourceTree = "<group>"; };
 		EACF4D9B1C8E794300C777D6 /* ChangePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassViewController.swift; sourceTree = "<group>"; };
 		EACF4D9D1C8E7F2800C777D6 /* SaoYiSaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaoYiSaoViewController.swift; sourceTree = "<group>"; };
@@ -280,9 +294,7 @@
 		EAFAE61F1C82E50900A8BAF2 /* Readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme; sourceTree = "<group>"; };
 		EAFAE6231C82E50900A8BAF2 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		EAFAE6241C82E50900A8BAF2 /* JiaZhangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiaZhangViewController.swift; sourceTree = "<group>"; };
-		EAFAE6251C82E50900A8BAF2 /* QunLiaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QunLiaoViewController.swift; sourceTree = "<group>"; };
 		EAFAE6261C82E50900A8BAF2 /* Readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme; sourceTree = "<group>"; };
-		EAFAE6271C82E50900A8BAF2 /* YuanDingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YuanDingViewController.swift; sourceTree = "<group>"; };
 		EAFAE6291C82E50900A8BAF2 /* Readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme; sourceTree = "<group>"; };
 		EAFAE62B1C82E50900A8BAF2 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
 		EAFAE62C1C82E50900A8BAF2 /* Readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme; sourceTree = "<group>"; };
@@ -443,6 +455,15 @@
 			path = Browser;
 			sourceTree = "<group>";
 		};
+		EACF434A1C9D3B4B0008A3A6 /* Dingzhu */ = {
+			isa = PBXGroup;
+			children = (
+				EAC2008B1C9D332700A6A613 /* DingzhuViewController.swift */,
+				EACF434B1C9D3B730008A3A6 /* DingzhuXiangqingViewController.swift */,
+			);
+			name = Dingzhu;
+			sourceTree = "<group>";
+		};
 		EAFAE5C61C82E4D500A8BAF2 = {
 			isa = PBXGroup;
 			children = (
@@ -543,6 +564,7 @@
 		EAFAE5F21C82E50900A8BAF2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EACF434A1C9D3B4B0008A3A6 /* Dingzhu */,
 				EA4882051C9948E3009CAC3A /* photo */,
 				EAFAE5F41C82E50900A8BAF2 /* Readme */,
 				EAFAE5F31C82E50900A8BAF2 /* FunctionViewController.swift */,
@@ -558,6 +580,7 @@
 				EA6D54101C97925D00F85EA2 /* XinXiViewController.swift */,
 				EA6D54121C97AB3D00F85EA2 /* daKaViewController.swift */,
 				EA6D54141C97E85F00F85EA2 /* BanJihuodongViewController.swift */,
+				EAC200891C9D2D6300A6A613 /* ShiPuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -580,6 +603,7 @@
 				EAB2EED41C90035B00693D04 /* PhotoCollectionViewCell.swift */,
 				EAD5D45C1C93AB5F00013E10 /* TeacherDianPingTableViewCell.swift */,
 				EA6D2D3E1C9512F20092F09A /* AvatorCollectionViewCell.swift */,
+				EAC2008D1C9D36A400A6A613 /* DingZhuTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -715,11 +739,13 @@
 			isa = PBXGroup;
 			children = (
 				EAFAE61A1C82E50900A8BAF2 /* Readme */,
+				EAFAE6191C82E50900A8BAF2 /* MineMainViewController.swift */,
 				EACF4D9F1C8E9F4000C777D6 /* ServerTableViewController.swift */,
 				EACF4DA01C8E9F4000C777D6 /* HelpTableViewController.swift */,
-				EAFAE6191C82E50900A8BAF2 /* MineMainViewController.swift */,
 				EACF4D9B1C8E794300C777D6 /* ChangePassViewController.swift */,
 				EACF4D9D1C8E7F2800C777D6 /* SaoYiSaoViewController.swift */,
+				EA4402821C9BED87009D1890 /* YiJianFanKuiViewController.swift */,
+				EAC200871C9CF72700A6A613 /* SetPassViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -766,11 +792,11 @@
 		EAFAE6221C82E50900A8BAF2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EAFAE6261C82E50900A8BAF2 /* Readme */,
 				EAFAE6231C82E50900A8BAF2 /* ContactsViewController.swift */,
 				EAFAE6241C82E50900A8BAF2 /* JiaZhangViewController.swift */,
-				EAFAE6251C82E50900A8BAF2 /* QunLiaoViewController.swift */,
-				EAFAE6261C82E50900A8BAF2 /* Readme */,
-				EAFAE6271C82E50900A8BAF2 /* YuanDingViewController.swift */,
+				EACF434D1C9D3EC30008A3A6 /* QunLiaoViewController.swift */,
+				EACF434E1C9D3EC30008A3A6 /* YuanDingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1201,6 +1227,7 @@
 				EAFAE6F01C82E50900A8BAF2 /* Log.swift in Sources */,
 				EAFAE6DB1C82E50900A8BAF2 /* ConstraintDescription.swift in Sources */,
 				EAFAE7081C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
+				EACF43501C9D3EC30008A3A6 /* YuanDingViewController.swift in Sources */,
 				EAFAE6D51C82E50900A8BAF2 /* DisplayView.swift in Sources */,
 				EAFAE7031C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
 				EAFAE6C21C82E50900A8BAF2 /* MineMainViewController.swift in Sources */,
@@ -1223,10 +1250,10 @@
 				EACF4DA11C8E9F4000C777D6 /* ServerTableViewController.swift in Sources */,
 				EAFAE6A71C82E50900A8BAF2 /* DianZanList.swift in Sources */,
 				EAFAE71A1C82E50900A8BAF2 /* NVActivityIndicatorView.swift in Sources */,
-				EAFAE6CB1C82E50900A8BAF2 /* YuanDingViewController.swift in Sources */,
 				EAFAE70E1C82E50900A8BAF2 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				EAFAE6EF1C82E50900A8BAF2 /* Haneke.swift in Sources */,
 				EAD5D45D1C93AB5F00013E10 /* TeacherDianPingTableViewCell.swift in Sources */,
+				EAC2008A1C9D2D6300A6A613 /* ShiPuViewController.swift in Sources */,
 				EAA578031C8A7BDA00E9A95D /* NewCommentViewController.swift in Sources */,
 				EAFAE6E81C82E50900A8BAF2 /* CryptoSwiftMD5.swift in Sources */,
 				EAFAE7191C82E50900A8BAF2 /* NVActivityIndicatorShape.swift in Sources */,
@@ -1242,7 +1269,9 @@
 				EAFAE7061C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
 				EAFAE6F41C82E50900A8BAF2 /* NSURLResponse+Haneke.swift in Sources */,
 				EAFAE5D51C82E4D500A8BAF2 /* ViewController.swift in Sources */,
+				EAC200881C9CF72700A6A613 /* SetPassViewController.swift in Sources */,
 				EAFAE6E31C82E50900A8BAF2 /* SourceLocation.swift in Sources */,
+				EA4402831C9BED87009D1890 /* YiJianFanKuiViewController.swift in Sources */,
 				EAFAE6DF1C82E50900A8BAF2 /* Debugging.swift in Sources */,
 				EAFAE6CD1C82E50900A8BAF2 /* ContactsTableViewCell.swift in Sources */,
 				EAFAE6FB1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
@@ -1273,6 +1302,7 @@
 				EAFAE6EA1C82E50900A8BAF2 /* DiskCache.swift in Sources */,
 				EAFAE7131C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				EAFAE70A1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
+				EACF434F1C9D3EC30008A3A6 /* QunLiaoViewController.swift in Sources */,
 				EAFAE6E11C82E50900A8BAF2 /* LayoutConstraint.swift in Sources */,
 				EAB2EED31C90032500693D04 /* PhotoViewController.swift in Sources */,
 				EAFAE7001C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
@@ -1307,12 +1337,14 @@
 				EAFAE7201C82E50900A8BAF2 /* PhotoBrowser+Main.swift in Sources */,
 				EACFF6361C86885800615394 /* DianzanTableViewCell.swift in Sources */,
 				EAFAE6D01C82E50900A8BAF2 /* NewsViewController.swift in Sources */,
+				EACF434C1C9D3B730008A3A6 /* DingzhuXiangqingViewController.swift in Sources */,
 				EAFAE7151C82E50900A8BAF2 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				EAFAE6FE1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				EA5DC6D91C9A3D4600A0641B /* PhotoBrowserView.swift in Sources */,
 				EAFAE70B1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				EAFAE6EE1C82E50900A8BAF2 /* Format.swift in Sources */,
 				EAFAE6B21C82E50900A8BAF2 /* FunTableViewCell.swift in Sources */,
+				EAC2008E1C9D36A400A6A613 /* DingZhuTableViewCell.swift in Sources */,
 				EAFAE6F71C82E50900A8BAF2 /* UIImage+Haneke.swift in Sources */,
 				EAFAE7071C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				EA6D54131C97AB3D00F85EA2 /* daKaViewController.swift in Sources */,
@@ -1325,7 +1357,6 @@
 				EAB2EED51C90035B00693D04 /* PhotoCollectionViewCell.swift in Sources */,
 				EAFAE7041C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
 				EAFAE6D61C82E50900A8BAF2 /* FlexibleTableView.swift in Sources */,
-				EAFAE6C91C82E50900A8BAF2 /* QunLiaoViewController.swift in Sources */,
 				EAFAE7091C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				EAFAE5D31C82E4D500A8BAF2 /* AppDelegate.swift in Sources */,
 				EAFAE7051C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
@@ -1334,6 +1365,7 @@
 				EACF4D9C1C8E794300C777D6 /* ChangePassViewController.swift in Sources */,
 				EAFAE6A41C82E50900A8BAF2 /* BlogViewController.swift in Sources */,
 				EAFAE7271C82E50900A8BAF2 /* ItemCell.swift in Sources */,
+				EAC2008C1C9D332700A6A613 /* DingzhuViewController.swift in Sources */,
 				EAB2EECF1C8FAE5500693D04 /* DaiJieViewController.swift in Sources */,
 				EAEA5F021C86C51A00DD362E /* MineModel.swift in Sources */,
 				EAFAE71D1C82E50900A8BAF2 /* PhotoBrowser+CollectionViewExtend.swift in Sources */,

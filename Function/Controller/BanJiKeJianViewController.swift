@@ -19,7 +19,7 @@ class BanJiKeJianViewController: UIViewController,UITableViewDelegate,UITableVie
         self.kejianTableview.delegate = self
         self.kejianTableview.dataSource = self
         self.automaticallyAdjustsScrollViewInsets = false
-        self.kejianTableview.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64)
+        self.kejianTableview.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
         self.kejianTableview.tableFooterView = UIView(frame: CGRectZero)
         self.view.addSubview(self.kejianTableview)
         // Do any additional setup after loading the view.

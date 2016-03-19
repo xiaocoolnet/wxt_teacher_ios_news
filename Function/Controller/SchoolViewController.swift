@@ -33,7 +33,7 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "学校官网"
-        self.schoolTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64)
+        self.schoolTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
         self.automaticallyAdjustsScrollViewInsets = false
         self.schoolTableView.delegate = self
         self.schoolTableView.dataSource = self

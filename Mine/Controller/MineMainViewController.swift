@@ -21,22 +21,12 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "我的"
-        mineTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64 - 44)
+        mineTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height - 44 - 64)
         mineTableView.delegate = self
         mineTableView.dataSource = self
         mineTableView.registerClass(MineTableViewCell.self, forCellReuseIdentifier: "MineCell")
-        exitBtn.frame = CGRectMake(0, 750, 300, 38)
-        exitBtn.center.x = self.view.center.x
-        exitBtn.setTitle("退出登录", forState: .Normal)
-        exitBtn.backgroundColor = UIColor(red: 54.0 / 255.0, green: 190.0 / 255.0, blue: 100.0 / 255.0, alpha: 1.0)
-        exitBtn.tintColor = UIColor.whiteColor()
-        exitBtn.layer.cornerRadius = 2
-        exitBtn.layer.masksToBounds = true
-        exitBtn.addTarget(self, action: Selector("ExitLogin"), forControlEvents: .TouchUpInside)
         self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(mineTableView)
-        self.mineTableView.tableFooterView = exitBtn
-        self.mineTableView.tableFooterView!.frame = CGRectMake(0, 760, 300, 38)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -46,6 +36,24 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 4
     }
+    
+//    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        if(section == 3){
+//            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 38))
+//            exitBtn.frame = CGRectMake(0, 750, 300, 38)
+//            exitBtn.center.x = self.view.center.x
+//            exitBtn.setTitle("退出登录", forState: .Normal)
+//            exitBtn.backgroundColor = UIColor(red: 54.0 / 255.0, green: 190.0 / 255.0, blue: 100.0 / 255.0, alpha: 1.0)
+//            exitBtn.tintColor = UIColor.whiteColor()
+//            exitBtn.layer.cornerRadius = 2
+//            exitBtn.layer.masksToBounds = true
+//            exitBtn.addTarget(self, action: Selector("ExitLogin"), forControlEvents: .TouchUpInside)
+//            view.addSubview(exitBtn)
+//            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+//            return view
+//        }
+//        return UIView(frame: CGRectMake(0,0,self.view.bounds.width,5))
+//    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(section == 0){
@@ -253,9 +261,9 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 HelpView.tabBarController?.tabBar.hidden = true
             }
             if(indexPath.row == 4){
-                let ChangePassView = ChangePassViewController()
-                self.navigationController?.pushViewController(ChangePassView, animated: true)
-                ChangePassView.tabBarController?.tabBar.hidden = true
+                let YiJianFanKuiView = YiJianFanKuiViewController()
+                self.navigationController?.pushViewController(YiJianFanKuiView, animated: true)
+                YiJianFanKuiView.tabBarController?.tabBar.hidden = true
             }
         }
         if(indexPath.section == 3){
