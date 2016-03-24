@@ -38,9 +38,17 @@ class BanJihuodongViewController: UIViewController,UITableViewDelegate,UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "cell")
+        cell.selectionStyle = .None
+        cell.accessoryType = .DisclosureIndicator
         cell.imageView?.image = UIImage(named: "运动会")
+        cell.imageView?.frame = CGRectMake(10, 10, 80, 80)
         cell.textLabel?.text = "亲子运动会"
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let huodongxq = HuoDongXqViewController()
+        self.navigationController?.pushViewController(huodongxq, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

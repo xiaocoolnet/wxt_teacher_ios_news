@@ -90,7 +90,6 @@ class DaiJieViewController: UIViewController,UITableViewDelegate,UITableViewData
         cell.selectionStyle = .None
         if(indexPath.section == 0){
             cell.nameLabel.text = "小明"
-            //245,80,102
             cell.btn.backgroundColor = UIColor(red: 245/255, green: 80/255, blue: 102/255, alpha: 1)
             cell.btn.layer.borderWidth = 0
             cell.btn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
@@ -100,12 +99,12 @@ class DaiJieViewController: UIViewController,UITableViewDelegate,UITableViewData
         }
         if(indexPath.section == 1){
             cell.nameLabel.text = "小房"
-            //255,130,4
             cell.btn.backgroundColor = UIColor(red: 255/255, green: 130/255, blue: 4/255, alpha: 1)
             cell.btn.layer.borderWidth = 0
             cell.btn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-            cell.btn.setTitle("确认", forState: .Normal)
+            cell.btn.setTitle("提醒", forState: .Normal)
             cell.btn.frame.origin.x = self.view.bounds.width - 80
+            cell.btn.addTarget(self, action: Selector("TiXing"), forControlEvents: .TouchUpInside)
             return cell
         }
         else{
@@ -117,8 +116,12 @@ class DaiJieViewController: UIViewController,UITableViewDelegate,UITableViewData
             cell.btn.setTitle("已接走", forState: .Normal)
             cell.btn.frame.origin.x = self.view.bounds.width - 80
             return cell
-
         }
+    }
+    
+    func TiXing(){
+        let tixing = TiXingViewController()
+        self.navigationController?.pushViewController(tixing, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

@@ -10,7 +10,6 @@ import UIKit
 import ImageSlideshow
 
 class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
     let schoolTableView = UITableView()
     let scrollImageView = ImageSlideshow()
     let yuanquBtn = UIButton()

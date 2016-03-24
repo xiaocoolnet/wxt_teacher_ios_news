@@ -153,6 +153,25 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 0{
+            if indexPath.row == 0{
+                let newsInfo = ZuiXinNewsViewController()
+                self.navigationController?.pushViewController(newsInfo, animated: true)
+                newsInfo.newsInfo = self.newsSource.objectlist[0]
+                newsInfo.tabBarController?.tabBar.hidden = true
+            }
+            if indexPath.row == 3{
+                let tongZhi = TongZhiGonggaoViewController()
+                tongZhi.newsInfo = self.newsSource.objectlist[0]
+                self.navigationController?.pushViewController(tongZhi, animated: true)
+                tongZhi.tabBarController?.tabBar.hidden = true
+            }
+            if indexPath.row == 4{
+                let daiBan = DaiBanViewController()
+                self.navigationController?.pushViewController(daiBan, animated: true)
+                daiBan.tabBarController?.tabBar.hidden = true
+            }
+        }
         if(indexPath.section == 1){
             self.dataTableView.deselectRowAtIndexPath(indexPath, animated: true)
             let newsInfo = NewsInfoViewController()

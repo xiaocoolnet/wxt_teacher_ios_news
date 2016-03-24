@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -18,6 +19,9 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
     let editBtn = UIButton()
     let jifenLabel = UILabel()
     let duiHuanBtn = UIButton()
+    let qingchuHuancun = UIButton()
+    let footview = UIView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "我的"
@@ -25,6 +29,18 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
         mineTableView.delegate = self
         mineTableView.dataSource = self
         mineTableView.registerClass(MineTableViewCell.self, forCellReuseIdentifier: "MineCell")
+        exitBtn.frame = CGRectMake(0, 0, self.view.bounds.width - 20, 38)
+        exitBtn.center.x = self.view.center.x
+        exitBtn.setTitle("退出登录", forState: .Normal)
+        exitBtn.backgroundColor = UIColor(red: 54.0 / 255.0, green: 190.0 / 255.0, blue: 100.0 / 255.0, alpha: 1.0)
+        exitBtn.tintColor = UIColor.whiteColor()
+        exitBtn.layer.cornerRadius = 5
+        exitBtn.layer.masksToBounds = true
+        exitBtn.addTarget(self, action: Selector("ExitLogin"), forControlEvents: .TouchUpInside)
+        footview.frame = CGRectMake(0, 0, self.view.bounds.width, 43)
+        footview.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+        footview.addSubview(exitBtn)
+        self.mineTableView.tableFooterView = footview
         self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(mineTableView)
     }
@@ -36,24 +52,6 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 4
     }
-    
-//    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        if(section == 3){
-//            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 38))
-//            exitBtn.frame = CGRectMake(0, 750, 300, 38)
-//            exitBtn.center.x = self.view.center.x
-//            exitBtn.setTitle("退出登录", forState: .Normal)
-//            exitBtn.backgroundColor = UIColor(red: 54.0 / 255.0, green: 190.0 / 255.0, blue: 100.0 / 255.0, alpha: 1.0)
-//            exitBtn.tintColor = UIColor.whiteColor()
-//            exitBtn.layer.cornerRadius = 2
-//            exitBtn.layer.masksToBounds = true
-//            exitBtn.addTarget(self, action: Selector("ExitLogin"), forControlEvents: .TouchUpInside)
-//            view.addSubview(exitBtn)
-//            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
-//            return view
-//        }
-//        return UIView(frame: CGRectMake(0,0,self.view.bounds.width,5))
-//    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(section == 0){
@@ -214,9 +212,18 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
             if indexPath.row == 2{
                 let defaultCell = tableView.dequeueReusableCellWithIdentifier("MineCell", forIndexPath: indexPath) as! MineTableViewCell
                 defaultCell.selectionStyle = .None
-                defaultCell.accessoryType = .DisclosureIndicator
                 defaultCell.iconImage.image = UIImage(named: "清除缓存")
                 defaultCell.contentLabel.text = "清除缓存"
+                self.qingchuHuancun.frame = CGRectMake(0, 13, 45, 27)
+                self.qingchuHuancun.frame.origin.x = self.view.frame.width - 55
+                self.qingchuHuancun.backgroundColor = UIColor(red: 54.0 / 255.0, green: 190.0 / 255.0, blue: 100.0 / 255.0, alpha: 1.0)
+                self.qingchuHuancun.tintColor = UIColor.whiteColor()
+                self.qingchuHuancun.setTitle("清除", forState: .Normal)
+                self.qingchuHuancun.layer.cornerRadius = 3
+                self.qingchuHuancun.layer.masksToBounds = true
+                self.qingchuHuancun.titleLabel?.font = UIFont.systemFontOfSize(14)
+                self.qingchuHuancun.addTarget(self, action: Selector("Qingchu"), forControlEvents: .TouchUpInside)
+                defaultCell.contentView.addSubview(self.qingchuHuancun)
                 return defaultCell
             }
             if indexPath.row == 3{
@@ -283,6 +290,15 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 ChangePassView.tabBarController?.tabBar.hidden = true
             }
         }
+    }
+    
+    func Qingchu(){
+        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.mode = MBProgressHUDMode.Text
+        hud.labelText = "清除成功"
+        hud.margin = 10.0
+        hud.removeFromSuperViewOnHide = true
+        hud.hide(true, afterDelay: 1)
     }
     
     func ExitLogin(){
