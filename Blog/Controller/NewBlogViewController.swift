@@ -30,7 +30,7 @@ class NewBlogViewController: UIViewController,UICollectionViewDataSource,UIColle
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         self.title = "发表动态"
-        let rightItem = UIBarButtonItem(title: "发表", style: .Done, target: self, action: Selector("UpdateBlog"))
+        let rightItem = UIBarButtonItem(title: "发表", style: .Done, target: self, action: #selector(NewBlogViewController.UpdateBlog))
         self.navigationItem.rightBarButtonItem = rightItem
         self.contentTextView.frame = CGRectMake(8, 5, self.view.bounds.width - 16, 200)
         self.contentTextView.font = UIFont.systemFontOfSize(15)
@@ -47,7 +47,7 @@ class NewBlogViewController: UIViewController,UICollectionViewDataSource,UIColle
         addPictureBtn.setBackgroundImage(UIImage(named: "add2"), forState: UIControlState.Normal)
         addPictureBtn.layer.borderWidth = 1.0
         addPictureBtn.layer.borderColor = UIColor.grayColor().CGColor
-        addPictureBtn.addTarget(self, action: Selector("AddPictrures"), forControlEvents: UIControlEvents.TouchUpInside)
+        addPictureBtn.addTarget(self, action: #selector(NewBlogViewController.AddPictrures), forControlEvents: UIControlEvents.TouchUpInside)
         flowLayout.scrollDirection = UICollectionViewScrollDirection.Vertical
         flowLayout.itemSize = CGSizeMake(80,80)
         self.collectV = UICollectionView(frame: CGRectMake(8, 215, UIScreen.mainScreen().bounds.width-30, 359), collectionViewLayout: flowLayout)

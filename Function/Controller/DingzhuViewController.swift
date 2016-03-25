@@ -48,7 +48,7 @@ class DingzhuViewController: UIViewController,UITableViewDelegate,UITableViewDat
         cell.btn.layer.borderWidth = 0
         cell.btn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         cell.btn.setTitle("查看", forState: .Normal)
-        cell.btn.addTarget(self, action: Selector("DingzhuXiangqing"), forControlEvents: .TouchUpInside)
+        cell.btn.addTarget(self, action: #selector(DingzhuViewController.DingzhuXiangqing), forControlEvents: .TouchUpInside)
         cell.btn.frame.origin.x = self.view.bounds.width - 80
         return cell
     }

@@ -39,7 +39,7 @@ class SetPassViewController: UIViewController {
         self.finishBtn.setTitle("完成设置", forState: .Normal)
         self.finishBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         self.finishBtn.titleLabel?.font = UIFont.systemFontOfSize(17)
-        self.finishBtn.addTarget(self, action: Selector("FinishView"), forControlEvents: .TouchUpInside)
+        self.finishBtn.addTarget(self, action: #selector(SetPassViewController.FinishView), forControlEvents: .TouchUpInside)
         self.view.addSubview(self.passView)
         self.view.addSubview(self.passText)
         self.view.addSubview(self.againPassView)

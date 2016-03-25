@@ -21,12 +21,15 @@
 		EA5DC6DA1C9A3D4600A0641B /* RMDownloadIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DC6D61C9A3D4600A0641B /* RMDownloadIndicator.swift */; };
 		EA5DC6DC1C9AA36500A0641B /* NewPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DC6DB1C9AA36500A0641B /* NewPhotoViewController.swift */; };
 		EA61C6DE1C9F8A760073E9CA /* HuoDongXqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA61C6DD1C9F8A760073E9CA /* HuoDongXqViewController.swift */; };
+		EA652B091CA524F2001724F3 /* XinWenListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA652B081CA524F2001724F3 /* XinWenListViewController.swift */; };
 		EA6D2D3B1C9500830092F09A /* ZhouPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D2D3A1C9500830092F09A /* ZhouPlanViewController.swift */; };
 		EA6D2D3D1C95125D0092F09A /* bbKaoQinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D2D3C1C95125D0092F09A /* bbKaoQinViewController.swift */; };
 		EA6D2D3F1C9512F20092F09A /* AvatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D2D3E1C9512F20092F09A /* AvatorCollectionViewCell.swift */; };
 		EA6D54111C97925D00F85EA2 /* XinXiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D54101C97925D00F85EA2 /* XinXiViewController.swift */; };
 		EA6D54131C97AB3D00F85EA2 /* daKaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D54121C97AB3D00F85EA2 /* daKaViewController.swift */; };
 		EA6D54151C97E85F00F85EA2 /* BanJihuodongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D54141C97E85F00F85EA2 /* BanJihuodongViewController.swift */; };
+		EA715B281CA3796F00E37519 /* YuanquJieShaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA715B271CA3796F00E37519 /* YuanquJieShaoViewController.swift */; };
+		EA715B2A1CA38EC400E37519 /* TeacherInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA715B291CA38EC400E37519 /* TeacherInfoViewController.swift */; };
 		EA7A7E361C9261AD00DBA75B /* SchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A7E351C9261AD00DBA75B /* SchoolViewController.swift */; };
 		EA7D9D111C83DE8B00056B22 /* XKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D9D101C83DE8B00056B22 /* XKeyBoard.m */; };
 		EA8B7C441CA22F1C007AFED0 /* ZuiXinNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8B7C431CA22F1C007AFED0 /* ZuiXinNewsViewController.swift */; };
@@ -62,6 +65,7 @@
 		EAD5D45B1C93A2D900013E10 /* TeacherDianPingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD5D45A1C93A2D900013E10 /* TeacherDianPingViewController.swift */; };
 		EAD5D45D1C93AB5F00013E10 /* TeacherDianPingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD5D45C1C93AB5F00013E10 /* TeacherDianPingTableViewCell.swift */; };
 		EAEA5F021C86C51A00DD362E /* MineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA5F011C86C51A00DD362E /* MineModel.swift */; };
+		EAEB3C051CA3C53E0033B2E9 /* singleTeacherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB3C041CA3C53E0033B2E9 /* singleTeacherViewController.swift */; };
 		EAFAE5D31C82E4D500A8BAF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE5D21C82E4D500A8BAF2 /* AppDelegate.swift */; };
 		EAFAE5D51C82E4D500A8BAF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFAE5D41C82E4D500A8BAF2 /* ViewController.swift */; };
 		EAFAE5DD1C82E4D600A8BAF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE5DB1C82E4D600A8BAF2 /* LaunchScreen.storyboard */; };
@@ -223,12 +227,15 @@
 		EA5DC6D61C9A3D4600A0641B /* RMDownloadIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMDownloadIndicator.swift; sourceTree = "<group>"; };
 		EA5DC6DB1C9AA36500A0641B /* NewPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPhotoViewController.swift; sourceTree = "<group>"; };
 		EA61C6DD1C9F8A760073E9CA /* HuoDongXqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuoDongXqViewController.swift; sourceTree = "<group>"; };
+		EA652B081CA524F2001724F3 /* XinWenListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XinWenListViewController.swift; sourceTree = "<group>"; };
 		EA6D2D3A1C9500830092F09A /* ZhouPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhouPlanViewController.swift; sourceTree = "<group>"; };
 		EA6D2D3C1C95125D0092F09A /* bbKaoQinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bbKaoQinViewController.swift; sourceTree = "<group>"; };
 		EA6D2D3E1C9512F20092F09A /* AvatorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatorCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA6D54101C97925D00F85EA2 /* XinXiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XinXiViewController.swift; sourceTree = "<group>"; };
 		EA6D54121C97AB3D00F85EA2 /* daKaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = daKaViewController.swift; sourceTree = "<group>"; };
 		EA6D54141C97E85F00F85EA2 /* BanJihuodongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanJihuodongViewController.swift; sourceTree = "<group>"; };
+		EA715B271CA3796F00E37519 /* YuanquJieShaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YuanquJieShaoViewController.swift; sourceTree = "<group>"; };
+		EA715B291CA38EC400E37519 /* TeacherInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherInfoViewController.swift; sourceTree = "<group>"; };
 		EA7A7E351C9261AD00DBA75B /* SchoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolViewController.swift; sourceTree = "<group>"; };
 		EA7D9D0F1C83DE8B00056B22 /* XKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKeyBoard.h; sourceTree = "<group>"; };
 		EA7D9D101C83DE8B00056B22 /* XKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKeyBoard.m; sourceTree = "<group>"; };
@@ -267,6 +274,7 @@
 		EAD5D45A1C93A2D900013E10 /* TeacherDianPingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherDianPingViewController.swift; sourceTree = "<group>"; };
 		EAD5D45C1C93AB5F00013E10 /* TeacherDianPingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherDianPingTableViewCell.swift; sourceTree = "<group>"; };
 		EAEA5F011C86C51A00DD362E /* MineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineModel.swift; sourceTree = "<group>"; };
+		EAEB3C041CA3C53E0033B2E9 /* singleTeacherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleTeacherViewController.swift; sourceTree = "<group>"; };
 		EAFAE5CF1C82E4D500A8BAF2 /* WXT_Teacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXT_Teacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFAE5D21C82E4D500A8BAF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAFAE5D41C82E4D500A8BAF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -491,6 +499,10 @@
 			isa = PBXGroup;
 			children = (
 				EA7A7E351C9261AD00DBA75B /* SchoolViewController.swift */,
+				EA715B271CA3796F00E37519 /* YuanquJieShaoViewController.swift */,
+				EA715B291CA38EC400E37519 /* TeacherInfoViewController.swift */,
+				EAEB3C041CA3C53E0033B2E9 /* singleTeacherViewController.swift */,
+				EA652B081CA524F2001724F3 /* XinWenListViewController.swift */,
 			);
 			name = School;
 			sourceTree = "<group>";
@@ -1296,6 +1308,7 @@
 				EA4882071C995E9A009CAC3A /* CameraViewController.swift in Sources */,
 				EA8B7C4A1CA273F3007AFED0 /* TongZhiXinagQingViewController.swift in Sources */,
 				EAFAE6F01C82E50900A8BAF2 /* Log.swift in Sources */,
+				EAEB3C051CA3C53E0033B2E9 /* singleTeacherViewController.swift in Sources */,
 				EAFAE6DB1C82E50900A8BAF2 /* ConstraintDescription.swift in Sources */,
 				EAFAE7081C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				EACF43501C9D3EC30008A3A6 /* YuanDingViewController.swift in Sources */,
@@ -1406,6 +1419,7 @@
 				EAFAE7221C82E50900A8BAF2 /* PhotoBrowser+ZoomAnim.swift in Sources */,
 				EAFAE6FA1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
 				EAFAE6A61C82E50900A8BAF2 /* BlogList.swift in Sources */,
+				EA715B281CA3796F00E37519 /* YuanquJieShaoViewController.swift in Sources */,
 				EAFAE6F61C82E50900A8BAF2 /* UIButton+Haneke.swift in Sources */,
 				EAFAE7101C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				EAFAE7201C82E50900A8BAF2 /* PhotoBrowser+Main.swift in Sources */,
@@ -1414,6 +1428,7 @@
 				EACF434C1C9D3B730008A3A6 /* DingzhuXiangqingViewController.swift in Sources */,
 				EAFAE7151C82E50900A8BAF2 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				EAFAE6FE1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
+				EA715B2A1CA38EC400E37519 /* TeacherInfoViewController.swift in Sources */,
 				EA5DC6D91C9A3D4600A0641B /* PhotoBrowserView.swift in Sources */,
 				EAFAE70B1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				EAFAE6EE1C82E50900A8BAF2 /* Format.swift in Sources */,
@@ -1442,6 +1457,7 @@
 				EAFAE7271C82E50900A8BAF2 /* ItemCell.swift in Sources */,
 				EAC2008C1C9D332700A6A613 /* DingzhuViewController.swift in Sources */,
 				EAB2EECF1C8FAE5500693D04 /* DaiJieViewController.swift in Sources */,
+				EA652B091CA524F2001724F3 /* XinWenListViewController.swift in Sources */,
 				EAEA5F021C86C51A00DD362E /* MineModel.swift in Sources */,
 				EAFAE71D1C82E50900A8BAF2 /* PhotoBrowser+CollectionViewExtend.swift in Sources */,
 				EAFAE6C51C82E50900A8BAF2 /* MineTableViewCell.swift in Sources */,

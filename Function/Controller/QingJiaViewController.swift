@@ -31,7 +31,7 @@ class QingJiaViewController: UIViewController,UITableViewDelegate,UITableViewDat
         dataTableView.dataSource = self
         XKeyBoard.registerKeyBoardHide(self)
         XKeyBoard.registerKeyBoardShow(self)
-        let rightItem = UIBarButtonItem(title: "发送", style: .Done, target: self, action: Selector("PutMessage"))
+        let rightItem = UIBarButtonItem(title: "发送", style: .Done, target: self, action: #selector(QingJiaViewController.PutMessage))
         self.navigationItem.rightBarButtonItem = rightItem
         self.tabBarController?.tabBar.hidden = true
         self.view.addSubview(self.dataTableView)
@@ -75,18 +75,18 @@ class QingJiaViewController: UIViewController,UITableViewDelegate,UITableViewDat
         if indexPath.section == 0{
             lastDayBtn.frame = CGRectMake(50, 10, 20, 20)
             lastDayBtn.setImage(UIImage(named: "上一天"), forState: .Normal)
-            lastDayBtn.addTarget(self, action: Selector("LastDay"), forControlEvents: .TouchUpInside)
+            lastDayBtn.addTarget(self, action: #selector(QingJiaViewController.LastDay), forControlEvents: .TouchUpInside)
             nextDayBtn.frame = CGRectMake(0, 10, 20, 20)
             nextDayBtn.frame.origin.x = self.view.bounds.width - 70
             nextDayBtn.setImage(UIImage(named: "下一天"), forState: .Normal)
-            nextDayBtn.addTarget(self, action: Selector("NextDay"), forControlEvents: .TouchUpInside)
+            nextDayBtn.addTarget(self, action: #selector(QingJiaViewController.NextDay), forControlEvents: .TouchUpInside)
             lastMonthBtn.frame = CGRectMake(30, 10, 20, 20)
             lastMonthBtn.setImage(UIImage(named: "上个月"), forState: .Normal)
-            lastMonthBtn.addTarget(self, action: Selector("LastMonth"), forControlEvents: .TouchUpInside)
+            lastMonthBtn.addTarget(self, action: #selector(QingJiaViewController.LastMonth), forControlEvents: .TouchUpInside)
             nextMonthBtn.frame = CGRectMake(0, 10, 20, 20)
             nextMonthBtn.setImage(UIImage(named: "下个月"), forState: .Normal)
             nextMonthBtn.frame.origin.x = self.view.bounds.width - 50
-            nextMonthBtn.addTarget(self, action: Selector("NextMonth"), forControlEvents: .TouchUpInside)
+            nextMonthBtn.addTarget(self, action: #selector(QingJiaViewController.NextMonth), forControlEvents: .TouchUpInside)
             timeLabel.frame = CGRectMake(0, 10, 150, 20)
             timeLabel.textColor = UIColor.grayColor()
             timeLabel.center.x = self.view.center.x

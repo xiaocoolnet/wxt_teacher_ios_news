@@ -21,14 +21,13 @@ extension DisplayView{
     /** 准备 */
     func imgsPrepare(imgs: [String], isLocal: Bool){
        
-        for (var i=0; i<imgs.count; i++){
-            
+        for i in 0 ..< imgs.count{
             let imgV = UIImageView(frame: CGRectMake(0, 0, 200, 200))
             imgV.backgroundColor = UIColor.lightGrayColor()
             imgV.userInteractionEnabled = true
             imgV.contentMode = UIViewContentMode.ScaleAspectFill
             imgV.clipsToBounds = true
-            imgV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "tapAction:"))
+            imgV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(DisplayView.tapAction(_:))))
             imgV.tag = i
             if isLocal {
                 imgV.image = UIImage(named: imgs[i])
@@ -68,7 +67,7 @@ extension DisplayView{
             let y = (CGFloat(row) + 1) * margin + CGFloat(row) * itemWH
             let frame = CGRectMake(x, y, itemWH, itemWH)
             view.frame = frame
-            i++
+            i += 1
         }
     }
 }

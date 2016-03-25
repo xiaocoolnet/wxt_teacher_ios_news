@@ -104,7 +104,7 @@ class DaiJieViewController: UIViewController,UITableViewDelegate,UITableViewData
             cell.btn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             cell.btn.setTitle("提醒", forState: .Normal)
             cell.btn.frame.origin.x = self.view.bounds.width - 80
-            cell.btn.addTarget(self, action: Selector("TiXing"), forControlEvents: .TouchUpInside)
+            cell.btn.addTarget(self, action: #selector(DaiJieViewController.TiXing), forControlEvents: .TouchUpInside)
             return cell
         }
         else{

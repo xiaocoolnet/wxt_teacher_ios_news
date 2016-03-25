@@ -60,7 +60,7 @@ extension PhotoBrowser: UICollectionViewDataSource,UICollectionViewDelegate{
             collectionView.hidden = true
         }
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleRotation:", name: UIDeviceOrientationDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PhotoBrowser.handleRotation(_:)), name: UIDeviceOrientationDidChangeNotification, object: nil)
     }
 
     

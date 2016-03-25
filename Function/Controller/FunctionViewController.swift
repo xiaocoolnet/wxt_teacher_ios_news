@@ -275,91 +275,91 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 btn1.layer.masksToBounds = true
                 btn1.setBackgroundImage(UIImage(named: "学校官网"), forState: UIControlState.Normal)
                 btn1.center.x = viewWidth/8
-                btn1.addTarget(self, action: Selector("SchoolView"), forControlEvents: .TouchUpInside)
+                btn1.addTarget(self, action: #selector(FunctionViewController.SchoolView), forControlEvents: .TouchUpInside)
                 btn2.frame = CGRectMake(0, 16, 44, 44)
                 btn2.layer.cornerRadius = 22
                 btn2.layer.masksToBounds = true
                 btn2.setBackgroundImage(UIImage(named: "宝宝相册"), forState: UIControlState.Normal)
                 btn2.center.x = (viewWidth/8)*3
-                btn2.addTarget(self, action: Selector("PhotoView"), forControlEvents: .TouchUpInside)
+                btn2.addTarget(self, action: #selector(FunctionViewController.PhotoView), forControlEvents: .TouchUpInside)
                 btn3.frame = CGRectMake(0, 16, 44, 44)
                 btn3.layer.cornerRadius = 22
                 btn3.layer.masksToBounds = true
                 btn3.setBackgroundImage(UIImage(named: "成长档案"), forState: UIControlState.Normal)
                 btn3.center.x = (viewWidth/8)*5
-                btn3.addTarget(self, action: Selector("ChengZhangView"), forControlEvents: .TouchUpInside)
+                btn3.addTarget(self, action: #selector(FunctionViewController.ChengZhangView), forControlEvents: .TouchUpInside)
                 btn4.frame = CGRectMake(0, 16, 44, 44)
                 btn4.layer.cornerRadius = 22
                 btn4.layer.masksToBounds = true
                 btn4.setBackgroundImage(UIImage(named: "代接确认"), forState: UIControlState.Normal)
                 btn4.center.x = (viewWidth/8)*7
-                btn4.addTarget(self, action: Selector("DaiJieView"), forControlEvents: .TouchUpInside)
+                btn4.addTarget(self, action: #selector(FunctionViewController.DaiJieView), forControlEvents: .TouchUpInside)
                 btn5.frame = CGRectMake(0, 100, 44, 44)
                 btn5.layer.cornerRadius = 22
                 btn5.layer.masksToBounds = true
                 btn5.setBackgroundImage(UIImage(named: "在线请假"), forState: UIControlState.Normal)
                 btn5.center.x = (viewWidth/8)
-                btn5.addTarget(self, action: Selector("QingJiaView"), forControlEvents: .TouchUpInside)
+                btn5.addTarget(self, action: #selector(FunctionViewController.QingJiaView), forControlEvents: .TouchUpInside)
                 btn6.frame = CGRectMake(0, 100, 44, 44)
                 btn6.layer.cornerRadius = 22
                 btn6.layer.masksToBounds = true
                 btn6.setBackgroundImage(UIImage(named: "家长叮嘱"), forState: UIControlState.Normal)
                 btn6.center.x = (viewWidth/8)*3
-                btn6.addTarget(self, action: Selector("DingzhuView"), forControlEvents: .TouchUpInside)
+                btn6.addTarget(self, action: #selector(FunctionViewController.DingzhuView), forControlEvents: .TouchUpInside)
                 btn7.frame = CGRectMake(0, 100, 44, 44)
                 btn7.layer.cornerRadius = 22
                 btn7.layer.masksToBounds = true
                 btn7.setBackgroundImage(UIImage(named: "食谱"), forState: UIControlState.Normal)
                 btn7.center.x = (viewWidth/8)*5
-                btn7.addTarget(self, action: Selector("ShiPuView"), forControlEvents: .TouchUpInside)
+                btn7.addTarget(self, action: #selector(FunctionViewController.ShiPuView), forControlEvents: .TouchUpInside)
                 btn8.frame = CGRectMake(0, 100, 44, 44)
                 btn8.layer.cornerRadius = 22
                 btn8.layer.masksToBounds = true
                 btn8.setBackgroundImage(UIImage(named: "班级考勤"), forState: UIControlState.Normal)
                 btn8.center.x = (viewWidth/8)*7
-                btn8.addTarget(self, action: Selector("KaoQinView"), forControlEvents: .TouchUpInside)
+                btn8.addTarget(self, action: #selector(FunctionViewController.KaoQinView), forControlEvents: .TouchUpInside)
                 btn9.frame = CGRectMake(0, 16, 44, 44)
                 btn9.layer.cornerRadius = 22
                 btn9.layer.masksToBounds = true
                 btn9.setBackgroundImage(UIImage(named: "老师点评"), forState: UIControlState.Normal)
                 btn9.center.x = (viewWidth/8)*9
-                btn9.addTarget(self, action: Selector("TeacherDPView"), forControlEvents: .TouchUpInside)
+                btn9.addTarget(self, action: #selector(FunctionViewController.TeacherDPView), forControlEvents: .TouchUpInside)
                 btn10.frame = CGRectMake(0, 16, 44, 44)
                 btn10.layer.cornerRadius = 22
                 btn10.layer.masksToBounds = true
                 btn10.setBackgroundImage(UIImage(named: "老师考勤"), forState: UIControlState.Normal)
                 btn10.center.x = (viewWidth/8)*11
-                btn10.addTarget(self, action: Selector("daKaView"), forControlEvents: .TouchUpInside)
+                btn10.addTarget(self, action: #selector(FunctionViewController.daKaView), forControlEvents: .TouchUpInside)
                 btn11.frame = CGRectMake(0, 16, 44, 44)
                 btn11.layer.cornerRadius = 22
                 btn11.layer.masksToBounds = true
                 btn11.setBackgroundImage(UIImage(named: "周计划"), forState: UIControlState.Normal)
                 btn11.center.x = (viewWidth/8)*13
-                btn11.addTarget(self, action: Selector("ZhouPlanView"), forControlEvents: .TouchUpInside)
+                btn11.addTarget(self, action: #selector(FunctionViewController.ZhouPlanView), forControlEvents: .TouchUpInside)
                 btn12.frame = CGRectMake(0, 16, 44, 44)
                 btn12.layer.cornerRadius = 22
                 btn12.layer.masksToBounds = true
                 btn12.setBackgroundImage(UIImage(named: "信息审核"), forState: UIControlState.Normal)
                 btn12.center.x = (viewWidth/8)*15
-                btn12.addTarget(self, action: Selector("XinxiView"), forControlEvents: .TouchUpInside)
+                btn12.addTarget(self, action: #selector(FunctionViewController.XinxiView), forControlEvents: .TouchUpInside)
                 btn13.frame = CGRectMake(0, 100, 44, 44)
                 btn13.layer.cornerRadius = 22
                 btn13.layer.masksToBounds = true
                 btn13.setBackgroundImage(UIImage(named: "宝宝课件"), forState: UIControlState.Normal)
                 btn13.center.x = (viewWidth/8)*9
-                btn13.addTarget(self, action: Selector("KeJianView"), forControlEvents: .TouchUpInside)
+                btn13.addTarget(self, action: #selector(FunctionViewController.KeJianView), forControlEvents: .TouchUpInside)
                 btn14.frame = CGRectMake(0, 100, 44, 44)
                 btn14.layer.cornerRadius = 22
                 btn14.layer.masksToBounds = true
                 btn14.setBackgroundImage(UIImage(named: "成长档案"), forState: UIControlState.Normal)
                 btn14.center.x = (viewWidth/8)*11
-                btn14.addTarget(self, action: Selector("BBkeChengView"), forControlEvents: .TouchUpInside)
+                btn14.addTarget(self, action: #selector(FunctionViewController.BBkeChengView), forControlEvents: .TouchUpInside)
                 btn15.frame = CGRectMake(0, 100, 44, 44)
                 btn15.layer.cornerRadius = 22
                 btn15.layer.masksToBounds = true
                 btn15.setBackgroundImage(UIImage(named: "班级活动"), forState: UIControlState.Normal)
                 btn15.center.x = (viewWidth/8)*13
-                btn15.addTarget(self, action: Selector("huoDongView"), forControlEvents: .TouchUpInside)
+                btn15.addTarget(self, action: #selector(FunctionViewController.huoDongView), forControlEvents: .TouchUpInside)
                 btn16.frame = CGRectMake(0, 100, 44, 44)
                 btn16.layer.cornerRadius = 22
                 btn16.layer.masksToBounds = true

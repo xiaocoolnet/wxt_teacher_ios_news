@@ -19,7 +19,7 @@ class DaiBanViewController: UIViewController,UITableViewDelegate,UITableViewData
         DaiBanTableView.delegate = self
         DaiBanTableView.dataSource = self
         DaiBanTableView.tableFooterView = UIView(frame: CGRectZero)
-        let rightItem = UIBarButtonItem(title: "新增", style: UIBarButtonItemStyle.Done, target: self, action: Selector("ReviceMessages"))
+        let rightItem = UIBarButtonItem(title: "新增", style: UIBarButtonItemStyle.Done, target: self, action: Selector(""))
         self.navigationItem.rightBarButtonItem = rightItem
         self.view.addSubview(DaiBanTableView)
         // Do any additional setup after loading the view.

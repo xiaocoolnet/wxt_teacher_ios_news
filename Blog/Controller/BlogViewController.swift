@@ -30,7 +30,7 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let imageView = UIImageView(frame: CGRectMake(0, 0, self.blogTableView.bounds.width, 100))
         imageView.image = UIImage(named: "ba1ec0437cc8d5367a516ff69b01ea89")
         imageView.contentMode = .ScaleAspectFill
-        let rightItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("NewBlog"))
+        let rightItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(BlogViewController.NewBlog))
         self.navigationItem.rightBarButtonItem = rightItem
         blogTableView.delegate = self
         blogTableView.dataSource = self
@@ -47,7 +47,7 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func DropDownUpdate(){
-        self.blogTableView.headerView = XWRefreshNormalHeader(target: self, action: "GetDate")
+        self.blogTableView.headerView = XWRefreshNormalHeader(target: self, action: #selector(BlogViewController.GetDate))
         self.blogTableView.reloadData()
         self.blogTableView.headerView?.beginRefreshing()
     }
@@ -224,7 +224,7 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             pbVC.hideMsgForZoomAndDismissWithSingleTap = true
             var models: [PhotoBrowser.PhotoModel] = []
             //模型数据数组
-            for (var i=0; i<self.remoteThumbImage[indexPath]!.count; i++){
+            for i in 0 ..< self.remoteThumbImage[indexPath]!.count{
                 let model = PhotoBrowser.PhotoModel(hostHDImgURL:self.remoteThumbImage[indexPath]![i], hostThumbnailImg: (displayView.subviews[i] as! UIImageView).image, titleStr: "", descStr: "", sourceView: displayView.subviews[i])
                 models.append(model)
             }
@@ -253,12 +253,12 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             dianZanPeople.frame = CGRectMake(38, 8, 300, 20)
             dianZanBtn.setImage(UIImage(named: "zan0"), forState: .Normal)
             dianZanBtn.tag = Int(bloginfo.mid!)!
-            dianZanBtn.addTarget(self, action: Selector("DianZan:"), forControlEvents: .TouchUpInside)
+            dianZanBtn.addTarget(self, action: #selector(BlogViewController.DianZan(_:)), forControlEvents: .TouchUpInside)
             pingLun.frame = CGRectMake(15, 33, 20, 20)
             pingLun.setImage(UIImage(named: "pinglun0"), forState: .Normal)
             pingLun.tag = indexPath.section
             pingLun.setTitle(bloginfo.mid!, forState: .Normal)
-            pingLun.addTarget(self, action: Selector("PingLun:"), forControlEvents: .TouchUpInside)
+            pingLun.addTarget(self, action: #selector(BlogViewController.PingLun(_:)), forControlEvents: .TouchUpInside)
             pingLunLabel.frame = CGRectMake(40, 32, 20, 20)
             pingLunLabel.textColor = UIColor.grayColor()
             pingLunLabel.font = UIFont.systemFontOfSize(16)

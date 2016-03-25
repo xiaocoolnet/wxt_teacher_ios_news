@@ -110,7 +110,7 @@ class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, 
     func addCloseBtn(frame: CGRect) {
         close = UIButton(frame: CGRect(x: 8, y: 5.0, width: 30, height: heightUnit!))
         close?.setImage(UIImage(named: "close"), forState: UIControlState.Normal)
-        close?.addTarget(self, action: Selector("close:"), forControlEvents: UIControlEvents.TouchUpInside)
+        close?.addTarget(self, action: #selector(PhotoBrowserView.close(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         addSubview(close!)
     }
 
@@ -120,7 +120,7 @@ class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, 
         let downloadImage = UIImage(named: "Download")
         let stretchableButtonImage = downloadImage?.stretchableImageWithLeftCapWidth(0, topCapHeight: 0)
         downloadButton!.setBackgroundImage(stretchableButtonImage, forState: UIControlState.Normal)
-        downloadButton!.addTarget(self, action: "saveImage:", forControlEvents: UIControlEvents.TouchUpInside)
+        downloadButton!.addTarget(self, action: #selector(PhotoBrowserView.saveImage(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         addSubview(downloadButton!)
     }
     
@@ -131,7 +131,7 @@ class PhotoBrowserView: UIView, UICollectionViewDelegate, UIScrollViewDelegate, 
         if cell.imageView.image == nil{
             print("image nil")
         }else{
-            UIImageWriteToSavedPhotosAlbum(cell.imageView.image!, self, "image:didFinishSavingWithError:contextInfo:", nil)
+            UIImageWriteToSavedPhotosAlbum(cell.imageView.image!, self, #selector(PhotoBrowserView.image(_:didFinishSavingWithError:contextInfo:)), nil)
         }
     }
     

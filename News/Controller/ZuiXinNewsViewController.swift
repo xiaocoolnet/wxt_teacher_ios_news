@@ -21,7 +21,7 @@ class ZuiXinNewsViewController: UIViewController,UITableViewDelegate,UITableView
         newsInfoTableView.dataSource = self
         newsInfoTableView.scrollEnabled = false
         self.automaticallyAdjustsScrollViewInsets = false
-        let rightItem = UIBarButtonItem(title: "回复", style: UIBarButtonItemStyle.Done, target: self, action: Selector("ReviceMessages"))
+        let rightItem = UIBarButtonItem(title: "回复", style: UIBarButtonItemStyle.Done, target: self, action: #selector(ZuiXinNewsViewController.ReviceMessages))
         self.navigationItem.rightBarButtonItem = rightItem
         self.view.addSubview(newsInfoTableView)
     }

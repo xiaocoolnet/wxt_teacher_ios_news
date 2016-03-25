@@ -37,7 +37,7 @@ class YiJianFanKuiViewController: UIViewController {
         putBtn.setTitle("提交", forState: .Normal)
         putBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         putBtn.titleLabel?.font = UIFont.systemFontOfSize(14)
-        putBtn.addTarget(self, action: Selector("Fanhui"), forControlEvents: .TouchUpInside)
+        putBtn.addTarget(self, action: #selector(YiJianFanKuiViewController.Fanhui), forControlEvents: .TouchUpInside)
         putBtn.layer.cornerRadius = 5
         putBtn.layer.masksToBounds = true
         self.view.addSubview(contentView)

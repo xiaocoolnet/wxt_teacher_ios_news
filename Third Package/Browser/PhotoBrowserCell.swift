@@ -40,13 +40,13 @@ class PhotoBrowserCell: UICollectionViewCell, UIScrollViewDelegate {
         
         scrollView.contentSize = imageView.frame.size
         //添加双击手势
-        let doubleTapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("handleDoubleTapGesture:"))
+        let doubleTapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PhotoBrowserCell.handleDoubleTapGesture(_:)))
         doubleTapGesture.numberOfTouchesRequired = 1
         doubleTapGesture.numberOfTapsRequired = 2
         imageView.userInteractionEnabled = true
         imageView.addGestureRecognizer(doubleTapGesture)
         
-        let singleTapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("handleSingleTapGesture:"))
+        let singleTapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PhotoBrowserCell.handleSingleTapGesture(_:)))
         singleTapGesture.numberOfTouchesRequired = 1
         singleTapGesture.numberOfTapsRequired = 1
         imageView.userInteractionEnabled = true

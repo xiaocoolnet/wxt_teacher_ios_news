@@ -36,7 +36,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
         exitBtn.tintColor = UIColor.whiteColor()
         exitBtn.layer.cornerRadius = 5
         exitBtn.layer.masksToBounds = true
-        exitBtn.addTarget(self, action: Selector("ExitLogin"), forControlEvents: .TouchUpInside)
+        exitBtn.addTarget(self, action: #selector(MineMainViewController.ExitLogin), forControlEvents: .TouchUpInside)
         footview.frame = CGRectMake(0, 0, self.view.bounds.width, 43)
         footview.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
         footview.addSubview(exitBtn)
@@ -222,7 +222,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 self.qingchuHuancun.layer.cornerRadius = 3
                 self.qingchuHuancun.layer.masksToBounds = true
                 self.qingchuHuancun.titleLabel?.font = UIFont.systemFontOfSize(14)
-                self.qingchuHuancun.addTarget(self, action: Selector("Qingchu"), forControlEvents: .TouchUpInside)
+                self.qingchuHuancun.addTarget(self, action: #selector(MineMainViewController.Qingchu), forControlEvents: .TouchUpInside)
                 defaultCell.contentView.addSubview(self.qingchuHuancun)
                 return defaultCell
             }

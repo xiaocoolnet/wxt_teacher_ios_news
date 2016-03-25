@@ -23,7 +23,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         XKeyBoard.registerKeyBoardShow(self)
         AccountText.delegate = self
         PasswordText.delegate = self
-        LoginButton.addTarget(self, action: "Login", forControlEvents: UIControlEvents.TouchUpInside)
+        LoginButton.addTarget(self, action: #selector(LoginViewController.Login), forControlEvents: UIControlEvents.TouchUpInside)
     }
 
     override func viewWillAppear(animated: Bool) {

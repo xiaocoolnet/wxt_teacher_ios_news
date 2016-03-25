@@ -31,7 +31,7 @@ class ChangePassViewController: UIViewController {
         nextBtn.setTitle("设置新密码", forState: .Normal)
         nextBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         nextBtn.titleLabel?.font = UIFont.systemFontOfSize(17)
-        nextBtn.addTarget(self, action: Selector("setPassView"), forControlEvents: .TouchUpInside)
+        nextBtn.addTarget(self, action: #selector(ChangePassViewController.setPassView), forControlEvents: .TouchUpInside)
         self.view.addSubview(passView)
         self.view.addSubview(passText)
         self.view.addSubview(nextBtn)

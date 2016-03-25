@@ -19,7 +19,7 @@ class NewCommentViewController: UIViewController {
         
         self.title = "发表评论"
         self.view.backgroundColor = UIColor.whiteColor()
-        let rightItem = UIBarButtonItem(title: "发表", style: .Done, target: self, action: Selector("UpdateComment"))
+        let rightItem = UIBarButtonItem(title: "发表", style: .Done, target: self, action: #selector(NewCommentViewController.UpdateComment))
         self.navigationItem.rightBarButtonItem = rightItem
         self.contentTextView.frame = CGRectMake(8, 5, self.view.bounds.width - 16, 200)
         self.contentTextView.font = UIFont.systemFontOfSize(15)

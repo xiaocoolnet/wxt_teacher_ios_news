@@ -28,19 +28,19 @@ extension PhotoBrowser{
     /**  控制器准备  */
     func vcPrepare(){
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "singleTapAction", name: CFPBSingleTapNofi, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PhotoBrowser.singleTapAction), name: CFPBSingleTapNofi, object: nil)
     
         if showType != PhotoBrowser.ShowType.ZoomAndDismissWithSingleTap {
             
             dismissBtn = UIButton(frame: CGRectMake(0, 20, 40, 40))
             dismissBtn.setBackgroundImage(UIImage(named: "pic.bundle/cancel"), forState: UIControlState.Normal)
-            dismissBtn.addTarget(self, action: "dismissPrepare", forControlEvents: UIControlEvents.TouchUpInside)
+            dismissBtn.addTarget(self, action: #selector(PhotoBrowser.dismissPrepare), forControlEvents: UIControlEvents.TouchUpInside)
             self.view.addSubview(dismissBtn)
         
             //保存按钮
             saveBtn = UIButton()
             saveBtn.setBackgroundImage(UIImage(named: "pic.bundle/save"), forState: UIControlState.Normal)
-            saveBtn.addTarget(self, action: "saveAction", forControlEvents: UIControlEvents.TouchUpInside)
+            saveBtn.addTarget(self, action: #selector(PhotoBrowser.saveAction), forControlEvents: UIControlEvents.TouchUpInside)
             self.view.addSubview(saveBtn)
             saveBtn.make_rightTop_WH(top: 20, right: 0, rightWidth: 40, topHeight: 40)
         }
@@ -60,7 +60,7 @@ extension PhotoBrowser{
         
         showHUD("保存中", autoDismiss: -1)
     
-        UIImageWriteToSavedPhotosAlbum(itemCell.imageV.image!, self, Selector("image:didFinishSavingWithError:contextInfo:"), nil)
+        UIImageWriteToSavedPhotosAlbum(itemCell.imageV.image!, self, #selector(PhotoBrowser.image(_:didFinishSavingWithError:contextInfo:)), nil)
         
         self.view.userInteractionEnabled = false
     }

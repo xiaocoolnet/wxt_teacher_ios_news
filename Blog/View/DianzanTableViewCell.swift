@@ -25,7 +25,7 @@ class DianzanTableViewCell: UITableViewCell {
         for view in self.contentView.subviews {
             view.removeFromSuperview()
         }
-        dianZanBtn.addTarget(self, action: Selector("ChangeDianZan"), forControlEvents: UIControlEvents.TouchUpInside)
+        dianZanBtn.addTarget(self, action: #selector(DianzanTableViewCell.ChangeDianZan), forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     func ChangeDianZan(){

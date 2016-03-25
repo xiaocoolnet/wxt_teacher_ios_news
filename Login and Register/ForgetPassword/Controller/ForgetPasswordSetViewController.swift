@@ -17,7 +17,7 @@ class ForgetPasswordSetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        finishbutton.addTarget(self, action: Selector("PanKong"), forControlEvents: UIControlEvents.TouchUpInside)
+        finishbutton.addTarget(self, action: #selector(ForgetPasswordSetViewController.PanKong), forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     func Finish(){

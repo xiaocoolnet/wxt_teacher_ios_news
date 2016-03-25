@@ -23,7 +23,7 @@ class TeacherDianPingViewController: UIViewController,UITableViewDelegate,UITabl
         let emptyView = UIView()
         emptyView.frame = CGRectZero
         DianPingView.tableFooterView = emptyView
-        let rightItem = UIBarButtonItem(title: "发表点评", style: .Done, target: self, action: Selector("FaBiao"))
+        let rightItem = UIBarButtonItem(title: "发表点评", style: .Done, target: self, action: #selector(TeacherDianPingViewController.FaBiao))
         self.navigationItem.rightBarButtonItem = rightItem
         DianPingView.registerClass(TeacherDianPingTableViewCell.self, forCellReuseIdentifier: "TDP")
         self.view.addSubview(DianPingView)

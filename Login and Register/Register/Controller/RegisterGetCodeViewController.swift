@@ -31,8 +31,8 @@ class RegisterGetCodeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getCodeButton.addTarget(self, action: Selector("GetCode"), forControlEvents: UIControlEvents.TouchUpInside)
-        nextButton.addTarget(self, action: Selector("Next"), forControlEvents: UIControlEvents.TouchUpInside)
+        getCodeButton.addTarget(self, action: #selector(RegisterGetCodeViewController.GetCode), forControlEvents: UIControlEvents.TouchUpInside)
+        nextButton.addTarget(self, action: #selector(RegisterGetCodeViewController.Next), forControlEvents: UIControlEvents.TouchUpInside)
         timeLabel.hidden = true
         self.navigationController?.navigationBar.hidden = false
     }
@@ -131,7 +131,7 @@ class RegisterGetCodeViewController: UIViewController {
     
     func timeDow()
     {
-        let time1 = NSTimer.scheduledTimerWithTimeInterval(1.0, target:self, selector: "updateTime", userInfo: nil, repeats: true)
+        let time1 = NSTimer.scheduledTimerWithTimeInterval(1.0, target:self, selector: #selector(RegisterGetCodeViewController.updateTime), userInfo: nil, repeats: true)
         timeNow = time1
     }
     
@@ -144,7 +144,7 @@ class RegisterGetCodeViewController: UIViewController {
     
     func updateTime()
     {
-        count--
+        count -= 1
         if (count <= 0)
         {
             count = 60

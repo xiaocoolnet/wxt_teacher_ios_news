@@ -99,6 +99,7 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
                 self.yuanquBtn.frame = CGRectMake(0, 3, 60, 60)
                 self.yuanquBtn.center.x = self.view.bounds.width/8
                 self.yuanquBtn.setImage(UIImage(named: "园区介绍"), forState: .Normal)
+                self.yuanquBtn.addTarget(self, action: #selector(SchoolViewController.yuanquJieShao), forControlEvents: .TouchUpInside)
                 self.yuanquLabel.frame = CGRectMake(0, 66, 50, 12)
                 self.yuanquLabel.font = UIFont.systemFontOfSize(12)
                 self.yuanquLabel.center.x = self.view.bounds.width/8
@@ -107,6 +108,7 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
                 self.jiaoshiBtn.frame = CGRectMake(0, 3, 60, 60)
                 self.jiaoshiBtn.center.x = self.view.bounds.width/8*3
                 self.jiaoshiBtn.setImage(UIImage(named: "教师风采"), forState: .Normal)
+                self.jiaoshiBtn.addTarget(self, action: #selector(SchoolViewController.jiaoshifengcai), forControlEvents: .TouchUpInside)
                 self.jiaoshiLabel.frame = CGRectMake(0, 66, 50, 12)
                 self.jiaoshiLabel.font = UIFont.systemFontOfSize(12)
                 self.jiaoshiLabel.center.x = self.view.bounds.width/8*3
@@ -189,6 +191,27 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
             }
         }
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 1{
+            if indexPath.row == 0{
+                let xinwenlist = XinWenListViewController()
+                self.navigationController?.pushViewController(xinwenlist, animated: true)
+            }
+            if indexPath.row == 1{
+            }
+        }
+    }
+    
+    func yuanquJieShao(){
+        let yqjs = YuanquJieShaoViewController()
+        self.navigationController?.pushViewController(yqjs, animated: true)
+    }
+    
+    func jiaoshifengcai(){
+        let jsfc = TeacherInfoViewController()
+        self.navigationController?.pushViewController(jsfc, animated: true)
     }
     
 }

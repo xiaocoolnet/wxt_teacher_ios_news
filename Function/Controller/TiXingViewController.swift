@@ -19,7 +19,7 @@ class TiXingViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         super.viewDidLoad()
         self.title = "代接提醒"
         self.view.backgroundColor = UIColor.whiteColor()
-        let rightItem = UIBarButtonItem(title: "发送", style: .Done, target: self, action: Selector("Fasong"))
+        let rightItem = UIBarButtonItem(title: "发送", style: .Done, target: self, action: #selector(TiXingViewController.Fasong))
         self.navigationItem.rightBarButtonItem = rightItem
         photoView.frame = CGRectMake(0, 100, 250, 250)
         photoView.center.x = self.view.center.x
@@ -31,7 +31,7 @@ class TiXingViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         finishBtn.backgroundColor = UIColor(red: 155.0 / 255.0, green: 229.0 / 255.0, blue: 180.0 / 255.0, alpha: 1.0)
         finishBtn.titleLabel?.font = UIFont.systemFontOfSize(16)
         finishBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        finishBtn.addTarget(self, action: Selector("PaiShe"), forControlEvents: .TouchUpInside)
+        finishBtn.addTarget(self, action: #selector(TiXingViewController.PaiShe), forControlEvents: .TouchUpInside)
         self.view.addSubview(photoView)
         self.view.addSubview(finishBtn)
         // Do any additional setup after loading the view.

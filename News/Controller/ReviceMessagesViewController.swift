@@ -25,7 +25,7 @@ class ReviceMessagesViewController: UIViewController,UITableViewDelegate,UITable
         newsInfoTableView.dataSource = self
         newsInfoTableView.scrollEnabled = false
         self.automaticallyAdjustsScrollViewInsets = false
-        let rightItem = UIBarButtonItem(title: "发送", style: UIBarButtonItemStyle.Done, target: self, action: Selector("ReviceMessages"))
+        let rightItem = UIBarButtonItem(title: "发送", style: UIBarButtonItemStyle.Done, target: self, action: #selector(ReviceMessagesViewController.ReviceMessages))
         self.navigationItem.rightBarButtonItem = rightItem
         self.view.addSubview(newsInfoTableView)
         // Do any additional setup after loading the view.

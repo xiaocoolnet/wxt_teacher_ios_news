@@ -36,7 +36,7 @@ class ServerTableViewController: UITableViewController {
         
         footerBt.setTitle("拨打电话", forState: UIControlState.Normal)
         footerBt.backgroundColor = UIColor(red: 155.0/255.0, green: 229.0/255.0, blue: 180.0/255.0, alpha: 1.0)
-        footerBt.addTarget(self, action:Selector("call:"), forControlEvents: UIControlEvents.TouchUpInside)
+        footerBt.addTarget(self, action:#selector(ServerTableViewController.call(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         return forFooterView
     }
     

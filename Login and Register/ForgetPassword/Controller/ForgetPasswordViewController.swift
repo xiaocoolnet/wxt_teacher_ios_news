@@ -86,7 +86,7 @@ class ForgetPasswordViewController: UIViewController {
     //控制发送验证码之后的60s倒计时
     func timeDow()
     {
-        let time1 = NSTimer.scheduledTimerWithTimeInterval(1.0, target:self, selector: "updateTime", userInfo: nil, repeats: true)
+        let time1 = NSTimer.scheduledTimerWithTimeInterval(1.0, target:self, selector: #selector(ForgetPasswordViewController.updateTime), userInfo: nil, repeats: true)
         timeNow = time1
     }
     func showRepeatButton()
@@ -97,7 +97,7 @@ class ForgetPasswordViewController: UIViewController {
     }
     func updateTime()
     {
-        count--
+        count -= 1
         if (count <= 0)
         {
             count = 60
@@ -163,9 +163,9 @@ class ForgetPasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.hidden = false
-        getCodeButton.addTarget(self, action: Selector("GetCode"), forControlEvents: UIControlEvents.TouchUpInside)
+        getCodeButton.addTarget(self, action: #selector(ForgetPasswordViewController.GetCode), forControlEvents: UIControlEvents.TouchUpInside)
         
-        nextButton.addTarget(self, action: Selector("Next"), forControlEvents: UIControlEvents.TouchUpInside)
+        nextButton.addTarget(self, action: #selector(ForgetPasswordViewController.Next), forControlEvents: UIControlEvents.TouchUpInside)
         codeLabel.hidden = true
         
     }

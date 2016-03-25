@@ -14,8 +14,8 @@ class ContactsViewController: UIViewController {
     override func viewDidLoad(){
         super.viewDidLoad()
         self.title = "通讯录"
-        let rightItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "RightBtn")
-        let leftItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "LeftBtn")
+        let rightItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: #selector(ContactsViewController.RightBtn))
+        let leftItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: #selector(ContactsViewController.LeftBtn))
         self.navigationItem.rightBarButtonItem = rightItem
         self.navigationItem.leftBarButtonItem = leftItem
         let jiaZhangView = JiaZhangViewController()

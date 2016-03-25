@@ -37,7 +37,7 @@ class BlogCommentViewController: UIViewController,UITableViewDelegate,UITableVie
             self.automaticallyAdjustsScrollViewInsets = false
             self.view.addSubview(commentTableView)
         }
-        let rightItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("NewComment"))
+        let rightItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(BlogCommentViewController.NewComment))
         self.navigationItem.rightBarButtonItem = rightItem
         self.view.backgroundColor = UIColor.whiteColor()
         self.tabBarController?.tabBar.hidden = true

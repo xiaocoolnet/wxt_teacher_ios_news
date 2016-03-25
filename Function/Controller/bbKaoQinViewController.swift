@@ -40,18 +40,18 @@ class bbKaoQinViewController: UIViewController,UICollectionViewDataSource,UIColl
         avatorCollection!.registerClass(AvatorCollectionViewCell.self, forCellWithReuseIdentifier: "AvatorCell")
         self.lastDayBtn.frame = CGRectMake(50, 10, 20, 20)
         self.lastDayBtn.setImage(UIImage(named: "上一天"), forState: .Normal)
-        self.lastDayBtn.addTarget(self, action: Selector("LastDay"), forControlEvents: .TouchUpInside)
+        self.lastDayBtn.addTarget(self, action: #selector(bbKaoQinViewController.LastDay), forControlEvents: .TouchUpInside)
         self.nextDayBtn.frame = CGRectMake(0, 10, 20, 20)
         self.nextDayBtn.frame.origin.x = self.view.bounds.width - 70
         self.nextDayBtn.setImage(UIImage(named: "下一天"), forState: .Normal)
-        self.nextDayBtn.addTarget(self, action: Selector("NextDay"), forControlEvents: .TouchUpInside)
+        self.nextDayBtn.addTarget(self, action: #selector(bbKaoQinViewController.NextDay), forControlEvents: .TouchUpInside)
         self.lastMonthBtn.frame = CGRectMake(30, 10, 20, 20)
         self.lastMonthBtn.setImage(UIImage(named: "上个月"), forState: .Normal)
-        self.lastMonthBtn.addTarget(self, action: Selector("LastMonth"), forControlEvents: .TouchUpInside)
+        self.lastMonthBtn.addTarget(self, action: #selector(bbKaoQinViewController.LastMonth), forControlEvents: .TouchUpInside)
         self.nextMonthBtn.frame = CGRectMake(0, 10, 20, 20)
         self.nextMonthBtn.setImage(UIImage(named: "下个月"), forState: .Normal)
         self.nextMonthBtn.frame.origin.x = self.view.bounds.width - 50
-        self.nextMonthBtn.addTarget(self, action: Selector("NextMonth"), forControlEvents: .TouchUpInside)
+        self.nextMonthBtn.addTarget(self, action: #selector(bbKaoQinViewController.NextMonth), forControlEvents: .TouchUpInside)
         self.timeLabel.frame = CGRectMake(0, 10, 150, 20)
         self.timeLabel.textColor = UIColor.grayColor()
         self.timeLabel.center.x = self.view.center.x

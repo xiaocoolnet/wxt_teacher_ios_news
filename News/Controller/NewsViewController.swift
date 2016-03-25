@@ -22,8 +22,8 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
         dataTableView.delegate = self
         dataTableView.dataSource = self
         dataTableView.registerClass(NewsTableViewCell.self, forCellReuseIdentifier: "NewsCell")
-        let rightItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "RightBtn")
-        let leftItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "LeftBtn")
+        let rightItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: #selector(NewsViewController.RightBtn))
+        let leftItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: #selector(NewsViewController.LeftBtn))
         self.navigationItem.rightBarButtonItem = rightItem
         self.navigationItem.leftBarButtonItem = leftItem
         self.automaticallyAdjustsScrollViewInsets = false
@@ -32,7 +32,7 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
     func DropDownUpdate(){
-        self.dataTableView.headerView = XWRefreshNormalHeader(target: self, action: "GetDate")
+        self.dataTableView.headerView = XWRefreshNormalHeader(target: self, action: #selector(NewsViewController.GetDate))
         self.dataTableView.reloadData()
         self.dataTableView.headerView?.beginRefreshing()
     }

@@ -27,7 +27,7 @@ class PhotoViewController: UIViewController,UICollectionViewDataSource,UICollect
         photoCollection!.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
         photoCollection.contentSize = CGSizeMake(100, 100)
         photoCollection!.registerClass(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: "PhotoCell")
-        let rightItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: Selector("NewPhoto"))
+        let rightItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(PhotoViewController.NewPhoto))
         self.navigationItem.rightBarButtonItem = rightItem
         self.view.addSubview(photoCollection!)
     }

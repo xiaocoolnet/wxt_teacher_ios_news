@@ -18,10 +18,9 @@ class ChengZhangViewController: UIViewController,UITableViewDataSource,UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "学生档案"
-        self.automaticallyAdjustsScrollViewInsets = false
         nameTableView.delegate = self
         nameTableView.dataSource = self
-        nameTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height - 64)
+        nameTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height - 64 - 44)
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.frame = CGRectMake(0, 0, self.view.bounds.width, 44)
         definesPresentationContext = true
