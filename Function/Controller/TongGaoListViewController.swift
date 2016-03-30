@@ -1,32 +1,32 @@
 //
-//  XinWenListViewController.swift
+//  TongGaoViewController.swift
 //  WXT_Teacher
 //
-//  Created by 李春波 on 16/3/25.
+//  Created by 李春波 on 16/3/29.
 //  Copyright © 2016年 北京校酷网络科技有限公司. All rights reserved.
 //
 
 import UIKit
 
-class XinWenListViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-
-    let XinWenList = UITableView()
+class TongGaoListViewController:UIViewController,UITableViewDataSource,UITableViewDelegate {
+    
+    let TongGaoList = UITableView()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
-        XinWenList.delegate = self
-        XinWenList.dataSource = self
-        self.title = "新闻列表"
-        XinWenList.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height - 64)
-        XinWenList.tableFooterView = UIView(frame: CGRectZero)
-        self.view.addSubview(XinWenList)
+        TongGaoList.delegate = self
+        TongGaoList.dataSource = self
+        self.title = "公告列表"
+        TongGaoList.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height - 64)
+        TongGaoList.tableFooterView = UIView(frame: CGRectZero)
+        self.view.addSubview(TongGaoList)
         // Do any additional setup after loading the view.
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 90
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -51,18 +51,8 @@ class XinWenListViewController: UIViewController,UITableViewDataSource,UITableVi
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let teacherinfo = XinWenInfoViewController()
+        let teacherinfo = TongGaoInfoViewController()
         self.navigationController?.pushViewController(teacherinfo, animated: true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

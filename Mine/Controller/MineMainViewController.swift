@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import Haneke
 import MBProgressHUD
 
 class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
@@ -293,6 +294,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func Qingchu(){
+        //let cache = Haneke.Shared.imageCache
         let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         hud.mode = MBProgressHUDMode.Text
         hud.labelText = "清除成功"

@@ -95,6 +95,7 @@ class DaiJieViewController: UIViewController,UITableViewDelegate,UITableViewData
             cell.btn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             cell.btn.setTitle("提醒家长", forState: .Normal)
             cell.btn.frame.origin.x = self.view.bounds.width - 80
+            cell.btn.addTarget(self, action: #selector(DaiJieViewController.TiXingJiaZhang), forControlEvents: .TouchUpInside)
             return cell
         }
         if(indexPath.section == 1){
@@ -117,6 +118,11 @@ class DaiJieViewController: UIViewController,UITableViewDelegate,UITableViewData
             cell.btn.frame.origin.x = self.view.bounds.width - 80
             return cell
         }
+    }
+    
+    func TiXingJiaZhang(){
+        let tixingjiazhang = TiXingJiaZhangViewController()
+        self.navigationController?.pushViewController(tixingjiazhang, animated: true)
     }
     
     func TiXing(){

@@ -29,6 +29,7 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
     let xwdtLabel1 = UILabel()
     let xwdtLabel2 = UILabel()
     let teacherPic1 = UIImageView()
+    let contentText1 = UILabel()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "学校官网"
@@ -189,6 +190,17 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
                 cell.contentView.addSubview(self.xwdt)
                 return cell
             }
+            if indexPath.row == 1{
+                self.teacherPic1.frame = CGRectMake(5, 5, 80, 80)
+                self.teacherPic1.image = UIImage(named: "teacherPic")
+                cell.contentView.addSubview(self.teacherPic1)
+                self.contentText1.frame = CGRectMake(88, 5, self.view.bounds.width - 90, 80)
+                self.contentText1.numberOfLines = 0
+                self.contentText1.text = "通知内容通知内容通知内容"
+                self.contentText1.font = UIFont.systemFontOfSize(15)
+                cell.contentView.addSubview(self.contentText1)
+                return cell
+            }
         }
         return cell
     }
@@ -200,6 +212,18 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
                 self.navigationController?.pushViewController(xinwenlist, animated: true)
             }
             if indexPath.row == 1{
+                let xinweninfo = XinWenInfoViewController()
+                self.navigationController?.pushViewController(xinweninfo, animated: true)
+            }
+        }
+        if indexPath.section == 2{
+            if indexPath.row == 0{
+                let tonggaolist = TongGaoListViewController()
+                self.navigationController?.pushViewController(tonggaolist, animated: true)
+            }
+            if indexPath.row == 1{
+                let tonggaoinfo = TongGaoInfoViewController()
+                self.navigationController?.pushViewController(tonggaoinfo, animated: true)
             }
         }
     }

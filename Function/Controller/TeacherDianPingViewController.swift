@@ -47,6 +47,7 @@ class TeacherDianPingViewController: UIViewController,UITableViewDelegate,UITabl
         cell.avatorImage.image = UIImage(named: "老师点评-1")
         cell.nameLabel.text = "小红"
         cell.timeLabel.text = "今天14:17"
+        cell.selectionStyle = .None
         let options : NSStringDrawingOptions = NSStringDrawingOptions.UsesLineFragmentOrigin
         let string:NSString = "孩子学习成绩很好"
         let screenBounds:CGRect = UIScreen.mainScreen().bounds
@@ -58,6 +59,8 @@ class TeacherDianPingViewController: UIViewController,UITableViewDelegate,UITabl
     
     func FaBiao(){
         print("")
+        let dianpingList = DianPingListViewController()
+        self.navigationController?.pushViewController(dianpingList, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

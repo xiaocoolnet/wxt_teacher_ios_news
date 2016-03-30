@@ -28,7 +28,7 @@ class BlogCommentViewController: UIViewController,UITableViewDelegate,UITableVie
             self.view.addSubview(tiShiLable)
         }
         else{
-            commentTableView.frame = CGRectMake(0, 64, self.view.bounds.width, self.view.bounds.height - 64)
+            commentTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height - 64)
             commentTableView.delegate = self
             commentTableView.dataSource = self
             let emptyView = UIView()

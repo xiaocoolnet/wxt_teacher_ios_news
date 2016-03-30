@@ -10,7 +10,6 @@ import UIKit
 import MBProgressHUD
 
 class TiXingViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
-
     let photoView = UIImageView()
     let finishBtn = UIButton()
     var hud = MBProgressHUD()
