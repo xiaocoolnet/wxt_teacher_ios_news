@@ -259,9 +259,9 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 ChangePassView.tabBarController?.tabBar.hidden = true
             }
             if(indexPath.row == 2){
-                let ChangePassView = ChangePassViewController()
-                self.navigationController?.pushViewController(ChangePassView, animated: true)
-                ChangePassView.tabBarController?.tabBar.hidden = true
+                let xitonggonggao = XiTongGongGaoViewController()
+                self.navigationController?.pushViewController(xitonggonggao, animated: true)
+                xitonggonggao.tabBarController?.tabBar.hidden = true
             }
             if(indexPath.row == 3){
                 let  HelpView = HelpTableViewController()

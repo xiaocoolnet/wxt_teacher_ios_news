@@ -45,6 +45,7 @@ class BanJiKeJianViewController: UIViewController,UITableViewDelegate,UITableVie
         checkBtn.backgroundColor = UIColor(red: 255/255, green: 130/255, blue: 4/255, alpha: 1)
         checkBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         checkBtn.setTitle("查看", forState: .Normal)
+        checkBtn.addTarget(self, action: #selector(BanJiKeJianViewController.CheckKejian), forControlEvents: .TouchUpInside)
         checkBtn.titleLabel?.font = UIFont.systemFontOfSize(14)
         checkBtn.layer.cornerRadius = 5
         checkBtn.layer.masksToBounds = true
@@ -52,6 +53,11 @@ class BanJiKeJianViewController: UIViewController,UITableViewDelegate,UITableVie
         self.view.backgroundColor = UIColor.whiteColor()
         cell.contentView.addSubview(checkBtn)
         return cell
+    }
+    
+    func CheckKejian(){
+        let kejian = KeJianInfoViewController()
+        self.navigationController?.pushViewController(kejian, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

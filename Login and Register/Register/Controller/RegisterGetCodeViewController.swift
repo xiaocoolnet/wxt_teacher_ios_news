@@ -165,7 +165,6 @@ class RegisterGetCodeViewController: UIViewController {
                 timeLabel.hidden = false
                 self.timeDow()
             }
-
         }
         if alertView.tag == 1
         {}

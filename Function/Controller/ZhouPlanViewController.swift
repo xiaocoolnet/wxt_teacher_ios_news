@@ -35,6 +35,7 @@ class ZhouPlanViewController: UIViewController,UITableViewDataSource,UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let contentLabel = UILabel()
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "cell")
+        cell.selectionStyle = .None
         cell.textLabel?.text = "星期\(indexPath.row + 1)"
         contentLabel.frame = CGRectMake(102, 16, self.view.bounds.width - 102, 14)
         contentLabel.font = UIFont.systemFontOfSize(14)
@@ -42,6 +43,11 @@ class ZhouPlanViewController: UIViewController,UITableViewDataSource,UITableView
         contentLabel.textColor = UIColor.grayColor()
         cell.contentView.addSubview(contentLabel)
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let edit = EditZhouPlanViewController()
+        self.navigationController?.pushViewController(edit, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
