@@ -116,6 +116,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 self.infoLabel.text = "清华幼儿园·大班三班"
                 self.editBtn.frame = CGRectMake(174, 91, 12, 12)
                 self.editBtn.setBackgroundImage(UIImage(named: "编辑"), forState: .Normal)
+                self.editBtn.addTarget(self, action: Selector("edit"), forControlEvents: UIControlEvents.TouchUpInside)
                 cell.contentView.addSubview(self.avatorImage)
                 cell.contentView.addSubview(self.nameLabel)
                 cell.contentView.addSubview(self.infoLabel)
@@ -320,6 +321,13 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
         self.presentViewController(alertController, animated: true, completion: nil)
     }
 
+    //MARK: 点击事件
+    //编辑
+    func edit() -> Void {
+        let editVC = EditTableViewController()
+        self.navigationController?.pushViewController(editVC, animated: true)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
