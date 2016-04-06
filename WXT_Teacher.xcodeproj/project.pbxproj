@@ -222,6 +222,11 @@
 		EAFAE7321C82E52B00A8BAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE7301C82E52B00A8BAF2 /* Assets.xcassets */; };
 		EAFAE7331C82E52B00A8BAF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE7311C82E52B00A8BAF2 /* Main.storyboard */; };
 		EAFAE7391C82E56800A8BAF2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE7381C82E56800A8BAF2 /* Podfile */; };
+		F6F4C5401CB4A91900D4B6D9 /* EditOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C53E1CB4A91900D4B6D9 /* EditOtherViewController.swift */; };
+		F6F4C5411CB4A91900D4B6D9 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C53F1CB4A91900D4B6D9 /* EditTableViewController.swift */; };
+		F6F4C5441CB4DE4D00D4B6D9 /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C5431CB4DE4D00D4B6D9 /* FoodList.swift */; };
+		F6F4C5471CB4E0FD00D4B6D9 /* ShiPuXiangQingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C5461CB4E0FD00D4B6D9 /* ShiPuXiangQingViewController.swift */; };
+		F6F4C54F1CB4ED9900D4B6D9 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C54E1CB4ED9900D4B6D9 /* FoodTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -451,6 +456,11 @@
 		EAFAE7311C82E52B00A8BAF2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EAFAE7341C82E55400A8BAF2 /* WXT_Teacher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WXT_Teacher-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		EAFAE7381C82E56800A8BAF2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F6F4C53E1CB4A91900D4B6D9 /* EditOtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditOtherViewController.swift; sourceTree = "<group>"; };
+		F6F4C53F1CB4A91900D4B6D9 /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
+		F6F4C5431CB4DE4D00D4B6D9 /* FoodList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodList.swift; sourceTree = "<group>"; };
+		F6F4C5461CB4E0FD00D4B6D9 /* ShiPuXiangQingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiPuXiangQingViewController.swift; sourceTree = "<group>"; };
+		F6F4C54E1CB4ED9900D4B6D9 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		F7D892E0A840C8D6CB9F6455 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -746,6 +756,7 @@
 		EAFAE5F21C82E50900A8BAF2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F6F4C5451CB4E0B100D4B6D9 /* Shipu */,
 				EAFAE5F41C82E50900A8BAF2 /* Readme */,
 				EAA2CDF51CACB32E00766CCB /* Plan */,
 				EAA2CDF41CACB30000766CCB /* Kejian */,
@@ -762,7 +773,6 @@
 				EA6D2D3C1C95125D0092F09A /* bbKaoQinViewController.swift */,
 				EA6D54101C97925D00F85EA2 /* XinXiViewController.swift */,
 				EA6D54121C97AB3D00F85EA2 /* daKaViewController.swift */,
-				EAC200891C9D2D6300A6A613 /* ShiPuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -770,6 +780,7 @@
 		EAFAE5F61C82E50900A8BAF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F6F4C5431CB4DE4D00D4B6D9 /* FoodList.swift */,
 				EAFAE5F71C82E50900A8BAF2 /* Readme */,
 			);
 			path = Model;
@@ -786,6 +797,7 @@
 				EAD5D45C1C93AB5F00013E10 /* TeacherDianPingTableViewCell.swift */,
 				EA6D2D3E1C9512F20092F09A /* AvatorCollectionViewCell.swift */,
 				EAC2008D1C9D36A400A6A613 /* DingZhuTableViewCell.swift */,
+				F6F4C54E1CB4ED9900D4B6D9 /* FoodTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -921,6 +933,7 @@
 			isa = PBXGroup;
 			children = (
 				EAFAE61A1C82E50900A8BAF2 /* Readme */,
+				F6F4C5421CB4A92400D4B6D9 /* Edit */,
 				EAA2CE021CAE4D8200766CCB /* XiTong */,
 				EAA2CE011CAE4D5200766CCB /* ChangePass */,
 				EAFAE6191C82E50900A8BAF2 /* MineMainViewController.swift */,
@@ -1252,6 +1265,24 @@
 			path = Jsonjoy;
 			sourceTree = "<group>";
 		};
+		F6F4C5421CB4A92400D4B6D9 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				F6F4C53E1CB4A91900D4B6D9 /* EditOtherViewController.swift */,
+				F6F4C53F1CB4A91900D4B6D9 /* EditTableViewController.swift */,
+			);
+			name = Edit;
+			sourceTree = "<group>";
+		};
+		F6F4C5451CB4E0B100D4B6D9 /* Shipu */ = {
+			isa = PBXGroup;
+			children = (
+				EAC200891C9D2D6300A6A613 /* ShiPuViewController.swift */,
+				F6F4C5461CB4E0FD00D4B6D9 /* ShiPuXiangQingViewController.swift */,
+			);
+			name = Shipu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1424,6 +1455,7 @@
 				EAFAE7031C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
 				EAFAE6C21C82E50900A8BAF2 /* MineMainViewController.swift in Sources */,
 				EAD2EA6F1C911B00006F3A3B /* QingJiaViewController.swift in Sources */,
+				F6F4C5471CB4E0FD00D4B6D9 /* ShiPuXiangQingViewController.swift in Sources */,
 				EAFAE6CF1C82E50900A8BAF2 /* NewsInfoViewController.swift in Sources */,
 				EAFAE6FD1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				EAFAE71B1C82E50900A8BAF2 /* PhotoBrowser+Common.swift in Sources */,
@@ -1431,6 +1463,7 @@
 				EAFAE6EB1C82E50900A8BAF2 /* DiskFetcher.swift in Sources */,
 				EAFAE7291C82E50900A8BAF2 /* ShowImageView.swift in Sources */,
 				EAFAE7111C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
+				F6F4C5411CB4A91900D4B6D9 /* EditTableViewController.swift in Sources */,
 				EAFAE6DE1C82E50900A8BAF2 /* ConstraintRelation.swift in Sources */,
 				EA43502F1C93F51F0040F56D /* BanJiKeJianViewController.swift in Sources */,
 				EAFAE6AD1C82E50900A8BAF2 /* FunctionViewController.swift in Sources */,
@@ -1482,6 +1515,7 @@
 				EAFAE6F91C82E50900A8BAF2 /* UIView+Haneke.swift in Sources */,
 				EAFAE70C1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				EAFAE6EC1C82E50900A8BAF2 /* Fetch.swift in Sources */,
+				F6F4C5401CB4A91900D4B6D9 /* EditOtherViewController.swift in Sources */,
 				EAFAE7121C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				EAFAE6E71C82E50900A8BAF2 /* CGSize+Swift.swift in Sources */,
 				EA7D9D111C83DE8B00056B22 /* XKeyBoard.m in Sources */,
@@ -1489,6 +1523,7 @@
 				EAFAE72C1C82E50900A8BAF2 /* Httpresult.swift in Sources */,
 				EAFAE6BE1C82E50900A8BAF2 /* RegisterGetCodeViewController.swift in Sources */,
 				EA6D54151C97E85F00F85EA2 /* BanJihuodongViewController.swift in Sources */,
+				F6F4C54F1CB4ED9900D4B6D9 /* FoodTableViewCell.swift in Sources */,
 				EAFAE6DA1C82E50900A8BAF2 /* ConstraintAttributes.swift in Sources */,
 				EAA2CE041CAE4DEF00766CCB /* XiTongInfoViewController.swift in Sources */,
 				EAFAE70F1C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
@@ -1530,6 +1565,7 @@
 				EAFAE6E01C82E50900A8BAF2 /* EdgeInsets.swift in Sources */,
 				EAFAE6AA1C82E50900A8BAF2 /* BlogTableViewCell.swift in Sources */,
 				EA2D40211CABB547000DEAF6 /* FaBiaoDianpingViewController.swift in Sources */,
+				F6F4C5441CB4DE4D00D4B6D9 /* FoodList.swift in Sources */,
 				EA9489911C8413E8008682E6 /* BRPlaceholderTextView.m in Sources */,
 				EAFAE7221C82E50900A8BAF2 /* PhotoBrowser+ZoomAnim.swift in Sources */,
 				EAFAE6FA1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,

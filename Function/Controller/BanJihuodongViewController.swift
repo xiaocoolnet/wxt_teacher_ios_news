@@ -22,6 +22,10 @@ class BanJihuodongViewController: UIViewController,UITableViewDelegate,UITableVi
         huoDongTableView.dataSource = self
         self.tabBarController?.tabBar.hidden = true
         self.view.addSubview(huoDongTableView)
+        
+        //增加班级活动按钮
+        let addBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: Selector("addHuodong"))
+        self.navigationItem.rightBarButtonItem = addBtn
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -51,6 +55,11 @@ class BanJihuodongViewController: UIViewController,UITableViewDelegate,UITableVi
         self.navigationController?.pushViewController(huodongxq, animated: true)
     }
 
+    //MARK: - 增加班级活动事件
+    func addHuodong() -> Void {
+        let huodongVC = HuoDongXqViewController()
+        self.navigationController?.pushViewController(huodongVC, animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
