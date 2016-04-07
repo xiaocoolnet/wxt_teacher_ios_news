@@ -31,8 +31,21 @@ class WhichSex: UIView {
     //MARK: - 加载子视图
     
     func loadSubviews() -> Void {
+        
+        let toolBar = UIView()
+        toolBar.frame = CGRectMake(0, 0, self.bounds.width, self.bounds.height/3)
+        self.addSubview(toolBar)
+        
+        let btn = UIButton()
+        btn.frame = CGRectMake(0, 0, 50, 20)
+        btn.center = toolBar.center
+        toolBar.addSubview(btn)
+        
+        
         let  sexPicker = UIPickerView()
-        sexPicker.frame = CGRectMake(0, 0, self.bounds.width, 300)
+        sexPicker.frame = CGRectMake(0, toolBar.frame.maxY, self.bounds.width, self.bounds.height-toolBar.frame.height)
+        sexPicker.delegate = self
+        sexPicker.dataSource = self
         sexPicker.showsSelectionIndicator = true
         self.addSubview(sexPicker)
     }

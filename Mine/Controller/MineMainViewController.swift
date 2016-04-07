@@ -23,6 +23,8 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
     let duiHuanBtn = UIButton()
     let qingchuHuancun = UIButton()
     let footview = UIView()
+    var phoneNumber = 18256178888
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -130,7 +132,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 self.infoLabel.frame = CGRectMake(105, 115, 110, 11)
                 self.infoLabel.font = UIFont.systemFontOfSize(11)
                 self.infoLabel.textColor = UIColor.grayColor()
-                self.infoLabel.text = "清华幼儿园·大班三班"
+                self.infoLabel.text = String(phoneNumber)
                 self.editBtn.frame = CGRectMake(174, 91, 12, 12)
                 self.editBtn.setBackgroundImage(UIImage(named: "编辑"), forState: .Normal)
                 self.editBtn.addTarget(self, action: Selector("edit"), forControlEvents: UIControlEvents.TouchUpInside)

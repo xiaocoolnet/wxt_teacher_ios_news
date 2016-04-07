@@ -9,7 +9,7 @@
 import UIKit
 import MBProgressHUD
 import Alamofire
-class EditTableViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate,UIAlertViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
+class EditTableViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate,UIAlertViewDelegate {
 
     
     var data = NSData()
@@ -81,7 +81,8 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
                 headImg.image = UIImage(named: "Logo")
             }
             headImg.frame = CGRectMake(UIScreen.mainScreen().bounds.width-100, 10, 80, 80)
-            headImg.layer.cornerRadius = 39
+            headImg.layer.cornerRadius = 40
+            headImg.layer.masksToBounds = true
             self.view.addSubview(headImg)
             
         }else{
@@ -144,21 +145,12 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
     }
     //更改性别
     func changeSex() -> Void {
-        let  sexPicker = UIPickerView()
-        sexPicker.frame = CGRectMake(0, UIScreen.mainScreen().bounds.height-300, UIScreen.mainScreen().bounds.width, 300)
-        sexPicker.delegate = self
-        sexPicker.dataSource = self
-        sexPicker.showsSelectionIndicator = true
-        self.view.addSubview(sexPicker)
-        
-        //添加工具条
-        let toolBar = UIView()
-        toolBar.frame = CGRectMake(0, sexPicker.frame.minY-50, sexPicker.frame.width, 50)
-        toolBar.backgroundColor = UIColor.blueColor()
-        self.view.addSubview(toolBar)
-        
-        
-        
+        if sex=="女" {
+            sex = "男"
+        }else{
+            sex = "女"
+        }
+        self.tableView.reloadData()
     }
     //更改姓名
     func changeOther(index:Int) -> Void {
@@ -215,22 +207,7 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
     }
 
     
-    //pickerview代理方法
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 2
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if row==0 {
-            return "男"
-        }else{
-            return "女"
-        }
-    }
+   
    
     //MARK: - 具体实现方法
     //相机
