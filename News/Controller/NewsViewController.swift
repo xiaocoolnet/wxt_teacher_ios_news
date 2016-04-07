@@ -72,10 +72,12 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     func RightBtn(){
         print("点击了右边的按钮")
+        
     }
     
     func LeftBtn(){
         print("点击了左边的按钮")
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -160,6 +162,12 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 newsInfo.newsInfo = self.newsSource.objectlist[0]
                 newsInfo.tabBarController?.tabBar.hidden = true
             }
+            if indexPath.row == 1{
+                let newsInfo = XiaoXiQunFaViewController()
+                self.navigationController?.pushViewController(newsInfo, animated: true)
+                newsInfo.newsInfo = self.newsSource.objectlist[0]
+                newsInfo.tabBarController?.tabBar.hidden = true
+            }
             if indexPath.row == 3{
                 let tongZhi = TongZhiGonggaoViewController()
                 tongZhi.newsInfo = self.newsSource.objectlist[0]
@@ -201,6 +209,7 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
         print(indexPath.section)
         if editingStyle == .Delete
         {
+            
         }
     }
     /*

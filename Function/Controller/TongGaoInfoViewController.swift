@@ -8,26 +8,43 @@
 
 import UIKit
 
+
 class TongGaoInfoViewController: UIViewController {
 
-    let teacherImage = UIImageView()
+    let noticeTitle = UILabel()
+    let nameLabel = UILabel()
+    let timeLabel = UILabel()
     let contentLabel = UILabel()
+    
     override func viewDidLoad() {
-        self.view.backgroundColor = UIColor.whiteColor()
-        self.title = "公告详情"
         super.viewDidLoad()
-        let options : NSStringDrawingOptions = NSStringDrawingOptions.UsesLineFragmentOrigin
-        let string:NSString = "壮苗幼儿园始建于2000年,原校址位于东大道,13年7月正式迁至西大街,新学校占地1300平方米、建筑面积800平方米。"
-        let screenBounds:CGRect = UIScreen.mainScreen().bounds
-        let boundingRect = string.boundingRectWithSize(CGSizeMake(screenBounds.width - 10, 0), options: options, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(17)], context: nil)
-        self.teacherImage.frame = CGRectMake(5, 5, self.view.bounds.width - 10, 200)
-        self.contentLabel.frame = CGRectMake(5, 205, self.view.bounds.width - 10, boundingRect.height)
-        self.contentLabel.font = UIFont.systemFontOfSize(17)
-        self.contentLabel.numberOfLines = 0
-        self.contentLabel.text = string as String
-        self.teacherImage.image = UIImage(named: "teacherPic")
-        self.view.addSubview(self.teacherImage)
-        self.view.addSubview(self.contentLabel)
+        
+        self.title = "公告详情"
+        self.view.backgroundColor = UIColor.whiteColor()
+        
+        noticeTitle.frame = CGRectMake(30, 10, self.view.bounds.width-60, 30)
+        noticeTitle.textAlignment = .Center
+        noticeTitle.font = UIFont.boldSystemFontOfSize(25)
+        
+        nameLabel.frame = CGRectMake(15, 45, 150, 15)
+        nameLabel.textColor = UIColor.grayColor()
+        nameLabel.font = UIFont.boldSystemFontOfSize(15)
+        
+        timeLabel.frame = CGRectMake(self.view.bounds.width-165, 45, 150, 15)
+        timeLabel.textColor = UIColor.grayColor()
+        timeLabel.textAlignment = .Right
+        timeLabel.font = UIFont.boldSystemFontOfSize(15)
+        
+        contentLabel.frame = CGRectMake(15, 65, self.view.bounds.width-30, 300)
+        contentLabel.numberOfLines = 0
+        contentLabel.textAlignment = .Center
+        contentLabel.font = UIFont.boldSystemFontOfSize(17)
+        
+        self.view.addSubview(noticeTitle)
+        self.view.addSubview(nameLabel)
+        self.view.addSubview(timeLabel)
+        self.view.addSubview(contentLabel)
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -365,6 +365,7 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
                 btn16.layer.masksToBounds = true
                 btn16.setBackgroundImage(UIImage(named: "园所情况"), forState: UIControlState.Normal)
                 btn16.center.x = (viewWidth/8)*15
+                btn16.addTarget(self, action: #selector(FunctionViewController.QingKuang), forControlEvents: .TouchUpInside)
                 lab1.text = "学校官网"
                 lab1.frame = CGRectMake(0, 66, 55, 15)
                 lab1.center.x = (viewWidth/8)
@@ -655,8 +656,52 @@ class FunctionViewController: UIViewController,UITableViewDataSource,UITableView
         self.navigationController?.pushViewController(daka, animated: true)
     }
     
+    func QingKuang(){
+        let qingkuang = YSQingKuangViewController()
+        self.navigationController?.pushViewController(qingkuang, animated: true)
+        
+    }
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 8
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if (indexPath.section == 3) {
+            if (indexPath.row == 0) {
+                
+                let paradise = ParadiseViewController()
+                self.navigationController?.pushViewController(paradise, animated: true)
+                
+                print("0")
+            }
+            if (indexPath.row == 1) {
+                
+                let paradiseShow = ParadiseShowViewController()
+                self.navigationController?.pushViewController(paradiseShow, animated: true)
+                
+                print("1")
+            }
+        }
+        if (indexPath.section == 4) {
+            if (indexPath.row == 0) {
+                
+                let videos = VideosViewController()
+                self.navigationController?.pushViewController(videos, animated: true)
+                
+                print("0")
+            }else {
+                
+                let videoPlay = VideoPlayViewController()
+                self.navigationController?.pushViewController(videoPlay, animated: true)
+                
+                print("1")
+            }
+        }
+        if (indexPath.section == 5) {
+            let fangdiu = FangDiuViewController()
+            self.navigationController?.pushViewController(fangdiu, animated: true)
+            
+            print("防丢失")
+        }
     }
 }
 
@@ -665,6 +710,7 @@ extension FunctionViewController: UIScrollViewDelegate {
         let offset = scrollView.contentOffset
         pageControl.currentPage = Int(offset.x / view.bounds.width)
         // 因为currentPage是从0开始，所以numOfPages减1
+        print("啊！！")
     }
 }
 

@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Alamofire
+import MBProgressHUD
+import XWSwiftRefresh
 
 class BanJiKeJianViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    var keJianSource = KeJianList()
+    
     let kejianTableview = UITableView()
     
     override func viewDidLoad() {
@@ -22,7 +27,55 @@ class BanJiKeJianViewController: UIViewController,UITableViewDelegate,UITableVie
         self.kejianTableview.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
         self.kejianTableview.tableFooterView = UIView(frame: CGRectZero)
         self.view.addSubview(self.kejianTableview)
+        
+        self.DropDownUpdate()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func DropDownUpdate(){
+        self.kejianTableview.headerView = XWRefreshNormalHeader(target: self, action: #selector(NewsViewController.GetDate))
+        self.kejianTableview.reloadData()
+        self.kejianTableview.headerView?.beginRefreshing()
+    }
+    
+    func GetDate(){
+        let url = apiUrl+"SchoolCourseware"
+        //let userid = NSUserDefaults.standardUserDefaults()
+        let schoolid = 1
+        let classid = 1
+        
+        let param = [
+            "schoolid":schoolid,
+            "classid":classid
+            
+        ]
+        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                print("request是")
+                print(request!)
+                print("====================")
+                let status = Http(JSONDecoder(json!))
+                print("状态是")
+                print(status.status)
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                    print("0")
+                }
+                if(status.status == "success"){
+                    self.keJianSource = KeJianList(status.data!)
+                    self.kejianTableview.reloadData()
+                    self.kejianTableview.headerView?.endRefreshing()
+                    print("1")
+                }
+            }
+        }
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -30,7 +83,7 @@ class BanJiKeJianViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return keJianSource.count
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -38,42 +91,60 @@ class BanJiKeJianViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let checkBtn = UIButton()
+        
+        let kejianInfo = keJianSource.objectlist[indexPath.row]
+        
+        //        let checkBtn = UIButton()
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "cell")
-        checkBtn.frame = CGRectMake(0, 10, 70, 30)
-        checkBtn.frame.origin.x = self.view.bounds.width - 80
-        checkBtn.backgroundColor = UIColor(red: 255/255, green: 130/255, blue: 4/255, alpha: 1)
-        checkBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        checkBtn.setTitle("查看", forState: .Normal)
-        checkBtn.addTarget(self, action: #selector(BanJiKeJianViewController.CheckKejian), forControlEvents: .TouchUpInside)
-        checkBtn.titleLabel?.font = UIFont.systemFontOfSize(14)
-        checkBtn.layer.cornerRadius = 5
-        checkBtn.layer.masksToBounds = true
-        cell.textLabel?.text = "语文课课件"
+        cell.selectionStyle = .None
+        cell.accessoryType = .DisclosureIndicator
+        
+        cell.textLabel?.text = kejianInfo.courseware_title
+        cell.detailTextLabel?.text = kejianInfo.courseware_time
         self.view.backgroundColor = UIColor.whiteColor()
-        cell.contentView.addSubview(checkBtn)
+        
+        //        checkBtn.frame = CGRectMake(0, 10, 70, 30)
+        //        checkBtn.frame.origin.x = self.view.bounds.width - 80
+        //        checkBtn.backgroundColor = UIColor(red: 255/255, green: 130/255, blue: 4/255, alpha: 1)
+        //        checkBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        //        checkBtn.setTitle("查看", forState: .Normal)
+        //        checkBtn.addTarget(self, action: #selector(BanJiKeJianViewController.CheckKejian), forControlEvents: .TouchUpInside)
+        //        checkBtn.titleLabel?.font = UIFont.systemFontOfSize(14)
+        //        checkBtn.layer.cornerRadius = 5
+        //        checkBtn.layer.masksToBounds = true
+        //        cell.contentView.addSubview(checkBtn)
         return cell
     }
     
-    func CheckKejian(){
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let kejianInfo = keJianSource.objectlist[indexPath.row]
+        
         let kejian = KeJianInfoViewController()
         self.navigationController?.pushViewController(kejian, animated: true)
+        kejian.title = kejianInfo.courseware_title
+        kejian.contentTextView.text = kejianInfo.courseware_content
+        kejian.nameKejian.text = "主讲人：" + kejianInfo.releasename!
+        
     }
+    //    func CheckKejian(){
+    //        let kejian = KeJianInfoViewController()
+    //        self.navigationController?.pushViewController(kejian, animated: true)
+    //    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

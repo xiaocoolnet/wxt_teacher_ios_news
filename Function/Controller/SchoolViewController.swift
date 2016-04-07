@@ -118,6 +118,7 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
                 self.xiaoyfcBtn.frame = CGRectMake(0, 3, 60, 60)
                 self.xiaoyfcBtn.center.x = self.view.bounds.width/8*5
                 self.xiaoyfcBtn.setImage(UIImage(named: "校园风采"), forState: .Normal)
+                self.xiaoyfcBtn.addTarget(self, action: #selector(SchoolViewController.schoolFengCai), forControlEvents: .TouchUpInside)
                 self.xiaoyfcLabel.frame = CGRectMake(0, 66, 50, 12)
                 self.xiaoyfcLabel.text = "校园风采"
                 self.xiaoyfcLabel.center.x = self.view.bounds.width/8*5
@@ -125,6 +126,7 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
                 self.xiaoyfcLabel.textAlignment = .Center
                 self.bbxcBtn.frame = CGRectMake(0, 3, 60, 60)
                 self.bbxcBtn.setImage(UIImage(named: "宝宝秀场"), forState: .Normal)
+                self.bbxcBtn.addTarget(self, action: #selector(SchoolViewController.babyShows), forControlEvents: .TouchUpInside)
                 self.bbxcBtn.center.x = self.view.bounds.width/8*7
                 self.bbxcLabel.frame = CGRectMake(0, 66, 50, 12)
                 self.bbxcLabel.text = "宝宝秀场"
@@ -238,4 +240,13 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
         self.navigationController?.pushViewController(jsfc, animated: true)
     }
     
+    func schoolFengCai(){
+        let jsfc = SchoolFengCaiViewController()
+        self.navigationController?.pushViewController(jsfc, animated: true)
+    }
+    
+    func babyShows(){
+        let jsfc = BBShowsViewController()
+        self.navigationController?.pushViewController(jsfc, animated: true)
+    }
 }

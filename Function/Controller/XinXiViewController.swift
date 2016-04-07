@@ -42,12 +42,15 @@ class XinXiViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let checkBtn = UIButton()
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "cell")
+        cell.selectionStyle = .None
+        
         checkBtn.frame = CGRectMake(0, 10, 70, 30)
         checkBtn.frame.origin.x = self.view.bounds.width - 80
         //155,229,180
         checkBtn.backgroundColor = UIColor(red: 155/255, green: 229/255, blue: 180/255, alpha: 1)
         checkBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         checkBtn.setTitle("查看", forState: .Normal)
+        checkBtn.addTarget(self, action: #selector(XinXiViewController.checkView), forControlEvents: .TouchUpInside)
         checkBtn.titleLabel?.font = UIFont.systemFontOfSize(14)
         checkBtn.layer.cornerRadius = 5
         checkBtn.layer.masksToBounds = true
@@ -56,6 +59,12 @@ class XinXiViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         return cell
     }
 
+    func checkView() {
+        let check = CheckViewController()
+        self.navigationController?.pushViewController(check, animated: true)
+     
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

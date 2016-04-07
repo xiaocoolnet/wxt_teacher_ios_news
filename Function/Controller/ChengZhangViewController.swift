@@ -62,6 +62,11 @@ class ChengZhangViewController: UIViewController,UITableViewDataSource,UITableVi
         }
         return cell
     }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let person = PersonViewController()
+        self.navigationController?.pushViewController(person, animated: true)
+        person.title = "\(self.ctrls[indexPath.row])的档案"
+    }
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         let searchText = searchController.searchBar.text

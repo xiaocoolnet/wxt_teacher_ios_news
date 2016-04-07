@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 import MBProgressHUD
 import IQKeyboardManagerSwift
 
@@ -14,6 +15,7 @@ class ReviceMessagesViewController: UIViewController,UITableViewDelegate,UITable
 
     let newsInfoTableView = UITableView()
     var newsInfo = NewsInfo()
+    let contentTextView = BRPlaceholderTextView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,14 +58,44 @@ class ReviceMessagesViewController: UIViewController,UITableViewDelegate,UITable
     }
     
     func ReviceMessages(){
-        print("")
+        print("发送")
+        
+        let url = apiUrl+"SendMessage"
+        let param = [
+            "sendid":599,
+            "receiveid":1,
+            "content":contentTextView.text
+        ]
+        Alamofire.request(.POST, url, parameters: param as? [String : AnyObject]).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                print("request是")
+                print(request!)
+                print("====================")
+                let status = MineModel(JSONDecoder(json!))
+                print("状态是")
+                print(status.status)
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.labelText = status.errorData
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                }
+                if(status.status == "success"){
+                    print("Success+1")
+                    self.navigationController?.popToRootViewControllerAnimated(true)
+                }
+            }
+        }
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let avatorImage = UIImageView()
         let reviceLabel = UILabel()
         let nameLabel = UILabel()
-        let contentTextView = BRPlaceholderTextView()
         if(indexPath.section == 0){
             let cell = UITableViewCell(style: .Default, reuseIdentifier: "UserCell")
             cell.selectionStyle = .None

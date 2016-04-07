@@ -9,7 +9,6 @@
 import UIKit
 //import Haneke
 import MBProgressHUD
-import Alamofire
 
 class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -23,27 +22,9 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
     let duiHuanBtn = UIButton()
     let qingchuHuancun = UIButton()
     let footview = UIView()
-    var phoneNumber = 18256178888
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //加载数据
-        loadData()
-        //加载视图
-        loadSubviews()
-        
-        
-      
-    }
-    
-    //MARK: - 加载数据
-    func loadData() -> Void {
-        
-        
-    }
-    //MARK: - 加载视图
-    func loadSubviews() -> Void {
         self.title = "我的"
         mineTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height - 44 - 64)
         mineTableView.delegate = self
@@ -64,11 +45,11 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
         self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(mineTableView)
     }
-    //隐藏tabbar控制器
+    
     override func viewWillAppear(animated: Bool) {
         self.tabBarController?.tabBar.hidden = false
     }
-    //MARK: - tableview代理方法
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 4
     }
@@ -132,7 +113,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 self.infoLabel.frame = CGRectMake(105, 115, 110, 11)
                 self.infoLabel.font = UIFont.systemFontOfSize(11)
                 self.infoLabel.textColor = UIColor.grayColor()
-                self.infoLabel.text = String(phoneNumber)
+                self.infoLabel.text = "清华幼儿园·大班三班"
                 self.editBtn.frame = CGRectMake(174, 91, 12, 12)
                 self.editBtn.setBackgroundImage(UIImage(named: "编辑"), forState: .Normal)
                 self.editBtn.addTarget(self, action: Selector("edit"), forControlEvents: UIControlEvents.TouchUpInside)
@@ -274,7 +255,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 SaoYiSaoView.tabBarController?.tabBar.hidden = true
             }
             if(indexPath.row == 1){
-                let ChangePassView = ChangePassViewController()
+                let ChangePassView = CardSetViewController()
                 self.navigationController?.pushViewController(ChangePassView, animated: true)
                 ChangePassView.tabBarController?.tabBar.hidden = true
             }
@@ -296,7 +277,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
         }
         if(indexPath.section == 3){
             if(indexPath.row == 0){
-                let ChangePassView = ChangePassViewController()
+                let ChangePassView = MaintainViewController()
                 self.navigationController?.pushViewController(ChangePassView, animated: true)
                 ChangePassView.tabBarController?.tabBar.hidden = true
             }
@@ -306,14 +287,13 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 ServerView.tabBarController?.tabBar.hidden = true
             }
             if(indexPath.row == 3){
-                let ChangePassView = ChangePassViewController()
+                let ChangePassView = ErWeiMaDownViewController()
                 self.navigationController?.pushViewController(ChangePassView, animated: true)
                 ChangePassView.tabBarController?.tabBar.hidden = true
             }
         }
     }
-    //MARK: 点击事件
-    //清除缓存
+    
     func Qingchu(){
         //let cache = Haneke.Shared.imageCache
         let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
@@ -323,7 +303,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
         hud.removeFromSuperViewOnHide = true
         hud.hide(true, afterDelay: 1)
     }
-    //退出登录
+    
     func ExitLogin(){
         let alertController = UIAlertController(title: NSLocalizedString("", comment: "Warn"), message: NSLocalizedString("确认注销？", comment: "empty message"), preferredStyle: .Alert)
         let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
@@ -341,7 +321,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
         self.presentViewController(alertController, animated: true, completion: nil)
     }
 
-    
+    //MARK: 点击事件
     //编辑
     func edit() -> Void {
         let editVC = EditTableViewController()
@@ -353,7 +333,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
         // Dispose of any resources that can be recreated.
     }
     
-    
+
     /*
     // MARK: - Navigation
 

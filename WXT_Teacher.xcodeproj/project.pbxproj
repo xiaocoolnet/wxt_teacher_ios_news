@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1876F0271CB6440C00425BA9 /* GongGaoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F0261CB6440C00425BA9 /* GongGaoList.swift */; };
+		18B368F91CB5E7C3007DC602 /* MaintainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B368F81CB5E7C3007DC602 /* MaintainViewController.swift */; };
+		18B368FB1CB5E7D9007DC602 /* ErWeiMaDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B368FA1CB5E7D9007DC602 /* ErWeiMaDownViewController.swift */; };
+		18B368FE1CB5E8BF007DC602 /* CardSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B368FD1CB5E8BF007DC602 /* CardSetViewController.swift */; };
+		18B369001CB5E9C0007DC602 /* XiaoXiQunFaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B368FF1CB5E9C0007DC602 /* XiaoXiQunFaViewController.swift */; };
+		18B369021CB5ED66007DC602 /* ContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B369011CB5ED66007DC602 /* ContactList.swift */; };
+		18B369051CB5EF3F007DC602 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B369041CB5EF3F007DC602 /* VideosViewController.swift */; };
+		18B369071CB5EF59007DC602 /* VideoPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B369061CB5EF59007DC602 /* VideoPlayViewController.swift */; };
+		18B3690C1CB5EFED007DC602 /* ParadiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B3690B1CB5EFED007DC602 /* ParadiseViewController.swift */; };
+		18B3690E1CB5F002007DC602 /* ParadiseShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B3690D1CB5F002007DC602 /* ParadiseShowViewController.swift */; };
+		18B369111CB5F080007DC602 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B369101CB5F080007DC602 /* PersonViewController.swift */; };
+		18B369131CB5F11C007DC602 /* SchoolFengCaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B369121CB5F11C007DC602 /* SchoolFengCaiViewController.swift */; };
+		18B369151CB5F12E007DC602 /* BBShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B369141CB5F12E007DC602 /* BBShowsViewController.swift */; };
+		18B369171CB5F2DA007DC602 /* HuoDongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B369161CB5F2DA007DC602 /* HuoDongList.swift */; };
+		18B369191CB5F2F9007DC602 /* KeJianList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B369181CB5F2F9007DC602 /* KeJianList.swift */; };
+		18B3691B1CB5F333007DC602 /* DianPingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B3691A1CB5F333007DC602 /* DianPingList.swift */; };
+		18B3691D1CB5F52D007DC602 /* FangDiuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B3691C1CB5F52D007DC602 /* FangDiuViewController.swift */; };
+		18B369201CB5F59B007DC602 /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B3691F1CB5F59B007DC602 /* CheckViewController.swift */; };
+		18B369221CB5F66F007DC602 /* YSQingKuangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B369211CB5F66F007DC602 /* YSQingKuangViewController.swift */; };
+		18B369251CB5FA6C007DC602 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B369241CB5FA6C007DC602 /* ScrollViewController.swift */; };
 		AFC09C14012FD90FA811DB41 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F387A67369CB0717891AF5C /* Pods.framework */; };
 		EA166B1F1C92B11000416536 /* ChengZhangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA166B1E1C92B11000416536 /* ChengZhangViewController.swift */; };
 		EA1AB68A1CA12BBD00803E2D /* TiXingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AB6891CA12BBD00803E2D /* TiXingViewController.swift */; };
@@ -230,6 +250,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1876F0261CB6440C00425BA9 /* GongGaoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GongGaoList.swift; sourceTree = "<group>"; };
+		18B368F81CB5E7C3007DC602 /* MaintainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintainViewController.swift; sourceTree = "<group>"; };
+		18B368FA1CB5E7D9007DC602 /* ErWeiMaDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErWeiMaDownViewController.swift; sourceTree = "<group>"; };
+		18B368FD1CB5E8BF007DC602 /* CardSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSetViewController.swift; sourceTree = "<group>"; };
+		18B368FF1CB5E9C0007DC602 /* XiaoXiQunFaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XiaoXiQunFaViewController.swift; sourceTree = "<group>"; };
+		18B369011CB5ED66007DC602 /* ContactList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactList.swift; sourceTree = "<group>"; };
+		18B369041CB5EF3F007DC602 /* VideosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
+		18B369061CB5EF59007DC602 /* VideoPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayViewController.swift; sourceTree = "<group>"; };
+		18B3690B1CB5EFED007DC602 /* ParadiseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParadiseViewController.swift; sourceTree = "<group>"; };
+		18B3690D1CB5F002007DC602 /* ParadiseShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParadiseShowViewController.swift; sourceTree = "<group>"; };
+		18B369101CB5F080007DC602 /* PersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		18B369121CB5F11C007DC602 /* SchoolFengCaiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolFengCaiViewController.swift; sourceTree = "<group>"; };
+		18B369141CB5F12E007DC602 /* BBShowsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBShowsViewController.swift; sourceTree = "<group>"; };
+		18B369161CB5F2DA007DC602 /* HuoDongList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuoDongList.swift; sourceTree = "<group>"; };
+		18B369181CB5F2F9007DC602 /* KeJianList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeJianList.swift; sourceTree = "<group>"; };
+		18B3691A1CB5F333007DC602 /* DianPingList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DianPingList.swift; sourceTree = "<group>"; };
+		18B3691C1CB5F52D007DC602 /* FangDiuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FangDiuViewController.swift; sourceTree = "<group>"; };
+		18B3691F1CB5F59B007DC602 /* CheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
+		18B369211CB5F66F007DC602 /* YSQingKuangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSQingKuangViewController.swift; sourceTree = "<group>"; };
+		18B369241CB5FA6C007DC602 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		7CC3BC55E673A0F4FFA674CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7F387A67369CB0717891AF5C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA166B1E1C92B11000416536 /* ChengZhangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChengZhangViewController.swift; sourceTree = "<group>"; };
@@ -476,6 +516,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18B368FC1CB5E899007DC602 /* CardSet */ = {
+			isa = PBXGroup;
+			children = (
+				18B368FD1CB5E8BF007DC602 /* CardSetViewController.swift */,
+			);
+			name = CardSet;
+			sourceTree = "<group>";
+		};
+		18B369031CB5EF17007DC602 /* BBVideo */ = {
+			isa = PBXGroup;
+			children = (
+				18B369041CB5EF3F007DC602 /* VideosViewController.swift */,
+				18B369061CB5EF59007DC602 /* VideoPlayViewController.swift */,
+			);
+			name = BBVideo;
+			sourceTree = "<group>";
+		};
+		18B369081CB5EF8F007DC602 /* BBLeYuan */ = {
+			isa = PBXGroup;
+			children = (
+				18B3690B1CB5EFED007DC602 /* ParadiseViewController.swift */,
+				18B3690D1CB5F002007DC602 /* ParadiseShowViewController.swift */,
+			);
+			name = BBLeYuan;
+			sourceTree = "<group>";
+		};
+		18B3690F1CB5F025007DC602 /* ChengZhang */ = {
+			isa = PBXGroup;
+			children = (
+				EA166B1E1C92B11000416536 /* ChengZhangViewController.swift */,
+				18B369101CB5F080007DC602 /* PersonViewController.swift */,
+			);
+			name = ChengZhang;
+			sourceTree = "<group>";
+		};
+		18B3691E1CB5F573007DC602 /* XinXi */ = {
+			isa = PBXGroup;
+			children = (
+				EA6D54101C97925D00F85EA2 /* XinXiViewController.swift */,
+				18B3691F1CB5F59B007DC602 /* CheckViewController.swift */,
+			);
+			name = XinXi;
+			sourceTree = "<group>";
+		};
+		18B369231CB5FA58007DC602 /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				18B369241CB5FA6C007DC602 /* ScrollViewController.swift */,
+			);
+			name = ScrollView;
+			sourceTree = "<group>";
+		};
 		476E5D8D9D14FDD2A187CAEF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,6 +644,8 @@
 				EAF2D4941CA6298200523B37 /* XinWen */,
 				EA7A7E351C9261AD00DBA75B /* SchoolViewController.swift */,
 				EA715B271CA3796F00E37519 /* YuanquJieShaoViewController.swift */,
+				18B369121CB5F11C007DC602 /* SchoolFengCaiViewController.swift */,
+				18B369141CB5F12E007DC602 /* BBShowsViewController.swift */,
 			);
 			name = School;
 			sourceTree = "<group>";
@@ -756,23 +850,27 @@
 		EAFAE5F21C82E50900A8BAF2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F6F4C5451CB4E0B100D4B6D9 /* Shipu */,
-				EAFAE5F41C82E50900A8BAF2 /* Readme */,
 				EAA2CDF51CACB32E00766CCB /* Plan */,
 				EAA2CDF41CACB30000766CCB /* Kejian */,
 				EA2D401F1CABB510000DEAF6 /* DianPing */,
 				EA1AB6881CA12A9600803E2D /* Daijie */,
 				EA61C6DF1C9FD25E0073E9CA /* School */,
 				EA61C6DC1C9F8A5B0073E9CA /* Huodong */,
+				F6F4C5451CB4E0B100D4B6D9 /* Shipu */,
 				EACF434A1C9D3B4B0008A3A6 /* Dingzhu */,
 				EA4882051C9948E3009CAC3A /* photo */,
+				18B3690F1CB5F025007DC602 /* ChengZhang */,
+				18B369031CB5EF17007DC602 /* BBVideo */,
+				18B369081CB5EF8F007DC602 /* BBLeYuan */,
+				18B3691E1CB5F573007DC602 /* XinXi */,
+				EAFAE5F41C82E50900A8BAF2 /* Readme */,
 				EAFAE5F31C82E50900A8BAF2 /* FunctionViewController.swift */,
 				EAD2EA6E1C911B00006F3A3B /* QingJiaViewController.swift */,
-				EA166B1E1C92B11000416536 /* ChengZhangViewController.swift */,
 				EA4350301C9403810040F56D /* BBKeTangViewController.swift */,
 				EA6D2D3C1C95125D0092F09A /* bbKaoQinViewController.swift */,
-				EA6D54101C97925D00F85EA2 /* XinXiViewController.swift */,
 				EA6D54121C97AB3D00F85EA2 /* daKaViewController.swift */,
+				18B369211CB5F66F007DC602 /* YSQingKuangViewController.swift */,
+				18B3691C1CB5F52D007DC602 /* FangDiuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -780,8 +878,12 @@
 		EAFAE5F61C82E50900A8BAF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F6F4C5431CB4DE4D00D4B6D9 /* FoodList.swift */,
 				EAFAE5F71C82E50900A8BAF2 /* Readme */,
+				F6F4C5431CB4DE4D00D4B6D9 /* FoodList.swift */,
+				18B3691A1CB5F333007DC602 /* DianPingList.swift */,
+				18B369181CB5F2F9007DC602 /* KeJianList.swift */,
+				18B369161CB5F2DA007DC602 /* HuoDongList.swift */,
+				1876F0261CB6440C00425BA9 /* GongGaoList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -805,6 +907,7 @@
 		EAFAE5FC1C82E50900A8BAF2 /* Login and Register */ = {
 			isa = PBXGroup;
 			children = (
+				18B369231CB5FA58007DC602 /* ScrollView */,
 				EAFAE5FD1C82E50900A8BAF2 /* ForgetPassword */,
 				EAFAE6061C82E50900A8BAF2 /* Login */,
 				EAFAE60E1C82E50900A8BAF2 /* Register */,
@@ -933,14 +1036,17 @@
 			isa = PBXGroup;
 			children = (
 				EAFAE61A1C82E50900A8BAF2 /* Readme */,
-				F6F4C5421CB4A92400D4B6D9 /* Edit */,
-				EAA2CE021CAE4D8200766CCB /* XiTong */,
-				EAA2CE011CAE4D5200766CCB /* ChangePass */,
 				EAFAE6191C82E50900A8BAF2 /* MineMainViewController.swift */,
 				EACF4D9F1C8E9F4000C777D6 /* ServerTableViewController.swift */,
 				EACF4DA01C8E9F4000C777D6 /* HelpTableViewController.swift */,
 				EACF4D9D1C8E7F2800C777D6 /* SaoYiSaoViewController.swift */,
 				EA4402821C9BED87009D1890 /* YiJianFanKuiViewController.swift */,
+				18B368F81CB5E7C3007DC602 /* MaintainViewController.swift */,
+				18B368FA1CB5E7D9007DC602 /* ErWeiMaDownViewController.swift */,
+				18B368FC1CB5E899007DC602 /* CardSet */,
+				F6F4C5421CB4A92400D4B6D9 /* Edit */,
+				EAA2CE021CAE4D8200766CCB /* XiTong */,
+				EAA2CE011CAE4D5200766CCB /* ChangePass */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1000,6 +1106,7 @@
 			isa = PBXGroup;
 			children = (
 				EAFAE6291C82E50900A8BAF2 /* Readme */,
+				18B369011CB5ED66007DC602 /* ContactList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1017,11 +1124,12 @@
 			isa = PBXGroup;
 			children = (
 				EAFAE6301C82E50900A8BAF2 /* Readme */,
+				EAFAE62F1C82E50900A8BAF2 /* NewsViewController.swift */,
+				EA8B7C431CA22F1C007AFED0 /* ZuiXinNewsViewController.swift */,
+				18B368FF1CB5E9C0007DC602 /* XiaoXiQunFaViewController.swift */,
 				EA8B7C4B1CA2796C007AFED0 /* daiban */,
 				EA8B7C481CA26EFE007AFED0 /* xiaox */,
 				EA8B7C471CA26EE9007AFED0 /* tongzhi */,
-				EAFAE62F1C82E50900A8BAF2 /* NewsViewController.swift */,
-				EA8B7C431CA22F1C007AFED0 /* ZuiXinNewsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1439,14 +1547,17 @@
 				EAA2CDF71CACB37800766CCB /* KeJianInfoViewController.swift in Sources */,
 				EAFAE6C81C82E50900A8BAF2 /* JiaZhangViewController.swift in Sources */,
 				EAFAE6E61C82E50900A8BAF2 /* Cache.swift in Sources */,
+				18B369171CB5F2DA007DC602 /* HuoDongList.swift in Sources */,
 				EAA2CDFE1CACFE2C00766CCB /* NewPlanViewController.swift in Sources */,
 				EA8B7C4F1CA27B00007AFED0 /* DaibanxiangqingViewController.swift in Sources */,
+				18B369111CB5F080007DC602 /* PersonViewController.swift in Sources */,
 				EA5DC6DC1C9AA36500A0641B /* NewPhotoViewController.swift in Sources */,
 				EAFAE6F11C82E50900A8BAF2 /* NetworkFetcher.swift in Sources */,
 				EA4882071C995E9A009CAC3A /* CameraViewController.swift in Sources */,
 				EA8B7C4A1CA273F3007AFED0 /* TongZhiXinagQingViewController.swift in Sources */,
 				EAFAE6F01C82E50900A8BAF2 /* Log.swift in Sources */,
 				EA2D40231CABB5EE000DEAF6 /* DianPingListViewController.swift in Sources */,
+				18B369191CB5F2F9007DC602 /* KeJianList.swift in Sources */,
 				EAEB3C051CA3C53E0033B2E9 /* singleTeacherViewController.swift in Sources */,
 				EAFAE6DB1C82E50900A8BAF2 /* ConstraintDescription.swift in Sources */,
 				EAFAE7081C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
@@ -1462,6 +1573,7 @@
 				EA8B7C4D1CA27980007AFED0 /* DaiBanViewController.swift in Sources */,
 				EAFAE6EB1C82E50900A8BAF2 /* DiskFetcher.swift in Sources */,
 				EAFAE7291C82E50900A8BAF2 /* ShowImageView.swift in Sources */,
+				18B369251CB5FA6C007DC602 /* ScrollViewController.swift in Sources */,
 				EAFAE7111C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
 				F6F4C5411CB4A91900D4B6D9 /* EditTableViewController.swift in Sources */,
 				EAFAE6DE1C82E50900A8BAF2 /* ConstraintRelation.swift in Sources */,
@@ -1472,11 +1584,14 @@
 				EA5DC6DA1C9A3D4600A0641B /* RMDownloadIndicator.swift in Sources */,
 				EAFAE6B11C82E50900A8BAF2 /* FunSecondTableViewCell.swift in Sources */,
 				EAFAE72D1C82E50900A8BAF2 /* JSONJoy.swift in Sources */,
+				18B369001CB5E9C0007DC602 /* XiaoXiQunFaViewController.swift in Sources */,
 				EAFAE6E21C82E50900A8BAF2 /* SnapKit.swift in Sources */,
 				EACF4DA11C8E9F4000C777D6 /* ServerTableViewController.swift in Sources */,
+				18B3691B1CB5F333007DC602 /* DianPingList.swift in Sources */,
 				EAFAE6A71C82E50900A8BAF2 /* DianZanList.swift in Sources */,
 				EAFAE71A1C82E50900A8BAF2 /* NVActivityIndicatorView.swift in Sources */,
 				EAFAE70E1C82E50900A8BAF2 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
+				18B369151CB5F12E007DC602 /* BBShowsViewController.swift in Sources */,
 				EAFAE6EF1C82E50900A8BAF2 /* Haneke.swift in Sources */,
 				EAD5D45D1C93AB5F00013E10 /* TeacherDianPingTableViewCell.swift in Sources */,
 				EAC2008A1C9D2D6300A6A613 /* ShiPuViewController.swift in Sources */,
@@ -1486,9 +1601,11 @@
 				EAFAE6E81C82E50900A8BAF2 /* CryptoSwiftMD5.swift in Sources */,
 				EAFAE7191C82E50900A8BAF2 /* NVActivityIndicatorShape.swift in Sources */,
 				EAFAE6FF1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
+				18B368F91CB5E7C3007DC602 /* MaintainViewController.swift in Sources */,
 				EAFAE6E51C82E50900A8BAF2 /* ViewController+SnapKit.swift in Sources */,
 				EAA855411CA8D8C5004CB525 /* UpLoadeViewController.swift in Sources */,
 				EAFAE6D81C82E50900A8BAF2 /* CFSnapKit.swift in Sources */,
+				18B369071CB5EF59007DC602 /* VideoPlayViewController.swift in Sources */,
 				EAFAE7181C82E50900A8BAF2 /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
 				EA8B7C441CA22F1C007AFED0 /* ZuiXinNewsViewController.swift in Sources */,
 				EAFAE6B91C82E50900A8BAF2 /* LoginViewController.swift in Sources */,
@@ -1508,12 +1625,15 @@
 				EA94898C1C83E4FD008682E6 /* NewBlogViewController.swift in Sources */,
 				EA5DC6D71C9A3D4600A0641B /* BrowserCellDelegate.swift in Sources */,
 				EAFAE6DC1C82E50900A8BAF2 /* ConstraintItem.swift in Sources */,
+				18B368FB1CB5E7D9007DC602 /* ErWeiMaDownViewController.swift in Sources */,
 				EAFAE7171C82E50900A8BAF2 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				EAFAE6F31C82E50900A8BAF2 /* NSHTTPURLResponse+Haneke.swift in Sources */,
 				EACF4DA21C8E9F4000C777D6 /* HelpTableViewController.swift in Sources */,
 				EAFAE6D71C82E50900A8BAF2 /* FlexibleTableViewCell.swift in Sources */,
+				18B3691D1CB5F52D007DC602 /* FangDiuViewController.swift in Sources */,
 				EAFAE6F91C82E50900A8BAF2 /* UIView+Haneke.swift in Sources */,
 				EAFAE70C1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
+				18B369021CB5ED66007DC602 /* ContactList.swift in Sources */,
 				EAFAE6EC1C82E50900A8BAF2 /* Fetch.swift in Sources */,
 				F6F4C5401CB4A91900D4B6D9 /* EditOtherViewController.swift in Sources */,
 				EAFAE7121C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
@@ -1528,6 +1648,8 @@
 				EAA2CE041CAE4DEF00766CCB /* XiTongInfoViewController.swift in Sources */,
 				EAFAE70F1C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				EACF4D9E1C8E7F2800C777D6 /* SaoYiSaoViewController.swift in Sources */,
+				1876F0271CB6440C00425BA9 /* GongGaoList.swift in Sources */,
+				18B368FE1CB5E8BF007DC602 /* CardSetViewController.swift in Sources */,
 				EACF4D9A1C8E6B8800C777D6 /* ReviceMessagesViewController.swift in Sources */,
 				EAC8DE701C8974AC00C2CEE6 /* BlogCommentTableViewController.swift in Sources */,
 				EAFAE6F81C82E50900A8BAF2 /* UIImageView+Haneke.swift in Sources */,
@@ -1547,6 +1669,8 @@
 				EAFAE6D91C82E50900A8BAF2 /* Constraint.swift in Sources */,
 				EAFAE72E1C82E50900A8BAF2 /* Url.swift in Sources */,
 				EA2D401E1CABAE2D000DEAF6 /* TiXingJiaZhangViewController.swift in Sources */,
+				18B3690E1CB5F002007DC602 /* ParadiseShowViewController.swift in Sources */,
+				18B3690C1CB5EFED007DC602 /* ParadiseViewController.swift in Sources */,
 				EAFAE6BF1C82E50900A8BAF2 /* RegisterSetPasswordViewController.swift in Sources */,
 				EAFAE6C71C82E50900A8BAF2 /* ContactsViewController.swift in Sources */,
 				EA94898E1C83E8EE008682E6 /* ImageCollectionViewCell.swift in Sources */,
@@ -1568,6 +1692,7 @@
 				F6F4C5441CB4DE4D00D4B6D9 /* FoodList.swift in Sources */,
 				EA9489911C8413E8008682E6 /* BRPlaceholderTextView.m in Sources */,
 				EAFAE7221C82E50900A8BAF2 /* PhotoBrowser+ZoomAnim.swift in Sources */,
+				18B369221CB5F66F007DC602 /* YSQingKuangViewController.swift in Sources */,
 				EAFAE6FA1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
 				EAFAE6A61C82E50900A8BAF2 /* BlogList.swift in Sources */,
 				EA715B281CA3796F00E37519 /* YuanquJieShaoViewController.swift in Sources */,
@@ -1576,6 +1701,7 @@
 				EAFAE7201C82E50900A8BAF2 /* PhotoBrowser+Main.swift in Sources */,
 				EACFF6361C86885800615394 /* DianzanTableViewCell.swift in Sources */,
 				EAF8F5611CAA6C2C00AED18B /* TongGaoListViewController.swift in Sources */,
+				18B369131CB5F11C007DC602 /* SchoolFengCaiViewController.swift in Sources */,
 				EAFAE6D01C82E50900A8BAF2 /* NewsViewController.swift in Sources */,
 				EACF434C1C9D3B730008A3A6 /* DingzhuXiangqingViewController.swift in Sources */,
 				EAFAE7151C82E50900A8BAF2 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
@@ -1595,6 +1721,7 @@
 				EAFAE7021C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				EAF8F5631CAA6DDC00AED18B /* TongGaoInfoViewController.swift in Sources */,
 				EAFAE6B41C82E50900A8BAF2 /* ForgetPasswordSetViewController.swift in Sources */,
+				18B369051CB5EF3F007DC602 /* VideosViewController.swift in Sources */,
 				EA166B1F1C92B11000416536 /* ChengZhangViewController.swift in Sources */,
 				EAB2EED51C90035B00693D04 /* PhotoCollectionViewCell.swift in Sources */,
 				EA8B7C461CA2350D007AFED0 /* TongZhiGonggaoViewController.swift in Sources */,
@@ -1616,6 +1743,7 @@
 				EAFAE71D1C82E50900A8BAF2 /* PhotoBrowser+CollectionViewExtend.swift in Sources */,
 				EAFAE6C51C82E50900A8BAF2 /* MineTableViewCell.swift in Sources */,
 				EAFAE7161C82E50900A8BAF2 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
+				18B369201CB5F59B007DC602 /* CheckViewController.swift in Sources */,
 				EA6D2D3D1C95125D0092F09A /* bbKaoQinViewController.swift in Sources */,
 				EA9489951C84266F008682E6 /* ConnectModel.m in Sources */,
 				EAFAE7251C82E50900A8BAF2 /* PhotoBrowser.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="C9m-GK-Stj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IWi-uf-XaV">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -81,7 +81,7 @@
                                     <segue destination="YCu-nu-fg2" kind="push" id="6oO-Qa-aOC"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJA-2J-emY">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="18363866803" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJA-2J-emY">
                                 <rect key="frame" x="88" y="233" width="234" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="234" id="qsc-RK-bXC"/>
@@ -89,7 +89,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FM0-9J-mkp">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FM0-9J-mkp">
                                 <rect key="frame" x="88" y="308" width="234" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="Ijl-vH-lbA"/>
@@ -183,6 +183,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="693.5" y="421.5"/>
+        </scene>
+        <!--Scroll View Controller-->
+        <scene sceneID="4ey-xa-uog">
+            <objects>
+                <viewController storyboardIdentifier="ScollView" id="IWi-uf-XaV" customClass="ScrollViewController" customModule="WXT_Teacher" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nFv-Tw-uXA"/>
+                        <viewControllerLayoutGuide type="bottom" id="7rr-lX-Ri7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c1X-nh-zlv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogx-4p-bFh">
+                                <rect key="frame" x="84" y="474" width="152" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="8FU-ES-0t5"/>
+                                    <constraint firstAttribute="height" constant="41" id="l3Y-gU-poK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="进入应用">
+                                    <color key="titleColor" red="0.60784313729999995" green="0.8980392157" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Fwg-Tx-ZCD" kind="modal" id="I4t-6w-YXZ"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="eOo-ii-1Yl">
+                                <rect key="frame" x="80" y="523" width="160" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Ohv-HL-wrq"/>
+                                    <constraint firstAttribute="height" constant="37" id="uoh-jr-MYK"/>
+                                </constraints>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7rr-lX-Ri7" firstAttribute="top" secondItem="eOo-ii-1Yl" secondAttribute="bottom" constant="8" id="Cy6-SG-ARU"/>
+                            <constraint firstItem="eOo-ii-1Yl" firstAttribute="centerX" secondItem="c1X-nh-zlv" secondAttribute="centerX" id="FSg-R6-iCt"/>
+                            <constraint firstItem="ogx-4p-bFh" firstAttribute="centerX" secondItem="c1X-nh-zlv" secondAttribute="centerX" id="MR9-XE-IEi"/>
+                            <constraint firstItem="eOo-ii-1Yl" firstAttribute="top" secondItem="ogx-4p-bFh" secondAttribute="bottom" constant="8" id="wFK-WI-Big"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="comPageControl" destination="eOo-ii-1Yl" id="5PM-Wq-Dhp"/>
+                        <outlet property="enterBtn" destination="ogx-4p-bFh" id="PYc-nb-nMA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hfe-zG-I9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="210" y="-462"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tMh-FM-bsQ">
@@ -457,6 +508,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLN-rG-7YV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1882.5" y="421.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Uu6-yk-7cf">
+            <objects>
+                <viewController id="R19-eR-9b7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5bL-34-n7q"/>
+                        <viewControllerLayoutGuide type="bottom" id="XDx-I9-h63"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ar1-8s-U3y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QL3-tp-QL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1064" y="-310"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sJn-qW-6Vg">
+            <objects>
+                <viewController id="tUY-4m-Inj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ws3-7H-Zur"/>
+                        <viewControllerLayoutGuide type="bottom" id="jEf-Zg-uIr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pi8-fR-Ogm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cue-Lt-23t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-704" y="-310"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jkV-nh-gPb">
+            <objects>
+                <viewController id="zDN-lG-ixD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N4a-Dv-FSN"/>
+                        <viewControllerLayoutGuide type="bottom" id="s2D-eF-c1G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uDb-a7-4b4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHH-fe-bc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-344" y="-310"/>
         </scene>
         <!--设置密码-->
         <scene sceneID="2Z2-nc-uaF">

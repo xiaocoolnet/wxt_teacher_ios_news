@@ -51,7 +51,7 @@ class DaibanxiangqingViewController: UIViewController,UITableViewDelegate,UITabl
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "InfoCell")
         cell.selectionStyle = .None
         let options : NSStringDrawingOptions = NSStringDrawingOptions.UsesLineFragmentOrigin
-        let string:NSString = "待办事宜待办事宜待办事宜待办事宜待办事宜"
+        let string:NSString = "书山有路勤为径，学海无涯苦作舟！"
         let screenBounds:CGRect = UIScreen.mainScreen().bounds
         let boundingRect = string.boundingRectWithSize(CGSizeMake(screenBounds.width - 30, 0), options: options, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(17)], context: nil)
         contentLabel.frame = CGRectMake(15, 30, 100, 25)
@@ -61,7 +61,9 @@ class DaibanxiangqingViewController: UIViewController,UITableViewDelegate,UITabl
         content.frame = CGRectMake(15, 60, self.view.bounds.width - 30, boundingRect.height)
         content.font = UIFont.systemFontOfSize(16)
         content.textColor = UIColor.blackColor()
-        content.text = "待办事宜待办事宜待办事宜待办事宜待办事宜"
+        
+        content.text = string as String
+        
         content.numberOfLines = 0
         cell.contentView.addSubview(contentLabel)
         cell.contentView.addSubview(content)

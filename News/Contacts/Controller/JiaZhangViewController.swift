@@ -7,17 +7,65 @@
 //
 
 import UIKit
+import Alamofire
+import MBProgressHUD
+import XWSwiftRefresh
 
 
 class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
 
+    var contactSource : ContactList = ContactList.init()
     var tableView: FlexibleTableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView = FlexibleTableView(frame: CGRectMake(0, -30, self.view.bounds.width, self.view.bounds.height - 114), delegate: self)
         self.tableView.registerClass(ContactsTableViewCell.self, forCellReuseIdentifier: "ContactsCell")
         self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(tableView)
+    }
+
+    func DropDownUpdate(){
+        self.tableView.headerView = XWRefreshNormalHeader(target: self, action: #selector(JiaZhangViewController.GetDate))
+        self.tableView.reloadData()
+        self.tableView.headerView?.beginRefreshing()
+    }
+    
+    func GetDate(){
+        let url = apiUrl+"MessageAddress"
+        let userid = NSUserDefaults.standardUserDefaults()
+        let uid = userid.stringForKey("userid")
+        let param = [
+            "userid":uid!
+        ]
+        
+        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                print("request是")
+                print(request!)
+                print("====================")
+                let status = Http(JSONDecoder(json!))
+                print("状态是")
+                print(status.status)
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                    print("0")
+                    
+                }
+                if(status.status == "success"){
+                    self.contactSource = ContactList(status.data!)
+                    self.tableView.reloadData()
+                    self.tableView.headerView?.endRefreshing()
+                    print("1")
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -39,7 +39,7 @@ class EditOtherViewController: UIViewController {
         //添加输入框
         let textField = UITextField()
         textField.borderStyle = UITextBorderStyle.RoundedRect
-        textField.text = temp
+        textField.placeholder = "请输入您要保存的信息"
         textField.frame = CGRectMake(20, 20, UIScreen.mainScreen().bounds.width-20*2, 50)
         textField.tag = 101
         self.view.addSubview(textField)

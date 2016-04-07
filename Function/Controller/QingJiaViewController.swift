@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 import MBProgressHUD
 import IQKeyboardManagerSwift
 
@@ -179,7 +180,38 @@ class QingJiaViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 hud.hide(true, afterDelay: 2)
             }
             else{
-                print("成功")
+                print("成功＋1")
+                
+                let url = apiUrl+"OnlineLeave"
+                let param = [
+                    "userid":599,
+                    "teacherid":1,
+                    "content":dataTextView.text
+                ]
+                Alamofire.request(.POST, url, parameters: param as? [String : AnyObject]).response { request, response, json, error in
+                    if(error != nil){
+                    }
+                    else{
+                        print("request是")
+                        print(request!)
+                        print("====================")
+                        let status = MineModel(JSONDecoder(json!))
+                        print("状态是")
+                        print(status.status)
+                        if(status.status == "error"){
+                            let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                            hud.mode = MBProgressHUDMode.Text;
+                            hud.labelText = status.errorData
+                            hud.margin = 10.0
+                            hud.removeFromSuperViewOnHide = true
+                            hud.hide(true, afterDelay: 1)
+                        }
+                        if(status.status == "success"){
+                            print("Success")
+                            self.navigationController?.popToRootViewControllerAnimated(true)
+                        }
+                    }
+                }
             }
         }
     }
