@@ -8,7 +8,8 @@
 
 import UIKit
 import MBProgressHUD
-class EditTableViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate,UIAlertViewDelegate {
+import Alamofire
+class EditTableViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate,UIAlertViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
 
     
     var data = NSData()
@@ -25,8 +26,17 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     self.title = "编辑教师资料"
-     self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        self.title = "编辑教师资料"
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        self.tableView.scrollEnabled = false
+        //添加保存按钮
+        let saveInfo = UIBarButtonItem(title: "保存", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("saveInfo"))
+        self.navigationItem.rightBarButtonItem = saveInfo
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.tabBarController?.tabBar.hidden = true
     }
    
     override func didReceiveMemoryWarning() {
@@ -43,7 +53,7 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 6
+        return 3
     }
 
     
@@ -59,7 +69,7 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
         if indexPath.row==0{
             y=100
         }
-        separator.frame = CGRectMake(10, CGFloat(y), UIScreen.mainScreen().bounds.width-20, 2)
+        separator.frame = CGRectMake(10, CGFloat(y), UIScreen.mainScreen().bounds.width-20, 1)
         separator.backgroundColor = UIColor.grayColor()
         cell.contentView.addSubview(separator)
 
@@ -71,13 +81,13 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
                 headImg.image = UIImage(named: "Logo")
             }
             headImg.frame = CGRectMake(UIScreen.mainScreen().bounds.width-100, 10, 80, 80)
-            headImg.layer.cornerRadius = 20
+            headImg.layer.cornerRadius = 39
             self.view.addSubview(headImg)
             
         }else{
             //显示信息label
             let label = UILabel()
-            label.frame = CGRectMake(UIScreen.mainScreen().bounds.width-160, 10, 150, 40)
+            label.frame = CGRectMake(UIScreen.mainScreen().bounds.width-170, 10, 150, 40)
 //            label.backgroundColor = UIColor.redColor()
             label.textAlignment = NSTextAlignment.Right
             label.textColor = UIColor.grayColor()
@@ -92,18 +102,7 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
                 cell.textLabel?.text = "性别"
                 label.text = sex
             }
-            if indexPath.row == 3{
-                cell.textLabel?.text = "电话"
-                label.text = phoneNumber
-            }
-            if indexPath.row == 4{
-                cell.textLabel?.text = "学校"
-                label.text = school
-            }
-            if indexPath.row == 5{
-                cell.textLabel?.text = "班级"
-                label.text = classRoom
-            }
+           
         
         }
         
@@ -145,15 +144,28 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
     }
     //更改性别
     func changeSex() -> Void {
-        let alertSex = UIAlertView(title: "性别", message: "请您选择性别", delegate: self, cancelButtonTitle: "女",otherButtonTitles: "男")
-        alertSex.show()
+        let  sexPicker = UIPickerView()
+        sexPicker.frame = CGRectMake(0, UIScreen.mainScreen().bounds.height-300, UIScreen.mainScreen().bounds.width, 300)
+        sexPicker.delegate = self
+        sexPicker.dataSource = self
+        sexPicker.showsSelectionIndicator = true
+        self.view.addSubview(sexPicker)
+        
+        //添加工具条
+        let toolBar = UIView()
+        toolBar.frame = CGRectMake(0, sexPicker.frame.minY-50, sexPicker.frame.width, 50)
+        toolBar.backgroundColor = UIColor.blueColor()
+        self.view.addSubview(toolBar)
+        
+        
         
     }
-    //更改其他资料
+    //更改姓名
     func changeOther(index:Int) -> Void {
     
         let changeVC = EditOtherViewController()
         changeVC.index = index
+        changeVC.temp = name
         self.navigationController?.pushViewController(changeVC, animated: true)
         
     }
@@ -201,18 +213,25 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
         picker.dismissViewControllerAnimated(true, completion: nil)
 
     }
+
     
-    //UIAlertViewDelegate
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int){
-    
-        if buttonIndex == 0 {
-            sex = "女"
-        }else{
-            sex = "男"
-        }
-        self.tableView.reloadData()
+    //pickerview代理方法
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
     }
     
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 2
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if row==0 {
+            return "男"
+        }else{
+            return "女"
+        }
+    }
+   
     //MARK: - 具体实现方法
     //相机
     func GoCamera(){
@@ -238,6 +257,42 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
         pickerImage.delegate = self
         pickerImage.allowsEditing = true
         self.presentViewController(pickerImage, animated: true, completion: nil)
+        
+    }
+    
+    //MARK: - 保存信息并上传
+    func saveInfo() -> Void {
+        let url = "http://www.xiaocool.cn:8016/index.php?g=apps&m=teacher&a=saveinfo"
+        
+        let sexNub = 0
+        
+        let parameters = [
+          
+            "teacherid" : 30,
+            "teachername" : name,
+            "sex" : sexNub,
+            "picurl" : data
+            
+        
+        ]
+        
+        Alamofire.request(.POST, url, parameters: parameters).responseJSON{response in
+            print("上传结果")
+            print(response.result)
+            if response.result.isSuccess{
+            
+                let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                hud.mode = MBProgressHUDMode.Text;
+                hud.labelText = "保存资料成功！"
+                hud.margin = 10.0
+                hud.removeFromSuperViewOnHide = true
+                hud.hide(true, afterDelay: 1)
+
+            
+            }
+        
+        
+        }
         
     }
 

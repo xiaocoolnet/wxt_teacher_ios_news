@@ -222,6 +222,7 @@
 		EAFAE7321C82E52B00A8BAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE7301C82E52B00A8BAF2 /* Assets.xcassets */; };
 		EAFAE7331C82E52B00A8BAF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE7311C82E52B00A8BAF2 /* Main.storyboard */; };
 		EAFAE7391C82E56800A8BAF2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE7381C82E56800A8BAF2 /* Podfile */; };
+		F66A092A1CB64EE10052CFCC /* WhichSex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A09291CB64EE10052CFCC /* WhichSex.swift */; };
 		F6F4C5401CB4A91900D4B6D9 /* EditOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C53E1CB4A91900D4B6D9 /* EditOtherViewController.swift */; };
 		F6F4C5411CB4A91900D4B6D9 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C53F1CB4A91900D4B6D9 /* EditTableViewController.swift */; };
 		F6F4C5441CB4DE4D00D4B6D9 /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C5431CB4DE4D00D4B6D9 /* FoodList.swift */; };
@@ -456,6 +457,7 @@
 		EAFAE7311C82E52B00A8BAF2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EAFAE7341C82E55400A8BAF2 /* WXT_Teacher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WXT_Teacher-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		EAFAE7381C82E56800A8BAF2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F66A09291CB64EE10052CFCC /* WhichSex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WhichSex.swift; path = ../../Blog/View/WhichSex.swift; sourceTree = "<group>"; };
 		F6F4C53E1CB4A91900D4B6D9 /* EditOtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditOtherViewController.swift; sourceTree = "<group>"; };
 		F6F4C53F1CB4A91900D4B6D9 /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		F6F4C5431CB4DE4D00D4B6D9 /* FoodList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodList.swift; sourceTree = "<group>"; };
@@ -957,6 +959,7 @@
 		EAFAE61D1C82E50900A8BAF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F66A09291CB64EE10052CFCC /* WhichSex.swift */,
 				EAFAE61E1C82E50900A8BAF2 /* MineTableViewCell.swift */,
 				EAFAE61F1C82E50900A8BAF2 /* Readme */,
 			);
@@ -1540,6 +1543,7 @@
 				EACF434F1C9D3EC30008A3A6 /* QunLiaoViewController.swift in Sources */,
 				EAFAE6E11C82E50900A8BAF2 /* LayoutConstraint.swift in Sources */,
 				EAB2EED31C90032500693D04 /* PhotoViewController.swift in Sources */,
+				F66A092A1CB64EE10052CFCC /* WhichSex.swift in Sources */,
 				EAFAE7001C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
 				EAFAE71E1C82E50900A8BAF2 /* PhotoBrowser+HUD.swift in Sources */,
 				EAFAE6B51C82E50900A8BAF2 /* ForgetPasswordViewController.swift in Sources */,
