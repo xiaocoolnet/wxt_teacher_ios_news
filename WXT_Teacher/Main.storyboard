@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="C9m-GK-Stj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="C9m-GK-Stj">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="背景" translatesAutoresizingMaskIntoConstraints="NO" id="a7b-Wc-GGW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="背景" translatesAutoresizingMaskIntoConstraints="NO" id="a7b-Wc-GGW">
+                                <rect key="frame" x="0.0" y="-20" width="375" height="623"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="用户名输入栏" translatesAutoresizingMaskIntoConstraints="NO" id="ecC-y5-Lg4">
                                 <rect key="frame" x="38" y="233" width="299" height="48"/>
@@ -127,13 +127,15 @@
                         <constraints>
                             <constraint firstItem="acA-y1-64G" firstAttribute="top" secondItem="1Qf-Qr-5jT" secondAttribute="bottom" constant="35" id="1ko-RI-FhX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="acA-y1-64G" secondAttribute="trailing" constant="22" id="2E9-cm-QH3"/>
+                            <constraint firstItem="a7b-Wc-GGW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="7Li-Cw-rZc"/>
                             <constraint firstItem="3fR-XP-RI0" firstAttribute="centerY" secondItem="ecC-y5-Lg4" secondAttribute="centerY" id="7Uz-8c-eT2"/>
                             <constraint firstItem="1Qf-Qr-5jT" firstAttribute="centerY" secondItem="ecC-y5-Lg4" secondAttribute="centerY" id="7gR-h5-BQj"/>
-                            <constraint firstItem="a7b-Wc-GGW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="89A-Dz-IqT"/>
                             <constraint firstItem="jxG-Tb-FvV" firstAttribute="width" secondItem="1Qf-Qr-5jT" secondAttribute="width" id="9p8-2j-icf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eIh-Vk-hE8" secondAttribute="bottom" constant="33" id="AW8-Ii-ceS"/>
                             <constraint firstItem="NJA-2J-emY" firstAttribute="trailing" secondItem="FM0-9J-mkp" secondAttribute="trailing" id="Anc-yz-xvl"/>
                             <constraint firstItem="jxG-Tb-FvV" firstAttribute="centerY" secondItem="acA-y1-64G" secondAttribute="centerY" id="BHE-0m-Q6x"/>
+                            <constraint firstItem="a7b-Wc-GGW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="DQg-X5-hXq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a7b-Wc-GGW" secondAttribute="trailing" constant="-20" id="ESu-RL-vmj"/>
                             <constraint firstItem="1Qf-Qr-5jT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="33" id="EuT-PG-Tk7"/>
                             <constraint firstItem="rwT-iG-lAZ" firstAttribute="leading" secondItem="xqm-53-aFz" secondAttribute="trailing" constant="8" id="FUg-G3-BFc"/>
                             <constraint firstItem="eIh-Vk-hE8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GNh-SE-Gaf"/>
@@ -143,7 +145,6 @@
                             <constraint firstItem="jxG-Tb-FvV" firstAttribute="top" secondItem="ecC-y5-Lg4" secondAttribute="bottom" constant="35" id="L1a-I0-vPW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NJA-2J-emY" secondAttribute="trailing" constant="37" id="LtZ-4t-kG0"/>
                             <constraint firstItem="NJA-2J-emY" firstAttribute="leading" secondItem="1Qf-Qr-5jT" secondAttribute="trailing" constant="8" symbolic="YES" id="ONK-0A-a4s"/>
-                            <constraint firstItem="a7b-Wc-GGW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="T39-0B-FSd"/>
                             <constraint firstItem="NJA-2J-emY" firstAttribute="leading" secondItem="FM0-9J-mkp" secondAttribute="leading" id="TQV-0f-vCG"/>
                             <constraint firstItem="BwL-Aw-CRN" firstAttribute="centerY" secondItem="m4j-rY-XUn" secondAttribute="centerY" id="YVE-mY-wba"/>
                             <constraint firstItem="NJA-2J-emY" firstAttribute="top" secondItem="ecC-y5-Lg4" secondAttribute="top" id="aGg-aE-9Sc"/>
@@ -162,6 +163,7 @@
                             <constraint firstItem="1Qf-Qr-5jT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="240" id="pHg-4n-6Wk"/>
                             <constraint firstItem="rwT-iG-lAZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="pdF-aY-5Oo"/>
                             <constraint firstItem="jxG-Tb-FvV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="33" id="tXi-mr-Pi1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a7b-Wc-GGW" secondAttribute="bottom" id="vcw-2o-jrF"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xqm-53-aFz" secondAttribute="bottom" constant="29" id="wLj-ZB-eCO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ecC-y5-Lg4" secondAttribute="trailing" constant="22" id="wwt-5N-zrT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rIj-bq-9PW" secondAttribute="bottom" constant="23" id="xja-2H-Tjv"/>
@@ -723,7 +725,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7od-wQ-5Wm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-205" y="3995"/>
+            <point key="canvasLocation" x="-589" y="2723"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="k4a-lJ-OgI">
@@ -742,7 +744,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1n-wF-Jag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-601" y="3995"/>
+            <point key="canvasLocation" x="-985" y="2723"/>
         </scene>
         <!--Blog View Controller-->
         <scene sceneID="S75-t8-Cq7">
@@ -761,7 +763,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="th4-Hh-8hm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="3995"/>
+            <point key="canvasLocation" x="337" y="2723"/>
         </scene>
         <!--Function View Controller-->
         <scene sceneID="8V7-px-vZI">
@@ -780,7 +782,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpG-Ef-RWF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="229" y="3995"/>
+            <point key="canvasLocation" x="-155" y="2723"/>
         </scene>
         <!--Mine Main View Controller-->
         <scene sceneID="v5h-zi-KEb">
@@ -801,7 +803,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBM-j5-0Z1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1184" y="3995"/>
+            <point key="canvasLocation" x="848" y="2710"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UpS-fF-WEP">
@@ -822,7 +824,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrH-IC-kyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8" y="2576"/>
+            <point key="canvasLocation" x="636" y="1212"/>
         </scene>
         <!--消息-->
         <scene sceneID="F3c-Ky-Wul">
@@ -841,7 +843,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ji-jL-Koz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-601" y="3303"/>
+            <point key="canvasLocation" x="-985" y="2031"/>
         </scene>
         <!--通讯录-->
         <scene sceneID="Wkp-D7-HXw">
@@ -860,7 +862,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqu-mS-taV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-205" y="3303"/>
+            <point key="canvasLocation" x="-589" y="2031"/>
         </scene>
         <!--功能-->
         <scene sceneID="2LJ-3K-lK4">
@@ -879,7 +881,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sa5-aT-iol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="229" y="3308"/>
+            <point key="canvasLocation" x="-155" y="2036"/>
         </scene>
         <!--动态-->
         <scene sceneID="1AH-pL-Xbh">
@@ -898,7 +900,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZS-W8-cm2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="3308"/>
+            <point key="canvasLocation" x="337" y="2036"/>
         </scene>
         <!--我的-->
         <scene sceneID="he0-9T-BEd">
@@ -917,7 +919,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvW-QE-4gt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1184" y="3316"/>
+            <point key="canvasLocation" x="848" y="2031"/>
         </scene>
     </scenes>
     <resources>
