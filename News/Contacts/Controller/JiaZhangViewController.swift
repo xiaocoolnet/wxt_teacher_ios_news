@@ -13,7 +13,7 @@ import XWSwiftRefresh
 
 
 class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
-
+    
     var contactSource : ContactList = ContactList.init()
     var tableView: FlexibleTableView!
     
@@ -24,7 +24,7 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
         self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(tableView)
     }
-
+    
     func DropDownUpdate(){
         self.tableView.headerView = XWRefreshNormalHeader(target: self, action: #selector(JiaZhangViewController.GetDate))
         self.tableView.reloadData()
@@ -67,7 +67,7 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
             }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -106,7 +106,7 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
         }
         return 0
     }
-
+    
     //每一父类行的标题是什么
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = FlexibleTableViewCell(style:.Default, reuseIdentifier:"cell")
@@ -155,18 +155,18 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30.0
     }
-
-
-
-
+    
+    
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
