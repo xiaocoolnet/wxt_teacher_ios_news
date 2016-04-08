@@ -35,6 +35,9 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
         
     }
    
+    override func viewWillAppear(animated: Bool) {
+        self.tabBarController?.tabBar.hidden = true
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

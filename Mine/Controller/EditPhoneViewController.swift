@@ -20,6 +20,9 @@ class EditPhoneViewController: UIViewController {
         loadSubviews()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.tabBarController?.tabBar.hidden = true
+    }
     
     //MARK：- 加载数据
     func loadData(){
