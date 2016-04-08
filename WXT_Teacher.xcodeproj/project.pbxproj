@@ -242,6 +242,7 @@
 		EAFAE7321C82E52B00A8BAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE7301C82E52B00A8BAF2 /* Assets.xcassets */; };
 		EAFAE7331C82E52B00A8BAF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE7311C82E52B00A8BAF2 /* Main.storyboard */; };
 		EAFAE7391C82E56800A8BAF2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE7381C82E56800A8BAF2 /* Podfile */; };
+		F6879A121CB75059009C06FC /* EditPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6879A111CB75059009C06FC /* EditPhoneViewController.swift */; };
 		F6F4C5401CB4A91900D4B6D9 /* EditOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C53E1CB4A91900D4B6D9 /* EditOtherViewController.swift */; };
 		F6F4C5411CB4A91900D4B6D9 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C53F1CB4A91900D4B6D9 /* EditTableViewController.swift */; };
 		F6F4C5441CB4DE4D00D4B6D9 /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C5431CB4DE4D00D4B6D9 /* FoodList.swift */; };
@@ -496,6 +497,7 @@
 		EAFAE7311C82E52B00A8BAF2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EAFAE7341C82E55400A8BAF2 /* WXT_Teacher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WXT_Teacher-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		EAFAE7381C82E56800A8BAF2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F6879A111CB75059009C06FC /* EditPhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPhoneViewController.swift; sourceTree = "<group>"; };
 		F6F4C53E1CB4A91900D4B6D9 /* EditOtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditOtherViewController.swift; sourceTree = "<group>"; };
 		F6F4C53F1CB4A91900D4B6D9 /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		F6F4C5431CB4DE4D00D4B6D9 /* FoodList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodList.swift; sourceTree = "<group>"; };
@@ -1378,6 +1380,7 @@
 			children = (
 				F6F4C53E1CB4A91900D4B6D9 /* EditOtherViewController.swift */,
 				F6F4C53F1CB4A91900D4B6D9 /* EditTableViewController.swift */,
+				F6879A111CB75059009C06FC /* EditPhoneViewController.swift */,
 			);
 			name = Edit;
 			sourceTree = "<group>";
@@ -1595,6 +1598,7 @@
 				EAFAE6EF1C82E50900A8BAF2 /* Haneke.swift in Sources */,
 				EAD5D45D1C93AB5F00013E10 /* TeacherDianPingTableViewCell.swift in Sources */,
 				EAC2008A1C9D2D6300A6A613 /* ShiPuViewController.swift in Sources */,
+				F6879A121CB75059009C06FC /* EditPhoneViewController.swift in Sources */,
 				EAA2CDFC1CACC89000766CCB /* NirKxMenu.m in Sources */,
 				EAF2D4961CA6299B00523B37 /* XinWenInfoViewController.swift in Sources */,
 				EAA578031C8A7BDA00E9A95D /* NewCommentViewController.swift in Sources */,

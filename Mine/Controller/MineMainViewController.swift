@@ -22,6 +22,10 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
     let duiHuanBtn = UIButton()
     let qingchuHuancun = UIButton()
     let footview = UIView()
+    let phoneBtn = UIButton()
+    
+    var phoneNumber = 18363856895
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,14 +117,21 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 self.infoLabel.frame = CGRectMake(105, 115, 110, 11)
                 self.infoLabel.font = UIFont.systemFontOfSize(11)
                 self.infoLabel.textColor = UIColor.grayColor()
-                self.infoLabel.text = "清华幼儿园·大班三班"
+                self.infoLabel.text = String(phoneNumber)
                 self.editBtn.frame = CGRectMake(174, 91, 12, 12)
                 self.editBtn.setBackgroundImage(UIImage(named: "编辑"), forState: .Normal)
                 self.editBtn.addTarget(self, action: Selector("edit"), forControlEvents: UIControlEvents.TouchUpInside)
+                self.phoneBtn.frame = CGRectMake(self.infoLabel.frame.maxX-30, 115, 13, 13)
+                self.phoneBtn.titleLabel?.font = UIFont.systemFontOfSize(13)
+//                self.phoneBtn.backgroundColor = UIColor.redColor()
+                self.phoneBtn.setBackgroundImage(UIImage(named: "电话"), forState: .Normal)
+                self.phoneBtn.addTarget(self, action: Selector("changePhone"), forControlEvents: UIControlEvents.TouchUpInside)
+                
                 cell.contentView.addSubview(self.avatorImage)
                 cell.contentView.addSubview(self.nameLabel)
                 cell.contentView.addSubview(self.infoLabel)
                 cell.contentView.addSubview(self.editBtn)
+                cell.contentView.addSubview(self.phoneBtn)
                 return cell
             }
             if(indexPath.row == 1){
@@ -326,6 +337,14 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func edit() -> Void {
         let editVC = EditTableViewController()
         self.navigationController?.pushViewController(editVC, animated: true)
+        
+    }
+    
+    func changePhone() -> Void {
+        let phoneVC = EditPhoneViewController()
+        phoneVC.title = "修改手机绑定"
+        self.navigationController?.pushViewController(phoneVC, animated: true)
+        
         
     }
     override func didReceiveMemoryWarning() {

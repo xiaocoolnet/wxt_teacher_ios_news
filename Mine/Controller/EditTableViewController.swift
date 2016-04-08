@@ -8,6 +8,7 @@
 
 import UIKit
 import MBProgressHUD
+import Alamofire
 class EditTableViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate,UIAlertViewDelegate {
 
     
@@ -25,8 +26,13 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     self.title = "编辑教师资料"
-     self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+         self.title = "编辑教师资料"
+         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        //增加保存按钮
+        let save = UIBarButtonItem(title: "保存", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("saveInfo"))
+        self.navigationItem.rightBarButtonItem = save
+        
     }
    
     override func didReceiveMemoryWarning() {
@@ -43,7 +49,7 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 6
+        return 3
     }
 
     
@@ -59,7 +65,7 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
         if indexPath.row==0{
             y=100
         }
-        separator.frame = CGRectMake(10, CGFloat(y), UIScreen.mainScreen().bounds.width-20, 2)
+        separator.frame = CGRectMake(10, CGFloat(y), UIScreen.mainScreen().bounds.width-20, 1)
         separator.backgroundColor = UIColor.grayColor()
         cell.contentView.addSubview(separator)
 
@@ -71,13 +77,14 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
                 headImg.image = UIImage(named: "Logo")
             }
             headImg.frame = CGRectMake(UIScreen.mainScreen().bounds.width-100, 10, 80, 80)
-            headImg.layer.cornerRadius = 20
+            headImg.layer.cornerRadius = 40
+            headImg.layer.masksToBounds = true
             self.view.addSubview(headImg)
             
         }else{
             //显示信息label
             let label = UILabel()
-            label.frame = CGRectMake(UIScreen.mainScreen().bounds.width-160, 10, 150, 40)
+            label.frame = CGRectMake(UIScreen.mainScreen().bounds.width-170, 10, 150, 40)
 //            label.backgroundColor = UIColor.redColor()
             label.textAlignment = NSTextAlignment.Right
             label.textColor = UIColor.grayColor()
@@ -91,18 +98,6 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
             if indexPath.row == 2{
                 cell.textLabel?.text = "性别"
                 label.text = sex
-            }
-            if indexPath.row == 3{
-                cell.textLabel?.text = "电话"
-                label.text = phoneNumber
-            }
-            if indexPath.row == 4{
-                cell.textLabel?.text = "学校"
-                label.text = school
-            }
-            if indexPath.row == 5{
-                cell.textLabel?.text = "班级"
-                label.text = classRoom
             }
         
         }
@@ -145,7 +140,7 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
     }
     //更改性别
     func changeSex() -> Void {
-        let alertSex = UIAlertView(title: "性别", message: "请您选择性别", delegate: self, cancelButtonTitle: "女",otherButtonTitles: "男")
+        let alertSex = UIAlertView(title: "性别", message: "请您选择性别", delegate: self, cancelButtonTitle: "男",otherButtonTitles: "女")
         alertSex.show()
         
     }
@@ -154,6 +149,7 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
     
         let changeVC = EditOtherViewController()
         changeVC.index = index
+        changeVC.temp = name
         self.navigationController?.pushViewController(changeVC, animated: true)
         
     }
@@ -206,9 +202,9 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int){
     
         if buttonIndex == 0 {
-            sex = "女"
-        }else{
             sex = "男"
+        }else{
+            sex = "女"
         }
         self.tableView.reloadData()
     }
@@ -241,6 +237,52 @@ class EditTableViewController: UITableViewController,UIImagePickerControllerDele
         
     }
 
+    
+    //MARK: - 保存
+    func saveInfo() -> Void {
+        var sexIndex : Int?
+        if sex == "男" {
+            sexIndex = 0
+        }else{
+            sexIndex = 1
+        }
+        
+        
+        let  url = "http://www.xiaocool.cn:8016/index.php?g=apps&m=teacher&a=saveinfo"
+        let para = [
+            "teacherid" : 30,
+            "sex":sexIndex!,
+            "teachername" :name,
+            "picurl" : data
+        ]
+        Alamofire.request(.POST, url, parameters: para).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                print("request是")
+                print(request!)
+                print("====================")
+                let status = MineModel(JSONDecoder(json!))
+                print("状态是")
+                print(status.status)
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.labelText = status.errorData
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                }
+                if(status.status == "success"){
+                    print("Success")
+                    self.navigationController?.popToRootViewControllerAnimated(true)
+                }
+            }
+        }
+
+    
+        
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
