@@ -151,12 +151,59 @@ class NewBlogViewController: UIViewController,UICollectionViewDataSource,UIColle
     
     func UpdateBlog(){
         if(i != 0){
-            //self.UpdatePic()
+            self.UpdatePic()
             print("执行这个方法")
         }
+        self.PutBlog()
         self.navigationController?.popViewControllerAnimated(true)
     }
     
+    func PutBlog(){
+        let url = apiUrl+"WriteMicroblog"
+        let schoolid = NSUserDefaults.standardUserDefaults()
+        let scid = schoolid.stringForKey("schoolid")
+        let classid = NSUserDefaults.standardUserDefaults()
+        let clid = classid.stringForKey("classid")
+        let userid = NSUserDefaults.standardUserDefaults()
+        let uid = userid.stringForKey("userid")
+        if(self.imagePath.count == 0){
+            imageUrl = ""
+        }
+        let param = [
+            "schoolid":scid!,
+            "classid":clid!,
+            "userid":uid!,
+            "content":self.contentTextView.text!,
+            "picurl":imageUrl!
+        ]
+        Alamofire.request(.POST, url, parameters: param).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                print("request是")
+                print(request!)
+                print("====================")
+                let result = Httpresult(JSONDecoder(json!))
+                print("状态是")
+                print(result.status)
+                if(result.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text
+                    hud.labelText = result.errorData
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                }
+                
+                if(result.status == "success"){
+                    print("Success")
+                }
+                
+            }
+            
+        }
+        
+    }
     func UpdatePic(){
         for i in 0..<self.imageData.count{
             let RanNumber = String(arc4random_uniform(1000) + 1000)

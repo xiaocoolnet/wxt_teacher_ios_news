@@ -710,7 +710,7 @@ extension FunctionViewController: UIScrollViewDelegate {
         let offset = scrollView.contentOffset
         pageControl.currentPage = Int(offset.x / view.bounds.width)
         // 因为currentPage是从0开始，所以numOfPages减1
-        print("啊！！")
+        //print("啊！！")
     }
 }
 

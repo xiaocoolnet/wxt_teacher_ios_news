@@ -338,6 +338,8 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
         let editVC = EditTableViewController()
         self.navigationController?.pushViewController(editVC, animated: true)
         
+        editVC.tabBarController?.tabBar.hidden = true
+        
     }
     
     func changePhone() -> Void {

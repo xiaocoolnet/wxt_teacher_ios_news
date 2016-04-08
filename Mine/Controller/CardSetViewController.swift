@@ -11,6 +11,8 @@ import UIKit
 class CardSetViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     let cardTableView = UITableView.init()
+    let nameArr:[String] = ["上传照片","绑定卡号","编辑显示内容"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,14 +39,20 @@ class CardSetViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .Value1, reuseIdentifier: "cardCell")
-        //cell.selectionStyle = .None
+        cell.selectionStyle = .None
+        cell.accessoryType = .DisclosureIndicator
         
-        cell.textLabel?.text = "刷卡"
+        cell.textLabel?.text = nameArr[indexPath.row]
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("点击了")
+        let nextView = CardChildViewController()
+        
+        self.navigationController?.pushViewController(nextView, animated: true)
+        nextView.title = nameArr[indexPath.row]
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1876F0271CB6440C00425BA9 /* GongGaoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F0261CB6440C00425BA9 /* GongGaoList.swift */; };
+		18A848EF1CB757AD00A9D123 /* KeChengList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A848EE1CB757AD00A9D123 /* KeChengList.swift */; };
 		18B368F91CB5E7C3007DC602 /* MaintainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B368F81CB5E7C3007DC602 /* MaintainViewController.swift */; };
 		18B368FB1CB5E7D9007DC602 /* ErWeiMaDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B368FA1CB5E7D9007DC602 /* ErWeiMaDownViewController.swift */; };
 		18B368FE1CB5E8BF007DC602 /* CardSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B368FD1CB5E8BF007DC602 /* CardSetViewController.swift */; };
@@ -27,6 +28,7 @@
 		18B369201CB5F59B007DC602 /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B3691F1CB5F59B007DC602 /* CheckViewController.swift */; };
 		18B369221CB5F66F007DC602 /* YSQingKuangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B369211CB5F66F007DC602 /* YSQingKuangViewController.swift */; };
 		18B369251CB5FA6C007DC602 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B369241CB5FA6C007DC602 /* ScrollViewController.swift */; };
+		18D971011CB79D3F00DE612F /* CardChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D971001CB79D3F00DE612F /* CardChildViewController.swift */; };
 		AFC09C14012FD90FA811DB41 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F387A67369CB0717891AF5C /* Pods.framework */; };
 		EA166B1F1C92B11000416536 /* ChengZhangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA166B1E1C92B11000416536 /* ChengZhangViewController.swift */; };
 		EA1AB68A1CA12BBD00803E2D /* TiXingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1AB6891CA12BBD00803E2D /* TiXingViewController.swift */; };
@@ -252,6 +254,7 @@
 
 /* Begin PBXFileReference section */
 		1876F0261CB6440C00425BA9 /* GongGaoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GongGaoList.swift; sourceTree = "<group>"; };
+		18A848EE1CB757AD00A9D123 /* KeChengList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeChengList.swift; sourceTree = "<group>"; };
 		18B368F81CB5E7C3007DC602 /* MaintainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintainViewController.swift; sourceTree = "<group>"; };
 		18B368FA1CB5E7D9007DC602 /* ErWeiMaDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErWeiMaDownViewController.swift; sourceTree = "<group>"; };
 		18B368FD1CB5E8BF007DC602 /* CardSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSetViewController.swift; sourceTree = "<group>"; };
@@ -271,6 +274,7 @@
 		18B3691F1CB5F59B007DC602 /* CheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
 		18B369211CB5F66F007DC602 /* YSQingKuangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSQingKuangViewController.swift; sourceTree = "<group>"; };
 		18B369241CB5FA6C007DC602 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		18D971001CB79D3F00DE612F /* CardChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardChildViewController.swift; sourceTree = "<group>"; };
 		7CC3BC55E673A0F4FFA674CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7F387A67369CB0717891AF5C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA166B1E1C92B11000416536 /* ChengZhangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChengZhangViewController.swift; sourceTree = "<group>"; };
@@ -518,10 +522,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18A848F01CB759C000A9D123 /* KeBiao */ = {
+			isa = PBXGroup;
+			children = (
+				EA4350301C9403810040F56D /* BBKeTangViewController.swift */,
+			);
+			name = KeBiao;
+			sourceTree = "<group>";
+		};
+		18A848F11CB759EC00A9D123 /* QingJia */ = {
+			isa = PBXGroup;
+			children = (
+				EAD2EA6E1C911B00006F3A3B /* QingJiaViewController.swift */,
+			);
+			name = QingJia;
+			sourceTree = "<group>";
+		};
+		18A848F21CB75A0200A9D123 /* BBKaoQin */ = {
+			isa = PBXGroup;
+			children = (
+				EA6D2D3C1C95125D0092F09A /* bbKaoQinViewController.swift */,
+			);
+			name = BBKaoQin;
+			sourceTree = "<group>";
+		};
+		18A848F31CB75A6300A9D123 /* QingKuang */ = {
+			isa = PBXGroup;
+			children = (
+				18B369211CB5F66F007DC602 /* YSQingKuangViewController.swift */,
+			);
+			name = QingKuang;
+			sourceTree = "<group>";
+		};
+		18A848F41CB75A7E00A9D123 /* FangDiu */ = {
+			isa = PBXGroup;
+			children = (
+				18B3691C1CB5F52D007DC602 /* FangDiuViewController.swift */,
+			);
+			name = FangDiu;
+			sourceTree = "<group>";
+		};
+		18A848F51CB75A9A00A9D123 /* TeKaoQin */ = {
+			isa = PBXGroup;
+			children = (
+				EA6D54121C97AB3D00F85EA2 /* daKaViewController.swift */,
+			);
+			name = TeKaoQin;
+			sourceTree = "<group>";
+		};
 		18B368FC1CB5E899007DC602 /* CardSet */ = {
 			isa = PBXGroup;
 			children = (
 				18B368FD1CB5E8BF007DC602 /* CardSetViewController.swift */,
+				18D971001CB79D3F00DE612F /* CardChildViewController.swift */,
 			);
 			name = CardSet;
 			sourceTree = "<group>";
@@ -601,8 +654,8 @@
 			isa = PBXGroup;
 			children = (
 				EAD5D45A1C93A2D900013E10 /* TeacherDianPingViewController.swift */,
-				EA2D40201CABB547000DEAF6 /* FaBiaoDianpingViewController.swift */,
 				EA2D40221CABB5EE000DEAF6 /* DianPingListViewController.swift */,
+				EA2D40201CABB547000DEAF6 /* FaBiaoDianpingViewController.swift */,
 			);
 			name = DianPing;
 			sourceTree = "<group>";
@@ -852,6 +905,8 @@
 		EAFAE5F21C82E50900A8BAF2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EAFAE5F41C82E50900A8BAF2 /* Readme */,
+				EAFAE5F31C82E50900A8BAF2 /* FunctionViewController.swift */,
 				EAA2CDF51CACB32E00766CCB /* Plan */,
 				EAA2CDF41CACB30000766CCB /* Kejian */,
 				EA2D401F1CABB510000DEAF6 /* DianPing */,
@@ -865,14 +920,12 @@
 				18B369031CB5EF17007DC602 /* BBVideo */,
 				18B369081CB5EF8F007DC602 /* BBLeYuan */,
 				18B3691E1CB5F573007DC602 /* XinXi */,
-				EAFAE5F41C82E50900A8BAF2 /* Readme */,
-				EAFAE5F31C82E50900A8BAF2 /* FunctionViewController.swift */,
-				EAD2EA6E1C911B00006F3A3B /* QingJiaViewController.swift */,
-				EA4350301C9403810040F56D /* BBKeTangViewController.swift */,
-				EA6D2D3C1C95125D0092F09A /* bbKaoQinViewController.swift */,
-				EA6D54121C97AB3D00F85EA2 /* daKaViewController.swift */,
-				18B369211CB5F66F007DC602 /* YSQingKuangViewController.swift */,
-				18B3691C1CB5F52D007DC602 /* FangDiuViewController.swift */,
+				18A848F01CB759C000A9D123 /* KeBiao */,
+				18A848F11CB759EC00A9D123 /* QingJia */,
+				18A848F21CB75A0200A9D123 /* BBKaoQin */,
+				18A848F51CB75A9A00A9D123 /* TeKaoQin */,
+				18A848F31CB75A6300A9D123 /* QingKuang */,
+				18A848F41CB75A7E00A9D123 /* FangDiu */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -886,6 +939,7 @@
 				18B369181CB5F2F9007DC602 /* KeJianList.swift */,
 				18B369161CB5F2DA007DC602 /* HuoDongList.swift */,
 				1876F0261CB6440C00425BA9 /* GongGaoList.swift */,
+				18A848EE1CB757AD00A9D123 /* KeChengList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1606,6 +1660,7 @@
 				EAFAE7191C82E50900A8BAF2 /* NVActivityIndicatorShape.swift in Sources */,
 				EAFAE6FF1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				18B368F91CB5E7C3007DC602 /* MaintainViewController.swift in Sources */,
+				18A848EF1CB757AD00A9D123 /* KeChengList.swift in Sources */,
 				EAFAE6E51C82E50900A8BAF2 /* ViewController+SnapKit.swift in Sources */,
 				EAA855411CA8D8C5004CB525 /* UpLoadeViewController.swift in Sources */,
 				EAFAE6D81C82E50900A8BAF2 /* CFSnapKit.swift in Sources */,
@@ -1642,6 +1697,7 @@
 				F6F4C5401CB4A91900D4B6D9 /* EditOtherViewController.swift in Sources */,
 				EAFAE7121C82E50900A8BAF2 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				EAFAE6E71C82E50900A8BAF2 /* CGSize+Swift.swift in Sources */,
+				18D971011CB79D3F00DE612F /* CardChildViewController.swift in Sources */,
 				EA7D9D111C83DE8B00056B22 /* XKeyBoard.m in Sources */,
 				EAA2CE001CAE0A9000766CCB /* XiTongGongGaoViewController.swift in Sources */,
 				EAFAE72C1C82E50900A8BAF2 /* Httpresult.swift in Sources */,

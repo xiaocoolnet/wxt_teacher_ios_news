@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Alamofire
+import MBProgressHUD
+import XWSwiftRefresh
 
 class BBKeTangViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
+    var keBiaoSource = KeChengList()
+    
     let lastDayBtn = UIButton()
     let nextDayBtn = UIButton()
     let timeLabel = UILabel()
@@ -19,8 +24,8 @@ class BBKeTangViewController: UIViewController,UITableViewDataSource,UITableView
     let ketangTableView = UITableView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "宝宝课堂"
-        self.ketangTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
+        self.title = "宝宝课表"
+        self.ketangTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height-40)
         self.ketangTableView.dataSource = self
         self.ketangTableView.delegate = self
         self.ketangTableView.tableFooterView = UIView(frame: CGRectZero)
@@ -29,29 +34,83 @@ class BBKeTangViewController: UIViewController,UITableViewDataSource,UITableView
         self.view.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(self.ketangTableView)
         // Do any additional setup after loading the view.
+        
+        self.DropDownUpdate()
+        
     }
     
+    func DropDownUpdate(){
+        self.ketangTableView.headerView = XWRefreshNormalHeader(target: self, action: #selector(NewsViewController.GetDate))
+        self.ketangTableView.reloadData()
+        self.ketangTableView.headerView?.beginRefreshing()
+    }
+    
+    func GetDate(){
+        let url = apiUrl+"ClassSyllabus"
+        let schoolid = 1
+        let classid = 1
+        
+        let param = [
+            "schoolid":schoolid,
+            "classid":classid
+            
+        ]
+        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                print("request是")
+                print(request!)
+                print("====================")
+                let status = Http(JSONDecoder(json!))
+                print("状态是")
+                print(status.status)
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                    print("0")
+                }
+                if(status.status == "success"){
+                    self.keBiaoSource = KeChengList(status.data!)
+                    self.ketangTableView.reloadData()
+                    self.ketangTableView.headerView?.endRefreshing()
+                    print("1")
+                    print(self.keBiaoSource.count)
+                }
+            }
+        }
+    }
+
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0{
-            return 1
-        }
-        if section == 1{
-            return 4
-        }
-        if section == 2{
-            return 4
-        }
-        return 0
+       
+//        if section == 0{
+//            return 5
+//        }
+//        if section == 1{
+//            return 1
+//        }
+//        if section == 2{
+//            return 2
+//        }
+//        if section == 3{
+//            return 3
+//        }
+//        if section == 4{
+//            return 1
+//        }
+        return keBiaoSource.count
+        
     }
-    
+
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0{
-            return 0
-        }
+        
         return 20
     }
     
@@ -60,116 +119,103 @@ class BBKeTangViewController: UIViewController,UITableViewDataSource,UITableView
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.section == 0{
-            return 40
-        }
-        if indexPath.section == 1{
-            return 50
-        }
-        if indexPath.section == 2{
-            return 50
-        }
-        return 0
+        
+        return 50
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "cell")
         cell.selectionStyle = .None
-        if indexPath.section == 0{
-            lastDayBtn.frame = CGRectMake(50, 10, 20, 20)
-            lastDayBtn.setImage(UIImage(named: "上一天"), forState: .Normal)
-            lastDayBtn.addTarget(self, action: #selector(BBKeTangViewController.LastDay), forControlEvents: .TouchUpInside)
-            nextDayBtn.frame = CGRectMake(0, 10, 20, 20)
-            nextDayBtn.frame.origin.x = self.view.bounds.width - 70
-            nextDayBtn.setImage(UIImage(named: "下一天"), forState: .Normal)
-            nextDayBtn.addTarget(self, action: #selector(BBKeTangViewController.NextDay), forControlEvents: .TouchUpInside)
-            lastMonthBtn.frame = CGRectMake(30, 10, 20, 20)
-            lastMonthBtn.setImage(UIImage(named: "上个月"), forState: .Normal)
-            lastMonthBtn.addTarget(self, action: #selector(BBKeTangViewController.LastMonth), forControlEvents: .TouchUpInside)
-            nextMonthBtn.frame = CGRectMake(0, 10, 20, 20)
-            nextMonthBtn.setImage(UIImage(named: "下个月"), forState: .Normal)
-            nextMonthBtn.frame.origin.x = self.view.bounds.width - 50
-            nextMonthBtn.addTarget(self, action: #selector(BBKeTangViewController.NextMonth), forControlEvents: .TouchUpInside)
-            timeLabel.frame = CGRectMake(0, 10, 150, 20)
-            timeLabel.textColor = UIColor.grayColor()
-            timeLabel.center.x = self.view.center.x
-            timeLabel.font = UIFont.systemFontOfSize(15)
-            let today:NSDate = NSDate()
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd  EEEE"
-            let allday = dateFormatter.stringFromDate(today)
-            timeLabel.text = allday
-            cell.contentView.addSubview(timeLabel)
-            cell.contentView.addSubview(nextMonthBtn)
-            cell.contentView.addSubview(lastMonthBtn)
-            cell.contentView.addSubview(nextDayBtn)
-            cell.contentView.addSubview(lastDayBtn)
-            return cell
-        }
-        cell.textLabel?.text = "第\(indexPath.row + 1)节课: 语文"
+        let keBiaoInfo = keBiaoSource.objectlist[indexPath.row]
+
+//        if indexPath.section == 0{
+//            let keBiaoInfo = keBiaoSource.objectlist[indexPath.row]
+//
+//            cell.textLabel?.text = "第\(indexPath.row + 1)节课: " + keBiaoInfo.syllabus_name!
+//            return cell
+//        }
+//        if indexPath.section == 1{
+//            let keBiaoInfo = keBiaoSource.objectlist[indexPath.row + 5]
+//            
+//            cell.textLabel?.text = "第\(indexPath.row + 1)节课: " + keBiaoInfo.syllabus_name!
+//            return cell
+//        }
+//        if indexPath.section == 2{
+//            let keBiaoInfo = keBiaoSource.objectlist[indexPath.row + 6]
+//            
+//            cell.textLabel?.text = "第\(indexPath.row + 1)节课: " + keBiaoInfo.syllabus_name!
+//            return cell
+//        }
+//        if indexPath.section == 3{
+//            let keBiaoInfo = keBiaoSource.objectlist[indexPath.row + 8]
+//            
+//            cell.textLabel?.text = "第\(indexPath.row + 1)节课: " + keBiaoInfo.syllabus_name!
+//            return cell
+//        }
+//        if indexPath.section == 4{
+//            let keBiaoInfo = keBiaoSource.objectlist[indexPath.row + 11]
+//            
+//            cell.textLabel?.text = "第\(indexPath.row + 1)节课: " + keBiaoInfo.syllabus_name!
+//            return cell
+//        }
+        cell.textLabel?.text = "周 " + keBiaoInfo.syllabus_date! + " 第 " + keBiaoInfo.syllabus_no! + " 节课: " + keBiaoInfo.syllabus_name!
+
         return cell
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
-        if(section == 1){
+        if(section == 0){
             let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
             let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
             label.font = UIFont.systemFontOfSize(12)
-            label.text = "上午"
+            label.text = "课程表"
             label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
             view.addSubview(label)
             view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
             return view
         }
-        if(section == 2){
-            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
-            let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
-            label.font = UIFont.systemFontOfSize(12)
-            label.text = "下午"
-            label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
-            view.addSubview(label)
-            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
-            return view
-        }
+//        if(section == 1){
+//            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
+//            let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
+//            label.font = UIFont.systemFontOfSize(12)
+//            label.text = "星期二"
+//            label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
+//            view.addSubview(label)
+//            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+//            return view
+//        }
+//        if(section == 2){
+//            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
+//            let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
+//            label.font = UIFont.systemFontOfSize(12)
+//            label.text = "星期三"
+//            label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
+//            view.addSubview(label)
+//            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+//            return view
+//        }
+//        if(section == 3){
+//            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
+//            let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
+//            label.font = UIFont.systemFontOfSize(12)
+//            label.text = "星期四"
+//            label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
+//            view.addSubview(label)
+//            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+//            return view
+//        }
+//        if(section == 4){
+//            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
+//            let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
+//            label.font = UIFont.systemFontOfSize(12)
+//            label.text = "星期五"
+//            label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
+//            view.addSubview(label)
+//            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+//            return view
+//        }
         return UIView(frame: CGRectZero)
     }
-    
-    func NextDay(){
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd  EEEE"
-        let stringday = dateFormatter.dateFromString(self.timeLabel.text!)
-        let theDayAfterTomorrow = stringday!.dateByAddingTimeInterval(24*60*60)
-        let tomorrow = dateFormatter.stringFromDate(theDayAfterTomorrow)
-        timeLabel.text = tomorrow
-    }
-    
-    func LastDay(){
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd  EEEE"
-        let stringday = dateFormatter.dateFromString(self.timeLabel.text!)
-        let theYesterday = stringday!.dateByAddingTimeInterval(-24*60*60)
-        let yesterday = dateFormatter.stringFromDate(theYesterday)
-        timeLabel.text = yesterday
-    }
-    
-    func LastMonth(){
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd  EEEE"
-        let stringday = dateFormatter.dateFromString(self.timeLabel.text!)
-        let theLastMonth = stringday!.dateByAddingTimeInterval(-24*60*60*30)
-        let lastMonth = dateFormatter.stringFromDate(theLastMonth)
-        timeLabel.text = lastMonth
-    }
-    
-    func NextMonth(){
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd  EEEE"
-        let stringday = dateFormatter.dateFromString(self.timeLabel.text!)
-        let theNextMonth = stringday!.dateByAddingTimeInterval(24*60*60*30)
-        let nextMonth = dateFormatter.stringFromDate(theNextMonth)
-        timeLabel.text = nextMonth
-    }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

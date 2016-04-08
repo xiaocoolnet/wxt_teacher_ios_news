@@ -33,7 +33,7 @@ class ShiPuViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     
     func DropDownUpdate(){
-        self.dataTableView.headerView = XWRefreshNormalHeader(target: self, action: "GetDate")
+        self.dataTableView.headerView = XWRefreshNormalHeader(target: self, action: #selector(ShiPuViewController.GetDate))
         self.dataTableView.headerView?.beginRefreshing()
         
     }

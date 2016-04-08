@@ -28,6 +28,7 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
         self.navigationItem.leftBarButtonItem = leftItem
         self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(dataTableView)
+        
         self.DropDownUpdate()
     }
     

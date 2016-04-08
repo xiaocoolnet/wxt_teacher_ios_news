@@ -64,6 +64,7 @@ class DianPingListViewController: UIViewController,UITableViewDataSource,UITable
             }
             else{
                 cell.textLabel?.text = self.ctrls[indexPath.row]
+                cell.textLabel?.textColor = UIColor.grayColor()
             }
             return cell
         }

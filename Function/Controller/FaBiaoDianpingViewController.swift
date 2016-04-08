@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 import MBProgressHUD
 
 class FaBiaoDianpingViewController: UIViewController {
@@ -36,7 +37,41 @@ class FaBiaoDianpingViewController: UIViewController {
     
     func FaSong(){
         print("发送消息")
-        self.navigationController?.popViewControllerAnimated(true)
+        
+        let url = teUrl + "m=teacher&a=AddTeacherComment"
+        let teacherid = 30
+        let studentid = 50
+        
+        let param = [
+        "teacherid":teacherid,
+        "studentid":studentid,
+        "content":contentTextView.text
+        ]
+        Alamofire.request(.POST, url, parameters: param as? [String : AnyObject]).response{request , response , json , error in
+            if(error != nil){
+            
+            }
+            else{
+                print("request是")
+                print(request!)
+                print("====================")
+                let status = MineModel(JSONDecoder(json!))
+                print("状态是")
+                print(status.status)
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text
+                    hud.labelText = status.errorData
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true,afterDelay: 1)
+                }
+                if(status.status == "success"){
+                    print("success成功")
+                    self.navigationController?.popViewControllerAnimated(true)
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

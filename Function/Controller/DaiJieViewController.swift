@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Alamofire
+import MBProgressHUD
+import XWSwiftRefresh
 
 class DaiJieViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -103,7 +106,7 @@ class DaiJieViewController: UIViewController,UITableViewDelegate,UITableViewData
             cell.btn.backgroundColor = UIColor(red: 255/255, green: 130/255, blue: 4/255, alpha: 1)
             cell.btn.layer.borderWidth = 0
             cell.btn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-            cell.btn.setTitle("提醒", forState: .Normal)
+            cell.btn.setTitle("确认", forState: .Normal)
             cell.btn.frame.origin.x = self.view.bounds.width - 80
             cell.btn.addTarget(self, action: #selector(DaiJieViewController.TiXing), forControlEvents: .TouchUpInside)
             return cell
@@ -128,6 +131,38 @@ class DaiJieViewController: UIViewController,UITableViewDelegate,UITableViewData
     func TiXing(){
         let tixing = TiXingViewController()
         self.navigationController?.pushViewController(tixing, animated: true)
+        
+        let url = apiUrl+"DeliveryVerify"
+        let userid = 28
+        
+        let param = [
+            "userid" : userid
+        ]
+        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                print("request是")
+                print(request!)
+                print("====================")
+                let status = MineModel(JSONDecoder(json!))
+                print("状态是")
+                print(status.status)
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.labelText = status.errorData
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                }
+                if(status.status == "success"){
+                    print("Success")
+//                    self.navigationController?.popToRootViewControllerAnimated(true)
+                }
+            }
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
