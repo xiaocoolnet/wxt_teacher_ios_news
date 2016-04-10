@@ -22,6 +22,12 @@ class BBKeTangViewController: UIViewController,UITableViewDataSource,UITableView
     let nextMonthBtn = UIButton()
     let weekLabel = UILabel()
     let ketangTableView = UITableView()
+    var zhouyi = Array<KeChengInfo>()
+    var zhouer = Array<KeChengInfo>()
+    var zhousan = Array<KeChengInfo>()
+    var zhousi = Array<KeChengInfo>()
+    var zhouwu = Array<KeChengInfo>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "宝宝课表"
@@ -75,38 +81,65 @@ class BBKeTangViewController: UIViewController,UITableViewDataSource,UITableView
                 }
                 if(status.status == "success"){
                     self.keBiaoSource = KeChengList(status.data!)
-                    self.ketangTableView.reloadData()
-                    self.ketangTableView.headerView?.endRefreshing()
                     print("1")
                     print(self.keBiaoSource.count)
+                    //将课程分组
+                    for kechen in self.keBiaoSource.objectlist {
+                        if Int(kechen.syllabus_date!)! == 1{
+                            self.zhouyi.append(kechen)
+                        }
+                        if Int(kechen.syllabus_date!)! == 2{
+                            self.zhouer.append(kechen)
+                        }
+                        if Int(kechen.syllabus_date!)! == 3{
+                            self.zhousan.append(kechen)
+                        }
+                        if Int(kechen.syllabus_date!)! == 4{
+                            self.zhousi.append(kechen)
+                        }
+                        if Int(kechen.syllabus_date!)! == 5{
+                            self.zhouwu.append(kechen)
+                        }
+                        
+                    }
+            
+                    
+                    
+
+                    self.ketangTableView.reloadData()
+                    self.ketangTableView.headerView?.endRefreshing()
                 }
             }
         }
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return self.keBiaoSource.count
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-//        if section == 0{
-//            return 5
-//        }
-//        if section == 1{
-//            return 1
-//        }
-//        if section == 2{
-//            return 2
-//        }
-//        if section == 3{
-//            return 3
-//        }
-//        if section == 4{
-//            return 1
-//        }
-        return keBiaoSource.count
-        
+        if section == 0{
+            return self.zhouyi.count
+        }
+        if section == 1{
+            return self.zhouer.count
+
+        }
+        if section == 2{
+            return self.zhousan.count
+
+        }
+        if section == 3{
+            return self.zhousi.count
+
+        }
+        if section == 4{
+            return self.zhouwu.count
+
+        }
+
+        return 0
     }
 
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -126,39 +159,39 @@ class BBKeTangViewController: UIViewController,UITableViewDataSource,UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "cell")
         cell.selectionStyle = .None
-        let keBiaoInfo = keBiaoSource.objectlist[indexPath.row]
 
-//        if indexPath.section == 0{
-//            let keBiaoInfo = keBiaoSource.objectlist[indexPath.row]
-//
-//            cell.textLabel?.text = "第\(indexPath.row + 1)节课: " + keBiaoInfo.syllabus_name!
-//            return cell
-//        }
-//        if indexPath.section == 1{
-//            let keBiaoInfo = keBiaoSource.objectlist[indexPath.row + 5]
-//            
-//            cell.textLabel?.text = "第\(indexPath.row + 1)节课: " + keBiaoInfo.syllabus_name!
-//            return cell
-//        }
-//        if indexPath.section == 2{
-//            let keBiaoInfo = keBiaoSource.objectlist[indexPath.row + 6]
-//            
-//            cell.textLabel?.text = "第\(indexPath.row + 1)节课: " + keBiaoInfo.syllabus_name!
-//            return cell
-//        }
-//        if indexPath.section == 3{
-//            let keBiaoInfo = keBiaoSource.objectlist[indexPath.row + 8]
-//            
-//            cell.textLabel?.text = "第\(indexPath.row + 1)节课: " + keBiaoInfo.syllabus_name!
-//            return cell
-//        }
-//        if indexPath.section == 4{
-//            let keBiaoInfo = keBiaoSource.objectlist[indexPath.row + 11]
-//            
-//            cell.textLabel?.text = "第\(indexPath.row + 1)节课: " + keBiaoInfo.syllabus_name!
-//            return cell
-//        }
-        cell.textLabel?.text = "周 " + keBiaoInfo.syllabus_date! + " 第 " + keBiaoInfo.syllabus_no! + " 节课: " + keBiaoInfo.syllabus_name!
+
+        if indexPath.section == 0{
+            let keBiaoInfo = zhouyi[indexPath.row]
+
+            cell.textLabel?.text = "第\(indexPath.row + 1)节课: " + keBiaoInfo.syllabus_name!
+            return cell
+        }
+        if indexPath.section == 1{
+            let keBiaoInfo = zhouer[indexPath.row]
+            
+            cell.textLabel?.text = "第\(indexPath.row + 1)节课: " + keBiaoInfo.syllabus_name!
+            return cell
+        }
+        if indexPath.section == 2{
+            let keBiaoInfo = zhousan[indexPath.row]
+            
+            cell.textLabel?.text = "第\(indexPath.row + 1)节课: " + keBiaoInfo.syllabus_name!
+            return cell
+        }
+        if indexPath.section == 3{
+            let keBiaoInfo = zhousi[indexPath.row]
+            
+            cell.textLabel?.text = "第\(indexPath.row + 1)节课: " + keBiaoInfo.syllabus_name!
+            return cell
+        }
+        if indexPath.section == 4{
+            let keBiaoInfo = zhouwu[indexPath.row]
+            
+            cell.textLabel?.text = "第\(indexPath.row + 1)节课: " + keBiaoInfo.syllabus_name!
+            return cell
+        }
+    
 
         return cell
     }
@@ -168,52 +201,52 @@ class BBKeTangViewController: UIViewController,UITableViewDataSource,UITableView
             let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
             let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
             label.font = UIFont.systemFontOfSize(12)
-            label.text = "课程表"
+            label.text = "星期一"
             label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
             view.addSubview(label)
             view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
             return view
         }
-//        if(section == 1){
-//            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
-//            let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
-//            label.font = UIFont.systemFontOfSize(12)
-//            label.text = "星期二"
-//            label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
-//            view.addSubview(label)
-//            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
-//            return view
-//        }
-//        if(section == 2){
-//            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
-//            let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
-//            label.font = UIFont.systemFontOfSize(12)
-//            label.text = "星期三"
-//            label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
-//            view.addSubview(label)
-//            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
-//            return view
-//        }
-//        if(section == 3){
-//            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
-//            let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
-//            label.font = UIFont.systemFontOfSize(12)
-//            label.text = "星期四"
-//            label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
-//            view.addSubview(label)
-//            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
-//            return view
-//        }
-//        if(section == 4){
-//            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
-//            let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
-//            label.font = UIFont.systemFontOfSize(12)
-//            label.text = "星期五"
-//            label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
-//            view.addSubview(label)
-//            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
-//            return view
-//        }
+        if(section == 1){
+            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
+            let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
+            label.font = UIFont.systemFontOfSize(12)
+            label.text = "星期二"
+            label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
+            view.addSubview(label)
+            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+            return view
+        }
+        if(section == 2){
+            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
+            let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
+            label.font = UIFont.systemFontOfSize(12)
+            label.text = "星期三"
+            label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
+            view.addSubview(label)
+            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+            return view
+        }
+        if(section == 3){
+            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
+            let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
+            label.font = UIFont.systemFontOfSize(12)
+            label.text = "星期四"
+            label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
+            view.addSubview(label)
+            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+            return view
+        }
+        if(section == 4){
+            let view = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
+            let label = UILabel(frame: CGRectMake(5, 1, tableView.frame.size.width, 18))
+            label.font = UIFont.systemFontOfSize(12)
+            label.text = "星期五"
+            label.textColor = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
+            view.addSubview(label)
+            view.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+            return view
+        }
         return UIView(frame: CGRectZero)
     }
     
