@@ -245,6 +245,9 @@
 		EAFAE7331C82E52B00A8BAF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE7311C82E52B00A8BAF2 /* Main.storyboard */; };
 		EAFAE7391C82E56800A8BAF2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE7381C82E56800A8BAF2 /* Podfile */; };
 		F66292FC1CB9E7CC0022EEC3 /* PlanList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66292FB1CB9E7CC0022EEC3 /* PlanList.swift */; };
+		F66292FF1CB9F29F0022EEC3 /* YuErListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66292FE1CB9F29F0022EEC3 /* YuErListTableViewController.swift */; };
+		F66293011CB9F2CF0022EEC3 /* YuErInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66293001CB9F2CF0022EEC3 /* YuErInfoViewController.swift */; };
+		F66293031CB9F4230022EEC3 /* YuErList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66293021CB9F4230022EEC3 /* YuErList.swift */; };
 		F6879A121CB75059009C06FC /* EditPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6879A111CB75059009C06FC /* EditPhoneViewController.swift */; };
 		F6F4C5401CB4A91900D4B6D9 /* EditOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C53E1CB4A91900D4B6D9 /* EditOtherViewController.swift */; };
 		F6F4C5411CB4A91900D4B6D9 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C53F1CB4A91900D4B6D9 /* EditTableViewController.swift */; };
@@ -503,6 +506,9 @@
 		EAFAE7341C82E55400A8BAF2 /* WXT_Teacher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WXT_Teacher-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		EAFAE7381C82E56800A8BAF2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F66292FB1CB9E7CC0022EEC3 /* PlanList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanList.swift; sourceTree = "<group>"; };
+		F66292FE1CB9F29F0022EEC3 /* YuErListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YuErListTableViewController.swift; sourceTree = "<group>"; };
+		F66293001CB9F2CF0022EEC3 /* YuErInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YuErInfoViewController.swift; sourceTree = "<group>"; };
+		F66293021CB9F4230022EEC3 /* YuErList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YuErList.swift; sourceTree = "<group>"; };
 		F6879A111CB75059009C06FC /* EditPhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPhoneViewController.swift; sourceTree = "<group>"; };
 		F6F4C53E1CB4A91900D4B6D9 /* EditOtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditOtherViewController.swift; sourceTree = "<group>"; };
 		F6F4C53F1CB4A91900D4B6D9 /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
@@ -696,6 +702,7 @@
 		EA61C6DF1C9FD25E0073E9CA /* School */ = {
 			isa = PBXGroup;
 			children = (
+				F66292FD1CB9F2530022EEC3 /* YuEr */,
 				EAF8F55C1CAA6A8400AED18B /* TongGao */,
 				EA9E16141CA6685500BF479E /* Teacher */,
 				EAF2D4941CA6298200523B37 /* XinWen */,
@@ -943,6 +950,7 @@
 				1876F0261CB6440C00425BA9 /* GongGaoList.swift */,
 				18A848EE1CB757AD00A9D123 /* KeChengList.swift */,
 				F66292FB1CB9E7CC0022EEC3 /* PlanList.swift */,
+				F66293021CB9F4230022EEC3 /* YuErList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1432,6 +1440,15 @@
 			path = Jsonjoy;
 			sourceTree = "<group>";
 		};
+		F66292FD1CB9F2530022EEC3 /* YuEr */ = {
+			isa = PBXGroup;
+			children = (
+				F66292FE1CB9F29F0022EEC3 /* YuErListTableViewController.swift */,
+				F66293001CB9F2CF0022EEC3 /* YuErInfoViewController.swift */,
+			);
+			name = YuEr;
+			sourceTree = "<group>";
+		};
 		F6F4C5421CB4A92400D4B6D9 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1640,6 +1657,7 @@
 				EAFAE6DE1C82E50900A8BAF2 /* ConstraintRelation.swift in Sources */,
 				EA43502F1C93F51F0040F56D /* BanJiKeJianViewController.swift in Sources */,
 				EAFAE6AD1C82E50900A8BAF2 /* FunctionViewController.swift in Sources */,
+				F66292FF1CB9F29F0022EEC3 /* YuErListTableViewController.swift in Sources */,
 				EAFAE7261C82E50900A8BAF2 /* CollectionView.swift in Sources */,
 				EAFAE6F21C82E50900A8BAF2 /* NSFileManager+Haneke.swift in Sources */,
 				EA5DC6DA1C9A3D4600A0641B /* RMDownloadIndicator.swift in Sources */,
@@ -1732,6 +1750,7 @@
 				EAD5D45B1C93A2D900013E10 /* TeacherDianPingViewController.swift in Sources */,
 				EAFAE6D91C82E50900A8BAF2 /* Constraint.swift in Sources */,
 				EAFAE72E1C82E50900A8BAF2 /* Url.swift in Sources */,
+				F66293011CB9F2CF0022EEC3 /* YuErInfoViewController.swift in Sources */,
 				EA2D401E1CABAE2D000DEAF6 /* TiXingJiaZhangViewController.swift in Sources */,
 				18B3690E1CB5F002007DC602 /* ParadiseShowViewController.swift in Sources */,
 				18B3690C1CB5EFED007DC602 /* ParadiseViewController.swift in Sources */,
@@ -1799,6 +1818,7 @@
 				EAFAE6E41C82E50900A8BAF2 /* View+SnapKit.swift in Sources */,
 				EACF4D9C1C8E794300C777D6 /* ChangePassViewController.swift in Sources */,
 				EAFAE6A41C82E50900A8BAF2 /* BlogViewController.swift in Sources */,
+				F66293031CB9F4230022EEC3 /* YuErList.swift in Sources */,
 				EAFAE7271C82E50900A8BAF2 /* ItemCell.swift in Sources */,
 				EAC2008C1C9D332700A6A613 /* DingzhuViewController.swift in Sources */,
 				EAB2EECF1C8FAE5500693D04 /* DaiJieViewController.swift in Sources */,

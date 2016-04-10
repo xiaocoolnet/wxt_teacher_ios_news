@@ -8,7 +8,8 @@
 
 import UIKit
 import ImageSlideshow
-
+import Alamofire
+import MBProgressHUD
 class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     let schoolTableView = UITableView()
     let scrollImageView = ImageSlideshow()
@@ -30,8 +31,68 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
     let xwdtLabel2 = UILabel()
     let teacherPic1 = UIImageView()
     let contentText1 = UILabel()
+    let yedt = UIImageView()
+    let yedtLabel1 = UILabel()
+    let yedtLabel2 = UILabel()
+    let teacherPic2 = UIImageView()
+    let contentText2 = UILabel()
+    var yuErList = YuErList()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //加载数据
+        loadData()
+        //加载视图
+        loadSubviews()
+        
+        
+        
+    }
+    
+    //MARK: - 加载数据
+    func loadData() -> Void {
+        
+        getYuErData()
+        
+    }
+    //获取育儿知识
+    func getYuErData() -> Void {
+        let url = apiUrl+"ParentingKnowledge"
+        let schoolid = 1
+        
+        let param = [
+            "schoolid":schoolid
+        ]
+        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                print("request是")
+                print(request!)
+                print("====================")
+                let status = Http(JSONDecoder(json!))
+                print("状态是")
+                print(status.status)
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                    print("0")
+                }
+                if(status.status == "success"){
+                    print(status.data)
+                    self.yuErList = YuErList(status.data!)
+                    self.schoolTableView.reloadData()
+                    self.schoolTableView.headerView?.endRefreshing()
+                }
+            }
+        }
+
+    }
+    //MARK: - 加载视图
+    func loadSubviews() -> Void {
         self.title = "学校官网"
         self.schoolTableView.frame = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
         self.automaticallyAdjustsScrollViewInsets = false
@@ -42,6 +103,7 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
         self.tabBarController?.tabBar.hidden = true
         self.view.addSubview(self.schoolTableView)
     }
+    
     
     func ScrollViewImage(){
         scrollImageView.slideshowInterval = 5.0
@@ -72,6 +134,13 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
             }
             return 95
         }
+        if indexPath.section == 3{
+            if indexPath.row == 0{
+                return 30
+            }
+            return 95
+        }
+
         return 0
     }
     
@@ -80,7 +149,7 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -204,6 +273,39 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
                 return cell
             }
         }
+        if indexPath.section == 3{
+            if indexPath.row == 0{
+                cell.accessoryType = .DisclosureIndicator
+                self.yedt.frame = CGRectMake(10, 7, 15, 17)
+                self.yedt.image = UIImage(named: "学校官网_07")
+                self.yedtLabel1.frame = CGRectMake(36, 9, 59, 13)
+                self.yedtLabel1.font = UIFont.systemFontOfSize(14)
+                self.yedtLabel1.text = "育儿知识"
+                self.yedtLabel2.frame = CGRectMake(self.view.bounds.width - 55, 8, 28, 14)
+                self.yedtLabel2.text = "更多"
+                self.yedtLabel2.font = UIFont.systemFontOfSize(14)
+                self.yedtLabel2.textColor = UIColor.grayColor()
+                cell.contentView.addSubview(self.yedtLabel1)
+                cell.contentView.addSubview(self.yedtLabel2)
+                cell.contentView.addSubview(self.yedt)
+                return cell
+            }
+            if indexPath.row == 1{
+                self.teacherPic2.frame = CGRectMake(5, 5, 80, 80)
+                self.teacherPic2.image = UIImage(named: "teacherPic")
+                cell.contentView.addSubview(self.teacherPic2)
+                self.contentText2.frame = CGRectMake(88, 5, self.view.bounds.width - 90, 80)
+                self.contentText1.numberOfLines = 0
+                if self.yuErList.objectlist.count>0 {
+                    self.contentText2.text = self.yuErList.objectlist[0].happy_title
+                }
+                
+                self.contentText2.font = UIFont.systemFontOfSize(15)
+                cell.contentView.addSubview(self.contentText2)
+                return cell
+            }
+        }
+
         return cell
     }
     
@@ -228,6 +330,19 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
                 self.navigationController?.pushViewController(tonggaoinfo, animated: true)
             }
         }
+        if indexPath.section == 3{
+            if indexPath.row == 0{
+                let yuErList = YuErListTableViewController()
+                yuErList.yuErList = self.yuErList
+                self.navigationController?.pushViewController(yuErList, animated: true)
+            }
+            if indexPath.row == 1{
+                let yuErInfo = YuErInfoViewController()
+                yuErInfo.yuErInfo = self.yuErList.objectlist.first!
+                self.navigationController?.pushViewController(yuErInfo, animated: true)
+            }
+        }
+
     }
     
     func yuanquJieShao(){
