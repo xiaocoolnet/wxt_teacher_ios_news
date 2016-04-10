@@ -244,6 +244,7 @@
 		EAFAE7321C82E52B00A8BAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE7301C82E52B00A8BAF2 /* Assets.xcassets */; };
 		EAFAE7331C82E52B00A8BAF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE7311C82E52B00A8BAF2 /* Main.storyboard */; };
 		EAFAE7391C82E56800A8BAF2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EAFAE7381C82E56800A8BAF2 /* Podfile */; };
+		F66292FC1CB9E7CC0022EEC3 /* PlanList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66292FB1CB9E7CC0022EEC3 /* PlanList.swift */; };
 		F6879A121CB75059009C06FC /* EditPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6879A111CB75059009C06FC /* EditPhoneViewController.swift */; };
 		F6F4C5401CB4A91900D4B6D9 /* EditOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C53E1CB4A91900D4B6D9 /* EditOtherViewController.swift */; };
 		F6F4C5411CB4A91900D4B6D9 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4C53F1CB4A91900D4B6D9 /* EditTableViewController.swift */; };
@@ -501,6 +502,7 @@
 		EAFAE7311C82E52B00A8BAF2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EAFAE7341C82E55400A8BAF2 /* WXT_Teacher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WXT_Teacher-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		EAFAE7381C82E56800A8BAF2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F66292FB1CB9E7CC0022EEC3 /* PlanList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanList.swift; sourceTree = "<group>"; };
 		F6879A111CB75059009C06FC /* EditPhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPhoneViewController.swift; sourceTree = "<group>"; };
 		F6F4C53E1CB4A91900D4B6D9 /* EditOtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditOtherViewController.swift; sourceTree = "<group>"; };
 		F6F4C53F1CB4A91900D4B6D9 /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
@@ -940,6 +942,7 @@
 				18B369161CB5F2DA007DC602 /* HuoDongList.swift */,
 				1876F0261CB6440C00425BA9 /* GongGaoList.swift */,
 				18A848EE1CB757AD00A9D123 /* KeChengList.swift */,
+				F66292FB1CB9E7CC0022EEC3 /* PlanList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1599,6 +1602,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66292FC1CB9E7CC0022EEC3 /* PlanList.swift in Sources */,
 				EAFAE6FC1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				EAFAE7241C82E50900A8BAF2 /* PhotoBrowser+Model.swift in Sources */,
 				EAA2CDF71CACB37800766CCB /* KeJianInfoViewController.swift in Sources */,

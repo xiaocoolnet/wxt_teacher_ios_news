@@ -11,6 +11,7 @@ import MBProgressHUD
 
 class EditZhouPlanViewController: UIViewController {
 
+    var plan = planInfo()
     let contentTextView = BRPlaceholderTextView()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,7 @@ class EditZhouPlanViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = rightItem
         self.contentTextView.frame = CGRectMake(8, 5, self.view.bounds.width - 16, 200)
         self.contentTextView.font = UIFont.systemFontOfSize(17)
-        self.contentTextView.text = "计划详情计划详情计划详情计划详情计划详情计划详情计划详情计划详情计划详情计划详情计划详情计划详情计划详情计划详情计划详情"
+        self.contentTextView.text = self.plan.plan_content
         self.contentTextView.addMaxTextLengthWithMaxLength(200) { (contentTextView) -> Void in
             let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
             hud.mode = MBProgressHUDMode.Text
