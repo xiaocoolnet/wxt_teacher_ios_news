@@ -33,32 +33,45 @@ class ContactList: JSONJoy {
 }
 class ContactsInfo: JSONJoy{
     var classname:String?
-    //    var objectlist: [TeachersInfo]
-    //    var count: Int{
-    //        return self.objectlist.count
-    //    }
-    init() {
-        //objectlist = Array<TeachersInfo>()
+    var teacherlist: [TeacherInfo]
+    var schoolname:String?
+    var schoolid:String?
+    var classid:String?
+    
+    var count: Int{
+        return self.teacherlist.count
     }
+    
+    init() {
+        teacherlist = Array<TeacherInfo>()
+    }
+    
     required init(_ decoder: JSONDecoder){
         classname = decoder["classname"].string
-        print("输出数据:\(classname)")
-        //        objectlist = Array<TeachersInfo>()
-        //        for childs: JSONDecoder in decoder.array!{
-        //            objectlist.append(TeachersInfo(childs))
-        //        }
+        schoolname = decoder["schoolname"].string
+        schoolid = decoder["schoolid"].string
+        classid = decoder["classid"].string
+        teacherlist = Array<TeacherInfo>()
+        for teacher: JSONDecoder in decoder["teacherinfo"].array!{
+            teacherlist.append(TeacherInfo(teacher))
+        }
+    }
+    func append(list: [TeacherInfo]){
+        self.teacherlist = list + self.teacherlist
     }
     
 }
-//class TeachersInfo: JSONJoy{
-//    var name:String?
-//
-//    init() {
-//
-//    }
-//    required init(_ decoder: JSONDecoder){
-//        name = decoder["name"].string
-//        print("输出数据:\(name)")
-//    }
-//
-//}
+class TeacherInfo: JSONJoy{
+    var name:String?
+    var id: String?
+    var phone: String?
+    init() {
+
+    }
+    required init(_ decoder: JSONDecoder){
+        name = decoder["name"].string
+        id = decoder["id"].string
+        phone = decoder["phone"].string
+    }
+
+}

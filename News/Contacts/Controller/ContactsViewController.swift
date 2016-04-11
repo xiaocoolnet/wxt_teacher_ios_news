@@ -19,8 +19,8 @@ class ContactsViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = rightItem
         self.navigationItem.leftBarButtonItem = leftItem
         let jiaZhangView = JiaZhangViewController()
-        let yuanDingView = YuanDingViewController()
-        let qunLiaoView = QunLiaoViewController()
+        let yuanDingView = JiaZhangViewController()
+        let qunLiaoView = JiaZhangViewController()
         jiaZhangView.title = "家长"
         yuanDingView.title = "园丁"
         qunLiaoView.title = "群聊"
