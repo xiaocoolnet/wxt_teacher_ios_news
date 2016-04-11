@@ -36,7 +36,11 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
     let yedtLabel2 = UILabel()
     let teacherPic2 = UIImageView()
     let contentText2 = UILabel()
+    
     var yuErList = YuErList()
+    
+    var gongGaoList = GongGaoList()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,16 +49,48 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
         //加载视图
         loadSubviews()
         
-        
-        
     }
     
     //MARK: - 加载数据
     func loadData() -> Void {
         
         getYuErData()
+        GongGaoDate()
         
     }
+    //获取院所公告
+    func GongGaoDate(){
+        let url = apiUrl+"SchoolNotice"
+        
+        let param = [
+            "schoolid":1
+        ]
+        Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                print("request是")
+                print(request!)
+                print("====================")
+                let status = Http(JSONDecoder(json!))
+                print("状态是")
+                print(status.status)
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                }
+                if(status.status == "success"){
+                    self.gongGaoList = GongGaoList(status.data!)
+                    self.schoolTableView.reloadData()
+                    self.schoolTableView.headerView?.endRefreshing()
+                }
+            }
+        }
+    }
+
     //获取育儿知识
     func getYuErData() -> Void {
         let url = apiUrl+"ParentingKnowledge"
@@ -267,7 +303,10 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
                 cell.contentView.addSubview(self.teacherPic1)
                 self.contentText1.frame = CGRectMake(88, 5, self.view.bounds.width - 90, 80)
                 self.contentText1.numberOfLines = 0
-                self.contentText1.text = "通知内容通知内容通知内容"
+                if self.gongGaoList.objectlist.count>0 {
+                    self.contentText1.text = self.gongGaoList.objectlist[0].notice_title
+
+                }
                 self.contentText1.font = UIFont.systemFontOfSize(15)
                 cell.contentView.addSubview(self.contentText1)
                 return cell
@@ -328,6 +367,13 @@ class SchoolViewController: UIViewController,UITableViewDelegate,UITableViewData
             if indexPath.row == 1{
                 let tonggaoinfo = TongGaoInfoViewController()
                 self.navigationController?.pushViewController(tonggaoinfo, animated: true)
+                
+                let dataInfo = gongGaoList.objectlist[0]
+
+                tonggaoinfo.contentLabel.text = dataInfo.notice_content
+                tonggaoinfo.nameLabel.text = "教师：" + dataInfo.releasename!
+                tonggaoinfo.timeLabel.text = "时间：" + dataInfo.notice_time!
+                tonggaoinfo.noticeTitle.text = dataInfo.notice_title
             }
         }
         if indexPath.section == 3{
