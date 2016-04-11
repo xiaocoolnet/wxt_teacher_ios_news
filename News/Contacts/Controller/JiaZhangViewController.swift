@@ -146,7 +146,7 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
     }
     //加载子类行的数据
     func tableView(tableView: UITableView, cellForSubRowAtIndexPath indexPath: FlexibleIndexPath) -> UITableViewCell {
-<<<<<<< HEAD
+
     
         var cell = tableView.dequeueReusableCellWithIdentifier("ContactsCell", forIndexPath: indexPath.ns) as? ContactsTableViewCell
      
@@ -156,30 +156,15 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
         if self.contactSource?.count>0 {
 //            print("indexpath.row=\(indexPath.row)")
             cell!.nameLabel.text = self.contactSource?.objectlist[indexPath.row].teacherlist[indexPath.subRow-1].name
-=======
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("ContactsCell", forIndexPath: indexPath.ns) as! ContactsTableViewCell
-        
-        if self.contactSource?.count>0 {
-            //            print("indexpath.row=\(indexPath.row)")
-            cell.nameLabel.text = self.contactSource?.objectlist[indexPath.row].teacherlist[indexPath.subRow-1].name
->>>>>>> origin/master
         }
+        
         cell?.phoneBtn.tag = Int((self.contactSource?.objectlist[indexPath.row].teacherlist[indexPath.subRow-1].phone)!)!
         cell?.phoneBtn.addTarget(self, action: Selector("phone:"), forControlEvents: UIControlEvents.TouchUpInside)
-     
+    
         return cell!
     }
     
-    func tableView(tableView: FlexibleTableView, didSelectSubRowAtIndexPath indexPath: FlexibleIndexPath) {
         
-<<<<<<< HEAD
-=======
-        
-        return cell
->>>>>>> origin/master
-    }
-    
     func tableView(tableView: FlexibleTableView, didSelectSubRowAtIndexPath indexPath: FlexibleIndexPath) {
         
     }
