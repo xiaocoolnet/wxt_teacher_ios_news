@@ -141,33 +141,29 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
             cell.textLabel?.text = self.contactSource?.objectlist[indexPath.row].classname
             
         }
-        
+    
         return cell
     }
     //加载子类行的数据
     func tableView(tableView: UITableView, cellForSubRowAtIndexPath indexPath: FlexibleIndexPath) -> UITableViewCell {
-        let duanxinBtn = UIButton()
-        let ipBtn = UIButton()
-        let phoneBtn = UIButton()
-        let cell = tableView.dequeueReusableCellWithIdentifier("ContactsCell", forIndexPath: indexPath.ns) as! ContactsTableViewCell
-        duanxinBtn.frame = CGRectMake(0, 26, 17, 17)
-        duanxinBtn.frame.origin.x = self.view.bounds.width - 72
-        ipBtn.frame = CGRectMake(0, 26, 17, 17)
-        ipBtn.frame.origin.x = self.view.bounds.width - 50
-        phoneBtn.frame = CGRectMake(0, 26, 17, 17)
-        phoneBtn.frame.origin.x = self.view.bounds.width - 30
-        duanxinBtn.setImage(UIImage(named: "发消息"), forState: .Normal)
-        ipBtn.setImage(UIImage(named: "电话"), forState: .Normal)
-        phoneBtn.setImage(UIImage(named: "电话2"), forState: .Normal)
+    
+        var cell = tableView.dequeueReusableCellWithIdentifier("ContactsCell", forIndexPath: indexPath.ns) as? ContactsTableViewCell
+     
+        if cell==nil {
+            cell = ContactsTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "ContactsCell")
+        }
         if self.contactSource?.count>0 {
 //            print("indexpath.row=\(indexPath.row)")
-            cell.nameLabel.text = self.contactSource?.objectlist[indexPath.row].teacherlist[indexPath.subRow-1].name
+            cell!.nameLabel.text = self.contactSource?.objectlist[indexPath.row].teacherlist[indexPath.subRow-1].name
         }
+        cell?.phoneBtn.tag = Int((self.contactSource?.objectlist[indexPath.row].teacherlist[indexPath.subRow-1].phone)!)!
+        cell?.phoneBtn.addTarget(self, action: Selector("phone:"), forControlEvents: UIControlEvents.TouchUpInside)
+     
+        return cell!
+    }
+    
+    func tableView(tableView: FlexibleTableView, didSelectSubRowAtIndexPath indexPath: FlexibleIndexPath) {
         
-        cell.contentView.addSubview(duanxinBtn)
-        cell.contentView.addSubview(ipBtn)
-        cell.contentView.addSubview(phoneBtn)
-        return cell
     }
     
     func collapseSubrows() {
@@ -179,7 +175,16 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
     }
     
     
-    
+    //MARK: - 点击事件
+    func phone(button:UIButton) -> Void {
+        print("dianhua")
+        let tel = String(button.tag)
+        print(tel)
+        let url = NSURL(string: "tel://"+tel)
+        UIApplication.sharedApplication().openURL(url!)
+        
+        
+    }
     
     /*
      // MARK: - Navigation
