@@ -159,7 +159,7 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
         }
         
         cell?.phoneBtn.tag = Int((self.contactSource?.objectlist[indexPath.row].teacherlist[indexPath.subRow-1].phone)!)!
-        cell?.phoneBtn.addTarget(self, action: Selector("phone:"), forControlEvents: UIControlEvents.TouchUpInside)
+        cell?.phoneBtn.addTarget(self, action: #selector(JiaZhangViewController.phone(_:)), forControlEvents: UIControlEvents.TouchUpInside)
     
         return cell!
     }
