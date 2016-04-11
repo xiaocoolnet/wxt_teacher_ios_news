@@ -48,7 +48,6 @@ class QunLiaoViewController: UIViewController,FlexibleTableViewDelegate {
         default:
             return 12
         }
-        return 0
     }
 //    每一父类行的标题是什么
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

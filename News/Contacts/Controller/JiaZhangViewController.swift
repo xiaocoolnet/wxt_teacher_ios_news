@@ -33,10 +33,10 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
     
     func GetDate(){
         let url = apiUrl+"MessageAddress"
-        let userid = NSUserDefaults.standardUserDefaults()
-        let uid = userid.stringForKey("userid")
+        let userid = 597
+//        let uid = userid.stringForKey("userid")
         let param = [
-            "userid":uid!
+            "userid":userid
         ]
         
         Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
@@ -78,7 +78,7 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
     }
     //一组几个父类行
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 2
     }
     //默认的哪一行展开
     func tableView(tableView: UITableView, shouldExpandSubRowsOfCellAtIndexPath indexPath: NSIndexPath) -> Bool
@@ -98,12 +98,6 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
         if(indexPath.row == 1){
             return 3
         }
-        if(indexPath.row == 2){
-            return 6
-        }
-        if(indexPath.row == 3){
-            return 12
-        }
         return 0
     }
     
@@ -116,12 +110,6 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
         }
         if(indexPath.row == 1){
             cell.textLabel?.text = "幼儿三班"
-        }
-        if(indexPath.row == 2){
-            cell.textLabel?.text = "星星班"
-        }
-        if(indexPath.row == 3){
-            cell.textLabel?.text = "大班一班"
         }
         
         return cell
