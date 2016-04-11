@@ -111,9 +111,11 @@ class BanJihuodongViewController: UIViewController,UITableViewDelegate,UITableVi
         let data = NSData(contentsOfURL: url!)
         //通过数据流初始化图片
         let newImage = UIImage(data: data!)
-        
+
         cell.imageView?.frame = CGRectMake(15, 15, 70, 70)
         cell.imageView?.image = newImage
+        
+        
         cell.imageView?.layer.cornerRadius = 20
         cell.imageView?.layer.masksToBounds = true
         cell.textLabel?.text = huoDongInfo.activity_title

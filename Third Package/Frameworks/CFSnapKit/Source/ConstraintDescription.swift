@@ -22,9 +22,9 @@
 //  THE SOFTWARE.
 
 #if os(iOS) || os(tvOS)
-import UIKit
+    import UIKit
 #else
-import AppKit
+    import AppKit
 #endif
 
 public protocol RelationTarget {
@@ -109,7 +109,7 @@ extension ConstraintItem: RelationTarget {
 }
 
 /**
-    Used to expose the final API of a `ConstraintDescription` which allows getting a constraint from it
+ Used to expose the final API of a `ConstraintDescription` which allows getting a constraint from it
  */
 public class ConstraintDescriptionFinalizable {
     
@@ -125,7 +125,7 @@ public class ConstraintDescriptionFinalizable {
 }
 
 /**
-    Used to expose priority APIs
+ Used to expose priority APIs
  */
 public class ConstraintDescriptionPriortizable: ConstraintDescriptionFinalizable {
     
@@ -148,10 +148,10 @@ public class ConstraintDescriptionPriortizable: ConstraintDescriptionFinalizable
 }
 
 /**
-    Used to expose multiplier & constant APIs
-*/
+ Used to expose multiplier & constant APIs
+ */
 public class ConstraintDescriptionEditable: ConstraintDescriptionPriortizable {
-
+    
     public func multipliedBy(amount: FloatConvertible) -> ConstraintDescriptionEditable {
         return ConstraintDescriptionEditable(self.backing.multipliedBy(amount))
     }
@@ -182,10 +182,10 @@ public class ConstraintDescriptionEditable: ConstraintDescriptionPriortizable {
 }
 
 /**
-    Used to expose relation APIs
-*/
+ Used to expose relation APIs
+ */
 public class ConstraintDescriptionRelatable {
-
+    
     private let backing: ConstraintDescription
     
     init(_ backing: ConstraintDescription) {
@@ -221,8 +221,8 @@ public class ConstraintDescriptionRelatable {
 }
 
 /**
-    Used to expose chaining APIs
-*/
+ Used to expose chaining APIs
+ */
 public class ConstraintDescriptionExtendable: ConstraintDescriptionRelatable {
     
     public var left: ConstraintDescriptionExtendable {
@@ -298,7 +298,7 @@ public class ConstraintDescriptionExtendable: ConstraintDescriptionRelatable {
 }
 
 /**
-    Used to internally manage building constraint
+ Used to internally manage building constraint
  */
 internal class ConstraintDescription {
     
@@ -399,9 +399,9 @@ internal class ConstraintDescription {
     }
     private func priorityMedium() -> ConstraintDescription {
         #if os(iOS) || os(tvOS)
-        return self.priority(500.0)
+            return self.priority(500.0)
         #else
-        return self.priority(501.0)
+            return self.priority(501.0)
         #endif
     }
     private func priorityLow() -> ConstraintDescription {

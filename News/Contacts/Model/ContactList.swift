@@ -66,12 +66,12 @@ class TeacherInfo: JSONJoy{
     var id: String?
     var phone: String?
     init() {
-
+        
     }
     required init(_ decoder: JSONDecoder){
         name = decoder["name"].string
         id = decoder["id"].string
         phone = decoder["phone"].string
     }
-
+    
 }

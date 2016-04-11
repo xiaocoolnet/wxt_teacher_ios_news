@@ -69,10 +69,10 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
                     print(self.contactSource?.count)
                     for ob in (self.contactSource?.objectlist)!{
                         self.subRows.append(ob.teacherlist.count)
-                    
+                        
                     }
                     print(self.subRows)
-
+                    
                 }
             }
         }
@@ -93,7 +93,7 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
         self.tableView.headerView?.beginRefreshing()
     }
     
-  
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -115,10 +115,10 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
     //默认的哪一行展开(self.contactSource?.count)!
     func tableView(tableView: UITableView, shouldExpandSubRowsOfCellAtIndexPath indexPath: NSIndexPath) -> Bool
     {
-//        if (indexPath.section == 0 && indexPath.row == 0){
-//            return true
-//        }
-//        print("indexpath.row=\(indexPath.row)")
+        //        if (indexPath.section == 0 && indexPath.row == 0){
+        //            return true
+        //        }
+        //        print("indexpath.row=\(indexPath.row)")
         return false
     }
     //哪一行里面有多少子类行
@@ -129,7 +129,7 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
             print(self.contactSource?.objectlist[indexPath.row].count)
             return (self.contactSource?.objectlist[indexPath.row].count)!
         }
-    
+        
         return 0
     }
     
@@ -146,6 +146,7 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
     }
     //加载子类行的数据
     func tableView(tableView: UITableView, cellForSubRowAtIndexPath indexPath: FlexibleIndexPath) -> UITableViewCell {
+<<<<<<< HEAD
     
         var cell = tableView.dequeueReusableCellWithIdentifier("ContactsCell", forIndexPath: indexPath.ns) as? ContactsTableViewCell
      
@@ -155,11 +156,28 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
         if self.contactSource?.count>0 {
 //            print("indexpath.row=\(indexPath.row)")
             cell!.nameLabel.text = self.contactSource?.objectlist[indexPath.row].teacherlist[indexPath.subRow-1].name
+=======
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("ContactsCell", forIndexPath: indexPath.ns) as! ContactsTableViewCell
+        
+        if self.contactSource?.count>0 {
+            //            print("indexpath.row=\(indexPath.row)")
+            cell.nameLabel.text = self.contactSource?.objectlist[indexPath.row].teacherlist[indexPath.subRow-1].name
+>>>>>>> origin/master
         }
         cell?.phoneBtn.tag = Int((self.contactSource?.objectlist[indexPath.row].teacherlist[indexPath.subRow-1].phone)!)!
         cell?.phoneBtn.addTarget(self, action: Selector("phone:"), forControlEvents: UIControlEvents.TouchUpInside)
      
         return cell!
+    }
+    
+    func tableView(tableView: FlexibleTableView, didSelectSubRowAtIndexPath indexPath: FlexibleIndexPath) {
+        
+<<<<<<< HEAD
+=======
+        
+        return cell
+>>>>>>> origin/master
     }
     
     func tableView(tableView: FlexibleTableView, didSelectSubRowAtIndexPath indexPath: FlexibleIndexPath) {

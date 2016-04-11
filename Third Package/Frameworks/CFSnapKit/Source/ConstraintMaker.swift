@@ -22,14 +22,14 @@
 //  THE SOFTWARE.
 
 #if os(iOS) || os(tvOS)
-import UIKit
+    import UIKit
 #else
-import AppKit
+    import AppKit
 #endif
 
 /**
-    Used to make constraints
-*/
+ Used to make constraints
+ */
 public class ConstraintMaker {
     
     /// left edge

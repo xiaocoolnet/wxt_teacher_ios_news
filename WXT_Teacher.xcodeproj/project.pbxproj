@@ -1943,6 +1943,36 @@
 				INFOPLIST_FILE = WXT_Teacher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"BSGridCollectionViewLayout\"",
+					"-framework",
+					"\"BSImagePicker\"",
+					"-framework",
+					"\"FlexibleTableView\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"ImageSlideshow\"",
+					"-framework",
+					"\"JGProgressHUD\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"PagingMenuController\"",
+					"-framework",
+					"\"UIImageViewModeScaleAspect\"",
+					"-framework",
+					"\"XWSwiftRefresh\"",
+					"-framework",
+					"\"YYWebImage\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = xiaocool.cn.wxtteacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1962,6 +1992,36 @@
 				INFOPLIST_FILE = WXT_Teacher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"BSGridCollectionViewLayout\"",
+					"-framework",
+					"\"BSImagePicker\"",
+					"-framework",
+					"\"FlexibleTableView\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"ImageSlideshow\"",
+					"-framework",
+					"\"JGProgressHUD\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"PagingMenuController\"",
+					"-framework",
+					"\"UIImageViewModeScaleAspect\"",
+					"-framework",
+					"\"XWSwiftRefresh\"",
+					"-framework",
+					"\"YYWebImage\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = xiaocool.cn.wxtteacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
