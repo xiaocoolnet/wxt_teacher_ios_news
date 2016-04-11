@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-/** 
- *  You must add -DSNAPKIT_DEPLOYMENT_LEGACY to your OTHER_SWIFT_FLAGS in your targets Build Settings. 
+/**
+ *  You must add -DSNAPKIT_DEPLOYMENT_LEGACY to your OTHER_SWIFT_FLAGS in your targets Build Settings.
  */
 
 extension UIView {
@@ -19,7 +19,7 @@ extension UIView {
     func make_4Inset(inset: UIEdgeInsets){
         
         if self.superview == nil {return}
-            
+        
         self.snp_makeConstraints{ (make) -> Void in
             make.edges.equalTo(self.superview!).inset(inset)
         }
@@ -92,7 +92,7 @@ extension UIView {
         }
     }
     
-
+    
     /**  左上角 + 宽度 + 高度  */
     func make_leftTop_WH(top top: CGFloat, left: CGFloat, leftWidth: CGFloat, topHeight: CGFloat){
         
@@ -108,7 +108,7 @@ extension UIView {
             make.height.equalTo(topHeight)
         }
     }
-
+    
     
     /**  右上角 + 宽度 + 高度  */
     func make_rightTop_WH(top top: CFloat, right: CGFloat, rightWidth: CGFloat, topHeight: CGFloat){
@@ -125,7 +125,7 @@ extension UIView {
             make.height.equalTo(topHeight)
         }
     }
-
+    
     
     /**  左下角 + 宽度 + 高度  */
     func make_leftBottom_WH(left left: CGFloat, bottom: CGFloat, leftWidth: CGFloat, bottomHeight: CGFloat){
@@ -143,7 +143,7 @@ extension UIView {
         }
     }
     
-
+    
     /**  右下角 + 宽度 + 高度  */
     func make_rightBottom(bottom bottom: CGFloat, right: CGFloat, rightWidth: CGFloat, bottomHeight: CGFloat){
         
@@ -240,7 +240,7 @@ extension UIView {
             make.trailing.equalTo(sv!.snp_trailing).offset(-right)
             make.width.equalTo(width)
             make.height.equalTo(height)
-
+            
         }
     }
     
@@ -248,7 +248,7 @@ extension UIView {
     
     /** 宽度约束 */
     func make_width(equal: CGFloat) {
-
+        
         self.snp_makeConstraints { (make) -> Void in
             make.width.equalTo(equal)
         }
@@ -263,23 +263,23 @@ extension UIView {
     }
     
     
-
-    /**
-    多个View之间的单条约束
     
-    :param: sd self.direction
-    :param: v  view
-    :param: vdEnum view.direction
-    :param: o  offsetValue
-    */
+    /**
+     多个View之间的单条约束
+     
+     :param: sd self.direction
+     :param: v  view
+     :param: vdEnum view.direction
+     :param: o  offsetValue
+     */
     func make_relation(sd sd: Int, v: UIView!, vd: Int, o: CGFloat) -> ConstraintDescriptionEditable!{
-
+        
         if superview == nil {return nil}
         
         let relationView = v ?? superview!
-
+        
         var c: ConstraintDescriptionEditable! = nil
-    
+        
         let sdEnum = Direction(rawValue: sd)
         let vdEnum = Direction(rawValue: vd)
         
@@ -393,7 +393,7 @@ extension UIView {
         return c
     }
     
-
+    
     /** 方位 */
     enum Direction: Int{
         
