@@ -14,23 +14,25 @@ import XWSwiftRefresh
 
 class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
     
-    var contactSource : ContactList = ContactList.init()
+    var contactSource : ContactList?
     var tableView: FlexibleTableView!
+    var subRows = Array<Int>()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView = FlexibleTableView(frame: CGRectMake(0, -30, self.view.bounds.width, self.view.bounds.height - 114), delegate: self)
-        self.tableView.registerClass(ContactsTableViewCell.self, forCellReuseIdentifier: "ContactsCell")
-        self.automaticallyAdjustsScrollViewInsets = false
-        self.view.addSubview(tableView)
+        //加载数据
+        loadData()
+        //加载视图
+        loadSubviews()
+        
     }
     
-    func DropDownUpdate(){
-        self.tableView.headerView = XWRefreshNormalHeader(target: self, action: #selector(JiaZhangViewController.GetDate))
-        self.tableView.reloadData()
-        self.tableView.headerView?.beginRefreshing()
-    }
     
+    //MARK: - 加载数据
+    func loadData() -> Void {
+        self.GetDate()
+    }
     func GetDate(){
         let url = apiUrl+"MessageAddress"
         let userid = 597
@@ -60,13 +62,38 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
                 }
                 if(status.status == "success"){
                     self.contactSource = ContactList(status.data!)
-                    self.tableView.reloadData()
+                    self.tableView.refreshData()
                     self.tableView.headerView?.endRefreshing()
-                    print("1")
+                    print(self.contactSource?.objectlist[0].teacherlist[0].name)
+                    print("fu")
+                    print(self.contactSource?.count)
+                    for ob in (self.contactSource?.objectlist)!{
+                        self.subRows.append(ob.teacherlist.count)
+                    
+                    }
+                    print(self.subRows)
+
                 }
             }
         }
     }
+    //MARK: - 加载视图
+    func loadSubviews() -> Void {
+        tableView = FlexibleTableView(frame: CGRectMake(0, -30, self.view.bounds.width, self.view.bounds.height - 114), delegate: self)
+        self.tableView.registerClass(ContactsTableViewCell.self, forCellReuseIdentifier: "ContactsCell")
+        self.automaticallyAdjustsScrollViewInsets = false
+        self.view.addSubview(tableView)
+    }
+    
+    
+    
+    func DropDownUpdate(){
+        self.tableView.headerView = XWRefreshNormalHeader(target: self, action: #selector(JiaZhangViewController.GetDate))
+        self.tableView.refreshData()
+        self.tableView.headerView?.beginRefreshing()
+    }
+    
+  
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -78,26 +105,44 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
     }
     //一组几个父类行
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+<<<<<<< HEAD
         return 2
-    }
-    //默认的哪一行展开
-    func tableView(tableView: UITableView, shouldExpandSubRowsOfCellAtIndexPath indexPath: NSIndexPath) -> Bool
-    {
-        if (indexPath.section == 0 && indexPath.row == 0){
-            return true
+=======
+        if self.contactSource?.count>0 {
+            print(self.contactSource?.count)
+            return (self.contactSource?.count)!
         }
         
+        return 0
+>>>>>>> origin/master
+    }
+    //默认的哪一行展开(self.contactSource?.count)!
+    func tableView(tableView: UITableView, shouldExpandSubRowsOfCellAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+//        if (indexPath.section == 0 && indexPath.row == 0){
+//            return true
+//        }
+//        print("indexpath.row=\(indexPath.row)")
         return false
     }
     //哪一行里面有多少子类行
     func tableView(tableView: UITableView, numberOfSubRowsAtIndexPath indexPath: NSIndexPath) -> Int
     {
+<<<<<<< HEAD
         if(indexPath.row == 0){
             return 2
         }
         if(indexPath.row == 1){
             return 3
         }
+=======
+        if self.contactSource?.objectlist[indexPath.row].count>0 {
+            
+            print(self.contactSource?.objectlist[indexPath.row].count)
+            return (self.contactSource?.objectlist[indexPath.row].count)!
+        }
+    
+>>>>>>> origin/master
         return 0
     }
     
@@ -105,11 +150,17 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = FlexibleTableViewCell(style:.Default, reuseIdentifier:"cell")
         cell.expandable = true
+<<<<<<< HEAD
         if(indexPath.row == 0){
             cell.textLabel?.text = "小二班"
         }
         if(indexPath.row == 1){
             cell.textLabel?.text = "幼儿三班"
+=======
+        if self.contactSource?.count>0 {
+            cell.textLabel?.text = self.contactSource?.objectlist[indexPath.row].classname
+            
+>>>>>>> origin/master
         }
         
         return cell
@@ -129,7 +180,11 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
         duanxinBtn.setImage(UIImage(named: "发消息"), forState: .Normal)
         ipBtn.setImage(UIImage(named: "电话"), forState: .Normal)
         phoneBtn.setImage(UIImage(named: "电话2"), forState: .Normal)
-        cell.nameLabel.text = "小明爸爸"
+        if self.contactSource?.count>0 {
+//            print("indexpath.row=\(indexPath.row)")
+            cell.nameLabel.text = self.contactSource?.objectlist[indexPath.row].teacherlist[indexPath.subRow-1].name
+        }
+        
         cell.contentView.addSubview(duanxinBtn)
         cell.contentView.addSubview(ipBtn)
         cell.contentView.addSubview(phoneBtn)
