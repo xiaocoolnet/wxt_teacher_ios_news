@@ -35,10 +35,10 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
     }
     func GetDate(){
         let url = apiUrl+"MessageAddress"
-        let userid = 597
-//        let uid = userid.stringForKey("userid")
+        let userid = NSUserDefaults.standardUserDefaults()
+        let uid = userid.stringForKey("userid")
         let param = [
-            "userid":userid
+            "userid":uid!
         ]
         
         Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
@@ -69,10 +69,10 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
                     print(self.contactSource?.count)
                     for ob in (self.contactSource?.objectlist)!{
                         self.subRows.append(ob.teacherlist.count)
-                    
+                        
                     }
                     print(self.subRows)
-
+                    
                 }
             }
         }
@@ -93,7 +93,7 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
         self.tableView.headerView?.beginRefreshing()
     }
     
-  
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -105,44 +105,31 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
     }
     //一组几个父类行
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-<<<<<<< HEAD
-        return 2
-=======
         if self.contactSource?.count>0 {
             print(self.contactSource?.count)
             return (self.contactSource?.count)!
         }
         
         return 0
->>>>>>> origin/master
     }
     //默认的哪一行展开(self.contactSource?.count)!
     func tableView(tableView: UITableView, shouldExpandSubRowsOfCellAtIndexPath indexPath: NSIndexPath) -> Bool
     {
-//        if (indexPath.section == 0 && indexPath.row == 0){
-//            return true
-//        }
-//        print("indexpath.row=\(indexPath.row)")
+        //        if (indexPath.section == 0 && indexPath.row == 0){
+        //            return true
+        //        }
+        //        print("indexpath.row=\(indexPath.row)")
         return false
     }
     //哪一行里面有多少子类行
     func tableView(tableView: UITableView, numberOfSubRowsAtIndexPath indexPath: NSIndexPath) -> Int
     {
-<<<<<<< HEAD
-        if(indexPath.row == 0){
-            return 2
-        }
-        if(indexPath.row == 1){
-            return 3
-        }
-=======
         if self.contactSource?.objectlist[indexPath.row].count>0 {
             
             print(self.contactSource?.objectlist[indexPath.row].count)
             return (self.contactSource?.objectlist[indexPath.row].count)!
         }
-    
->>>>>>> origin/master
+        
         return 0
     }
     
@@ -150,45 +137,29 @@ class JiaZhangViewController: UIViewController,FlexibleTableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = FlexibleTableViewCell(style:.Default, reuseIdentifier:"cell")
         cell.expandable = true
-<<<<<<< HEAD
-        if(indexPath.row == 0){
-            cell.textLabel?.text = "小二班"
-        }
-        if(indexPath.row == 1){
-            cell.textLabel?.text = "幼儿三班"
-=======
         if self.contactSource?.count>0 {
             cell.textLabel?.text = self.contactSource?.objectlist[indexPath.row].classname
             
->>>>>>> origin/master
         }
         
         return cell
     }
     //加载子类行的数据
     func tableView(tableView: UITableView, cellForSubRowAtIndexPath indexPath: FlexibleIndexPath) -> UITableViewCell {
-        let duanxinBtn = UIButton()
-        let ipBtn = UIButton()
-        let phoneBtn = UIButton()
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("ContactsCell", forIndexPath: indexPath.ns) as! ContactsTableViewCell
-        duanxinBtn.frame = CGRectMake(0, 26, 17, 17)
-        duanxinBtn.frame.origin.x = self.view.bounds.width - 72
-        ipBtn.frame = CGRectMake(0, 26, 17, 17)
-        ipBtn.frame.origin.x = self.view.bounds.width - 50
-        phoneBtn.frame = CGRectMake(0, 26, 17, 17)
-        phoneBtn.frame.origin.x = self.view.bounds.width - 30
-        duanxinBtn.setImage(UIImage(named: "发消息"), forState: .Normal)
-        ipBtn.setImage(UIImage(named: "电话"), forState: .Normal)
-        phoneBtn.setImage(UIImage(named: "电话2"), forState: .Normal)
+        
         if self.contactSource?.count>0 {
-//            print("indexpath.row=\(indexPath.row)")
+            //            print("indexpath.row=\(indexPath.row)")
             cell.nameLabel.text = self.contactSource?.objectlist[indexPath.row].teacherlist[indexPath.subRow-1].name
         }
         
-        cell.contentView.addSubview(duanxinBtn)
-        cell.contentView.addSubview(ipBtn)
-        cell.contentView.addSubview(phoneBtn)
+        
         return cell
+    }
+    
+    func tableView(tableView: FlexibleTableView, didSelectSubRowAtIndexPath indexPath: FlexibleIndexPath) {
+        
     }
     
     func collapseSubrows() {

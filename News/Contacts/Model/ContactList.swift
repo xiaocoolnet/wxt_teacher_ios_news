@@ -19,7 +19,7 @@ class ContactList: JSONJoy {
         objectlist = Array<ContactsInfo>()
     }
     required init(_ decoder: JSONDecoder) {
-//        status = decoder["status"].string
+        //        status = decoder["status"].string
         objectlist = Array<ContactsInfo>()
         for childs: JSONDecoder in decoder.array!{
             objectlist.append(ContactsInfo(childs))
@@ -33,14 +33,6 @@ class ContactList: JSONJoy {
 }
 class ContactsInfo: JSONJoy{
     var classname:String?
-<<<<<<< HEAD
-        var objectlist: [TeachersInfo]
-        var count: Int{
-            return self.objectlist.count
-        }
-    init() {
-        objectlist = Array<TeachersInfo>()
-=======
     var teacherlist: [TeacherInfo]
     var schoolname:String?
     var schoolid:String?
@@ -52,24 +44,10 @@ class ContactsInfo: JSONJoy{
     
     init() {
         teacherlist = Array<TeacherInfo>()
->>>>>>> origin/master
     }
     
     required init(_ decoder: JSONDecoder){
         classname = decoder["classname"].string
-<<<<<<< HEAD
-        print("输出数据:\(classname)")
-                objectlist = Array<TeachersInfo>()
-                for childs: JSONDecoder in decoder["teacherinfo"].array!{
-                    objectlist.append(TeachersInfo(childs))
-                }
-    }
-    
-}
-class TeachersInfo: JSONJoy{
-    var name:String?
-
-=======
         schoolname = decoder["schoolname"].string
         schoolid = decoder["schoolid"].string
         classid = decoder["classid"].string
@@ -87,18 +65,13 @@ class TeacherInfo: JSONJoy{
     var name:String?
     var id: String?
     var phone: String?
->>>>>>> origin/master
     init() {
-
+        
     }
     required init(_ decoder: JSONDecoder){
         name = decoder["name"].string
-<<<<<<< HEAD
-        print("输出数据:\(name)")
-=======
         id = decoder["id"].string
         phone = decoder["phone"].string
->>>>>>> origin/master
     }
-
+    
 }
