@@ -45,7 +45,7 @@ class ScrollViewController: UIViewController {
         self.view.insertSubview(scrollView, atIndex: 0)
         
         // 给开始按钮设置圆角
-        enterBtn.layer.cornerRadius = 5.0
+        enterBtn.layer.cornerRadius = 10.0
         // 隐藏开始按钮
         enterBtn.alpha = 0.0
         

@@ -562,12 +562,12 @@
 			name = QingKuang;
 			sourceTree = "<group>";
 		};
-		18A848F41CB75A7E00A9D123 /* FangDiu */ = {
+		18A848F41CB75A7E00A9D123 /* DingWei */ = {
 			isa = PBXGroup;
 			children = (
 				18B3691C1CB5F52D007DC602 /* FangDiuViewController.swift */,
 			);
-			name = FangDiu;
+			name = DingWei;
 			sourceTree = "<group>";
 		};
 		18A848F51CB75A9A00A9D123 /* TeKaoQin */ = {
@@ -934,7 +934,7 @@
 				18A848F21CB75A0200A9D123 /* BBKaoQin */,
 				18A848F51CB75A9A00A9D123 /* TeKaoQin */,
 				18A848F31CB75A6300A9D123 /* QingKuang */,
-				18A848F41CB75A7E00A9D123 /* FangDiu */,
+				18A848F41CB75A7E00A9D123 /* DingWei */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

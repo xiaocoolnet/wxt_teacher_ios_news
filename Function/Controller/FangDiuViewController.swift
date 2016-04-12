@@ -7,81 +7,157 @@
 //
 
 import UIKit
-import CoreLocation
+import MapKit
 
-class FangDiuViewController: UIViewController,CLLocationManagerDelegate {
-
-    //定位管理器
-    let locationManager:CLLocationManager = CLLocationManager()
+class FangDiuViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate {
     
-    var label1: UILabel!
-    var label2: UILabel!
-    var label3: UILabel!
-    var label4: UILabel!
-    var label5: UILabel!
-    var label6: UILabel!
-    var label7: UILabel!
-   
+    var mapViewLoca: MKMapView!
+    var dingWei: UIButton!
+    var locateManage = CLLocationManager()
+    
+    var currentCoordinate:CLLocationCoordinate2D?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "防丢定位"
-        self.view.backgroundColor = UIColor.whiteColor()
+        mapViewLoca.frame = self.view.bounds
+        self.view.addSubview(mapViewLoca)
         
-//        label1.frame = CGRectMake(100, 150, 150, 40)
-//        label1.backgroundColor = UIColor.brownColor()
-//        self.view.addSubview(label1)
+        dingWei.frame = CGRectMake(self.view.bounds.width-130, self.view.bounds.height-80, 100, 40)
+        dingWei.backgroundColor = UIColor.greenColor()
+        dingWei.addTarget(self, action: #selector(FangDiuViewController.resetLocate(_:)), forControlEvents: .TouchUpInside)
+        dingWei.setTitle("定位", forState: .Normal)
+        self.view.addSubview(dingWei)
         
+        //-------------CLLocationManager-------------
+        self.locateManage.delegate = self
         
-        //设置定位服务管理器代理
-        locationManager.delegate = self
-        //设置定位进度
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        //更新距离
-        locationManager.distanceFilter = 100
-        ////发送授权申请
-        locationManager.requestAlwaysAuthorization()
-        if (CLLocationManager.locationServicesEnabled())
-        {
-            //允许使用定位服务的话，开启定位服务更新
-            locationManager.startUpdatingLocation()
-            print("定位开始")
+        dingWei.layer.cornerRadius = 10
+        //请求定位权限
+        if self.locateManage.respondsToSelector(#selector(CLLocationManager.requestAlwaysAuthorization)) {
+            self.locateManage.requestAlwaysAuthorization()
+        }
+        
+        self.locateManage.desiredAccuracy = kCLLocationAccuracyBest//定位精准度
+        self.locateManage.startUpdatingLocation()//开始定位
+        
+        //显示定位点
+        self.mapViewLoca.showsUserLocation = true
+        
+    }
+    
+    //CLLocationManager定位代理方法
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("hello")
+        if let newLoca = locations.last {
+            CLGeocoder().reverseGeocodeLocation(newLoca, completionHandler: { (pms, err) -> Void in
+                if let newCoordinate = pms?.last?.location?.coordinate {
+                    //此处设置地图中心点为定位点，缩放级别18
+                    self.mapViewLoca.setCenterCoordinateLevel(newCoordinate, zoomLevel: 15, animated: true)
+                    manager.stopUpdatingLocation()//停止定位，节省电量，只获取一次定位
+                    
+                    self.currentCoordinate = newCoordinate
+                    
+                    //取得最后一个地标，地标中存储了详细的地址信息，注意：一个地名可能搜索出多个地址
+                    let placemark:CLPlacemark = (pms?.last)!
+                    let location = placemark.location;//位置
+                    let region = placemark.region;//区域
+                    let addressDic = placemark.addressDictionary;//详细地址信息字典,包含以下部分信息
+                    //                    let name=placemark.name;//地名
+                    //                    let thoroughfare=placemark.thoroughfare;//街道
+                    //                    let subThoroughfare=placemark.subThoroughfare; //街道相关信息，例如门牌等
+                    //                    let locality=placemark.locality; // 城市
+                    //                    let subLocality=placemark.subLocality; // 城市相关信息，例如标志性建筑
+                    //                    let administrativeArea=placemark.administrativeArea; // 州
+                    //                    let subAdministrativeArea=placemark.subAdministrativeArea; //其他行政区域信息
+                    //                    let postalCode=placemark.postalCode; //邮编
+                    //                    let ISOcountryCode=placemark.ISOcountryCode; //国家编码
+                    //                    let country=placemark.country; //国家
+                    //                    let inlandWater=placemark.inlandWater; //水源、湖泊
+                    //                    let ocean=placemark.ocean; // 海洋
+                    //                    let areasOfInterest=placemark.areasOfInterest; //关联的或利益相关的地标
+                    print(location,region,addressDic)
+                }
+            })
         }
     }
     
-    //定位改变执行，可以得到新位置、旧位置
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //获取最新的坐标
-        let currLocation:CLLocation = locations.last!
-        label1.text = "经度：\(currLocation.coordinate.longitude)"
-        print("经度：\(currLocation.coordinate.longitude)")
-        //获取纬度
-        label2.text = "纬度：\(currLocation.coordinate.latitude)"
-        //获取海拔
-        label3.text = "海拔：\(currLocation.altitude)"
-        //获取水平精度
-        label4.text = "水平精度：\(currLocation.horizontalAccuracy)"
-        //获取垂直精度
-        label5.text = "垂直精度：\(currLocation.verticalAccuracy)"
-        //获取方向
-        label6.text = "方向：\(currLocation.course)"
-        //获取速度
-        label7.text = "速度：\(currLocation.speed)"
+    
+    func resetLocate(sender: UIButton) {
+        if let _coordinate = self.currentCoordinate {
+            self.mapViewLoca.setCenterCoordinate(_coordinate, animated: true)
+        }
+        else {
+            self.locateManage.startUpdatingLocation()
+        }
+        
+        print("点击定位")
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+extension MKMapView {
+    
+    var MERCATOR_OFFSET:Double {
+        return 268435456.0
+    }
+    var MERCATOR_RADIUS:Double {
+        return 85445659.44705395
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    public func setCenterCoordinateLevel(centerCoordinate:CLLocationCoordinate2D,var zoomLevel:Double,animated:Bool) {
+        //设置最小缩放级别
+        zoomLevel  = min(zoomLevel, 22)
+        
+        let span   = self.coordinateSpanWithMapView(self, centerCoordinate: centerCoordinate, zoomLevel: zoomLevel);
+        let region = MKCoordinateRegionMake(centerCoordinate, span);
+        
+        self.setRegion(region, animated: animated)
+        
     }
-    */
-
+    
+    func longitudeToPixelSpaceX(longitude:Double) ->Double {
+        return round(MERCATOR_OFFSET + MERCATOR_RADIUS * longitude * M_PI / 180.0)
+    }
+    
+    func latitudeToPixelSpaceY(latitude:Double) ->Double {
+        return round(MERCATOR_OFFSET - MERCATOR_RADIUS * log((1 + sin(latitude * M_PI / 180.0)) / (1 - sin(latitude * M_PI / 180.0))) / 2.0)
+    }
+    
+    func pixelSpaceXToLongitude(pixelX:Double) ->Double {
+        return ((round(pixelX) - MERCATOR_OFFSET) / MERCATOR_RADIUS) * 180.0 / M_PI
+    }
+    
+    func pixelSpaceYToLatitude(pixelY:Double) ->Double {
+        return (M_PI / 2.0 - 2.0 * atan(exp((round(pixelY) - MERCATOR_OFFSET) / MERCATOR_RADIUS))) * 180.0 / M_PI
+    }
+    
+    func coordinateSpanWithMapView(mapView:MKMapView,
+                                   centerCoordinate:CLLocationCoordinate2D,
+                                   zoomLevel:Double) -> MKCoordinateSpan
+    {
+        let centerPixelX = self.longitudeToPixelSpaceX(centerCoordinate.longitude)
+        let centerPixelY = self.latitudeToPixelSpaceY(centerCoordinate.latitude)
+        let zoomExponent = 20.0 - zoomLevel
+        let zoomScale = pow(2.0, zoomExponent)
+        
+        let mapSizeInPixels = mapView.bounds.size
+        let scaledMapWidth  = Double(mapSizeInPixels.width) * zoomScale
+        let scaledMapHeight = Double(mapSizeInPixels.height) * zoomScale
+        
+        let topLeftPixelX = centerPixelX - (scaledMapWidth/2)
+        let topLeftPixelY = centerPixelY - (scaledMapHeight/2)
+        
+        let minLng = self.pixelSpaceXToLongitude(topLeftPixelX)
+        let maxLng = self.pixelSpaceXToLongitude(topLeftPixelX + scaledMapWidth)
+        let longitudeDelta = maxLng - minLng
+        
+        let minLat = self.pixelSpaceYToLatitude(topLeftPixelY);
+        let maxLat = self.pixelSpaceYToLatitude(topLeftPixelY + scaledMapHeight);
+        let latitudeDelta = -1 * (maxLat - minLat);
+        
+        let span = MKCoordinateSpanMake(latitudeDelta, longitudeDelta)
+        return span
+    }
 }
+
+

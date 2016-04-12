@@ -18,7 +18,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.hidden = true
+        //self.navigationController?.navigationBar.hidden = true
         XKeyBoard.registerKeyBoardHide(self)
         XKeyBoard.registerKeyBoardShow(self)
         AccountText.delegate = self
