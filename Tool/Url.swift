@@ -7,9 +7,9 @@
 //
 
 import Foundation
-var teUrl = "http://www.xiaocool.cn:8016/index.php?g=apps&"
-var apiUrl = "http://www.xiaocool.cn:8016/index.php?g=apps&m=index&a="
-var imageUrl = "http://www.xiaocool.cn:8016/uploads/avatar/"
-var microblogImageUrl = "http://www.xiaocool.cn:8016/uploads/microblog/"
-var growCoverImageUrl = "http://www.xiaocool.cn:8016/uploads/growCover/"
-var foodMenuImageUrl = "http://www.xiaocool.cn:8016/uploads/recipe/"
+var teUrl = "http://wxt.xiaocool.net/index.php?g=apps&"
+var apiUrl = "http://wxt.xiaocool.net/index.php?g=apps&m=index&a="
+var imageUrl = "http://wxt.xiaocool.net/uploads/avatar/"
+var microblogImageUrl = "http://wxt.xiaocool.net/uploads/microblog/"
+var growCoverImageUrl = "http://wxt.xiaocool.net/uploads/growCover/"
+var foodMenuImageUrl = "http://wxt.xiaocool.net/uploads/recipe/"
