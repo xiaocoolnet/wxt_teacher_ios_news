@@ -61,12 +61,14 @@ class ReviceMessagesViewController: UIViewController,UITableViewDelegate,UITable
         print("发送")
         
         let url = apiUrl+"SendMessage"
+        let userid = NSUserDefaults.standardUserDefaults()
+        let uid = userid.stringForKey("userid")
         let param = [
-            "sendid":599,
-            "receiveid":1,
+            "sendid":uid!,
+            "receiveid":newsInfo.send_user_id!,
             "content":contentTextView.text
         ]
-        Alamofire.request(.POST, url, parameters: param as? [String : AnyObject]).response { request, response, json, error in
+        Alamofire.request(.POST, url, parameters: param ).response { request, response, json, error in
             if(error != nil){
             }
             else{

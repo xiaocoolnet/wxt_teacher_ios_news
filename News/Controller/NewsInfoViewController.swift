@@ -82,11 +82,11 @@ class NewsInfoViewController: UIViewController,UITableViewDelegate,UITableViewDa
             sendLabel.frame = CGRectMake(90, 15, 60, 20)
             sendLabel.font = UIFont.systemFontOfSize(15)
             sendLabel.textColor = UIColor.grayColor()
-            sendLabel.text = "发送人："
+            sendLabel.text = "接收人："
             nameLabel.frame = CGRectMake(140, 15, 150, 20)
             nameLabel.font = UIFont.systemFontOfSize(17)
             nameLabel.textColor = UIColor.blackColor()
-            nameLabel.text = newsInfo.sendName!
+            nameLabel.text = newsInfo.reciverName!
             sendTimeLabel.frame = CGRectMake(0, 0, 70, 15)
             sendTimeLabel.frame.origin.x = self.view.bounds.width - 150
             sendTimeLabel.frame.origin.y = 70

@@ -15,6 +15,7 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
 
     var dataTableView = UITableView()
     var newsSource = NewsList()
+    var newsSendList = NewsList()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "消息"
@@ -23,9 +24,9 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
         dataTableView.dataSource = self
         dataTableView.registerClass(NewsTableViewCell.self, forCellReuseIdentifier: "NewsCell")
         let rightItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: #selector(NewsViewController.RightBtn))
-        let leftItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: #selector(NewsViewController.LeftBtn))
+//        let leftItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: #selector(NewsViewController.LeftBtn))
         self.navigationItem.rightBarButtonItem = rightItem
-        self.navigationItem.leftBarButtonItem = leftItem
+//        self.navigationItem.leftBarButtonItem = leftItem
         self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(dataTableView)
         
@@ -45,6 +46,8 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
         let param = [
             "userid":uid!
         ]
+        print("my userid is ")
+        print(uid!)
         Alamofire.request(.GET, url, parameters: param).response { request, response, json, error in
             if(error != nil){
             }
@@ -64,6 +67,27 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 }
                 if(status.status == "success"){
                     self.newsSource = NewsList(status.data!)
+                    self.dataTableView.reloadData()
+                    self.dataTableView.headerView?.endRefreshing()
+                }
+            }
+        }
+        //获取信息群发
+        let senturl = apiUrl + "SentMessage"
+        Alamofire.request(.GET, senturl, parameters: param).response { request, response, json, error in
+            if(error != nil){
+            }
+            else{
+                let status = Http(JSONDecoder(json!))
+                if(status.status == "error"){
+                    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+                    hud.mode = MBProgressHUDMode.Text;
+                    hud.margin = 10.0
+                    hud.removeFromSuperViewOnHide = true
+                    hud.hide(true, afterDelay: 1)
+                }
+                if(status.status == "success"){
+                    self.newsSendList = NewsList(status.data!)
                     self.dataTableView.reloadData()
                     self.dataTableView.headerView?.endRefreshing()
                 }
@@ -91,16 +115,16 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(section == 0){
             return 6
         }
-       if(section == 1){
-            return newsSource.count
-        }
+//       if(section == 1){
+//            return newsSource.count
+//        }
         return 0
     }
     
@@ -109,15 +133,24 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         if(indexPath.section == 0){
             if(indexPath.row == 0){
-                cell.contextLabel.text = "小张妈妈发布了一张日记照片"
+                cell.contextLabel.text = "暂无最新消息"
                 cell.nameLabel.text = "最新消息"
                 cell.avatorImage.image = UIImage(named:"最新消息" )
+                if( newsSource.objectlist.count>0){
+                let newsInfo = newsSource.objectlist[0]
+                    cell.contextLabel.text = newsInfo.sendName! + ":"+newsInfo.message_content!
+                }
+                
                 return cell
             }
             if(indexPath.row == 1){
-                cell.contextLabel.text = "小张妈妈回复了一条信息"
+                cell.contextLabel.text = "暂无最新发送记录"
                 cell.nameLabel.text = "信息群发"
                 cell.avatorImage.image = UIImage(named:"信息群发")
+                if( newsSendList.objectlist.count>0){
+                    let newsInfo = newsSendList.objectlist[0]
+                    cell.contextLabel.text = newsInfo.sendName!+":" + newsInfo.message_content!
+                }
                 return cell
             }
             if(indexPath.row == 2){
@@ -145,28 +178,28 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 return cell
             }
         }
-        if(indexPath.section == 1){
-            let newsInfo = newsSource.objectlist[indexPath.row]
-            cell.contextLabel.text = newsInfo.message_content!
-            cell.nameLabel.text = newsInfo.sendName!
-            cell.avatorImage.image = UIImage(named: "Logo")
-            return cell
-        }
+//        if(indexPath.section == 1){
+//            let newsInfo = newsSource.objectlist[indexPath.row]
+//            cell.contextLabel.text = newsInfo.message_content!
+//            cell.nameLabel.text = newsInfo.sendName!
+//            cell.avatorImage.image = UIImage(named: "Logo")
+//            return cell
+//        }
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0{
             if indexPath.row == 0{
-                let newsInfo = ZuiXinNewsViewController()
+                let newsInfo = ReciveListViewController()   // ZuiXinNewsViewController()
                 self.navigationController?.pushViewController(newsInfo, animated: true)
-                newsInfo.newsInfo = self.newsSource.objectlist[0]
+                //newsInfo.newsInfo = self.newsSource.objectlist[0]
                 newsInfo.tabBarController?.tabBar.hidden = true
             }
             if indexPath.row == 1{
-                let newsInfo = XiaoXiQunFaViewController()
+                let newsInfo = SendListViewController()//XiaoXiQunFaViewController()
                 self.navigationController?.pushViewController(newsInfo, animated: true)
-                newsInfo.newsInfo = self.newsSource.objectlist[0]
+//                newsInfo.newsInfo = self.newsSource.objectlist[0]
                 newsInfo.tabBarController?.tabBar.hidden = true
             }
             if indexPath.row == 3{
@@ -181,13 +214,13 @@ class NewsViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 daiBan.tabBarController?.tabBar.hidden = true
             }
         }
-        if(indexPath.section == 1){
-            self.dataTableView.deselectRowAtIndexPath(indexPath, animated: true)
-            let newsInfo = NewsInfoViewController()
-            self.navigationController?.pushViewController(newsInfo, animated: true)
-            newsInfo.newsInfo = self.newsSource.objectlist[indexPath.row]
-            newsInfo.tabBarController?.tabBar.hidden = true
-        }
+//        if(indexPath.section == 1){
+//            self.dataTableView.deselectRowAtIndexPath(indexPath, animated: true)
+//            let newsInfo = NewsInfoViewController()
+//            self.navigationController?.pushViewController(newsInfo, animated: true)
+//            newsInfo.newsInfo = self.newsSource.objectlist[indexPath.row]
+//            newsInfo.tabBarController?.tabBar.hidden = true
+//        }
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

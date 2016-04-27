@@ -24,7 +24,7 @@ class MineMainViewController: UIViewController,UITableViewDelegate,UITableViewDa
     let footview = UIView()
     let phoneBtn = UIButton()
     
-    var phoneNumber = 18363856895
+    var phoneNumber = "18363856895"
     
     
     override func viewDidLoad() {

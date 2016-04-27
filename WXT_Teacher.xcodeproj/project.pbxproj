@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0470EBE21CCF118F00743D9F /* SendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470EBE11CCF118F00743D9F /* SendListViewController.swift */; };
+		04996BD81CCECC6900F571C6 /* ReciveListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04996BD71CCECC6900F571C6 /* ReciveListViewController.swift */; };
 		1876F0271CB6440C00425BA9 /* GongGaoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876F0261CB6440C00425BA9 /* GongGaoList.swift */; };
 		18A848EF1CB757AD00A9D123 /* KeChengList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A848EE1CB757AD00A9D123 /* KeChengList.swift */; };
 		18B368F91CB5E7C3007DC602 /* MaintainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B368F81CB5E7C3007DC602 /* MaintainViewController.swift */; };
@@ -257,6 +259,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0470EBE11CCF118F00743D9F /* SendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendListViewController.swift; sourceTree = "<group>"; };
+		04996BD71CCECC6900F571C6 /* ReciveListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciveListViewController.swift; sourceTree = "<group>"; };
 		1876F0261CB6440C00425BA9 /* GongGaoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GongGaoList.swift; sourceTree = "<group>"; };
 		18A848EE1CB757AD00A9D123 /* KeChengList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeChengList.swift; sourceTree = "<group>"; };
 		18B368F81CB5E7C3007DC602 /* MaintainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaintainViewController.swift; sourceTree = "<group>"; };
@@ -530,6 +534,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0470EBE31CCF127200743D9F /* message */ = {
+			isa = PBXGroup;
+			children = (
+				04996BD71CCECC6900F571C6 /* ReciveListViewController.swift */,
+				0470EBE11CCF118F00743D9F /* SendListViewController.swift */,
+			);
+			name = message;
+			sourceTree = "<group>";
+		};
 		18A848F01CB759C000A9D123 /* KeBiao */ = {
 			isa = PBXGroup;
 			children = (
@@ -1190,6 +1203,7 @@
 		EAFAE62D1C82E50900A8BAF2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0470EBE31CCF127200743D9F /* message */,
 				EAFAE6301C82E50900A8BAF2 /* Readme */,
 				EAFAE62F1C82E50900A8BAF2 /* NewsViewController.swift */,
 				EA8B7C431CA22F1C007AFED0 /* ZuiXinNewsViewController.swift */,
@@ -1503,7 +1517,7 @@
 				TargetAttributes = {
 					EAFAE5CE1C82E4D500A8BAF2 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = TB5TQ2MXGN;
+						DevelopmentTeam = HD3BV6H2CN;
 					};
 				};
 			};
@@ -1623,6 +1637,7 @@
 				EAFAE6FC1C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				EAFAE7241C82E50900A8BAF2 /* PhotoBrowser+Model.swift in Sources */,
 				EAA2CDF71CACB37800766CCB /* KeJianInfoViewController.swift in Sources */,
+				0470EBE21CCF118F00743D9F /* SendListViewController.swift in Sources */,
 				EAFAE6C81C82E50900A8BAF2 /* JiaZhangViewController.swift in Sources */,
 				EAFAE6E61C82E50900A8BAF2 /* Cache.swift in Sources */,
 				18B369171CB5F2DA007DC602 /* HuoDongList.swift in Sources */,
@@ -1639,6 +1654,7 @@
 				EAEB3C051CA3C53E0033B2E9 /* singleTeacherViewController.swift in Sources */,
 				EAFAE6DB1C82E50900A8BAF2 /* ConstraintDescription.swift in Sources */,
 				EAFAE7081C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
+				04996BD81CCECC6900F571C6 /* ReciveListViewController.swift in Sources */,
 				EACF43501C9D3EC30008A3A6 /* YuanDingViewController.swift in Sources */,
 				EAFAE6D51C82E50900A8BAF2 /* DisplayView.swift in Sources */,
 				EAFAE7031C82E50900A8BAF2 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
@@ -1868,7 +1884,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shuguo Peng (269Z58773S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shuguo Peng (269Z58773S)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1912,7 +1929,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shuguo Peng (269Z58773S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shuguo Peng (269Z58773S)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1938,8 +1956,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shuguo Peng (269Z58773S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shuguo Peng (269Z58773S)";
 				INFOPLIST_FILE = WXT_Teacher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1975,7 +1993,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xiaocool.cn.wxtteacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "510bfa43-15ad-491b-8059-242b382a4eaa";
 				SWIFT_OBJC_BRIDGING_HEADER = "WXT_Teacher-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1987,8 +2005,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shuguo Peng (269Z58773S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shuguo Peng (269Z58773S)";
 				INFOPLIST_FILE = WXT_Teacher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2024,7 +2042,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xiaocool.cn.wxtteacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "510bfa43-15ad-491b-8059-242b382a4eaa";
 				SWIFT_OBJC_BRIDGING_HEADER = "WXT_Teacher-Bridging-Header.h";
 			};
 			name = Release;
